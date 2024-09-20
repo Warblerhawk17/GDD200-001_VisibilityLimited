@@ -21,15 +21,13 @@ public class PlayerController : MonoBehaviour
         Vector3 vector3 = new(horizontalInput, verticalInput, 0);
         Vector3 direction = vector3;
 
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetKey(KeyCode.LeftShift))
         {
             transform.Translate(Sprintspeed * Time.deltaTime * direction);
-
         }
         else
         {
             transform.Translate(speed * Time.deltaTime * direction);
-
         }
 
     }
