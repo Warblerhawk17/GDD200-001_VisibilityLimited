@@ -49,7 +49,6 @@ public class WallBehavior : MonoBehaviour
             Color newColor = originalColor;
             newColor.a = alpha; // Set the alpha value
             wallSprite.color = newColor; // Apply the new color with transparency
-            throw new NotImplementedException();
         }
     }
 }

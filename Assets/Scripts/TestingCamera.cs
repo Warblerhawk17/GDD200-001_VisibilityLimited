@@ -1,0 +1,21 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class TestingCamera : MonoBehaviour
+{
+
+    GameObject player;
+    void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+    }
+
+    void LateUpdate()
+    {
+        Vector3 pos = transform.position;
+        pos.x = player.transform.position.x;
+        pos.y = player.transform.position.y;
+        transform.position = pos;
+    }
+}
