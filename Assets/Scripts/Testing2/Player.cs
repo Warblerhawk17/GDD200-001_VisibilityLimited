@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewPlayerScript : MonoBehaviour
+public class Player: MonoBehaviour
 {
     bool key_up = false,
         key_down = false,

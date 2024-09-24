@@ -22,12 +22,12 @@ public class FlashlightFollow : MonoBehaviour
     void Update()
     {
 
-        calculatePosRot();
-        applyPosRot();
+        CalculatePosRot();
+        ApplyPosRot();
 
     }
 
-    void calculatePosRot()
+    void CalculatePosRot()
     {
         // Get the mouse coordinates
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -46,7 +46,7 @@ public class FlashlightFollow : MonoBehaviour
         targetRotation = Quaternion.Euler(0, 0, angle);
     }
 
-    void applyPosRot()
+    void ApplyPosRot()
     {
         // Update the flashlight position
         transform.position = targetPosition;

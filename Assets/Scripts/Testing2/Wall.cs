@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WallShadow : MonoBehaviour
+public class Wall : MonoBehaviour
 {
     [HideInInspector] public float centerX, centerY, left, top, right, bottom;
     BoxCollider2D boxCollider;
