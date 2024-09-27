@@ -26,17 +26,17 @@ public class WallBehavior : MonoBehaviour
     }
 
     // Detect when the player enters the trigger area behind the wall
-    void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter2D()
     {
         // Check if the player is the object entering the trigger
-        if (player.position.y > (transform.position.y - 0.5))
+        if (player.position.y > (transform.position.y - 0.6))
         {
             SetWallTransparency(transparentValue);
             
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    private void OnTriggerExit2D()
     {
             SetWallTransparency(originalAlpha);
     }

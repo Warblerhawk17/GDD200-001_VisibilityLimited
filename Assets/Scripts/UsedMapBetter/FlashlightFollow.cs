@@ -49,10 +49,8 @@ public class FlashlightFollow : MonoBehaviour
     void ApplyPosRot()
     {
         // Update the flashlight position
-        transform.position = targetPosition;
-
         // Apply the rotation
-        transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+        transform.SetPositionAndRotation(targetPosition, Quaternion.Lerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime));
         transform.position = new Vector3(transform.position.x, transform.position.y, flashlightZPos);
     }
 }

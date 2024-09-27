@@ -5,7 +5,8 @@ using UnityEngine;
 public class Player_Script : MonoBehaviour
 {
     // Public variables
-    public float speed = 5f; // The speed at which the player moves
+    public float speed = 5f;
+    public float runSpeed = 8f; // The speed at which the player moves
     public bool canMoveDiagonally = true; // Controls whether the player can move diagonally
 
     // Private variables 
@@ -32,8 +33,6 @@ public class Player_Script : MonoBehaviour
         {
             // Set movement direction based on input
             movement = new Vector2(horizontalInput, verticalInput);
-            // Optionally rotate the player based on movement direction
-            RotatePlayer(horizontalInput, verticalInput);
         }
         else
         {
@@ -46,18 +45,15 @@ public class Player_Script : MonoBehaviour
             {
                 isMovingHorizontally = false;
             }
+        }
 
-            // Set movement direction and optionally rotate the player
-            if (isMovingHorizontally)
-            {
-                movement = new Vector2(horizontalInput, 0);
-                RotatePlayer(horizontalInput, 0);
-            }
-            else
-            {
-                movement = new Vector2(0, verticalInput);
-                RotatePlayer(0, verticalInput);
-            }
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            transform.Translate(runSpeed * Time.deltaTime * movement);
+        }
+        else
+        {
+            transform.Translate(speed * Time.deltaTime * movement);
         }
     }
 
@@ -65,16 +61,5 @@ public class Player_Script : MonoBehaviour
     {
         // Apply movement to the player in FixedUpdate for physics consistency
         rb.velocity = movement * speed;
-    }
-
-    void RotatePlayer(float x, float y)
-    {
-        // If there is no input, do not rotate the player
-        if (x == 0 && y == 0) return;
-
-        // Calculate the rotation angle based on input direction
-        float angle = Mathf.Atan2(y, x) * Mathf.Rad2Deg;
-        // Apply the rotation to the player
-        transform.rotation = Quaternion.Euler(0, 0, angle);
     }
 }

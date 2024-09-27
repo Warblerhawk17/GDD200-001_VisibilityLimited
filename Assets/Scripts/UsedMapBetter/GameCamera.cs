@@ -13,7 +13,6 @@ public class GameCamera : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
         cam = Camera.main;
-        cam.aspect = 4f / 3f;
         camHeight = 2 * cam.orthographicSize;
         camWidth = camHeight * cam.aspect;
     }
