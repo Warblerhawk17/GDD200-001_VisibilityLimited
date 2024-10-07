@@ -1,5 +1,3 @@
-using System;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class WallBehavior : MonoBehaviour
@@ -11,7 +9,6 @@ public class WallBehavior : MonoBehaviour
     // Opacity value (set to 50%)
     public float transparentValue;
     private float originalAlpha = 1f;
-    public Transform player;
 
     void Start()
     {
@@ -26,19 +23,23 @@ public class WallBehavior : MonoBehaviour
     }
 
     // Detect when the player enters the trigger area behind the wall
-    void OnTriggerEnter2D()
+    void OnTriggerEnter2D(Collider2D other)
     {
         // Check if the player is the object entering the trigger
-        if (player.position.y > (transform.position.y - 0.6))
+        if (other.CompareTag("Player"))
         {
             SetWallTransparency(transparentValue);
-            
         }
     }
 
-    private void OnTriggerExit2D()
+    // Detect when the player exits the trigger area
+    void OnTriggerExit2D(Collider2D other)
     {
+        // Check if the player is the object exiting the trigger
+        if (other.CompareTag("Player"))
+        {
             SetWallTransparency(originalAlpha);
+        }
     }
 
     // Set the transparency of the wall by adjusting its alpha value
