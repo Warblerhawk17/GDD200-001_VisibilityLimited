@@ -9556,7 +9556,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1981454768459982271, guid: 38eb59035af574a499cf8af94051250c, type: 3}
       propertyPath: connections.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1981454768459982271, guid: 38eb59035af574a499cf8af94051250c, type: 3}
       propertyPath: connections.Array.data[0]
@@ -9566,6 +9566,10 @@ PrefabInstance:
       propertyPath: connections.Array.data[1]
       value: 
       objectReference: {fileID: 568172339}
+    - target: {fileID: 1981454768459982271, guid: 38eb59035af574a499cf8af94051250c, type: 3}
+      propertyPath: connections.Array.data[2]
+      value: 
+      objectReference: {fileID: 197894124}
     - target: {fileID: 3732251484980009960, guid: 38eb59035af574a499cf8af94051250c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 43.77
@@ -20389,10 +20393,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1593329553}
   - component: {fileID: 1593329552}
-  - component: {fileID: 1593329554}
   - component: {fileID: 1593329556}
   - component: {fileID: 1593329555}
   - component: {fileID: 1593329557}
+  - component: {fileID: 1593329558}
   m_Layer: 6
   m_Name: Monster
   m_TagString: Untagged
@@ -20468,21 +20472,6 @@ Transform:
   - {fileID: 1959293935}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1593329554
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1593329551}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58b80fde76bfff743a119b8496b7d6ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 1623646756}
-  speed: 1
-  chaseLimit: 5
 --- !u!58 &1593329555
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -20554,7 +20543,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1593329551}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3640613a3b094a94792a9e48613fa1c0, type: 3}
+  m_Script: {fileID: 11500000, guid: 85c9fa01d1b884745b0ce91cb8dc05fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   currentNode: {fileID: 0}
@@ -20564,10 +20553,36 @@ MonoBehaviour:
   - {fileID: 682842989}
   - {fileID: 197894124}
   - {fileID: 59265699}
+  target: {fileID: 1623646756}
+  speed: 2
+  visionRadius: 5
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 384
+  defaultSawPlayerCount: 1.5
+--- !u!114 &1593329558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1593329551}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3640613a3b094a94792a9e48613fa1c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentNode: {fileID: 0}
+  path: []
+  patrolPath:
+  - {fileID: 1201868596}
+  - {fileID: 1858666416}
+  - {fileID: 197894124}
+  - {fileID: 59265699}
   patrolIndex: 0
   target: {fileID: 1623646756}
   speed: 3
-  directChaseDistance: 5.49
+  directChaseDistance: 5
   layerMask:
     serializedVersion: 2
     m_Bits: 384

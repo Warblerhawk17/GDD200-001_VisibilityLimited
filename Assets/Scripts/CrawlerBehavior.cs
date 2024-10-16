@@ -8,10 +8,13 @@ public class CrawlerBehavior : MonoBehaviour
     public Node currentNode; //the current node it is at
     public List<Node> path; //the path of nodes it will travel
     public List<Node> patrolPath; //the nodes that will be patroled by the crawler
+    private int patrolIndex; //the index in patrol path the crawler is headed towards
     public GameObject target; //the target, which it will go towards
-    public float speed; //the speed of the npc
+    public float speed; //the speed of the crawler
     public float visionRadius; //the radius the crawler can see
+    public LayerMask layerMask;
     private float sawPlayerCount; //used to make the monster pause for a second after loosing sight of the player
+    public float defaultSawPlayerCount; //default value that sawPlayerCount is set to
 
 
     // Start is called before the first frame update
@@ -29,10 +32,48 @@ public class CrawlerBehavior : MonoBehaviour
         //if neither of the above appply it will move to the next point in its patrol path
 
         //chase the player
-        if (Vector2.Distance(transform.position, target.transform.position) <= visionRadius)
+        //a raycast is done from the monster to the player only interacts with things on layerMask (set to player and wall layers)
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, target.transform.position - transform.position, float.MaxValue, layerMask);
+        //checks if the layer of the raycast and target are the same and if the target is within the vision radius
+        if (hit.collider.gameObject.layer == target.gameObject.layer && Vector2.Distance(transform.position,target.transform.position) <= visionRadius) 
         {
-
+            GoTowards(target.transform.position); //moves towards target
+            Debug.Log("Chasing Player");
+            sawPlayerCount = defaultSawPlayerCount;
         }
+        //pause behavior
+        else if (sawPlayerCount > 0f)
+        {
+            sawPlayerCount -= Time.deltaTime;
+        }
+        // Patroling behavior
+        else
+        {
+            Debug.Log("Patroling");
+            if (path.Count == 0) 
+            {
+                Node nearestNode = AStarManager.instance.FindNearestNode(transform.position); //the node nearest to the crawler
+                path = AStarManager.instance.GeneratePath(nearestNode, patrolPath[patrolIndex]); //makes a path from the crawler to the next node in the patrol path
+            }
+            GoTowards(path[0].transform.position); //goes towards the next node in path
+            if (Vector2.Distance(transform.position, path[0].transform.position) < 0.1f) //removes node if it gets too close to it
+            {
+                currentNode = path[0];
+                path.RemoveAt(0);
+            }
+            if (Vector2.Distance(transform.position, patrolPath[patrolIndex].transform.position) < 0.1f) //moves to next index in its patrol path if it reaches it
+            {
+                patrolIndex++;
+                if (patrolIndex == patrolPath.Count) //loops around if it reaches the end
+                {
+                    patrolIndex = 0;
+                }
+            }
+        }
+
+
+
+
     }
 
 
