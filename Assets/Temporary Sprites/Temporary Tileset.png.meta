@@ -378,7 +378,7 @@ TextureImporter:
       name: Temporary Tileset_12
       rect:
         serializedVersion: 2
-        x: 64
+        x: 0
         y: 128
         width: 64
         height: 64
@@ -399,7 +399,7 @@ TextureImporter:
       name: Temporary Tileset_13
       rect:
         serializedVersion: 2
-        x: 128
+        x: 64
         y: 128
         width: 64
         height: 64
@@ -420,7 +420,7 @@ TextureImporter:
       name: Temporary Tileset_14
       rect:
         serializedVersion: 2
-        x: 192
+        x: 128
         y: 128
         width: 64
         height: 64
@@ -441,7 +441,7 @@ TextureImporter:
       name: Temporary Tileset_15
       rect:
         serializedVersion: 2
-        x: 256
+        x: 192
         y: 128
         width: 64
         height: 64
@@ -462,8 +462,8 @@ TextureImporter:
       name: Temporary Tileset_16
       rect:
         serializedVersion: 2
-        x: 0
-        y: 64
+        x: 256
+        y: 128
         width: 64
         height: 64
       alignment: 0
@@ -483,8 +483,8 @@ TextureImporter:
       name: Temporary Tileset_17
       rect:
         serializedVersion: 2
-        x: 64
-        y: 64
+        x: 320
+        y: 128
         width: 64
         height: 64
       alignment: 0
@@ -504,7 +504,7 @@ TextureImporter:
       name: Temporary Tileset_18
       rect:
         serializedVersion: 2
-        x: 128
+        x: 0
         y: 64
         width: 64
         height: 64
@@ -525,7 +525,7 @@ TextureImporter:
       name: Temporary Tileset_19
       rect:
         serializedVersion: 2
-        x: 192
+        x: 64
         y: 64
         width: 64
         height: 64
@@ -546,7 +546,7 @@ TextureImporter:
       name: Temporary Tileset_20
       rect:
         serializedVersion: 2
-        x: 256
+        x: 128
         y: 64
         width: 64
         height: 64
@@ -567,7 +567,7 @@ TextureImporter:
       name: Temporary Tileset_21
       rect:
         serializedVersion: 2
-        x: 320
+        x: 192
         y: 64
         width: 64
         height: 64
@@ -588,8 +588,8 @@ TextureImporter:
       name: Temporary Tileset_22
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
+        x: 256
+        y: 64
         width: 64
         height: 64
       alignment: 0
@@ -609,8 +609,8 @@ TextureImporter:
       name: Temporary Tileset_23
       rect:
         serializedVersion: 2
-        x: 64
-        y: 0
+        x: 320
+        y: 64
         width: 64
         height: 64
       alignment: 0
@@ -630,7 +630,7 @@ TextureImporter:
       name: Temporary Tileset_24
       rect:
         serializedVersion: 2
-        x: 128
+        x: 0
         y: 0
         width: 64
         height: 64
@@ -651,7 +651,7 @@ TextureImporter:
       name: Temporary Tileset_25
       rect:
         serializedVersion: 2
-        x: 192
+        x: 64
         y: 0
         width: 64
         height: 64
@@ -672,7 +672,7 @@ TextureImporter:
       name: Temporary Tileset_26
       rect:
         serializedVersion: 2
-        x: 256
+        x: 128
         y: 0
         width: 64
         height: 64
@@ -693,7 +693,7 @@ TextureImporter:
       name: Temporary Tileset_27
       rect:
         serializedVersion: 2
-        x: 320
+        x: 192
         y: 0
         width: 64
         height: 64
@@ -706,6 +706,48 @@ TextureImporter:
       bones: []
       spriteID: f9d9a411447b44a4db6e25532e0be6a8
       internalID: -1605852612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Temporary Tileset_28
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 891921c36fdd21b45a2024a6006638cb
+      internalID: -970528329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Temporary Tileset_29
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc654f9bf67c984499c7b08e99210422
+      internalID: 624556216
       vertices: []
       indices: 
       edges: []
@@ -742,6 +784,8 @@ TextureImporter:
       Temporary Tileset_25: 915009365
       Temporary Tileset_26: -1127499969
       Temporary Tileset_27: -1605852612
+      Temporary Tileset_28: -970528329
+      Temporary Tileset_29: 624556216
       Temporary Tileset_3: -987077197
       Temporary Tileset_4: 656248733
       Temporary Tileset_5: 722304764
