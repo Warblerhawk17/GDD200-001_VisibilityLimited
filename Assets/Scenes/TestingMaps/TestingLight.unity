@@ -592,7 +592,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transparentValue: 0.5
-  player: {fileID: 0}
 --- !u!61 &563014943
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -638,26 +637,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!1 &933167344 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7681635624727147621, guid: 97fd240f7816aa244963cf3dd28066c1, type: 3}
-  m_PrefabInstance: {fileID: 2127524207}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &933167347
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 933167344}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a92c2f7f587b8364f8f13268c672041b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 1699903523}
-  orbitDistance: 1.5
-  rotationSpeed: 5
 --- !u!1 &960344399
 GameObject:
   m_ObjectHideFlags: 0
@@ -891,11 +870,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 457998364201435404, guid: 97fd240f7816aa244963cf3dd28066c1, type: 3}
   m_PrefabInstance: {fileID: 2127524207}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1699903523 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2772525585293980590, guid: 97fd240f7816aa244963cf3dd28066c1, type: 3}
-  m_PrefabInstance: {fileID: 2127524207}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1699903525
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1047,9 +1021,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 457998364201435404, guid: 97fd240f7816aa244963cf3dd28066c1, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1699903526}
-    - targetCorrespondingSourceObject: {fileID: 7681635624727147621, guid: 97fd240f7816aa244963cf3dd28066c1, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 933167347}
   m_SourcePrefab: {fileID: 100100000, guid: 97fd240f7816aa244963cf3dd28066c1, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
