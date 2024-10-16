@@ -11,12 +11,15 @@ public class FlashlightFollow : MonoBehaviour
     public float rotationSpeed = 5f;   // Speed that the flashlight will rotate
     private Quaternion targetRotation;
     private Vector3 targetPosition;
-    private float flashlightZPos = -0.1f; // Keep flashlight Z-axis position at -.1 for light to be above the floor
+    public GameObject playerObject;
+    private float flashlightZPos = -0.1f;
+    // Keep flashlight Z-axis position at -.1 for light to be above the floor
                                          // (VERY IMPORTANT!! Z AXIS POS MUST BE <= -0.1 FOR IT TO WORK PROPERLY)
 
     void Start()
     {
-
+        playerObject = GameObject.Find("Player");
+        player = playerObject.transform;
     }
 
     void Update()
