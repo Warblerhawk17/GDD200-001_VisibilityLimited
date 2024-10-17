@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -93,9 +93,232 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Battery_RW_UI_Design_Sprite_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 588
+        width: 166
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a90644c3db385214eb6676038a2b3472
+      internalID: 1571420369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Battery_RW_UI_Design_Sprite_1
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 524
+        width: 166
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1eaed2c00dfdfd8458fdffe403132c4b
+      internalID: -815292836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Battery_RW_UI_Design_Sprite_2
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 460
+        width: 166
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af4baf38e0d021c4b87c4ba95e858db9
+      internalID: -268469186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Battery_RW_UI_Design_Sprite_3
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 396
+        width: 166
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 886d74ddea0d0b24d8d369392daa9546
+      internalID: 1410657141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Battery_RW_UI_Design_Sprite_4
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 332
+        width: 166
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edc34c9420f53d74582f99db7e854381
+      internalID: 819109722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Battery_RW_UI_Design_Sprite_5
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 268
+        width: 166
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f602453515ecc6459aff1af42503809
+      internalID: 1690014173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Battery_RW_UI_Design_Sprite_6
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 204
+        width: 166
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e48184775011c0b49a5e13b1b181a9ff
+      internalID: 961911677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Battery_RW_UI_Design_Sprite_7
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 140
+        width: 166
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50483714582d2a943a37d61c93002c0e
+      internalID: 66303570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Battery_RW_UI_Design_Sprite_8
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 76
+        width: 166
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7680409f44aa4254aaf0c43ef8613f8b
+      internalID: 1463679242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Battery_RW_UI_Design_Sprite_9
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 12
+        width: 166
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52a6257ac04f86340a593b8065553ac5
+      internalID: 1963155011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -106,7 +329,17 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Battery_RW_UI_Design_Sprite_0: 1571420369
+      Battery_RW_UI_Design_Sprite_1: -815292836
+      Battery_RW_UI_Design_Sprite_2: -268469186
+      Battery_RW_UI_Design_Sprite_3: 1410657141
+      Battery_RW_UI_Design_Sprite_4: 819109722
+      Battery_RW_UI_Design_Sprite_5: 1690014173
+      Battery_RW_UI_Design_Sprite_6: 961911677
+      Battery_RW_UI_Design_Sprite_7: 66303570
+      Battery_RW_UI_Design_Sprite_8: 1463679242
+      Battery_RW_UI_Design_Sprite_9: 1963155011
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
