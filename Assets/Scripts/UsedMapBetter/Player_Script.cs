@@ -64,11 +64,15 @@ public class Player_Script : MonoBehaviour
         rb.velocity = movement * speed;
     }
 
+    //If the player collides into a monster
     private void OnCollisionEnter2D(UnityEngine.Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Crawler")){
+        if (collision.gameObject.CompareTag("Crawler"))
+        {
             batteryManager.batteryCharge = batteryManager.batteryCharge - 10;
         }
+        // disabling temporarily as these monsters will not be present in Alpha
+     /*   
         else if (collision.gameObject.CompareTag("Shadow"))
         {
             batteryManager.batteryCharge = batteryManager.batteryCharge - 10;
@@ -76,6 +80,7 @@ public class Player_Script : MonoBehaviour
         else if (collision.gameObject.CompareTag("Scream"))
         {
             batteryManager.batteryCharge = batteryManager.batteryCharge - 10;
-        }
+       }
+     */
     }
 }

@@ -4,22 +4,17 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Flashlight
-  - Fireflies
-  - Candle
   - Crawler
-  - Scream
-  - Shadow
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Wall
+  - 
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Monster
+  - Player
+  - Wall
   - 
   - 
   - 

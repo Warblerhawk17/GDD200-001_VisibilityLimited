@@ -14,7 +14,7 @@ public class FlashlightFollow : MonoBehaviour
     public GameObject playerObject;
     private float flashlightZPos = -0.1f;
     // Keep flashlight Z-axis position at -.1 for light to be above the floor
-                                         // (VERY IMPORTANT!! Z AXIS POS MUST BE <= -0.1 FOR IT TO WORK PROPERLY)
+    // (VERY IMPORTANT!! Z AXIS POS MUST BE <= -0.1 FOR IT TO WORK PROPERLY)
 
     void Start()
     {
