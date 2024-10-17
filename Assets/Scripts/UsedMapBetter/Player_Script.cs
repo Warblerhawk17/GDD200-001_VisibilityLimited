@@ -13,6 +13,7 @@ public class Player_Script : MonoBehaviour
     private Rigidbody2D rb; // Reference to the Rigidbody2D component attached to the player
     private Vector2 movement; // Stores the direction of player movement
     private bool isMovingHorizontally = true; // Flag to track if the player is moving horizontally
+    public BatteryManager batteryManager;
 
     void Start()
     {
@@ -61,5 +62,25 @@ public class Player_Script : MonoBehaviour
     {
         // Apply movement to the player in FixedUpdate for physics consistency
         rb.velocity = movement * speed;
+    }
+
+    //If the player collides into a monster
+    private void OnCollisionEnter2D(UnityEngine.Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Crawler"))
+        {
+            batteryManager.batteryCharge = batteryManager.batteryCharge - 10;
+        }
+        // disabling temporarily as these monsters will not be present in Alpha
+     /*   
+        else if (collision.gameObject.CompareTag("Shadow"))
+        {
+            batteryManager.batteryCharge = batteryManager.batteryCharge - 10;
+        }
+        else if (collision.gameObject.CompareTag("Scream"))
+        {
+            batteryManager.batteryCharge = batteryManager.batteryCharge - 10;
+       }
+     */
     }
 }
