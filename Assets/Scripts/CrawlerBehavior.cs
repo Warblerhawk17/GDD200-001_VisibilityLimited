@@ -5,8 +5,8 @@ using UnityEngine;
 public class CrawlerBehavior : MonoBehaviour
 {
 
-    public Node currentNode; //the current node it is at
-    public List<Node> path; //the path of nodes it will travel
+    private Node currentNode; //the current node it is at
+    private List<Node> path = new List<Node>(); //the path of nodes it will travel
     public List<Node> patrolPath; //the nodes that will be patroled by the crawler
     private int patrolIndex; //the index in patrol path the crawler is headed towards
     public GameObject target; //the target, which it will go towards
@@ -49,7 +49,7 @@ public class CrawlerBehavior : MonoBehaviour
         // Patroling behavior
         else
         {
-            Debug.Log("Patroling");
+            Debug.Log(path);
             if (path.Count == 0) 
             {
                 Node nearestNode = AStarManager.instance.FindNearestNode(transform.position); //the node nearest to the crawler
@@ -85,4 +85,14 @@ public class CrawlerBehavior : MonoBehaviour
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg; // weird math to find the angle, yes the Atan2 goes y first then x
         transform.rotation = Quaternion.Euler(Vector3.forward * angle); // changes npc rotation
     }
+
+    /*private void OnDrawGizmos() //helper function to draw a line towards the node it is going towards
+    {
+        Gizmos.color = Color.blue;
+        if (path.Count != 0)
+        {
+            Gizmos.DrawLine(transform.position, path[0].transform.position);
+        }
+
+    }*/
 }
