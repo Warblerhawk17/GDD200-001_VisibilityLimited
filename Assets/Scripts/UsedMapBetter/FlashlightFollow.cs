@@ -7,7 +7,7 @@ using UnityEngine;
 public class FlashlightFollow : MonoBehaviour
 {
     public Transform player;  // Variable to assign to the player object for it to "orbit" the player properly
-    public float orbitDistance = 1.5f; // Distance the flashlight should be from the player
+    public float orbitDistance = 1f; // Distance the flashlight should be from the player
     public float rotationSpeed = 5f;   // Speed that the flashlight will rotate
     private Quaternion targetRotation;
     private Vector3 targetPosition;

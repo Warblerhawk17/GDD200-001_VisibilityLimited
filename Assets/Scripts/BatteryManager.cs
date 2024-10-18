@@ -29,6 +29,7 @@ public class BatteryManager : MonoBehaviour
         switch (batteryCharge)
         {
             case >= 90f:
+                spriteRenderer.enabled = true;
                 spriteRenderer.sprite = batterySprites[0];
                 break;
 
