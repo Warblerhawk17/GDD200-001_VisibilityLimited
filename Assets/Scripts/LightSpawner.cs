@@ -5,7 +5,7 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine.Rendering;
 
-public class LightInteraction : MonoBehaviour
+public class LightSpawner : MonoBehaviour
 {
     // Start is called before the first frame update
     public TextMeshProUGUI pickupText; // Text prompting the user to press button.

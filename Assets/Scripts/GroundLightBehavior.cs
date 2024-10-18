@@ -9,13 +9,13 @@ public class GroundLightBehavior : MonoBehaviour
     float maxDistance = 1.0f;
     public GameObject player; // the player object
     public TextMeshProUGUI pickupText;
-    LightInteraction gameManager;
+    LightSpawner gameManager;
     [SerializeField] bool isNearLight = false;
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.Find("Player");
-        gameManager = GameObject.Find("Game Manager").GetComponent<LightInteraction>();
+        gameManager = GameObject.Find("Game Manager").GetComponent<LightSpawner>();
         pickupText = GameObject.Find("Pickup Text").GetComponentInChildren<TextMeshProUGUI>();
         pickupText.SetText("Press E to pickup" + " Flashlight");
 
