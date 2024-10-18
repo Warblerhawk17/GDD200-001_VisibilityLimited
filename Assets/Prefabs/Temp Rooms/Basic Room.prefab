@@ -426,6 +426,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transparentValue: 0.25
+  player: {fileID: 0}
 --- !u!1 &8223582982773360189
 GameObject:
   m_ObjectHideFlags: 0
@@ -812,6 +813,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transparentValue: 0.25
+  player: {fileID: 0}
 --- !u!1 &9150812312811069641
 GameObject:
   m_ObjectHideFlags: 0
@@ -826,7 +828,7 @@ GameObject:
   - component: {fileID: 498217264884305420}
   - component: {fileID: 591444860346650502}
   - component: {fileID: 5402326678200857396}
-  - component: {fileID: 1696815375746759824}
+  - component: {fileID: 6509681578730471667}
   m_Layer: 8
   m_Name: Interact
   m_TagString: Untagged
@@ -1225,7 +1227,7 @@ TilemapCollider2D:
     m_Bits: 4294967295
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_UsedByComposite: 1
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 20
   m_ExtrusionFactor: 0
@@ -1293,14 +1295,76 @@ CompositeCollider2D:
   m_GeometryType: 0
   m_GenerationType: 0
   m_EdgeRadius: 0
-  m_ColliderPaths: []
+  m_ColliderPaths:
+  - m_Collider: {fileID: 498217264884305420}
+    m_ColliderPaths:
+    - - X: 55781248
+        Y: 61406248
+      - X: 55468752
+        Y: 61718752
+      - X: 29375000
+        Y: 61718752
+      - X: 29062500
+        Y: 61406248
+      - X: 29062500
+        Y: 60000000
+      - X: 54218752
+        Y: 60000000
+      - X: 54218752
+        Y: 30000000
+      - X: 50000000
+        Y: 21875000
+      - X: 50000000
+        Y: 21718750
+      - X: 0
+        Y: 21718750
+      - X: 0
+        Y: 21875000
+      - X: -4218750
+        Y: 30000000
+      - X: -4218750
+        Y: 60000000
+      - X: 20937500
+        Y: 60000000
+      - X: 20937500
+        Y: 61406248
+      - X: 20625000
+        Y: 61718752
+      - X: -5468750
+        Y: 61718752
+      - X: -5781250
+        Y: 61406248
+      - X: -5781250
+        Y: 20000000
+      - X: 55781248
+        Y: 20000000
   m_CompositePaths:
-    m_Paths: []
+    m_Paths:
+    - - {x: 5.5780954, y: 2}
+      - {x: 5.5781174, y: 6.1406326}
+      - {x: 5.5468645, y: 6.1718755}
+      - {x: 2.9374924, y: 6.171868}
+      - {x: 2.90625, y: 6.140614}
+      - {x: 2.9062793, y: 6}
+      - {x: 5.4218755, y: 5.9999704}
+      - {x: 5.4218726, y: 2.9999945}
+      - {x: 5, y: 2.1874938}
+      - {x: 4.9999704, y: 2.171875}
+      - {x: 0, y: 2.1719043}
+      - {x: -0.0000029, y: 2.1875057}
+      - {x: -0.421875, y: 3.0000064}
+      - {x: -0.42184561, y: 6}
+      - {x: 2.09375, y: 6.000029}
+      - {x: 2.0937424, y: 6.1406326}
+      - {x: 2.0624893, y: 6.1718755}
+      - {x: -0.5468826, y: 6.171868}
+      - {x: -0.578125, y: 6.140614}
+      - {x: -0.57809573, y: 2}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
   m_UseDelaunayMesh: 0
   m_CompositeGameObject: {fileID: 9150812312811069641}
---- !u!114 &1696815375746759824
+--- !u!114 &6509681578730471667
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
