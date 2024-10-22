@@ -8,6 +8,8 @@ public class Player_Script : MonoBehaviour
     public float speed = 5f;
     public float runSpeed = 8f; // The speed at which the player moves
     public bool canMoveDiagonally = true; // Controls whether the player can move diagonally
+    public bool isFacingUp = false;
+    public bool isFacingLeft = false;
 
     // Private variables 
     private Rigidbody2D rb; // Reference to the Rigidbody2D component attached to the player
@@ -40,10 +42,17 @@ public class Player_Script : MonoBehaviour
             // Determine the priority of movement based on input
             if (horizontalInput != 0)
             {
+                if (horizontalInput < 0)
+                {
+                    isFacingLeft = false;
+                }
+                else isFacingLeft = true;
                 isMovingHorizontally = true;
             }
             else if (verticalInput != 0)
             {
+                if (verticalInput < 0) isFacingUp = false;
+                else isFacingUp = true;
                 isMovingHorizontally = false;
             }
         }
