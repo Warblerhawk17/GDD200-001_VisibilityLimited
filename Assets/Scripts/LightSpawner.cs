@@ -16,19 +16,14 @@ public class LightSpawner : MonoBehaviour
     [SerializeField] int numberToSpawn; // The total number of flashlights that should be spawned
     public GameObject equippedFlashlightPrefab; // Prefab of the equipped flashlight
     public BatteryManager batteryManager; // The battery manager script on the battery object
-    float distance; //
-    float maxDistance; //Maximum distance, where a player below the maxDistance will be prompted
-    GameObject currentEquippedLight; // (Unused) the light the player currently has equipped.
-    float flashlightCharge;
-    // For if the player picks up a new light while holding a light
-    // that still has charge.
-    public bool lightSpawnRequested;
+    public bool lightSpawnRequested; // If a ground light is picked u
     public GameObject player; // the player object
 
 
     void Start()
     {
         pickupText.enabled = false;
+        //Spawns each light at random locations
         for (int i = 0; i < numberToSpawn; i++)
         {
             int randomNumber = Random.Range(0, spawnLocations.Count - 1);
@@ -44,12 +39,13 @@ public class LightSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Spawns a light if the groundLightBehavior sends a signal to do so
         if (lightSpawnRequested == true)
         {
             SpawnEquippedLight();
         }
     }
-
+    // Spawns the equipped light variant 
     void SpawnEquippedLight()
     {
 

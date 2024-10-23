@@ -41,7 +41,8 @@ public class GroundLightBehavior : MonoBehaviour
                 pickupText.enabled = true;
 
             }
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.E) && (GameObject.FindWithTag("Flashlight") == false))
+                
             {
                 Destroy(this.gameObject);
                 gameManager.lightSpawnRequested = true;
