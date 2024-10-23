@@ -13,8 +13,10 @@ public class CrawlerBehavior : MonoBehaviour
     public float speed; //the speed of the crawler
     public float visionRadius; //the radius the crawler can see
     public LayerMask layerMask;
-    private float sawPlayerCount; //used to make the monster pause for a second after loosing sight of the player
-    public float defaultSawPlayerCount; //default value that sawPlayerCount is set to
+    private float stopCount; //used to make the monster pause for a second after loosing sight of the player
+    public float defaultStopCount; //default value that sawPlayerCount is set to
+    public float hitStopCount; //how long it stops when it hits the player
+    public bool isLookingAt; //checks if the crawler is looking at it
 
 
     // Start is called before the first frame update
@@ -31,25 +33,38 @@ public class CrawlerBehavior : MonoBehaviour
         //if it was chasing the player but lost sight or they are out of their radius it will stand still for a few seconds
         //if neither of the above appply it will move to the next point in its patrol path
 
+        //todo
+        //the bug is that as soon as it sees the player it also stops 
+
+
+        //pause behavior
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, target.transform.position - transform.position, float.MaxValue, layerMask);
+        
+        if (!(hit.collider.gameObject.layer == target.gameObject.layer && Vector2.Distance(transform.position, target.transform.position) <= visionRadius))
+        {
+            isLookingAt = false;
+        }
+
+        if (stopCount > 0f && !isLookingAt)
+        {
+            Debug.Log("Stopped");
+            stopCount -= Time.deltaTime;
+        }
         //chase the player
         //a raycast is done from the monster to the player only interacts with things on layerMask (set to player and wall layers)
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, target.transform.position - transform.position, float.MaxValue, layerMask);
         //checks if the layer of the raycast and target are the same and if the target is within the vision radius
-        if (hit.collider.gameObject.layer == target.gameObject.layer && Vector2.Distance(transform.position,target.transform.position) <= visionRadius) 
+        else if (hit.collider.gameObject.layer == target.gameObject.layer && Vector2.Distance(transform.position,target.transform.position) <= visionRadius) 
         {
+            Debug.Log("Chase");
             GoTowards(target.transform.position); //moves towards target
-            Debug.Log("Chasing Player");
-            sawPlayerCount = defaultSawPlayerCount;
-        }
-        //pause behavior
-        else if (sawPlayerCount > 0f)
-        {
-            sawPlayerCount -= Time.deltaTime;
+            stopCount = defaultStopCount;
+            isLookingAt = true;
         }
         // Patroling behavior
         else
         {
-            Debug.Log(path);
+            Debug.Log("Patrol");
+            //Debug.Log(path);
             if (path.Count == 0) 
             {
                 Node nearestNode = AStarManager.instance.FindNearestNode(transform.position); //the node nearest to the crawler
@@ -74,6 +89,16 @@ public class CrawlerBehavior : MonoBehaviour
 
 
 
+    }
+
+    //add some sort of collider with the player, stopCount = hitStopCount
+    
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.layer == target.layer)
+            {
+            stopCount = hitStopCount;
+            }
     }
 
 
