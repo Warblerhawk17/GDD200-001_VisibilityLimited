@@ -7,7 +7,6 @@ public class Player_Script : MonoBehaviour
     // Public variables
     public float speed = 5f;
     public float runSpeed = 8f; // The speed at which the player moves
-    public bool canMoveDiagonally = true; // Controls whether the player can move diagonally
     public bool isFacingUp = false;
     public bool isFacingLeft = false;
 
@@ -16,6 +15,7 @@ public class Player_Script : MonoBehaviour
     private Vector2 movement; // Stores the direction of player movement
     private bool isMovingHorizontally = true; // Flag to track if the player is moving horizontally
     public BatteryManager batteryManager;
+    private Animator anim;
 
     void Start()
     {
@@ -23,6 +23,7 @@ public class Player_Script : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         // Prevent the player from rotating
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+        anim = GetComponent<Animator>();
     }
 
     void Update()
@@ -31,31 +32,20 @@ public class Player_Script : MonoBehaviour
         float horizontalInput = Input.GetAxisRaw("Horizontal");
         float verticalInput = Input.GetAxisRaw("Vertical");
 
-        // Check if diagonal movement is allowed
-        if (canMoveDiagonally)
+        movement = new Vector2(horizontalInput, verticalInput);
+
+        // Determine the priority of movement based on input
+        if (Mathf.Abs(horizontalInput) != 0 || Mathf.Abs(verticalInput) != 0)
         {
-            // Set movement direction based on input
-            movement = new Vector2(horizontalInput, verticalInput);
+            anim.SetBool("isWalking", true);
+            anim.SetFloat("movingUp", verticalInput);
+            anim.SetFloat("movingLeft", horizontalInput);
         }
-        else
+        else 
         {
-            // Determine the priority of movement based on input
-            if (horizontalInput != 0)
-            {
-                if (horizontalInput < 0)
-                {
-                    isFacingLeft = false;
-                }
-                else isFacingLeft = true;
-                isMovingHorizontally = true;
-            }
-            else if (verticalInput != 0)
-            {
-                if (verticalInput < 0) isFacingUp = false;
-                else isFacingUp = true;
-                isMovingHorizontally = false;
-            }
+            anim.SetBool("isWalking", false);
         }
+
 
         if (Input.GetKey(KeyCode.LeftShift))
         {
