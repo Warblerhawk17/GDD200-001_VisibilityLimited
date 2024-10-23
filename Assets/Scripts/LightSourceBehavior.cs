@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class LightSourceBehavior : MonoBehaviour
 {
-
     public BatteryManager batteryManager;
     // Start is called before the first frame update
     void Start()
     {
-        batteryManager.hasLight = true;
-        batteryManager = GameObject.Find("Flashlight Battery").GetComponent<BatteryManager>();
+        batteryManager = GameObject.Find("Battery").GetComponent<BatteryManager>();
     }
 
     // Update is called once per frame
@@ -24,7 +22,6 @@ public class LightSourceBehavior : MonoBehaviour
     {
         if (batteryManager.batteryCharge <= 0f)
         {
-            batteryManager.hasLight = false;
             Destroy(gameObject);
         }
     }

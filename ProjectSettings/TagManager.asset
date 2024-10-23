@@ -4,9 +4,7 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Scream
   - Crawler
-  - Shadow
   layers:
   - Default
   - TransparentFX
@@ -14,9 +12,9 @@ TagManager:
   - Wall
   - Water
   - UI
-  - 
-  - 
-  - 
+  - WallsForAStar
+  - Player
+  - Monster
   - 
   - 
   - 

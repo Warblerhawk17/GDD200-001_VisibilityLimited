@@ -124,8 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a90644c3db385214eb6676038a2b3472
-      internalID: 1571420369
+      spriteID: a96b7aad923a5d049bfff8aa72d7e222
+      internalID: -1845499927
       vertices: []
       indices: 
       edges: []
@@ -145,8 +145,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1eaed2c00dfdfd8458fdffe403132c4b
-      internalID: -815292836
+      spriteID: ccfd19261284ec44c877a5216a569b9b
+      internalID: 805230455
       vertices: []
       indices: 
       edges: []
@@ -166,8 +166,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: af4baf38e0d021c4b87c4ba95e858db9
-      internalID: -268469186
+      spriteID: 833a1f41049b4b0489c83004f340e650
+      internalID: -969028449
       vertices: []
       indices: 
       edges: []
@@ -187,8 +187,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 886d74ddea0d0b24d8d369392daa9546
-      internalID: 1410657141
+      spriteID: 69958aa79fc6a054b960244cd8ae89ec
+      internalID: -973522643
       vertices: []
       indices: 
       edges: []
@@ -208,8 +208,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: edc34c9420f53d74582f99db7e854381
-      internalID: 819109722
+      spriteID: 92ffcf04e36cded46abb9735722cca73
+      internalID: -1485442990
       vertices: []
       indices: 
       edges: []
@@ -229,8 +229,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1f602453515ecc6459aff1af42503809
-      internalID: 1690014173
+      spriteID: b8ceb54149adfbe45affa730bda82cc0
+      internalID: -1659559703
       vertices: []
       indices: 
       edges: []
@@ -250,8 +250,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e48184775011c0b49a5e13b1b181a9ff
-      internalID: 961911677
+      spriteID: afb59aa6652631a4991ae63451bdfeab
+      internalID: -1009234116
       vertices: []
       indices: 
       edges: []
@@ -271,8 +271,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 50483714582d2a943a37d61c93002c0e
-      internalID: 66303570
+      spriteID: 33cb8f2957677a548b34caa5ef0fb288
+      internalID: 1240128932
       vertices: []
       indices: 
       edges: []
@@ -292,8 +292,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7680409f44aa4254aaf0c43ef8613f8b
-      internalID: 1463679242
+      spriteID: d4c8f89dd1d9bec4cb4c34e1e82d0f6a
+      internalID: 108397558
       vertices: []
       indices: 
       edges: []
@@ -313,8 +313,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 52a6257ac04f86340a593b8065553ac5
-      internalID: 1963155011
+      spriteID: bcd0ba4c05365ad41af8ed0394ec26ad
+      internalID: 1102068931
       vertices: []
       indices: 
       edges: []
@@ -330,16 +330,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Battery_RW_UI_Design_Sprite_0: 1571420369
-      Battery_RW_UI_Design_Sprite_1: -815292836
-      Battery_RW_UI_Design_Sprite_2: -268469186
-      Battery_RW_UI_Design_Sprite_3: 1410657141
-      Battery_RW_UI_Design_Sprite_4: 819109722
-      Battery_RW_UI_Design_Sprite_5: 1690014173
-      Battery_RW_UI_Design_Sprite_6: 961911677
-      Battery_RW_UI_Design_Sprite_7: 66303570
-      Battery_RW_UI_Design_Sprite_8: 1463679242
-      Battery_RW_UI_Design_Sprite_9: 1963155011
+      Battery_RW_UI_Design_Sprite_0: -1845499927
+      Battery_RW_UI_Design_Sprite_1: 805230455
+      Battery_RW_UI_Design_Sprite_2: -969028449
+      Battery_RW_UI_Design_Sprite_3: -973522643
+      Battery_RW_UI_Design_Sprite_4: -1485442990
+      Battery_RW_UI_Design_Sprite_5: -1659559703
+      Battery_RW_UI_Design_Sprite_6: -1009234116
+      Battery_RW_UI_Design_Sprite_7: 1240128932
+      Battery_RW_UI_Design_Sprite_8: 108397558
+      Battery_RW_UI_Design_Sprite_9: 1102068931
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

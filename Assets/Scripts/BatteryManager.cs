@@ -7,9 +7,10 @@ public class BatteryManager : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     public Sprite[] batterySprites;
     public float batteryCharge;
+
+    // Timer and interval to decrease charge every second
     public float interval = 1f;
     private float timer = 0f;
-    public bool hasLight;
 
     void Start()
     {
@@ -19,16 +20,8 @@ public class BatteryManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (hasLight == true)
-        {
-            spriteRenderer.enabled = true;
-            NaturalDepletion();
-            ChangeBattery();
-        }
-        else
-        {
-            spriteRenderer.enabled = false;
-        }
+        NaturalDepletion();
+        ChangeBattery();
     }
 
     void ChangeBattery()
@@ -36,6 +29,7 @@ public class BatteryManager : MonoBehaviour
         switch (batteryCharge)
         {
             case >= 90f:
+                spriteRenderer.enabled = true;
                 spriteRenderer.sprite = batterySprites[0];
                 break;
 

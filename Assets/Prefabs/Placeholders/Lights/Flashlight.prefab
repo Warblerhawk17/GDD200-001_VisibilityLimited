@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7011083430983295160}
   - component: {fileID: 2663884208427514634}
   - component: {fileID: 6750353186137853528}
+  - component: {fileID: 6137320531112935754}
   m_Layer: 0
   m_Name: Flashlight
   m_TagString: Untagged
@@ -101,7 +102,20 @@ MonoBehaviour:
   player: {fileID: 0}
   orbitDistance: 1
   rotationSpeed: 5
-  flashlightZPos: -0.1
+  playerObject: {fileID: 0}
+--- !u!114 &6137320531112935754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 574832171078062374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d37103d07e0721b4283e2c3a3bced291, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  batteryManager: {fileID: 0}
 --- !u!1 &6634929644662141368
 GameObject:
   m_ObjectHideFlags: 0
