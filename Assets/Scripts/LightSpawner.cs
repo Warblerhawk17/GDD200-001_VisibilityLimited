@@ -1,3 +1,7 @@
+// Amelia Nehring
+// GDD 200-001
+// Fall 2024
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
