@@ -3485,7 +3485,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5414520327466945182, guid: b824e9128d1d62248be5752ab5cb1c3c, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 9027073019581602050, guid: b824e9128d1d62248be5752ab5cb1c3c, type: 3}
       propertyPath: m_Name
@@ -21626,7 +21626,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5414520327466945182, guid: b824e9128d1d62248be5752ab5cb1c3c, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 9027073019581602050, guid: b824e9128d1d62248be5752ab5cb1c3c, type: 3}
       propertyPath: m_Name
@@ -22019,11 +22019,15 @@ PrefabInstance:
       objectReference: {fileID: 430634586}
     - target: {fileID: 8603154735146099372, guid: 5ed60247bc77b2944a8d8ea77fe268b9, type: 3}
       propertyPath: hitStopCount
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8603154735146099372, guid: 5ed60247bc77b2944a8d8ea77fe268b9, type: 3}
       propertyPath: defaultStopCount
       value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8603154735146099372, guid: 5ed60247bc77b2944a8d8ea77fe268b9, type: 3}
+      propertyPath: defaultHitStopCount
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8603154735146099372, guid: 5ed60247bc77b2944a8d8ea77fe268b9, type: 3}
       propertyPath: patrolPath.Array.size
@@ -22364,6 +22368,14 @@ PrefabInstance:
     - target: {fileID: 662361867706363866, guid: e44fe13cbafa8a5449381aafc30da4dc, type: 3}
       propertyPath: m_Name
       value: Shadow
+      objectReference: {fileID: 0}
+    - target: {fileID: 662361867706363866, guid: e44fe13cbafa8a5449381aafc30da4dc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 662361867706363866, guid: e44fe13cbafa8a5449381aafc30da4dc, type: 3}
+      propertyPath: m_TagString
+      value: Crawler
       objectReference: {fileID: 0}
     - target: {fileID: 2581014113240021530, guid: e44fe13cbafa8a5449381aafc30da4dc, type: 3}
       propertyPath: m_LocalPosition.x

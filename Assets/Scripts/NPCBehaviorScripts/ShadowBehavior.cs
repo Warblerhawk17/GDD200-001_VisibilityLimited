@@ -31,7 +31,7 @@ public class ShadowBehavior : MonoBehaviour
         if (hit.collider.gameObject.layer == target.gameObject.layer && 
             Vector2.Distance(transform.position, target.transform.position) <= chaseRadius)
         {
-            Debug.Log("Chase");
+            //Debug.Log("Chase");
             GoTowards(target.transform.position); //moves towards target
             timeChased += Time.deltaTime;
             if (timeChased > 5)
@@ -43,7 +43,7 @@ public class ShadowBehavior : MonoBehaviour
         //pathfind towards 
         else
         {
-            Debug.Log("Search");
+            //Debug.Log("Search");
             if (path.Count == 0 || Vector2.Distance(path[path.Count-1].transform.position,target.transform.position) > 5) { //make new path
                 Node nearestNode = AStarManager.instance.FindNearestNode(transform.position); //the node nearest to the crawler
                 Node targetNode = AStarManager.instance.FindNearestNode(target.transform.position);
@@ -61,6 +61,14 @@ public class ShadowBehavior : MonoBehaviour
     private void telaportAway()
     {
         transform.position = AStarManager.instance.FindFurthestNode(transform.position).transform.position;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.layer == target.layer)
+        {
+            telaportAway();
+        }
     }
 
     private void GoTowards(Vector2 goTo) //helper method which both moves and rotates the thing moving
