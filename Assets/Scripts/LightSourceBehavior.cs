@@ -3,7 +3,6 @@
 // Fall 2024
 
 using UnityEngine;
-
 public class LightSourceBehavior : MonoBehaviour
 {
     public BatteryManager batteryManager;

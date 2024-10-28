@@ -291,9 +291,25 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 1240080819211589230, guid: 97fd240f7816aa244963cf3dd28066c1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1240080819211589230, guid: 97fd240f7816aa244963cf3dd28066c1, type: 3}
+      propertyPath: m_TagString
+      value: Fireflies
+      objectReference: {fileID: 0}
     - target: {fileID: 1513035532966663281, guid: 97fd240f7816aa244963cf3dd28066c1, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1513035532966663281, guid: 97fd240f7816aa244963cf3dd28066c1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1650234038579246578, guid: 97fd240f7816aa244963cf3dd28066c1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2133540972903800034, guid: 97fd240f7816aa244963cf3dd28066c1, type: 3}
       propertyPath: m_Layer
@@ -359,9 +375,53 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 6338083491670661581, guid: 97fd240f7816aa244963cf3dd28066c1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6468031980981622264, guid: 97fd240f7816aa244963cf3dd28066c1, type: 3}
+      propertyPath: m_Intensity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6468031980981622264, guid: 97fd240f7816aa244963cf3dd28066c1, type: 3}
+      propertyPath: m_NormalMapQuality
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6468031980981622264, guid: 97fd240f7816aa244963cf3dd28066c1, type: 3}
+      propertyPath: m_PointLightOuterRadius
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6468031980981622264, guid: 97fd240f7816aa244963cf3dd28066c1, type: 3}
+      propertyPath: m_LocalBounds.m_Center.y
+      value: -0.00000011920929
+      objectReference: {fileID: 0}
+    - target: {fileID: 6468031980981622264, guid: 97fd240f7816aa244963cf3dd28066c1, type: 3}
+      propertyPath: m_LocalBounds.m_Extent.x
+      value: 0.9985302
+      objectReference: {fileID: 0}
+    - target: {fileID: 6468031980981622264, guid: 97fd240f7816aa244963cf3dd28066c1, type: 3}
+      propertyPath: m_LocalBounds.m_Extent.y
+      value: 0.99853027
+      objectReference: {fileID: 0}
+    - target: {fileID: 6468031980981622264, guid: 97fd240f7816aa244963cf3dd28066c1, type: 3}
+      propertyPath: m_ShadowIntensityEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6468031980981622264, guid: 97fd240f7816aa244963cf3dd28066c1, type: 3}
+      propertyPath: m_LightVolumeIntensityEnabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6468031980981622264, guid: 97fd240f7816aa244963cf3dd28066c1, type: 3}
+      propertyPath: m_ApplyToSortingLayers.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6758829522810454915, guid: 97fd240f7816aa244963cf3dd28066c1, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6758829522810454915, guid: 97fd240f7816aa244963cf3dd28066c1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7599880246719835650, guid: 97fd240f7816aa244963cf3dd28066c1, type: 3}
       propertyPath: playerObject
@@ -1015,7 +1075,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &277835068
 Transform:
@@ -1026,7 +1086,7 @@ Transform:
   m_GameObject: {fileID: 277835067}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.594572, y: 4.64005, z: -0.046410494}
+  m_LocalPosition: {x: -5.08, y: 4.09, z: -0.046410494}
   m_LocalScale: {x: 1.1542412, y: 1.1542412, z: 2.3086352}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1097,6 +1157,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 277835069}
+  flashlightBatterySprites:
+  - {fileID: -272890657, guid: c1eca031f1458e4478b7ab482e6fa48f, type: 3}
+  - {fileID: 1123198141, guid: c1eca031f1458e4478b7ab482e6fa48f, type: 3}
+  - {fileID: -1086526726, guid: c1eca031f1458e4478b7ab482e6fa48f, type: 3}
+  - {fileID: 343976429, guid: c1eca031f1458e4478b7ab482e6fa48f, type: 3}
+  - {fileID: -771099686, guid: c1eca031f1458e4478b7ab482e6fa48f, type: 3}
+  candleBatterySprites:
+  - {fileID: -1556228736, guid: 3faff4f1586dbbd44ab7e7ae61eeaa1c, type: 3}
+  - {fileID: -285271141, guid: 3faff4f1586dbbd44ab7e7ae61eeaa1c, type: 3}
+  - {fileID: 483448386, guid: 3faff4f1586dbbd44ab7e7ae61eeaa1c, type: 3}
+  - {fileID: -991048591, guid: 3faff4f1586dbbd44ab7e7ae61eeaa1c, type: 3}
+  - {fileID: -300503354, guid: 3faff4f1586dbbd44ab7e7ae61eeaa1c, type: 3}
+  - {fileID: 1013468620, guid: 3faff4f1586dbbd44ab7e7ae61eeaa1c, type: 3}
+  - {fileID: -21431609, guid: 3faff4f1586dbbd44ab7e7ae61eeaa1c, type: 3}
+  - {fileID: -472398383, guid: 3faff4f1586dbbd44ab7e7ae61eeaa1c, type: 3}
+  - {fileID: -1890586154, guid: 3faff4f1586dbbd44ab7e7ae61eeaa1c, type: 3}
+  - {fileID: 972824213, guid: 3faff4f1586dbbd44ab7e7ae61eeaa1c, type: 3}
+  - {fileID: -2032507956, guid: 3faff4f1586dbbd44ab7e7ae61eeaa1c, type: 3}
+  - {fileID: 1590344236, guid: 3faff4f1586dbbd44ab7e7ae61eeaa1c, type: 3}
+  - {fileID: 1301856141, guid: 3faff4f1586dbbd44ab7e7ae61eeaa1c, type: 3}
+  - {fileID: 378088767, guid: 3faff4f1586dbbd44ab7e7ae61eeaa1c, type: 3}
+  - {fileID: -621288772, guid: 3faff4f1586dbbd44ab7e7ae61eeaa1c, type: 3}
+  firefliesBatterySprites:
+  - {fileID: -1845499927, guid: 0f960352bbaa50e45a96fcea3c408414, type: 3}
+  - {fileID: 805230455, guid: 0f960352bbaa50e45a96fcea3c408414, type: 3}
+  - {fileID: -969028449, guid: 0f960352bbaa50e45a96fcea3c408414, type: 3}
+  - {fileID: -973522643, guid: 0f960352bbaa50e45a96fcea3c408414, type: 3}
+  - {fileID: -1485442990, guid: 0f960352bbaa50e45a96fcea3c408414, type: 3}
+  - {fileID: -1659559703, guid: 0f960352bbaa50e45a96fcea3c408414, type: 3}
+  - {fileID: -1009234116, guid: 0f960352bbaa50e45a96fcea3c408414, type: 3}
+  - {fileID: 1240128932, guid: 0f960352bbaa50e45a96fcea3c408414, type: 3}
+  - {fileID: 108397558, guid: 0f960352bbaa50e45a96fcea3c408414, type: 3}
+  - {fileID: 1102068931, guid: 0f960352bbaa50e45a96fcea3c408414, type: 3}
   batterySprites:
   - {fileID: -1845499927, guid: 0f960352bbaa50e45a96fcea3c408414, type: 3}
   - {fileID: 805230455, guid: 0f960352bbaa50e45a96fcea3c408414, type: 3}
@@ -1109,6 +1202,7 @@ MonoBehaviour:
   - {fileID: 108397558, guid: 0f960352bbaa50e45a96fcea3c408414, type: 3}
   - {fileID: 1102068931, guid: 0f960352bbaa50e45a96fcea3c408414, type: 3}
   batteryCharge: 0
+  lightNum: 0
   interval: 1
 --- !u!1001 &284758527
 PrefabInstance:
@@ -1689,9 +1783,12 @@ MonoBehaviour:
   spawnedLights: []
   numberToSpawn: 7
   equippedFlashlightPrefab: {fileID: 7908519645577968149, guid: 956a70e61f58b4f478d65a77a6a07560, type: 3}
+  equippedCandlePrefab: {fileID: 826861030557923246, guid: 935ed5b3126e8bc47a5287a3fbb1b0ce, type: 3}
+  equippedFirefliesPrefab: {fileID: 5044946137686382250, guid: 32e6fe7dfc26c8c44892c05619f8584a, type: 3}
   batteryManager: {fileID: 277835070}
   lightSpawnRequested: 0
   player: {fileID: 430634586}
+  lightToSpawn: 
 --- !u!4 &415671442
 Transform:
   m_ObjectHideFlags: 0
@@ -3976,6 +4073,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transparentValue: 0
+  player: {fileID: 0}
 --- !u!1001 &841835290
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21648,6 +21746,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transparentValue: 0
+  player: {fileID: 0}
 --- !u!1001 &2018097602
 PrefabInstance:
   m_ObjectHideFlags: 0

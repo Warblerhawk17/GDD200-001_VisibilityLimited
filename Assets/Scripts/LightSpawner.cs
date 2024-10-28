@@ -19,9 +19,12 @@ public class LightSpawner : MonoBehaviour
     Vector2 chosenLocation; // Location that is randomly chosen for a light to spawn (from spawnLocations)
     [SerializeField] int numberToSpawn; // The total number of flashlights that should be spawned
     public GameObject equippedFlashlightPrefab; // Prefab of the equipped flashlight
+    public GameObject equippedCandlePrefab; // Prefab of the equipped candle
+    public GameObject equippedFirefliesPrefab; // Prefab of the equipped fireflies
     public BatteryManager batteryManager; // The battery manager script on the battery object
     public bool lightSpawnRequested; // If a ground light is picked u
     public GameObject player; // the player object
+    public string lightToSpawn;
 
 
     void Start()
@@ -52,9 +55,22 @@ public class LightSpawner : MonoBehaviour
     // Spawns the equipped light variant 
     void SpawnEquippedLight()
     {
-
+        if (lightToSpawn == "Flashlight")
+        {
         Instantiate(equippedFlashlightPrefab, player.transform, worldPositionStays: false);
-        batteryManager.batteryCharge = 100f;
+        batteryManager.batteryCharge = 50f;
+        }
+        if (lightToSpawn == "Candle")
+        {
+            Instantiate(equippedCandlePrefab, player.transform, worldPositionStays: false);
+            batteryManager.batteryCharge = 150f;
+        }
+        if (lightToSpawn == "Fireflies")
+        {
+            Instantiate(equippedFirefliesPrefab, player.transform, worldPositionStays: false);
+            batteryManager.batteryCharge = 100f;
+        }
+
         lightSpawnRequested = false;
     }
 

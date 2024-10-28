@@ -6,6 +6,11 @@ TagManager:
   tags:
   - Crawler
   - Flashlight
+  - Fireflies
+  - Candle
+  - Ground Flashlight
+  - Ground Candle
+  - Ground Fireflies
   layers:
   - Default
   - TransparentFX

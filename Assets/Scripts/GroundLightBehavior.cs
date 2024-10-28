@@ -15,15 +15,14 @@ public class GroundLightBehavior : MonoBehaviour
     public TextMeshProUGUI pickupText;
     LightSpawner gameManager;
     [SerializeField] bool isNearLight = false;
+    string lightType;
+    string lightTypeRequested;
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.Find("Player");
         gameManager = GameObject.Find("Game Manager").GetComponent<LightSpawner>();
         pickupText = GameObject.Find("Pickup Text").GetComponentInChildren<TextMeshProUGUI>();
-        pickupText.SetText("Press E to pickup" + " Flashlight");
-
-
     }
 
     // Update is called once per frame
@@ -37,20 +36,36 @@ public class GroundLightBehavior : MonoBehaviour
 
     void PromptUser()
     {
+
         distance = Vector2.Distance(player.transform.position, this.gameObject.transform.position);
         if (distance <= maxDistance)
         {
+            if(this.tag == "Ground Flashlight")
+            {
+                lightType = "Flashlight";
+            }
+            else if (this.tag ==  "Ground Candle")
+            {
+                lightType = "Candle";
+
+            }
+            else if (this.tag == "Ground Fireflies")
+            {
+                lightType = "Candle";
+
+            }
+            pickupText.SetText("Press E to pickup " + lightType);
             if (distance <= maxDistance && isNearLight == false) {
                 isNearLight = true;
                 pickupText.enabled = true;
 
             }
-            if (Input.GetKeyDown(KeyCode.E) && (GameObject.FindWithTag("Flashlight") == false))
+            if (Input.GetKeyDown(KeyCode.E) && ((GameObject.FindWithTag("Flashlight") == false && GameObject.FindWithTag("Flashlight") == false && GameObject.FindWithTag("Flashlight") == false)))
                 
             {
                 Destroy(this.gameObject);
                 gameManager.lightSpawnRequested = true;
-
+                gameManager.lightToSpawn = lightType;
                 pickupText.enabled = false;
             }
 

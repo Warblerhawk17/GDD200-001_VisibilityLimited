@@ -11,7 +11,7 @@ public class BatteryManager : MonoBehaviour
     public Sprite[] firefliesBatterySprites;
     public List<Sprite> batterySprites;
     public float batteryCharge;
-    int lightNum = 0;
+    [SerializeField] int lightNum = 0;
 
     // Timer and interval to decrease charge every second
     public float interval = 1f;
@@ -19,12 +19,14 @@ public class BatteryManager : MonoBehaviour
 
     void Start()
     {
-        
+        spriteRenderer.enabled = false;
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        SetBatteryType();
         NaturalDepletion();
         ChangeBattery();
     }
@@ -65,37 +67,52 @@ public class BatteryManager : MonoBehaviour
         {
             switch (batteryCharge)
             {
-                case >= 90f:
+                case >= 140f:
                     spriteRenderer.enabled = true;
                     spriteRenderer.sprite = batterySprites[0];
                     break;
-
-                case >= 80f:
+                case >= 130f:
                     spriteRenderer.sprite = batterySprites[1];
                     break;
-                case >= 70f:
+                case >= 120f:
                     spriteRenderer.sprite = batterySprites[2];
                     break;
-                case >= 60f:
+                case >= 110f:
                     spriteRenderer.sprite = batterySprites[3];
                     break;
-                case >= 50f:
+                case >= 100f:
                     spriteRenderer.sprite = batterySprites[4];
                     break;
-                case >= 40f:
+                case >= 90f:
                     spriteRenderer.sprite = batterySprites[5];
                     break;
-                case >= 30f:
+
+                case >= 80f:
                     spriteRenderer.sprite = batterySprites[6];
                     break;
-                case >= 20f:
+                case >= 70f:
                     spriteRenderer.sprite = batterySprites[7];
                     break;
-                case >= 10f:
+                case >= 60f:
                     spriteRenderer.sprite = batterySprites[8];
                     break;
-                case > 0f:
+                case >= 50f:
                     spriteRenderer.sprite = batterySprites[9];
+                    break;
+                case >= 40f:
+                    spriteRenderer.sprite = batterySprites[10];
+                    break;
+                case >= 30f:
+                    spriteRenderer.sprite = batterySprites[11];
+                    break;
+                case >= 20f:
+                    spriteRenderer.sprite = batterySprites[12];
+                    break;
+                case >= 10f:
+                    spriteRenderer.sprite = batterySprites[13];
+                    break;
+                case > 0f:
+                    spriteRenderer.sprite = batterySprites[14];
                     break;
                 case <= 0f:
                     spriteRenderer.enabled = false;
