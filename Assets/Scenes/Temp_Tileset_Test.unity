@@ -425,6 +425,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 6758829522810454915, guid: 97fd240f7816aa244963cf3dd28066c1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7599880246719835650, guid: 97fd240f7816aa244963cf3dd28066c1, type: 3}
       propertyPath: playerObject
       value: 
@@ -446,7 +450,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 277835070}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 4689390080089523030, guid: 97fd240f7816aa244963cf3dd28066c1, type: 3}
+    - {fileID: 1513035532966663281, guid: 97fd240f7816aa244963cf3dd28066c1, type: 3}
+    - {fileID: 7799812971529417003, guid: 97fd240f7816aa244963cf3dd28066c1, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 2772525585293980590, guid: 97fd240f7816aa244963cf3dd28066c1, type: 3}
       insertIndex: -1
@@ -1028,7 +1035,7 @@ Transform:
   m_GameObject: {fileID: 277835067}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.594572, y: 4.64005, z: -0.046410494}
+  m_LocalPosition: {x: -4.5, y: 2.96, z: -0.046410494}
   m_LocalScale: {x: 1.1542412, y: 1.1542412, z: 2.3086352}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1099,7 +1106,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 277835069}
-  batterySprites:
+  flashlightBatterySprites:
+  - {fileID: -272890657, guid: c1eca031f1458e4478b7ab482e6fa48f, type: 3}
+  - {fileID: 1123198141, guid: c1eca031f1458e4478b7ab482e6fa48f, type: 3}
+  - {fileID: -1086526726, guid: c1eca031f1458e4478b7ab482e6fa48f, type: 3}
+  - {fileID: 343976429, guid: c1eca031f1458e4478b7ab482e6fa48f, type: 3}
+  - {fileID: -771099686, guid: c1eca031f1458e4478b7ab482e6fa48f, type: 3}
+  candleBatterySprites:
+  - {fileID: -1556228736, guid: 3faff4f1586dbbd44ab7e7ae61eeaa1c, type: 3}
+  - {fileID: -285271141, guid: 3faff4f1586dbbd44ab7e7ae61eeaa1c, type: 3}
+  - {fileID: 483448386, guid: 3faff4f1586dbbd44ab7e7ae61eeaa1c, type: 3}
+  - {fileID: -991048591, guid: 3faff4f1586dbbd44ab7e7ae61eeaa1c, type: 3}
+  - {fileID: -300503354, guid: 3faff4f1586dbbd44ab7e7ae61eeaa1c, type: 3}
+  - {fileID: 1013468620, guid: 3faff4f1586dbbd44ab7e7ae61eeaa1c, type: 3}
+  - {fileID: -21431609, guid: 3faff4f1586dbbd44ab7e7ae61eeaa1c, type: 3}
+  - {fileID: -472398383, guid: 3faff4f1586dbbd44ab7e7ae61eeaa1c, type: 3}
+  - {fileID: -1890586154, guid: 3faff4f1586dbbd44ab7e7ae61eeaa1c, type: 3}
+  - {fileID: 972824213, guid: 3faff4f1586dbbd44ab7e7ae61eeaa1c, type: 3}
+  - {fileID: -2032507956, guid: 3faff4f1586dbbd44ab7e7ae61eeaa1c, type: 3}
+  - {fileID: 1590344236, guid: 3faff4f1586dbbd44ab7e7ae61eeaa1c, type: 3}
+  - {fileID: 1301856141, guid: 3faff4f1586dbbd44ab7e7ae61eeaa1c, type: 3}
+  - {fileID: 378088767, guid: 3faff4f1586dbbd44ab7e7ae61eeaa1c, type: 3}
+  - {fileID: -621288772, guid: 3faff4f1586dbbd44ab7e7ae61eeaa1c, type: 3}
+  firefliesBatterySprites:
   - {fileID: -1845499927, guid: 0f960352bbaa50e45a96fcea3c408414, type: 3}
   - {fileID: 805230455, guid: 0f960352bbaa50e45a96fcea3c408414, type: 3}
   - {fileID: -969028449, guid: 0f960352bbaa50e45a96fcea3c408414, type: 3}
@@ -1110,7 +1139,9 @@ MonoBehaviour:
   - {fileID: 1240128932, guid: 0f960352bbaa50e45a96fcea3c408414, type: 3}
   - {fileID: 108397558, guid: 0f960352bbaa50e45a96fcea3c408414, type: 3}
   - {fileID: 1102068931, guid: 0f960352bbaa50e45a96fcea3c408414, type: 3}
+  batterySprites: []
   batteryCharge: 0
+  lightNum: 0
   interval: 1
 --- !u!1001 &291555589
 PrefabInstance:
@@ -1767,20 +1798,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickupText: {fileID: 1468916957}
   groundFlashlightPrefab: {fileID: 7908519645577968149, guid: 671b236e4b9272a48ad18e5fb8c79548, type: 3}
+  groundCandlePrefab: {fileID: 826861030557923246, guid: 33044e9161282ca4393d91eb56f3d69c, type: 3}
+  groundFirefliesPrefab: {fileID: 1811812448869938210, guid: 16cc0c25018894c41ab34afa882d5d27, type: 3}
+  equippedFlashlightPrefab: {fileID: 7908519645577968149, guid: 956a70e61f58b4f478d65a77a6a07560, type: 3}
+  equippedCandlePrefab: {fileID: 826861030557923246, guid: 935ed5b3126e8bc47a5287a3fbb1b0ce, type: 3}
+  equippedFirefliesPrefab: {fileID: 1811812448869938210, guid: 08151a7db74fc8c439521564c25c6110, type: 3}
+  lightSpawnRequested: 0
   spawnLocations:
   - {x: 0, y: 0}
   - {x: 8, y: -3}
-  - {x: 8, y: -3}
+  - {x: 8, y: 0}
   - {x: -5.5, y: -4.5}
-  - {x: -5.5, y: -4.5}
+  - {x: 3, y: -7}
   - {x: 10, y: 4}
   - {x: 16, y: 4}
   spawnedLights: []
   numberToSpawn: 7
-  equippedFlashlightPrefab: {fileID: 7908519645577968149, guid: 956a70e61f58b4f478d65a77a6a07560, type: 3}
   batteryManager: {fileID: 277835070}
-  lightSpawnRequested: 0
   player: {fileID: 430634586}
+  lightToSpawn: 
 --- !u!4 &415671442
 Transform:
   m_ObjectHideFlags: 0
@@ -1790,7 +1826,7 @@ Transform:
   m_GameObject: {fileID: 415671440}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16.28, y: 3.75, z: 0.00035669026}
+  m_LocalPosition: {x: 16.28, y: 4.742, z: 0.00035669026}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

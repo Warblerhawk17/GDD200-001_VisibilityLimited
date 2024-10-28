@@ -51,7 +51,7 @@ public class GroundLightBehavior : MonoBehaviour
             }
             else if (this.tag == "Ground Fireflies")
             {
-                lightType = "Candle";
+                lightType = "Fireflies";
 
             }
             pickupText.SetText("Press E to pickup " + lightType);
@@ -60,7 +60,7 @@ public class GroundLightBehavior : MonoBehaviour
                 pickupText.enabled = true;
 
             }
-            if (Input.GetKeyDown(KeyCode.E) && ((GameObject.FindWithTag("Flashlight") == false && GameObject.FindWithTag("Flashlight") == false && GameObject.FindWithTag("Flashlight") == false)))
+            if (Input.GetKeyDown(KeyCode.E) && ((GameObject.FindWithTag("Flashlight") == false && GameObject.FindWithTag("Candle") == false && GameObject.FindWithTag("Fireflies") == false)))
                 
             {
                 Destroy(this.gameObject);
