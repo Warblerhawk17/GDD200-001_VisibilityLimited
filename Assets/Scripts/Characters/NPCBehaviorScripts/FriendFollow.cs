@@ -21,27 +21,32 @@ public class FriendFollow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, follow.transform.position - transform.position, float.MaxValue, layerMask);
-        if (hit.collider.gameObject.layer != follow.gameObject.layer)
+        if (follow != null)
         {
-            Debug.Log("Non Direct Move");
-            if (path.Count == 0)
-            { //make new path
-                Node nearestNode = AStarManager.instance.FindNearestNode(transform.position); //the node nearest to the friend
-                Node targetNode = AStarManager.instance.FindNearestNode(follow.transform.position);
-                path = AStarManager.instance.GeneratePath(nearestNode, targetNode); //makes a path from the crawler to the next node in the patrol path
-            }
-            GoTowards(path[0].transform.position); //goes towards the next node in path
-            if (Vector2.Distance(transform.position, path[0].transform.position) < 0.1f) //removes node if it gets too close to it
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, follow.transform.position - transform.position, float.MaxValue, layerMask);
+            if (hit.collider.gameObject.layer != follow.gameObject.layer)
             {
-                currentNode = path[0];
-                path.RemoveAt(0);
+                Debug.Log("Non Direct Move");
+                if (path.Count == 0)
+                { //make new path
+                    Node nearestNode = AStarManager.instance.FindNearestNode(transform.position); //the node nearest to the friend
+                    Node targetNode = AStarManager.instance.FindNearestNode(follow.transform.position);
+                    path = AStarManager.instance.GeneratePath(nearestNode, targetNode); //makes a path from the crawler to the next node in the patrol path
+                }
+                GoTowards(path[0].transform.position); //goes towards the next node in path
+                Debug.DrawRay(transform.position, path[0].transform.position - transform.position, Color.red);
+                if (Vector2.Distance(transform.position, path[0].transform.position) < 0.1f) //removes node if it gets too close to it
+                {
+                    currentNode = path[0];
+                    path.RemoveAt(0);
+                }
             }
-        }
-        else if (Vector2.Distance(transform.position, follow.transform.position) > followDistance)
-        {
-            Debug.Log("Direct Move");
-            GoTowards(follow.transform.position);
+            else if (Vector2.Distance(transform.position, follow.transform.position) > followDistance)
+            {
+                Debug.Log("Direct Move");
+                GoTowards(follow.transform.position);
+                path.Clear();
+            }
         }
     }
 

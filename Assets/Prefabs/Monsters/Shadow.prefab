@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8799179477472673533}
   m_Layer: 8
   m_Name: Shadow
-  m_TagString: Crawler
+  m_TagString: Shadow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -14,7 +14,11 @@ public class Player_Script : MonoBehaviour
     private Vector2 movement; // Stores the direction of player movement
     private bool isMovingHorizontally = true; // Flag to track if the player is moving horizontally
     public BatteryManager batteryManager;
-    public List<GameObject> friends = new List<GameObject>();
+
+
+    // Friend variable
+    public List<GameObject> friendList = new List<GameObject>();
+    
 
     void Start()
     {
@@ -22,6 +26,7 @@ public class Player_Script : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         // Prevent the player from rotating
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+        
     }
 
     void Update()
@@ -57,6 +62,9 @@ public class Player_Script : MonoBehaviour
         {
             transform.Translate(speed * Time.deltaTime * movement);
         }
+
+       
+
     }
 
     void FixedUpdate()
@@ -72,16 +80,51 @@ public class Player_Script : MonoBehaviour
         {
             batteryManager.batteryCharge = batteryManager.batteryCharge - 10;
         }
-        // disabling temporarily as these monsters will not be present in Alpha
-     /*   
         else if (collision.gameObject.CompareTag("Shadow"))
         {
             batteryManager.batteryCharge = batteryManager.batteryCharge - 10;
         }
-        else if (collision.gameObject.CompareTag("Scream"))
+        else if (collision.gameObject.CompareTag("Friend"))
         {
-            batteryManager.batteryCharge = batteryManager.batteryCharge - 10;
-       }
-     */
+            Debug.Log("Collided with a friend");
+            friendList.Add(collision.gameObject);
+            if (friendList.Count == 1)
+            {
+                friendList[0].GetComponent<FriendFollow>().follow = this.gameObject;
+            }
+            else
+            {
+                friendList[friendList.Count - 1].GetComponent<FriendFollow>().follow = friendList[friendList.Count - 2].gameObject;
+            }
+        }
+
+        
+
+
+    // disabling temporarily as this monster will not be present in Beta  
+    /*
+       else if (collision.gameObject.CompareTag("Scream"))
+       {
+           batteryManager.batteryCharge = batteryManager.batteryCharge - 10;
+      }
+    */
+}
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Friend") && !friendList.Contains(collision.gameObject))
+        {
+            Debug.Log("Collided with a friend");
+            friendList.Add(collision.gameObject);
+            if (friendList.Count == 1)
+            {
+                friendList[0].GetComponent<FriendFollow>().follow = this.gameObject;
+            }
+            else
+            {
+                friendList[friendList.Count - 1].GetComponent<FriendFollow>().follow = friendList[friendList.Count - 2].gameObject;
+            }
+        }
     }
+
+
 }

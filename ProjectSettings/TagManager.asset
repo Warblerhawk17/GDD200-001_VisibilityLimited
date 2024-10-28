@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Crawler
   - Flashlight
+  - Shadow
+  - Friend
   layers:
   - Default
   - TransparentFX
@@ -17,7 +19,7 @@ TagManager:
   - Player
   - Monster
   - Node
-  - 
+  - Friend
   - 
   - 
   - 
