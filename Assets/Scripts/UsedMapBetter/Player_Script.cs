@@ -14,6 +14,7 @@ public class Player_Script : MonoBehaviour
     private Vector2 movement; // Stores the direction of player movement
     private bool isMovingHorizontally = true; // Flag to track if the player is moving horizontally
     public BatteryManager batteryManager;
+    public List<GameObject> friends = new List<GameObject>();
 
     void Start()
     {
