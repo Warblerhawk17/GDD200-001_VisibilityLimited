@@ -8,6 +8,7 @@ using UnityEngine;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine.Rendering;
+using Pathfinding.Serialization;
 
 public class LightSpawner : MonoBehaviour
 {
@@ -23,43 +24,17 @@ public class LightSpawner : MonoBehaviour
     public List<Vector2> spawnLocations; //Array that holds possible spawn locations
     public List<GameObject> spawnedLights; // List that holds all the spawned ground flashlights
     Vector2 chosenLocation; // Location that is randomly chosen for a light to spawn (from spawnLocations)
-    [SerializeField] int numberToSpawn; // The total number of flashlights that should be spawned
+    [SerializeField] int numberToSpawn; // The total number of flashlights that should be spawned, should be <= to the number of spawn locations
     public BatteryManager batteryManager; // The battery manager script on the battery object
 
     public GameObject player; // the player object
     public string lightToSpawn;
+    [SerializeField] int minNumberOfEach;
 
 
     void Start()
     {
-        pickupText.enabled = false;
-        //Spawns each light at random locations
-        for (int i = 0; i < numberToSpawn; i++)
-        {
-            int randomNumber = Random.Range(0, spawnLocations.Count - 1);
-            int randomNumber2 = Random.Range(1,4);
-            
-            chosenLocation = spawnLocations[randomNumber];
-            if (randomNumber2 == 1)
-            {
-                spawnedLights.Add(Instantiate(groundFlashlightPrefab, chosenLocation, Quaternion.identity));
-
-            }
-            else if (randomNumber2 == 2)
-            {
-                spawnedLights.Add(Instantiate(groundCandlePrefab, chosenLocation, Quaternion.identity));
-
-            }
-            else if (randomNumber2 == 3)
-            {
-                spawnedLights.Add(Instantiate(groundFirefliesPrefab, chosenLocation, Quaternion.identity));
-
-            }
-
-
-            spawnLocations.RemoveAt(randomNumber); // So that multiple lights dont spawn in the same position
-
-        }
+        SpawnStartingLights();
     }
 
     // Update is called once per frame
@@ -91,6 +66,63 @@ public class LightSpawner : MonoBehaviour
         }
 
         lightSpawnRequested = false;
+    }
+
+    void SpawnStartingLights()
+    {
+        pickupText.enabled = false;
+        minNumberOfEach = numberToSpawn / 3;
+        int randomNumber;
+
+        //Spawns each light at random locations
+
+        for (int i = 0; i < minNumberOfEach; i++)
+        {
+            randomNumber = Random.Range(0, spawnLocations.Count);
+            chosenLocation = spawnLocations[randomNumber];
+            spawnedLights.Add(Instantiate(groundFlashlightPrefab, chosenLocation, Quaternion.identity));
+            spawnLocations.RemoveAt(randomNumber);
+        }
+
+        for (int i = 0; i < minNumberOfEach; i++)
+        {
+            randomNumber = Random.Range(0, spawnLocations.Count);
+            chosenLocation = spawnLocations[randomNumber];
+            spawnedLights.Add(Instantiate(groundCandlePrefab, chosenLocation, Quaternion.identity));
+            spawnLocations.RemoveAt(randomNumber);
+        }
+
+        for (int i = 0; i < minNumberOfEach; i++)
+        {
+            randomNumber = Random.Range(0, spawnLocations.Count);
+            chosenLocation = spawnLocations[randomNumber];
+            spawnedLights.Add(Instantiate(groundFirefliesPrefab, chosenLocation, Quaternion.identity));
+            spawnLocations.RemoveAt(randomNumber);
+        }
+
+        if (spawnedLights.Count < numberToSpawn)
+        {
+            for (int i = 0; i < numberToSpawn - spawnedLights.Count; i++)
+            {
+                int randomNumber2 = Random.Range(1, 4);
+                randomNumber = Random.Range(0, spawnLocations.Count);
+                chosenLocation = spawnLocations[Random.Range(0, spawnLocations.Count - 1)];
+                if (randomNumber2 == 1)
+                {
+                    spawnedLights.Add(Instantiate(groundFlashlightPrefab, chosenLocation, Quaternion.identity));
+                }
+                if (randomNumber2 == 2)
+                {
+                    spawnedLights.Add(Instantiate(groundCandlePrefab, chosenLocation, Quaternion.identity));
+                }
+                if (randomNumber2 == 3)
+                {
+                    spawnedLights.Add(Instantiate(groundFirefliesPrefab, chosenLocation, Quaternion.identity));
+                }
+                spawnLocations.RemoveAt(randomNumber);
+            }
+        }
+
     }
 
 }

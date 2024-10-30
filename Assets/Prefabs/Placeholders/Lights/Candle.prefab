@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 826861030557923246}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.25, y: 0, z: 0}
+  m_LocalPosition: {x: 0.5, y: 0, z: 0}
   m_LocalScale: {x: 0.1567, y: 0.15380001, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -123,7 +123,7 @@ MonoBehaviour:
   m_LocalBounds:
     m_Center: {x: 0, y: -0.00000011920929, z: 0}
     m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
-  m_PointLightInnerAngle: 330
+  m_PointLightInnerAngle: 300
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
   m_PointLightOuterRadius: 3
@@ -163,6 +163,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  orbitDistance: 0
+  orbitDistance: 1
   rotationSpeed: 5
   playerObject: {fileID: 0}

@@ -6,11 +6,24 @@ using UnityEngine;
 public class LightSourceBehavior : MonoBehaviour
 {
     public BatteryManager batteryManager;
+    int lightLevel;
     // Start is called before the first frame update
     void Start()
     {
         //Finds the battery object and its component
         batteryManager = GameObject.Find("Battery").GetComponent<BatteryManager>();
+        if (gameObject.CompareTag("Flashlight"))
+        {
+            lightLevel = 1;
+        }
+        if (gameObject.CompareTag("Candle"))
+        {
+            lightLevel = 2;
+        }
+        if (gameObject.CompareTag("Fireflies"))
+        {
+            lightLevel = 3;
+        }
     }
 
     // Update is called once per frame

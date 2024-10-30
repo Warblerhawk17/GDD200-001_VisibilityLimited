@@ -1035,7 +1035,7 @@ Transform:
   m_GameObject: {fileID: 277835067}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.5, y: 2.96, z: -0.046410494}
+  m_LocalPosition: {x: -6.231362, y: 3.825681, z: -0.046410494}
   m_LocalScale: {x: 1.1542412, y: 1.1542412, z: 2.3086352}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1081,7 +1081,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: -1845499927, guid: 0f960352bbaa50e45a96fcea3c408414, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1807,7 +1807,7 @@ MonoBehaviour:
   spawnLocations:
   - {x: 0, y: 0}
   - {x: 8, y: -3}
-  - {x: 8, y: 0}
+  - {x: 8, y: 3}
   - {x: -5.5, y: -4.5}
   - {x: 3, y: -7}
   - {x: 10, y: 4}
@@ -1817,6 +1817,7 @@ MonoBehaviour:
   batteryManager: {fileID: 277835070}
   player: {fileID: 430634586}
   lightToSpawn: 
+  minNumberOfEach: 0
 --- !u!4 &415671442
 Transform:
   m_ObjectHideFlags: 0
