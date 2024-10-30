@@ -18,7 +18,7 @@ public class Player_Script : MonoBehaviour
 
     // Friend variable
     public List<GameObject> friendList = new List<GameObject>();
-    
+
 
     void Start()
     {
@@ -26,7 +26,7 @@ public class Player_Script : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         // Prevent the player from rotating
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
-        
+
     }
 
     void Update()
@@ -63,7 +63,7 @@ public class Player_Script : MonoBehaviour
             transform.Translate(speed * Time.deltaTime * movement);
         }
 
-       
+
 
     }
 
@@ -98,33 +98,38 @@ public class Player_Script : MonoBehaviour
             }
         }
 
-        
 
 
-    // disabling temporarily as this monster will not be present in Beta  
-    /*
-       else if (collision.gameObject.CompareTag("Scream"))
-       {
-           batteryManager.batteryCharge = batteryManager.batteryCharge - 10;
-      }
-    */
-}
+
+        // disabling temporarily as this monster will not be present in Beta  
+        /*
+           else if (collision.gameObject.CompareTag("Scream"))
+           {
+               batteryManager.batteryCharge = batteryManager.batteryCharge - 10;
+          }
+        */
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Friend") && !friendList.Contains(collision.gameObject))
         {
             Debug.Log("Collided with a friend");
             friendList.Add(collision.gameObject);
-            if (friendList.Count == 1)
-            {
-                friendList[0].GetComponent<FriendFollow>().follow = this.gameObject;
-            }
-            else
-            {
-                friendList[friendList.Count - 1].GetComponent<FriendFollow>().follow = friendList[friendList.Count - 2].gameObject;
-            }
+            friendList[friendList.Count - 1].GetComponent<FriendFollow>().follow = this.gameObject;
+            friendList[friendList.Count - 1].GetComponent<FriendFollow>().followDistance = friendList.Count * 0.5f;
+
+
+
         }
+        if (collision.gameObject.CompareTag("Exit"))
+        {
+            for (int i = 0; i < friendList.Count; i++)
+            { 
+                Object.Destroy(friendList[i]);
+            }
+        friendList.Clear();
     }
 
 
+    }
 }

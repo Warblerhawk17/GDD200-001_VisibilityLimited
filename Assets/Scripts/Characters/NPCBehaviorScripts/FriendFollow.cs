@@ -23,8 +23,12 @@ public class FriendFollow : MonoBehaviour
     {
         if (follow != null)
         {
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, follow.transform.position - transform.position, float.MaxValue, layerMask);
-            if (hit.collider.gameObject.layer != follow.gameObject.layer)
+            //Vector2 rayCastStart = transform.position + Vector3.Normalize(follow.transform.position - transform.position)*1.5f;
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector3.Normalize(follow.transform.position - transform.position), float.MaxValue, layerMask);
+            Debug.DrawRay(transform.position, Vector3.Normalize(follow.transform.position - transform.position), Color.red);
+            Debug.Log(hit.collider.gameObject == gameObject);
+            //Debug.Log("Is self collide " + (hit.collider.gameObject == follow.gameObject) + " rayCastStart " + (rayCastStart) + " direction " + (Vector3.Normalize(follow.transform.position - transform.position)) + " Follow " + (follow.transform.position) + " my position" + (transform.position));
+            if (hit.collider.gameObject != follow.gameObject)
             {
                 Debug.Log("Non Direct Move");
                 if (path.Count == 0)

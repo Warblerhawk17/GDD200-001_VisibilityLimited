@@ -8,6 +8,7 @@ TagManager:
   - Flashlight
   - Shadow
   - Friend
+  - Exit
   layers:
   - Default
   - TransparentFX
