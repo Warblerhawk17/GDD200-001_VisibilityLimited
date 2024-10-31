@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/Scripts/BatteryManager.cs.meta
-guid: 106296b4bc75b714fbc6b23b0f0e31d5
-========
-guid: 63b05f5f8090a5747a93b6e301c8c1a4
->>>>>>>> main:Assets/Scripts/AIFollow.cs.meta
+guid: 708dde2cd95fa314bbfffadcfa2357fd
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2

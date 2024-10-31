@@ -9,15 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/0_StartingScreen.unity
-    guid: d7b771e6586c86d45a68918917bacfbc
-  - enabled: 1
-    path: Assets/Scenes/1_Temp_Tileset_Test.unity
+    path: Assets/Scenes/Temp_Tileset_Test.unity
     guid: 69540c8626530db44a1001dd1b9ff4ad
-  - enabled: 1
-    path: Assets/Scenes/TestingMaps/2_Testing1.unity
-    guid: f5c93a3c7bf9f3a4097c08b9755846f3
-  - enabled: 1
-    path: Assets/Scenes/TestingMaps/3_Testing2.unity
-    guid: dc72f7d4551676549930e46270ffff41
   m_configObjects: {}
