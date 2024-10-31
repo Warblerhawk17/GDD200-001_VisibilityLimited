@@ -1,12 +1,18 @@
+using UnityEditor.Build.Content;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class CustomSceneManager : MonoBehaviour
 {
     // Static reference to the instance of our SceneManager
     public static CustomSceneManager instance;
+    public int currIndex;
     public int sceneIndex = 0;
     public Transform player;
+    public GameObject pauseMenu;
 
     private void Awake()
     {
@@ -28,24 +34,28 @@ public class CustomSceneManager : MonoBehaviour
 
     private void Update()
     {
-        // Check if the user is on a non-main scene and presses the Escape key
         if (SceneManager.GetActiveScene().buildIndex != 0 && Input.GetKeyDown(KeyCode.Escape))
         {
-            // Load the main scene (assuming the main scene is at build index 0)
-            LoadScene(0);
+            Debug.Log("Escape responded correctly");
+            if (pauseMenu.activeInHierarchy == false)
+            {
+                pauseMenu.SetActive(true);
+            } else
+            {
+                pauseMenu.SetActive(false);
+            }
         }
     }
 
 
     // General method to load scenes based on build index
-    private void LoadScene(int sceneIndex)
+    public void LoadScene(int sceneIndex)
     {
         SceneManager.LoadScene(sceneIndex);
     }
 
     void OnTriggerEnter2D(UnityEngine.Collider2D collision)
     {
-
         Debug.Log("Trigger activated");
 
         // Check if the player is the object entering the trigger

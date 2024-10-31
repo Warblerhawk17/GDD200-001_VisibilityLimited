@@ -789,6 +789,7 @@ GameObject:
   - component: {fileID: 1253296997}
   - component: {fileID: 1253296996}
   - component: {fileID: 1253296995}
+  - component: {fileID: 1253296998}
   m_Layer: 5
   m_Name: Audio Button
   m_TagString: Untagged
@@ -898,6 +899,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1253296993}
   m_CullTransparentMesh: 1
+--- !u!114 &1253296998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1253296993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0b2b8bdb4db3054fb30cbe11f3baa6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainMenu: {fileID: 0}
+  currentMenu: {fileID: 0}
+  index: 5
 --- !u!1 &1263151674
 GameObject:
   m_ObjectHideFlags: 0
@@ -942,8 +958,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4013729de7febb448f1f42e9d279f83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneIndex: 0
+  currIndex: 0
+  sceneIndex: 1
   player: {fileID: 0}
+  pauseMenu: {fileID: 0}
 --- !u!1 &1422085845
 GameObject:
   m_ObjectHideFlags: 0
@@ -2287,6 +2305,7 @@ GameObject:
   - component: {fileID: 2073651028}
   - component: {fileID: 2073651027}
   - component: {fileID: 2073651026}
+  - component: {fileID: 2073651029}
   m_Layer: 5
   m_Name: Video Button
   m_TagString: Untagged
@@ -2396,6 +2415,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2073651024}
   m_CullTransparentMesh: 1
+--- !u!114 &2073651029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2073651024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0b2b8bdb4db3054fb30cbe11f3baa6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainMenu: {fileID: 0}
+  currentMenu: {fileID: 0}
+  index: 5
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

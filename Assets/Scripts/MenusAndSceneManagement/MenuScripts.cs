@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 public class MenuScripts : MonoBehaviour
 {
@@ -27,20 +29,30 @@ public class MenuScripts : MonoBehaviour
 
     void MenuShowing()
     {
-        if (index == 0)
+        switch (index)
         {
-            currentMenu.SetActive(false);
-            mainMenu.SetActive(true);
-        }
-        else if (index == 1)
-        {
-            mainMenu.gameObject.SetActive(false);
-            currentMenu.gameObject.SetActive(true);
-        }
-        else if (index == 2)
-        {
-            Debug.Log("button pressed");
-            Application.Quit();
+            case 0:
+                currentMenu.SetActive(false);
+                mainMenu.SetActive(true);
+                break;
+            case 1:
+                mainMenu.SetActive(false);
+                currentMenu.SetActive(true);
+                break;
+            case 2:
+                Debug.Log("Resume button pressed");
+                currentMenu.SetActive(false);
+                break;
+            case 3:
+                Debug.Log("Exit button pressed");
+                Application.Quit();
+                break;
+            case 4:
+                SceneManager.LoadScene(0);
+                break;
+            default:
+                Debug.Log(message: $"{button.name} pressed but has no action");
+                break;
         }
     }
 }
