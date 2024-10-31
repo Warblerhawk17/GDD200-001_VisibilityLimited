@@ -166,4 +166,4 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 192
-  speed: 5
+  speed: 10
