@@ -8,8 +8,6 @@ using UnityEngine;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine.Rendering;
-using Pathfinding.Serialization;
-
 public class LightSpawner : MonoBehaviour
 {
     // Start is called before the first frame update
