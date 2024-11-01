@@ -450,7 +450,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 277835070}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 1513035532966663281, guid: 97fd240f7816aa244963cf3dd28066c1, type: 3}
+    - {fileID: 4689390080089523030, guid: 97fd240f7816aa244963cf3dd28066c1, type: 3}
+    - {fileID: 7799812971529417003, guid: 97fd240f7816aa244963cf3dd28066c1, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 2772525585293980590, guid: 97fd240f7816aa244963cf3dd28066c1, type: 3}
       insertIndex: -1
@@ -1103,6 +1106,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 277835069}
+  flashlightBatterySprites: []
+  candleBatterySprites: []
+  firefliesBatterySprites: []
   batterySprites:
   - {fileID: -1845499927, guid: 0f960352bbaa50e45a96fcea3c408414, type: 3}
   - {fileID: 805230455, guid: 0f960352bbaa50e45a96fcea3c408414, type: 3}
@@ -1115,6 +1121,7 @@ MonoBehaviour:
   - {fileID: 108397558, guid: 0f960352bbaa50e45a96fcea3c408414, type: 3}
   - {fileID: 1102068931, guid: 0f960352bbaa50e45a96fcea3c408414, type: 3}
   batteryCharge: 0
+  lightNum: 0
   interval: 1
 --- !u!1001 &291555589
 PrefabInstance:
@@ -21989,6 +21996,42 @@ PrefabInstance:
       propertyPath: batteryManager
       value: 
       objectReference: {fileID: 277835070}
+    - target: {fileID: 1241806178288772468, guid: b93569d8466dc5b49aab72cc79d10aeb, type: 3}
+      propertyPath: groundCandlePrefab
+      value: 
+      objectReference: {fileID: 826861030557923246, guid: 33044e9161282ca4393d91eb56f3d69c, type: 3}
+    - target: {fileID: 1241806178288772468, guid: b93569d8466dc5b49aab72cc79d10aeb, type: 3}
+      propertyPath: equippedCandlePrefab
+      value: 
+      objectReference: {fileID: 826861030557923246, guid: 935ed5b3126e8bc47a5287a3fbb1b0ce, type: 3}
+    - target: {fileID: 1241806178288772468, guid: b93569d8466dc5b49aab72cc79d10aeb, type: 3}
+      propertyPath: groundFirefliesPrefab
+      value: 
+      objectReference: {fileID: 1811812448869938210, guid: 16cc0c25018894c41ab34afa882d5d27, type: 3}
+    - target: {fileID: 1241806178288772468, guid: b93569d8466dc5b49aab72cc79d10aeb, type: 3}
+      propertyPath: equippedFirefliesPrefab
+      value: 
+      objectReference: {fileID: 1811812448869938210, guid: 08151a7db74fc8c439521564c25c6110, type: 3}
+    - target: {fileID: 1241806178288772468, guid: b93569d8466dc5b49aab72cc79d10aeb, type: 3}
+      propertyPath: spawnLocations.Array.data[2].x
+      value: -11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1241806178288772468, guid: b93569d8466dc5b49aab72cc79d10aeb, type: 3}
+      propertyPath: spawnLocations.Array.data[2].y
+      value: -4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1241806178288772468, guid: b93569d8466dc5b49aab72cc79d10aeb, type: 3}
+      propertyPath: spawnLocations.Array.data[3].x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1241806178288772468, guid: b93569d8466dc5b49aab72cc79d10aeb, type: 3}
+      propertyPath: spawnLocations.Array.data[3].y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1241806178288772468, guid: b93569d8466dc5b49aab72cc79d10aeb, type: 3}
+      propertyPath: spawnLocations.Array.data[4].x
+      value: -5.5
+      objectReference: {fileID: 0}
     - target: {fileID: 2341712250580689972, guid: b93569d8466dc5b49aab72cc79d10aeb, type: 3}
       propertyPath: m_Name
       value: Game Manager
