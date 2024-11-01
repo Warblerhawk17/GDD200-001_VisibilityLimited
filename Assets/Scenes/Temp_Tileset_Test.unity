@@ -425,10 +425,6 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 6438522758496127282, guid: 97fd240f7816aa244963cf3dd28066c1, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6758829522810454915, guid: 97fd240f7816aa244963cf3dd28066c1, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -454,11 +450,7 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 277835070}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 1513035532966663281, guid: 97fd240f7816aa244963cf3dd28066c1, type: 3}
-    - {fileID: 4689390080089523030, guid: 97fd240f7816aa244963cf3dd28066c1, type: 3}
-    - {fileID: 7799812971529417003, guid: 97fd240f7816aa244963cf3dd28066c1, type: 3}
-    - {fileID: 6438522758496127282, guid: 97fd240f7816aa244963cf3dd28066c1, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 2772525585293980590, guid: 97fd240f7816aa244963cf3dd28066c1, type: 3}
       insertIndex: -1
@@ -1071,7 +1063,7 @@ Transform:
   m_GameObject: {fileID: 277835067}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.480175, y: -3.1510782, z: -0.046410494}
+  m_LocalPosition: {x: -4.594572, y: 4.64005, z: -0.046410494}
   m_LocalScale: {x: 1.1542412, y: 1.1542412, z: 2.3086352}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1142,39 +1134,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 277835069}
-  flashlightBatterySprites:
-  - {fileID: -272890657, guid: c1eca031f1458e4478b7ab482e6fa48f, type: 3}
-  - {fileID: 1123198141, guid: c1eca031f1458e4478b7ab482e6fa48f, type: 3}
-  - {fileID: -1086526726, guid: c1eca031f1458e4478b7ab482e6fa48f, type: 3}
-  - {fileID: 343976429, guid: c1eca031f1458e4478b7ab482e6fa48f, type: 3}
-  - {fileID: -771099686, guid: c1eca031f1458e4478b7ab482e6fa48f, type: 3}
-  candleBatterySprites:
-  - {fileID: -1556228736, guid: 3faff4f1586dbbd44ab7e7ae61eeaa1c, type: 3}
-  - {fileID: -285271141, guid: 3faff4f1586dbbd44ab7e7ae61eeaa1c, type: 3}
-  - {fileID: 483448386, guid: 3faff4f1586dbbd44ab7e7ae61eeaa1c, type: 3}
-  - {fileID: -991048591, guid: 3faff4f1586dbbd44ab7e7ae61eeaa1c, type: 3}
-  - {fileID: -300503354, guid: 3faff4f1586dbbd44ab7e7ae61eeaa1c, type: 3}
-  - {fileID: 1013468620, guid: 3faff4f1586dbbd44ab7e7ae61eeaa1c, type: 3}
-  - {fileID: -21431609, guid: 3faff4f1586dbbd44ab7e7ae61eeaa1c, type: 3}
-  - {fileID: -472398383, guid: 3faff4f1586dbbd44ab7e7ae61eeaa1c, type: 3}
-  - {fileID: -1890586154, guid: 3faff4f1586dbbd44ab7e7ae61eeaa1c, type: 3}
-  - {fileID: 972824213, guid: 3faff4f1586dbbd44ab7e7ae61eeaa1c, type: 3}
-  - {fileID: -2032507956, guid: 3faff4f1586dbbd44ab7e7ae61eeaa1c, type: 3}
-  - {fileID: 1590344236, guid: 3faff4f1586dbbd44ab7e7ae61eeaa1c, type: 3}
-  - {fileID: 1301856141, guid: 3faff4f1586dbbd44ab7e7ae61eeaa1c, type: 3}
-  - {fileID: 378088767, guid: 3faff4f1586dbbd44ab7e7ae61eeaa1c, type: 3}
-  - {fileID: -621288772, guid: 3faff4f1586dbbd44ab7e7ae61eeaa1c, type: 3}
-  firefliesBatterySprites:
-  - {fileID: -1845499927, guid: 0f960352bbaa50e45a96fcea3c408414, type: 3}
-  - {fileID: 805230455, guid: 0f960352bbaa50e45a96fcea3c408414, type: 3}
-  - {fileID: -969028449, guid: 0f960352bbaa50e45a96fcea3c408414, type: 3}
-  - {fileID: -973522643, guid: 0f960352bbaa50e45a96fcea3c408414, type: 3}
-  - {fileID: -1485442990, guid: 0f960352bbaa50e45a96fcea3c408414, type: 3}
-  - {fileID: -1659559703, guid: 0f960352bbaa50e45a96fcea3c408414, type: 3}
-  - {fileID: -1009234116, guid: 0f960352bbaa50e45a96fcea3c408414, type: 3}
-  - {fileID: 1240128932, guid: 0f960352bbaa50e45a96fcea3c408414, type: 3}
-  - {fileID: 108397558, guid: 0f960352bbaa50e45a96fcea3c408414, type: 3}
-  - {fileID: 1102068931, guid: 0f960352bbaa50e45a96fcea3c408414, type: 3}
   batterySprites:
   - {fileID: -1845499927, guid: 0f960352bbaa50e45a96fcea3c408414, type: 3}
   - {fileID: 805230455, guid: 0f960352bbaa50e45a96fcea3c408414, type: 3}
@@ -1187,7 +1146,6 @@ MonoBehaviour:
   - {fileID: 108397558, guid: 0f960352bbaa50e45a96fcea3c408414, type: 3}
   - {fileID: 1102068931, guid: 0f960352bbaa50e45a96fcea3c408414, type: 3}
   batteryCharge: 0
-  lightNum: 0
   interval: 1
 --- !u!1001 &291555589
 PrefabInstance:
@@ -22062,42 +22020,6 @@ PrefabInstance:
       propertyPath: batteryManager
       value: 
       objectReference: {fileID: 277835070}
-    - target: {fileID: 1241806178288772468, guid: b93569d8466dc5b49aab72cc79d10aeb, type: 3}
-      propertyPath: groundCandlePrefab
-      value: 
-      objectReference: {fileID: 826861030557923246, guid: 33044e9161282ca4393d91eb56f3d69c, type: 3}
-    - target: {fileID: 1241806178288772468, guid: b93569d8466dc5b49aab72cc79d10aeb, type: 3}
-      propertyPath: equippedCandlePrefab
-      value: 
-      objectReference: {fileID: 826861030557923246, guid: 935ed5b3126e8bc47a5287a3fbb1b0ce, type: 3}
-    - target: {fileID: 1241806178288772468, guid: b93569d8466dc5b49aab72cc79d10aeb, type: 3}
-      propertyPath: groundFirefliesPrefab
-      value: 
-      objectReference: {fileID: 1811812448869938210, guid: 16cc0c25018894c41ab34afa882d5d27, type: 3}
-    - target: {fileID: 1241806178288772468, guid: b93569d8466dc5b49aab72cc79d10aeb, type: 3}
-      propertyPath: equippedFirefliesPrefab
-      value: 
-      objectReference: {fileID: 1811812448869938210, guid: 08151a7db74fc8c439521564c25c6110, type: 3}
-    - target: {fileID: 1241806178288772468, guid: b93569d8466dc5b49aab72cc79d10aeb, type: 3}
-      propertyPath: spawnLocations.Array.data[2].x
-      value: -11
-      objectReference: {fileID: 0}
-    - target: {fileID: 1241806178288772468, guid: b93569d8466dc5b49aab72cc79d10aeb, type: 3}
-      propertyPath: spawnLocations.Array.data[2].y
-      value: -4.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1241806178288772468, guid: b93569d8466dc5b49aab72cc79d10aeb, type: 3}
-      propertyPath: spawnLocations.Array.data[3].x
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1241806178288772468, guid: b93569d8466dc5b49aab72cc79d10aeb, type: 3}
-      propertyPath: spawnLocations.Array.data[3].y
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1241806178288772468, guid: b93569d8466dc5b49aab72cc79d10aeb, type: 3}
-      propertyPath: spawnLocations.Array.data[4].x
-      value: -5.5
-      objectReference: {fileID: 0}
     - target: {fileID: 2341712250580689972, guid: b93569d8466dc5b49aab72cc79d10aeb, type: 3}
       propertyPath: m_Name
       value: Game Manager

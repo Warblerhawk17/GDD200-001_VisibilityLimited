@@ -9,11 +9,6 @@ TagManager:
   - Shadow
   - Friend
   - Exit
-  - Candle
-  - Fireflies
-  - Ground Candle
-  - Ground Fireflies
-  - Ground Flashlight
   layers:
   - Default
   - TransparentFX
