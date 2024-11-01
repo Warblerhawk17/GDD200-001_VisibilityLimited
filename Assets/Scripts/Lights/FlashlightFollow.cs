@@ -43,8 +43,11 @@ public class FlashlightFollow : MonoBehaviour
         targetPosition = player.position + directionToMouse * orbitDistance;
 
         // Calculate the angle to the mouse cursor
-        float angle = Mathf.Atan2(directionToMouse.y, directionToMouse.x) * Mathf.Rad2Deg;
-
+        float angle = (Mathf.Atan2(directionToMouse.y, directionToMouse.x) * Mathf.Rad2Deg);
+        if(GameObject.FindWithTag("Candle") || GameObject.FindWithTag("Fireflies"))
+        {
+            angle = angle - 90;
+        }
         // Set what the target rotation should be
         targetRotation = Quaternion.Euler(0, 0, angle);
     }
