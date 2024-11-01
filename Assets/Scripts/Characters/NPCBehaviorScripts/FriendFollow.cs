@@ -10,7 +10,7 @@ public class FriendFollow : MonoBehaviour
     public LayerMask layerMask;
     private Node currentNode; //the current node it is at
     private List<Node> path = new List<Node>(); //the path of nodes it will travel
-    public float speed;
+    private float speed = 10;
 
     // Start is called before the first frame update
     void Start()

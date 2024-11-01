@@ -14,6 +14,7 @@ public class Player_Script : MonoBehaviour
     private Vector2 movement; // Stores the direction of player movement
     private bool isMovingHorizontally = true; // Flag to track if the player is moving horizontally
     public BatteryManager batteryManager;
+    private int lives = 3;
 
 
     // Friend variable
@@ -78,10 +79,18 @@ public class Player_Script : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Crawler"))
         {
+            if (batteryManager.batteryCharge <= 0)
+            {
+                LoseLife();
+            }
             batteryManager.batteryCharge = batteryManager.batteryCharge - 10;
         }
         else if (collision.gameObject.CompareTag("Shadow"))
         {
+            if (batteryManager.batteryCharge <= 0) 
+            {
+                LoseLife();
+            }
             batteryManager.batteryCharge = batteryManager.batteryCharge - 10;
         }
         else if (collision.gameObject.CompareTag("Friend"))
@@ -97,10 +106,6 @@ public class Player_Script : MonoBehaviour
                 friendList[friendList.Count - 1].GetComponent<FriendFollow>().follow = friendList[friendList.Count - 2].gameObject;
             }
         }
-
-
-
-
         // disabling temporarily as this monster will not be present in Beta  
         /*
            else if (collision.gameObject.CompareTag("Scream"))
@@ -109,6 +114,22 @@ public class Player_Script : MonoBehaviour
           }
         */
     }
+    private void LoseLife()
+    {
+        lives--;
+        transform.position = GameObject.Find("PlayerSpawn").transform.position;
+        for (int i = 0; i < friendList.Count; i++) 
+        {
+            friendList[i].GetComponent<FriendFollow>().follow = null;
+        }
+        friendList.Clear();
+        if (lives == 0)
+        {
+            Object.Destroy(this.gameObject);
+        }
+    }
+
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Friend") && !friendList.Contains(collision.gameObject))

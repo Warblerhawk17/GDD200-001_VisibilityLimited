@@ -11,13 +11,12 @@ public class CrawlerBehavior : MonoBehaviour
     private int patrolIndex; //the index in patrol path the crawler is headed towards
     public GameObject target; //the target, which it will go towards
     public float speed; //the speed of the crawler
-    public float visionRadius; //the radius the crawler can see
+    private float visionRadius; //the radius the crawler can see
     public LayerMask layerMask;
     private float stopCount; //used to make the monster pause for a second after loosing sight of the player
     public float defaultStopCount; //default value that sawPlayerCount is set to
-    public float hitStopCount; //how long it stops when it hits the player
+    private float hitStopCount; //how long it stops when it hits the player
     public float defaultHitStopCount; //default value that hitStopCount is set to
-    public bool isLookingAt; //checks if the crawler is looking at it
 
 
     // Start is called before the first frame update
@@ -29,7 +28,12 @@ public class CrawlerBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //New behavior for the crawler
+        //updates the crawlers search radius
+        visionRadius = 3 + target.GetComponent<Player_Script>().friendList.Count;
+
+
+
+        //raycast
         RaycastHit2D hit = Physics2D.Raycast(transform.position, target.transform.position - transform.position, float.MaxValue, layerMask);
 
         // pause if it hit the player
@@ -103,7 +107,7 @@ public class CrawlerBehavior : MonoBehaviour
         transform.rotation = Quaternion.Euler(Vector3.forward * angle); // changes npc rotation
     }
 
-    /*private void OnDrawGizmos() //helper function to draw a line towards the node it is going towards
+    private void OnDrawGizmos() //helper function to draw a line towards the node it is going towards
     {
         Gizmos.color = Color.blue;
         if (path.Count != 0)
@@ -111,5 +115,5 @@ public class CrawlerBehavior : MonoBehaviour
             Gizmos.DrawLine(transform.position, path[0].transform.position);
         }
 
-    }*/
+    }
 }
