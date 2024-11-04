@@ -56,9 +56,9 @@ public class ShadowBehavior : MonoBehaviour
                 path.RemoveAt(0);
             }
         }
-    }
+    }   
 
-    private void telaportAway()
+    public void telaportAway()
     {
         transform.position = AStarManager.instance.FindFurthestNode(transform.position).transform.position;
     }

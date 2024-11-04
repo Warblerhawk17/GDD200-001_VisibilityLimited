@@ -14,6 +14,7 @@ public class Player_Script : MonoBehaviour
     private Vector2 movement; // Stores the direction of player movement
     private bool isMovingHorizontally = true; // Flag to track if the player is moving horizontally
     public BatteryManager batteryManager;
+    public string currentLightSource;
 
 
     // Friend variable
@@ -111,7 +112,7 @@ public class Player_Script : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Friend") && !friendList.Contains(collision.gameObject))
+        if (collision.gameObject.CompareTag("Friend") && !friendList.Contains(collision.gameObject) )
         {
             Debug.Log("Collided with a friend");
             friendList.Add(collision.gameObject);
