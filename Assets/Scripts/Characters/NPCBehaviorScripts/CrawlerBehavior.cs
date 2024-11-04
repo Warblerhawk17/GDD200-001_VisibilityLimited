@@ -30,6 +30,7 @@ public class CrawlerBehavior : MonoBehaviour
     {
         //updates the crawlers search radius
         visionRadius = 3 + target.GetComponent<Player_Script>().friendList.Count;
+       
 
 
 
