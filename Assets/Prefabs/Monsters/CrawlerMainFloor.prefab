@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8634418604131312052}
   - component: {fileID: 9128767863233180794}
   m_Layer: 8
-  m_Name: Crawler
+  m_Name: CrawlerMainFloor
   m_TagString: Crawler
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -99,10 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85c9fa01d1b884745b0ce91cb8dc05fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  publicPatrolPath:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  patrolPath:
   - {fileID: 0}
   target: {fileID: 457998364201435404, guid: 97fd240f7816aa244963cf3dd28066c1, type: 3}
   speed: 3

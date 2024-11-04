@@ -15,6 +15,7 @@ public class Player_Script : MonoBehaviour
     private bool isMovingHorizontally = true; // Flag to track if the player is moving horizontally
     public BatteryManager batteryManager;
     private int lives = 3;
+    public int friendsSaved = 0;
 
 
     // Friend variable
@@ -147,6 +148,8 @@ public class Player_Script : MonoBehaviour
             for (int i = 0; i < friendList.Count; i++)
             { 
                 Object.Destroy(friendList[i]);
+                friendsSaved++;
+                MonsterSpawner.instance.SpawnMonsters(friendsSaved - 1);
             }
         friendList.Clear();
     }
