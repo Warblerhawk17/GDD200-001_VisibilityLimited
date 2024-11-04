@@ -37,24 +37,21 @@ public class BatteryManager : MonoBehaviour
         {
             switch (batteryCharge)
             {
-                case >= 50f:
+                case >= 40f:
                     spriteRenderer.enabled = true;
                     spriteRenderer.sprite = batterySprites[0];
                     break;
-                case >= 40f:
+                case >= 30f:
                     spriteRenderer.sprite = batterySprites[1];
                     break;
-                case >= 30f:
+                case >= 20f:
                     spriteRenderer.sprite = batterySprites[2];
                     break;
-                case >= 20f:
+                case >= 10f:
                     spriteRenderer.sprite = batterySprites[3];
                     break;
-                case >= 10f:
+                case >= 0f:
                     spriteRenderer.sprite = batterySprites[4];
-                    break;
-                case > 0f:
-                    spriteRenderer.sprite = batterySprites[5];
                     break;
                 case <= 0f:
                     spriteRenderer.enabled = false;

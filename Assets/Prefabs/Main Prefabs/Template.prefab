@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1081906046633802339}
   - component: {fileID: 8767789220126526619}
   m_Layer: 0
-  m_Name: Hall Border
+  m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
