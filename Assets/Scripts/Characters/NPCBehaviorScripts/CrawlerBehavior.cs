@@ -7,7 +7,6 @@ public class CrawlerBehavior : MonoBehaviour
 
     private Node currentNode; //the current node it is at
     private List<Node> path = new List<Node>(); //the path of nodes it will travel
-    //public List<GameObject> goPatrolPath = new List<GameObject>(); //the list of game objects that it will travel around
     public List<Node> patrolPath; //the nodes that will be patroled by the crawler
     private int patrolIndex; //the index in patrol path the crawler is headed towards
     public GameObject target; //the target, which it will go towards
@@ -24,10 +23,6 @@ public class CrawlerBehavior : MonoBehaviour
     void Start()
     {
         currentNode = AStarManager.instance.FindNearestNode(transform.position);
-        /*for (int i = 0; i < goPatrolPath.Count; i++)
-        {
-            patrolPath.Add(goPatrolPath[i].GetComponent<Node>());
-        }*/
     }
 
     // Update is called once per frame

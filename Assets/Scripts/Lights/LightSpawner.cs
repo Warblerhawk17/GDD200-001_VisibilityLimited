@@ -8,7 +8,7 @@ using UnityEngine;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine.Rendering;
-//using Pathfinding.Serialization;
+using Pathfinding.Serialization;
 
 public class LightSpawner : MonoBehaviour
 {

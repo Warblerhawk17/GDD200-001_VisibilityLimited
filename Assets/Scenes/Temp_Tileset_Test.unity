@@ -1892,26 +1892,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3732251484980009960, guid: 38eb59035af574a499cf8af94051250c, type: 3}
   m_PrefabInstance: {fileID: 14460209}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &497293034 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2341712250580689972, guid: b93569d8466dc5b49aab72cc79d10aeb, type: 3}
-  m_PrefabInstance: {fileID: 2523276491371562928}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &497293035
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 497293034}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4bf6b52bdcecb334f820b1229b715cdf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  monsterList:
-  - {fileID: 715665065652141250, guid: 5ed60247bc77b2944a8d8ea77fe268b9, type: 3}
-  - {fileID: 662361867706363866, guid: e44fe13cbafa8a5449381aafc30da4dc, type: 3}
 --- !u!4 &508969140 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3732251484980009960, guid: 38eb59035af574a499cf8af94051250c, type: 3}
@@ -22094,10 +22074,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1811812448869938210, guid: 08151a7db74fc8c439521564c25c6110, type: 3}
     - target: {fileID: 1241806178288772468, guid: b93569d8466dc5b49aab72cc79d10aeb, type: 3}
-      propertyPath: equippedFlashlightPrefab
-      value: 
-      objectReference: {fileID: 7908519645577968149, guid: edbb72a2724c78146a6c763a45b26da2, type: 3}
-    - target: {fileID: 1241806178288772468, guid: b93569d8466dc5b49aab72cc79d10aeb, type: 3}
       propertyPath: spawnLocations.Array.data[2].x
       value: -11
       objectReference: {fileID: 0}
@@ -22124,10 +22100,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2341712250580689972, guid: b93569d8466dc5b49aab72cc79d10aeb, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 497293035}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b93569d8466dc5b49aab72cc79d10aeb, type: 3}
 --- !u!1001 &2941837662307890374
 PrefabInstance:
@@ -22143,7 +22116,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 715665065652141250, guid: 5ed60247bc77b2944a8d8ea77fe268b9, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6067295020922064616, guid: 5ed60247bc77b2944a8d8ea77fe268b9, type: 3}
       propertyPath: m_LocalPosition.x
