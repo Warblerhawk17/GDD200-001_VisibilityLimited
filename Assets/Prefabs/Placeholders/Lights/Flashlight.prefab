@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7531715073721476412}
   - component: {fileID: 2847913634833087052}
   - component: {fileID: 8320535643694012673}
+  - component: {fileID: 3112628981797972281}
   m_Layer: 0
   m_Name: Flashlight
   m_TagString: Flashlight
@@ -137,8 +138,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 3.4735498, y: 0.37354994, z: 0}
-    m_Extent: {x: 3.45435, y: 10.06975, z: 0}
+    m_Center: {x: 3.4822001, y: 0.23134995, z: 0}
+    m_Extent: {x: 3.4814, y: 9.24715, z: 0}
   m_PointLightInnerAngle: 0
   m_PointLightOuterAngle: 90.00052
   m_PointLightInnerRadius: 1
@@ -149,10 +150,10 @@ MonoBehaviour:
   m_ShapeLightFalloffSize: 0.5
   m_ShapeLightFalloffOffset: {x: 0, y: 0}
   m_ShapePath:
-  - {x: 0.5199424, y: -0.57989234, z: 0}
-  - {x: 6.427705, y: -9.197095, z: 0}
-  - {x: 6.385476, y: 9.942572, z: 0}
-  - {x: 0.5199424, y: 0.38017312, z: 0}
+  - {x: 0.50249773, y: -0.5158235, z: 0}
+  - {x: 6.4634943, y: -8.517258, z: 0}
+  - {x: 6.464102, y: 8.977749, z: 0}
+  - {x: 0.5015796, y: 0.50297177, z: 0}
 --- !u!114 &8320535643694012673
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -166,3 +167,54 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   batteryManager: {fileID: 0}
+  player: {fileID: 0}
+  lightName: 
+--- !u!60 &3112628981797972281
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7908519645577968149}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.4999445, y: 0.4996926}
+      - {x: 0.50010145, y: -0.50146514}
+      - {x: 6.21661, y: -8.187054}
+      - {x: 6.2119226, y: 8.619255}
+  m_UseDelaunayMesh: 0
