@@ -3,7 +3,17 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Crawler
+  - Flashlight
+  - Shadow
+  - Friend
+  - Exit
+  - Candle
+  - Fireflies
+  - Ground Candle
+  - Ground Fireflies
+  - Ground Flashlight
   layers:
   - Default
   - TransparentFX
@@ -12,10 +22,10 @@ TagManager:
   - Water
   - UI
   - WallsForAStar
-  - 
-  - 
-  - 
-  - 
+  - Player
+  - Monster
+  - Node
+  - Friend
   - 
   - 
   - 

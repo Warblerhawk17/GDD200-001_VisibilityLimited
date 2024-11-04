@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5971024903800860342}
   - component: {fileID: 7033563804605632628}
   - component: {fileID: 8523457477624073483}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Interact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -877,6 +877,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transparentValue: 0.25
+  player: {fileID: 0}
 --- !u!1 &5897592933601673794
 GameObject:
   m_ObjectHideFlags: 0
@@ -923,7 +924,7 @@ GameObject:
   - component: {fileID: 2443989497194936388}
   - component: {fileID: 2845866972418248452}
   - component: {fileID: 3105875502704209847}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1321,3 +1322,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transparentValue: 0.25
+  player: {fileID: 0}
