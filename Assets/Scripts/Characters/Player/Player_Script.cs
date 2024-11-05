@@ -16,6 +16,7 @@ public class Player_Script : MonoBehaviour
     public BatteryManager batteryManager;
     private int lives = 3;
     public int friendsSaved = 0;
+    public string currentLightSource;
 
 
 
@@ -134,7 +135,7 @@ public class Player_Script : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Friend") && !friendList.Contains(collision.gameObject))
+        /*if (collision.gameObject.CompareTag("Friend") && !friendList.Contains(collision.gameObject))
         {
             Debug.Log("Collided with a friend");
             friendList.Add(collision.gameObject);
@@ -143,7 +144,7 @@ public class Player_Script : MonoBehaviour
 
 
 
-        }
+        }*/
         if (collision.gameObject.CompareTag("Exit"))
         {
             for (int i = 0; i < friendList.Count; i++)

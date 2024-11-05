@@ -62,4 +62,29 @@ public class FriendFollow : MonoBehaviour
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg; // weird math to find the angle, yes the Atan2 goes y first then x
         transform.rotation = Quaternion.Euler(Vector3.forward * angle); // changes npc rotation
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player") && !collision.GetComponent<Player_Script>().friendList.Contains(this.gameObject))
+        {
+            Player_Script player = collision.GetComponent<Player_Script>();
+            player.friendList.Add(this.gameObject);
+            follow = player.gameObject;
+            followDistance = player.friendList.Count * 0.5f;
+        }
+
+        /*!collision.GetComponent<Player_Script>.friendList.Contains(this)
+          if (collision.gameObject.CompareTag("Friend") && !friendList.Contains(collision.gameObject))
+        {
+            Debug.Log("Collided with a friend");
+            friendList.Add(collision.gameObject);
+            friendList[friendList.Count - 1].GetComponent<FriendFollow>().follow = this.gameObject;
+            friendList[friendList.Count - 1].GetComponent<FriendFollow>().followDistance = friendList.Count * 0.5f;
+
+
+
+        }
+         */
+    }
+
 }
