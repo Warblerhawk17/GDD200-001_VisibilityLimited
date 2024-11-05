@@ -312,7 +312,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Settings
+  m_text: Audio
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -540,7 +540,7 @@ GameObject:
   - component: {fileID: 982007768}
   - component: {fileID: 982007772}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Menus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -913,6 +913,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainMenu: {fileID: 0}
   currentMenu: {fileID: 0}
+  button: {fileID: 0}
   index: 5
 --- !u!1 &1263151674
 GameObject:
@@ -1166,6 +1167,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainMenu: {fileID: 1665080924}
   currentMenu: {fileID: 1591512004}
+  button: {fileID: 0}
   index: 1
 --- !u!1 &1483731064
 GameObject:
@@ -1571,7 +1573,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainMenu: {fileID: 1665080924}
   currentMenu: {fileID: 1665080924}
-  index: 2
+  button: {fileID: 0}
+  index: 3
 --- !u!1 &1591512004
 GameObject:
   m_ObjectHideFlags: 0
@@ -2080,6 +2083,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainMenu: {fileID: 1665080924}
   currentMenu: {fileID: 1591512004}
+  button: {fileID: 0}
   index: 0
 --- !u!1 &1665080924
 GameObject:
@@ -2429,6 +2433,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainMenu: {fileID: 0}
   currentMenu: {fileID: 0}
+  button: {fileID: 0}
   index: 5
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

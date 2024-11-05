@@ -11,7 +11,7 @@ public class MenuScripts : MonoBehaviour
     public GameObject mainMenu;
     public GameObject currentMenu;
 
-    private Button button;
+    public Button button;
     public int index;
 
     // Start is called before the first frame update
@@ -24,7 +24,6 @@ public class MenuScripts : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
     }
 
     void MenuShowing()

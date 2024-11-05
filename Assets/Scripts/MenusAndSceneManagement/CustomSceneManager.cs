@@ -14,6 +14,8 @@ public class CustomSceneManager : MonoBehaviour
     public Transform player;
     public GameObject pauseMenu;
 
+    private bool isGamePaused = false;
+
     private void Awake()
     {
         // Check if instance already exists
@@ -32,21 +34,24 @@ public class CustomSceneManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
+    //Pause menu method
     private void Update()
     {
         if (SceneManager.GetActiveScene().buildIndex != 0 && Input.GetKeyDown(KeyCode.Escape))
         {
-            Debug.Log("Escape responded correctly");
+            //Debug.Log("Escape responded correctly");
             if (pauseMenu.activeInHierarchy == false)
             {
                 pauseMenu.SetActive(true);
-            } else
+                isGamePaused = true;
+            }
+            else
             {
                 pauseMenu.SetActive(false);
+                isGamePaused = false;
             }
         }
     }
-
 
     // General method to load scenes based on build index
     public void LoadScene(int sceneIndex)
