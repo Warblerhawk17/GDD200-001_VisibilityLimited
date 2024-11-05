@@ -16,6 +16,13 @@ public class CustomSceneManager : MonoBehaviour
 
     private bool isGamePaused = false;
 
+    private void Start()
+    {
+        if (pauseMenu.activeInHierarchy == true)
+        {
+            pauseMenu.SetActive(false);
+        }
+    }
     private void Awake()
     {
         // Check if instance already exists
