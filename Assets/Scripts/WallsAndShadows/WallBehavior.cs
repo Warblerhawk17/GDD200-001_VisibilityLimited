@@ -13,8 +13,9 @@ public class WallBehavior : MonoBehaviour
 
     void Start()
     {
-        // Get the tilemapRenderer component of the wall
-        
+
+        wallSprite = GetComponent<Tilemap >();
+
         // Store the original color of the wall
         if (TryGetComponent<Tilemap>(out wallSprite))
         {
@@ -22,7 +23,7 @@ public class WallBehavior : MonoBehaviour
         }
     }
 
- /*   private void Update()
+   private void Update()
     {
         if (player != null && wallSprite != null)
         {
@@ -35,10 +36,10 @@ public class WallBehavior : MonoBehaviour
                 SetWallTransparency(1f);  // Reset to original transparency
             }
         }
-    }*/
+    }
 
     // Detect when the player enters the trigger area behind the wall
-   void OnTriggerEnter2D(UnityEngine.Collider2D collision)
+   void OnTriggerEnter2D(Collider2D collision)
     {
         // Check if the player is the object entering the trigger
         if (collision.CompareTag("Player"))
@@ -57,18 +58,18 @@ public class WallBehavior : MonoBehaviour
         }
     }
 
-    void OnTriggerExit2D(UnityEngine.Collider2D collision)
+   /* void OnTriggerExit2D(Collider2D collision)
     {
-        // Check if the player is the object entering the trigger
+        // Check if the player is the object exiting the trigger
         if (collision.CompareTag("Player"))
         {
             SetWallTransparency(1f);
         }
-    }
+    }*/
 
     bool IsPlayerAboveWall()
     {
-        float wallYPosition = transform.position.y + 2;
+        float wallYPosition = transform.position.y;
         
         return player.position.y > wallYPosition;
     }
