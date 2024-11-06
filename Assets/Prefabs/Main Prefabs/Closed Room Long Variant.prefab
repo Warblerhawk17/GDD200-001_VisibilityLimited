@@ -58,10 +58,90 @@ MonoBehaviour:
   - {x: 3.538775, y: 0.0068445727, z: 0}
   m_ShapePathHash: 1093712510
   m_Mesh: {fileID: 0}
-  m_InstanceId: 139800
+  m_InstanceId: 42494
   m_LocalBounds:
     m_Center: {x: 2.0005517, y: 1.0003915, z: 0}
     m_Extent: {x: 1.5388201, y: 0.9935469, z: 0}
+--- !u!1 &4066870015058024932
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8509938760926821022}
+  - component: {fileID: 1516629641405888311}
+  m_Layer: 6
+  m_Name: Colliders
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8509938760926821022
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4066870015058024932}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.33844215}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4256373041539759489}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!68 &1516629641405888311
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4066870015058024932}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0.047
+  m_Points:
+  - {x: 0.50004584, y: 0.04736243}
+  - {x: 3.5003886, y: 0.04641359}
+  - {x: 3.4996436, y: 9.047642}
+  - {x: 4.500165, y: 9.04631}
+  - {x: 4.4997516, y: 12.04675}
+  - {x: -4.500237, y: 12.045182}
+  - {x: -4.499903, y: 8.047447}
+  - {x: 0.50027996, y: 8.047574}
+  - {x: 0.49998733, y: 0.047731582}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!1 &4269461895226395971
 GameObject:
   m_ObjectHideFlags: 0
@@ -120,7 +200,7 @@ MonoBehaviour:
   - {x: 0.5390371, y: 8.0071, z: 0}
   m_ShapePathHash: 1148241815
   m_Mesh: {fileID: 0}
-  m_InstanceId: 139790
+  m_InstanceId: 42480
   m_LocalBounds:
     m_Center: {x: -2.0004492, y: 9.000097, z: 0}
     m_Extent: {x: 2.5394864, y: 0.99299717, z: 0}
@@ -182,7 +262,7 @@ MonoBehaviour:
   - {x: 4.5383396, y: 9.008875, z: 0}
   m_ShapePathHash: -1677753536
   m_Mesh: {fileID: 0}
-  m_InstanceId: 139792
+  m_InstanceId: 42482
   m_LocalBounds:
     m_Center: {x: 4.000079, y: 9.999945, z: 0}
     m_Extent: {x: 0.53916335, y: 0.9924207, z: 0}
@@ -4917,6 +4997,9 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 535341200810840579, guid: 79f23e690faa126478e07a154122dcce, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8509938760926821022}
     - targetCorrespondingSourceObject: {fileID: 2912613071986284332, guid: 79f23e690faa126478e07a154122dcce, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1813135239891615694}
@@ -4927,9 +5010,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 6978373445983558307}
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2775975966944878233, guid: 79f23e690faa126478e07a154122dcce, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 5504521657853209963}
     - targetCorrespondingSourceObject: {fileID: 5484297297433042393, guid: 79f23e690faa126478e07a154122dcce, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7096974422471860913}
@@ -4973,63 +5053,15 @@ MonoBehaviour:
   - {x: 4.5389743, y: 12.008726, z: 0}
   m_ShapePathHash: -1932215640
   m_Mesh: {fileID: 0}
-  m_InstanceId: 139804
+  m_InstanceId: 42498
   m_LocalBounds:
     m_Center: {x: -0.0010404587, y: 13.000286, z: 0}
     m_Extent: {x: 4.540244, y: 0.9938588, z: 0}
---- !u!1 &1944000508254875931 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2775975966944878233, guid: 79f23e690faa126478e07a154122dcce, type: 3}
+--- !u!4 &4256373041539759489 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 535341200810840579, guid: 79f23e690faa126478e07a154122dcce, type: 3}
   m_PrefabInstance: {fileID: 4358434709549657986}
   m_PrefabAsset: {fileID: 0}
---- !u!68 &5504521657853209963
-EdgeCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1944000508254875931}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0.047
-  m_Points:
-  - {x: 0.50004584, y: 0.04736243}
-  - {x: 3.5003886, y: 0.04641359}
-  - {x: 3.4996436, y: 9.047642}
-  - {x: 4.500165, y: 9.04631}
-  - {x: 4.4997516, y: 12.04675}
-  - {x: -4.500237, y: 12.045182}
-  - {x: -4.499903, y: 8.047447}
-  - {x: 0.50027996, y: 8.047574}
-  - {x: 0.49998733, y: 0.047731582}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
 --- !u!1 &8097584363938591323 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5484297297433042393, guid: 79f23e690faa126478e07a154122dcce, type: 3}
@@ -5065,7 +5097,7 @@ MonoBehaviour:
   - {x: 3.5391681, y: 0.0070788264, z: 0}
   m_ShapePathHash: -1765598203
   m_Mesh: {fileID: 0}
-  m_InstanceId: 139808
+  m_InstanceId: 42502
   m_LocalBounds:
     m_Center: {x: -0.00067186356, y: 6.054657, z: 0}
     m_Extent: {x: 4.540124, y: 6.0475783, z: 0}
