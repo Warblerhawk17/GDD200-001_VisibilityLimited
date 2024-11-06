@@ -27,7 +27,7 @@ public class MonsterSpawner : MonoBehaviour
     public void SpawnMonsters(int i)
     {
         //Instantiate(monsterList[i], AStarManager.instance.FindFurthestNode(GameObject.Find("Player").transform.position).transform);
-        if (i < monsterList.Count)
+        if (i < monsterList.Count && monsterList[i] != null)
         {
             monsterList[i].gameObject.SetActive(true);
             Debug.Log("Spawn monster");
