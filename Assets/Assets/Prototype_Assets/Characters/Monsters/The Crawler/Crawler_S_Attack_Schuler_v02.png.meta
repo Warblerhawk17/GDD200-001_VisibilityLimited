@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9a5b5256a7f9c3c45995b620bdcebb86
+guid: fef9c2d40a1fc1747888b5daf619bd2c
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Crawler_S_MS_Sprite_0
+      name: Crawler_S_Attack_Schuler_v02_0
       rect:
         serializedVersion: 2
         x: 0
@@ -124,14 +124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7d06d0855b37b6944b20a73330c055ad
-      internalID: -1331630263
+      spriteID: c0f39e1d462d58d49a71261a3850af48
+      internalID: 1104761470
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crawler_S_MS_Sprite_1
+      name: Crawler_S_Attack_Schuler_v02_1
       rect:
         serializedVersion: 2
         x: 96
@@ -145,14 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e6a39a4b5e0eea43b083ef58ad39b7f
-      internalID: 856677618
+      spriteID: 64e0aa52e95684a46ae74999efae36ec
+      internalID: 345634048
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crawler_S_MS_Sprite_2
+      name: Crawler_S_Attack_Schuler_v02_2
       rect:
         serializedVersion: 2
         x: 192
@@ -166,14 +166,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 540ccec3685157e43b9aa7a0d4e414e7
-      internalID: 2145215365
+      spriteID: 5e59ac708274976469fdbefb85b55f8a
+      internalID: 1694204895
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crawler_S_MS_Sprite_3
+      name: Crawler_S_Attack_Schuler_v02_3
       rect:
         serializedVersion: 2
         x: 288
@@ -187,14 +187,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9b5165b764aa4c54da0d15f396c6881e
-      internalID: 932167947
+      spriteID: 77809d0549b21184e8c8663553f1ca7d
+      internalID: -982477492
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crawler_S_MS_Sprite_4
+      name: Crawler_S_Attack_Schuler_v02_4
       rect:
         serializedVersion: 2
         x: 384
@@ -208,14 +208,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4ac9779179ff0bc48a73112d300127c2
-      internalID: 1354840320
+      spriteID: b9cc8480b1fceba4f8636ef235df3fd5
+      internalID: 1449987692
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crawler_S_MS_Sprite_5
+      name: Crawler_S_Attack_Schuler_v02_5
       rect:
         serializedVersion: 2
         x: 0
@@ -229,14 +229,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 988ff19a50b6b094e8ea404bab3e49db
-      internalID: 630828444
+      spriteID: 3b762cf4c39f2f946b82e6f25f8bdc02
+      internalID: -127626320
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crawler_S_MS_Sprite_6
+      name: Crawler_S_Attack_Schuler_v02_6
       rect:
         serializedVersion: 2
         x: 96
@@ -250,14 +250,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4d77cf691e7004f4cbe38b331bca8f72
-      internalID: -1936453368
+      spriteID: 8aa67015fa71005419063e49b1670c3e
+      internalID: -750495239
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crawler_S_MS_Sprite_7
+      name: Crawler_S_Attack_Schuler_v02_7
       rect:
         serializedVersion: 2
         x: 192
@@ -271,8 +271,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c1f4f34990d9b894cb5ded9f67f3d503
-      internalID: 595092879
+      spriteID: 18e7088ca5275634fbcc58bc723090e1
+      internalID: 870738787
       vertices: []
       indices: 
       edges: []
@@ -288,14 +288,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Crawler_S_MS_Sprite_0: -1331630263
-      Crawler_S_MS_Sprite_1: 856677618
-      Crawler_S_MS_Sprite_2: 2145215365
-      Crawler_S_MS_Sprite_3: 932167947
-      Crawler_S_MS_Sprite_4: 1354840320
-      Crawler_S_MS_Sprite_5: 630828444
-      Crawler_S_MS_Sprite_6: -1936453368
-      Crawler_S_MS_Sprite_7: 595092879
+      Crawler_S_Attack_Schuler_v02_0: 1104761470
+      Crawler_S_Attack_Schuler_v02_1: 345634048
+      Crawler_S_Attack_Schuler_v02_2: 1694204895
+      Crawler_S_Attack_Schuler_v02_3: -982477492
+      Crawler_S_Attack_Schuler_v02_4: 1449987692
+      Crawler_S_Attack_Schuler_v02_5: -127626320
+      Crawler_S_Attack_Schuler_v02_6: -750495239
+      Crawler_S_Attack_Schuler_v02_7: 870738787
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

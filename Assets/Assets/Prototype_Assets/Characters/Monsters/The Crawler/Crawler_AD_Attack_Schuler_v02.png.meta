@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e08c5d635a31a0e439eeccbbf8a45229
+guid: 1100da4adcd3f2a4393ab699bde16350
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,169 +110,190 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Crawler_A_MS_Sprite_0
+      name: Crawler_AD_Attack_Schuler_v02_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 160
-        width: 96
+        y: 416
+        width: 128
         height: 96
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fcca2023e298f1747a10b98c26d2ed10
-      internalID: -133586956
+      spriteID: 83d1a65780be65940ae4f06e3219089d
+      internalID: 1851708243
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crawler_A_MS_Sprite_1
+      name: Crawler_AD_Attack_Schuler_v02_1
       rect:
         serializedVersion: 2
-        x: 96
-        y: 160
-        width: 96
+        x: 128
+        y: 416
+        width: 128
         height: 96
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b76ffb4c530fde84084e63f460c94057
-      internalID: 1260075932
+      spriteID: 6244201e876705c44a939c1b4a65d0f4
+      internalID: 1407092822
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crawler_A_MS_Sprite_2
+      name: Crawler_AD_Attack_Schuler_v02_2
       rect:
         serializedVersion: 2
-        x: 192
-        y: 160
-        width: 96
+        x: 256
+        y: 416
+        width: 128
         height: 96
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a9d442739ba582e449917ad56e20914b
-      internalID: -804770983
+      spriteID: a4b12c2a5e24ec14baa333806cc42f45
+      internalID: -542901418
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crawler_A_MS_Sprite_3
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 160
-        width: 96
-        height: 96
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: aa88400833dcd2c46a0b25d2a9cbd1d7
-      internalID: -601924571
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Crawler_A_MS_Sprite_4
+      name: Crawler_AD_Attack_Schuler_v02_3
       rect:
         serializedVersion: 2
         x: 384
-        y: 160
-        width: 96
+        y: 416
+        width: 128
         height: 96
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f54a7fccef8686344bbb6c54abeede6e
-      internalID: 414417635
+      spriteID: 6ca265f4adfe90740854f1eabe5f8088
+      internalID: -1658312289
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crawler_A_MS_Sprite_5
+      name: Crawler_AD_Attack_Schuler_v02_4
       rect:
         serializedVersion: 2
         x: 0
-        y: 64
-        width: 96
+        y: 320
+        width: 128
         height: 96
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0439592ccfa40754c9a20a3e28f8d990
-      internalID: -73461166
+      spriteID: c9dfb6b8f337471438f1faf31b42038d
+      internalID: 513313429
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crawler_A_MS_Sprite_6
+      name: Crawler_AD_Attack_Schuler_v02_5
       rect:
         serializedVersion: 2
-        x: 96
-        y: 64
-        width: 96
+        x: 128
+        y: 320
+        width: 128
         height: 96
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 769b01837b7fbe14e930640df7b5fc50
-      internalID: -485802395
+      spriteID: 4e56062c1219c8c42afdf8bd8eafdb3d
+      internalID: -555788385
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crawler_A_MS_Sprite_7
+      name: Crawler_AD_Attack_Schuler_v02_6
       rect:
         serializedVersion: 2
-        x: 192
-        y: 64
-        width: 96
+        x: 256
+        y: 320
+        width: 128
         height: 96
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7a71a85ed55aaf14dbdd4a7bf1e7ae06
-      internalID: -1468328664
+      spriteID: e507d77ae1821a7409bef57cd64bb1ac
+      internalID: -1425769179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crawler_AD_Attack_Schuler_v02_7
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 320
+        width: 128
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f69b3f7d209d2554986ffc38fd47cc55
+      internalID: 1328460683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crawler_AD_Attack_Schuler_v02_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 224
+        width: 128
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd1798914d116274fb6d0a369ba1e62d
+      internalID: -614455123
       vertices: []
       indices: 
       edges: []
@@ -288,15 +309,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Crawler_A_MS_Sprite_0: -133586956
-      Crawler_A_MS_Sprite_1: 1260075932
-      Crawler_A_MS_Sprite_2: -804770983
-      Crawler_A_MS_Sprite_3: -601924571
-      Crawler_A_MS_Sprite_4: 414417635
-      Crawler_A_MS_Sprite_5: -73461166
-      Crawler_A_MS_Sprite_6: -485802395
-      Crawler_A_MS_Sprite_7: -1468328664
-      Crawler_A_MS_Sprite_8: -1305061979
+      Crawler_AD_Attack_Schuler_v02_0: 1851708243
+      Crawler_AD_Attack_Schuler_v02_1: 1407092822
+      Crawler_AD_Attack_Schuler_v02_2: -542901418
+      Crawler_AD_Attack_Schuler_v02_3: -1658312289
+      Crawler_AD_Attack_Schuler_v02_4: 513313429
+      Crawler_AD_Attack_Schuler_v02_5: -555788385
+      Crawler_AD_Attack_Schuler_v02_6: -1425769179
+      Crawler_AD_Attack_Schuler_v02_7: 1328460683
+      Crawler_AD_Attack_Schuler_v02_8: -614455123
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
