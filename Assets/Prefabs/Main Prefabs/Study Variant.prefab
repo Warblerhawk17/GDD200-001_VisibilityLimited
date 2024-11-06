@@ -58,7 +58,7 @@ MonoBehaviour:
   - {x: 6.539429, y: 0.0074556246, z: 0}
   m_ShapePathHash: 1461294527
   m_Mesh: {fileID: 0}
-  m_InstanceId: 165796
+  m_InstanceId: 43500
   m_LocalBounds:
     m_Center: {x: 3.500136, y: 1.0006953, z: 0}
     m_Extent: {x: 3.039293, y: 0.99323976, z: 0}
@@ -120,10 +120,89 @@ MonoBehaviour:
   - {x: 11.539052, y: -2.9914174, z: 0}
   m_ShapePathHash: 1655985016
   m_Mesh: {fileID: 0}
-  m_InstanceId: 165790
+  m_InstanceId: 43494
   m_LocalBounds:
     m_Center: {x: 8.9996395, y: -1.9990158, z: 0}
     m_Extent: {x: 2.539413, y: 0.9924016, z: 0}
+--- !u!1 &4361752241271388178
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5562441045319309508}
+  - component: {fileID: 3436859070900918044}
+  m_Layer: 6
+  m_Name: Colliders
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5562441045319309508
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4361752241271388178}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.0051941266}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4726082601311994275}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!68 &3436859070900918044
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4361752241271388178}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0.047
+  m_Points:
+  - {x: 1.0157552, y: 4.046914}
+  - {x: 0.50032544, y: 4.047158}
+  - {x: 0.49962917, y: 0.048185047}
+  - {x: 6.499627, y: 0.046552155}
+  - {x: 6.4998903, y: -2.952722}
+  - {x: 11.500153, y: -2.9532707}
+  - {x: 11.499287, y: 4.046797}
+  - {x: 1.984355, y: 4.04679}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!1001 &5114825744914912160
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3727,6 +3806,9 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 535341200810840579, guid: 79f23e690faa126478e07a154122dcce, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5562441045319309508}
     - targetCorrespondingSourceObject: {fileID: 2912613071986284332, guid: 79f23e690faa126478e07a154122dcce, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1763556718980702677}
@@ -3737,13 +3819,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2775975966944878233, guid: 79f23e690faa126478e07a154122dcce, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6448829273631245883}
-    - targetCorrespondingSourceObject: {fileID: 2775975966944878233, guid: 79f23e690faa126478e07a154122dcce, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 214967260854022162}
     - targetCorrespondingSourceObject: {fileID: 2762598654767415770, guid: 79f23e690faa126478e07a154122dcce, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7803330230526183745}
   m_SourcePrefab: {fileID: 100100000, guid: 79f23e690faa126478e07a154122dcce, type: 3}
+--- !u!4 &4726082601311994275 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 535341200810840579, guid: 79f23e690faa126478e07a154122dcce, type: 3}
+  m_PrefabInstance: {fileID: 5114825744914912160}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &6952921780728646969 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2775975966944878233, guid: 79f23e690faa126478e07a154122dcce, type: 3}
@@ -3787,57 +3871,10 @@ MonoBehaviour:
   - {x: 6.460681, y: 0.008604653, z: 0}
   m_ShapePathHash: 691180545
   m_Mesh: {fileID: 0}
-  m_InstanceId: 165784
+  m_InstanceId: 43488
   m_LocalBounds:
     m_Center: {x: 5.999961, y: 0.5550759, z: 0}
     m_Extent: {x: 5.5393767, y: 3.548113, z: 0}
---- !u!68 &214967260854022162
-EdgeCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6952921780728646969}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0.047
-  m_Points:
-  - {x: 1.0157552, y: 4.046914}
-  - {x: 0.50032544, y: 4.047158}
-  - {x: 0.49962917, y: 0.048185047}
-  - {x: 6.499627, y: 0.046552155}
-  - {x: 6.4998903, y: -2.952722}
-  - {x: 11.500153, y: -2.9532707}
-  - {x: 11.499287, y: 4.046797}
-  - {x: 1.984355, y: 4.04679}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
 --- !u!1 &6966288230934073978 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2762598654767415770, guid: 79f23e690faa126478e07a154122dcce, type: 3}
@@ -3873,7 +3910,7 @@ MonoBehaviour:
   - {x: 1.054545, y: 4.0083017, z: 0}
   m_ShapePathHash: -2001293548
   m_Mesh: {fileID: 0}
-  m_InstanceId: 165792
+  m_InstanceId: 43496
   m_LocalBounds:
     m_Center: {x: 5.9992366, y: 5.000023, z: 0}
     m_Extent: {x: 5.540395, y: 0.99276805, z: 0}
