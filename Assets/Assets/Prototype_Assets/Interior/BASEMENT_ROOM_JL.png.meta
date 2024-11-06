@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0f960352bbaa50e45a96fcea3c408414
+guid: 93cedba2a0827504dbced242ffd01554
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -94,6 +94,32 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -107,37 +133,11 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: iPhone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
     buildTarget: Windows Store Apps
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -150,7 +150,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -162,13 +162,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Battery_RW_UI_Design_Sprite_0
+      name: BASEMENT_ROOM_JL_0
       rect:
         serializedVersion: 2
-        x: 15
-        y: 588
-        width: 166
-        height: 39
+        x: 0
+        y: 192
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -176,20 +176,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a96b7aad923a5d049bfff8aa72d7e222
-      internalID: -1845499927
+      spriteID: 13850fdf82945414788def4abc8a4494
+      internalID: -2078775531
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Battery_RW_UI_Design_Sprite_1
+      name: BASEMENT_ROOM_JL_1
       rect:
         serializedVersion: 2
-        x: 15
-        y: 524
-        width: 166
-        height: 39
+        x: 64
+        y: 192
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -197,20 +197,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ccfd19261284ec44c877a5216a569b9b
-      internalID: 805230455
+      spriteID: 065c55500a9a3bb4596518fa1112833d
+      internalID: -1263399360
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Battery_RW_UI_Design_Sprite_2
+      name: BASEMENT_ROOM_JL_2
       rect:
         serializedVersion: 2
-        x: 15
-        y: 460
-        width: 166
-        height: 39
+        x: 128
+        y: 192
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -218,20 +218,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 833a1f41049b4b0489c83004f340e650
-      internalID: -969028449
+      spriteID: 870446613346fdc408e0f24a99593f8c
+      internalID: 1634026362
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Battery_RW_UI_Design_Sprite_3
+      name: BASEMENT_ROOM_JL_3
       rect:
         serializedVersion: 2
-        x: 15
-        y: 396
-        width: 166
-        height: 39
+        x: 192
+        y: 192
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -239,20 +239,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 69958aa79fc6a054b960244cd8ae89ec
-      internalID: -973522643
+      spriteID: a719d0bb3705157468c5ca14b9dd4689
+      internalID: 931986388
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Battery_RW_UI_Design_Sprite_4
+      name: BASEMENT_ROOM_JL_4
       rect:
         serializedVersion: 2
-        x: 15
-        y: 332
-        width: 166
-        height: 39
+        x: 0
+        y: 128
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -260,20 +260,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 92ffcf04e36cded46abb9735722cca73
-      internalID: -1485442990
+      spriteID: c572738272f51344c91b76d3af6ce3f2
+      internalID: -1219094643
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Battery_RW_UI_Design_Sprite_5
+      name: BASEMENT_ROOM_JL_5
       rect:
         serializedVersion: 2
-        x: 15
-        y: 268
-        width: 166
-        height: 39
+        x: 64
+        y: 128
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -281,20 +281,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b8ceb54149adfbe45affa730bda82cc0
-      internalID: -1659559703
+      spriteID: 0797208dfb0367a44a9192376a5dca3f
+      internalID: -582607971
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Battery_RW_UI_Design_Sprite_6
+      name: BASEMENT_ROOM_JL_6
       rect:
         serializedVersion: 2
-        x: 15
-        y: 204
-        width: 166
-        height: 39
+        x: 128
+        y: 128
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -302,20 +302,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: afb59aa6652631a4991ae63451bdfeab
-      internalID: -1009234116
+      spriteID: 6cdeb62ec09a9df41a67284c838b7828
+      internalID: -681827385
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Battery_RW_UI_Design_Sprite_7
+      name: BASEMENT_ROOM_JL_7
       rect:
         serializedVersion: 2
-        x: 15
-        y: 140
-        width: 166
-        height: 39
+        x: 192
+        y: 128
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -323,20 +323,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 33cb8f2957677a548b34caa5ef0fb288
-      internalID: 1240128932
+      spriteID: 33bdb8576aa1c784fa5e63b8f4371e32
+      internalID: -1487843355
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Battery_RW_UI_Design_Sprite_8
+      name: BASEMENT_ROOM_JL_8
       rect:
         serializedVersion: 2
-        x: 15
-        y: 76
-        width: 166
-        height: 39
+        x: 0
+        y: 64
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -344,20 +344,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d4c8f89dd1d9bec4cb4c34e1e82d0f6a
-      internalID: 108397558
+      spriteID: 7da6b1bd44073014ea3b5c96c066a4e4
+      internalID: -1409377947
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Battery_RW_UI_Design_Sprite_9
+      name: BASEMENT_ROOM_JL_9
       rect:
         serializedVersion: 2
-        x: 15
-        y: 12
-        width: 166
-        height: 39
+        x: 128
+        y: 64
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -365,8 +365,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bcd0ba4c05365ad41af8ed0394ec26ad
-      internalID: 1102068931
+      spriteID: cfe40edaba91ed14ea53a74e7dc12d24
+      internalID: 842435910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BASEMENT_ROOM_JL_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93cdf922849de3b468f014ec728b7f28
+      internalID: 996478884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BASEMENT_ROOM_JL_11
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3534b0d3604e5df4788f79c53ebb1833
+      internalID: -1668781231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BASEMENT_ROOM_JL_12
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80cb6549fab71334c8712e0393f65407
+      internalID: -794939246
       vertices: []
       indices: 
       edges: []
@@ -382,16 +445,19 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Battery_RW_UI_Design_Sprite_0: -1845499927
-      Battery_RW_UI_Design_Sprite_1: 805230455
-      Battery_RW_UI_Design_Sprite_2: -969028449
-      Battery_RW_UI_Design_Sprite_3: -973522643
-      Battery_RW_UI_Design_Sprite_4: -1485442990
-      Battery_RW_UI_Design_Sprite_5: -1659559703
-      Battery_RW_UI_Design_Sprite_6: -1009234116
-      Battery_RW_UI_Design_Sprite_7: 1240128932
-      Battery_RW_UI_Design_Sprite_8: 108397558
-      Battery_RW_UI_Design_Sprite_9: 1102068931
+      BASEMENT_ROOM_JL_0: -2078775531
+      BASEMENT_ROOM_JL_1: -1263399360
+      BASEMENT_ROOM_JL_10: 996478884
+      BASEMENT_ROOM_JL_11: -1668781231
+      BASEMENT_ROOM_JL_12: -794939246
+      BASEMENT_ROOM_JL_2: 1634026362
+      BASEMENT_ROOM_JL_3: 931986388
+      BASEMENT_ROOM_JL_4: -1219094643
+      BASEMENT_ROOM_JL_5: -582607971
+      BASEMENT_ROOM_JL_6: -681827385
+      BASEMENT_ROOM_JL_7: -1487843355
+      BASEMENT_ROOM_JL_8: -1409377947
+      BASEMENT_ROOM_JL_9: 842435910
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

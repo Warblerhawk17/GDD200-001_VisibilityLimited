@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0f960352bbaa50e45a96fcea3c408414
+guid: f37a22de4f0717943ac3d818d8702a85
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -94,6 +94,32 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -107,37 +133,11 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: iPhone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
     buildTarget: Windows Store Apps
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -150,7 +150,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -162,13 +162,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Battery_RW_UI_Design_Sprite_0
+      name: Basement_Floor_Jl_0
       rect:
         serializedVersion: 2
-        x: 15
-        y: 588
-        width: 166
-        height: 39
+        x: 0
+        y: 128
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -176,20 +176,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a96b7aad923a5d049bfff8aa72d7e222
-      internalID: -1845499927
+      spriteID: dbb31bfa89f5dd7458e9209b55cabe43
+      internalID: 313375677
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Battery_RW_UI_Design_Sprite_1
+      name: Basement_Floor_Jl_1
       rect:
         serializedVersion: 2
-        x: 15
-        y: 524
-        width: 166
-        height: 39
+        x: 64
+        y: 128
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -197,20 +197,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ccfd19261284ec44c877a5216a569b9b
-      internalID: 805230455
+      spriteID: fdd9b639fc9e6c94683d2bde5a72162e
+      internalID: 68298823
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Battery_RW_UI_Design_Sprite_2
+      name: Basement_Floor_Jl_2
       rect:
         serializedVersion: 2
-        x: 15
-        y: 460
-        width: 166
-        height: 39
+        x: 128
+        y: 128
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -218,20 +218,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 833a1f41049b4b0489c83004f340e650
-      internalID: -969028449
+      spriteID: 1394956cc9babfb4b95aba7fba6e2988
+      internalID: -1780139051
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Battery_RW_UI_Design_Sprite_3
+      name: Basement_Floor_Jl_3
       rect:
         serializedVersion: 2
-        x: 15
-        y: 396
-        width: 166
-        height: 39
+        x: 0
+        y: 64
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -239,20 +239,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 69958aa79fc6a054b960244cd8ae89ec
-      internalID: -973522643
+      spriteID: d8836272f4cd4df4180b8f73422bdc83
+      internalID: -1813071673
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Battery_RW_UI_Design_Sprite_4
+      name: Basement_Floor_Jl_4
       rect:
         serializedVersion: 2
-        x: 15
-        y: 332
-        width: 166
-        height: 39
+        x: 64
+        y: 64
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -260,20 +260,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 92ffcf04e36cded46abb9735722cca73
-      internalID: -1485442990
+      spriteID: f274f545ad1ebc74cb46f153c1feab17
+      internalID: 630653337
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Battery_RW_UI_Design_Sprite_5
+      name: Basement_Floor_Jl_5
       rect:
         serializedVersion: 2
-        x: 15
-        y: 268
-        width: 166
-        height: 39
+        x: 128
+        y: 64
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -281,20 +281,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b8ceb54149adfbe45affa730bda82cc0
-      internalID: -1659559703
+      spriteID: c392c85cf5eaae747b5484117e7a7b73
+      internalID: 1419866855
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Battery_RW_UI_Design_Sprite_6
+      name: Basement_Floor_Jl_6
       rect:
         serializedVersion: 2
-        x: 15
-        y: 204
-        width: 166
-        height: 39
+        x: 0
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -302,20 +302,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: afb59aa6652631a4991ae63451bdfeab
-      internalID: -1009234116
+      spriteID: 7a3c39a24c8fbe04ebc6118fa7e3a847
+      internalID: 1972633683
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Battery_RW_UI_Design_Sprite_7
+      name: Basement_Floor_Jl_7
       rect:
         serializedVersion: 2
-        x: 15
-        y: 140
-        width: 166
-        height: 39
+        x: 64
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -323,20 +323,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 33cb8f2957677a548b34caa5ef0fb288
-      internalID: 1240128932
+      spriteID: 78a11bb1a65286a4aab1bcd6c56c8d7f
+      internalID: 959899319
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Battery_RW_UI_Design_Sprite_8
+      name: Basement_Floor_Jl_8
       rect:
         serializedVersion: 2
-        x: 15
-        y: 76
-        width: 166
-        height: 39
+        x: 128
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -344,29 +344,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d4c8f89dd1d9bec4cb4c34e1e82d0f6a
-      internalID: 108397558
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Battery_RW_UI_Design_Sprite_9
-      rect:
-        serializedVersion: 2
-        x: 15
-        y: 12
-        width: 166
-        height: 39
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bcd0ba4c05365ad41af8ed0394ec26ad
-      internalID: 1102068931
+      spriteID: e2ef7e673eb45b346bcb93b3b50c2917
+      internalID: -1038910336
       vertices: []
       indices: 
       edges: []
@@ -382,16 +361,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Battery_RW_UI_Design_Sprite_0: -1845499927
-      Battery_RW_UI_Design_Sprite_1: 805230455
-      Battery_RW_UI_Design_Sprite_2: -969028449
-      Battery_RW_UI_Design_Sprite_3: -973522643
-      Battery_RW_UI_Design_Sprite_4: -1485442990
-      Battery_RW_UI_Design_Sprite_5: -1659559703
-      Battery_RW_UI_Design_Sprite_6: -1009234116
-      Battery_RW_UI_Design_Sprite_7: 1240128932
-      Battery_RW_UI_Design_Sprite_8: 108397558
-      Battery_RW_UI_Design_Sprite_9: 1102068931
+      Basement_Floor_Jl_0: 313375677
+      Basement_Floor_Jl_1: 68298823
+      Basement_Floor_Jl_2: -1780139051
+      Basement_Floor_Jl_3: -1813071673
+      Basement_Floor_Jl_4: 630653337
+      Basement_Floor_Jl_5: 1419866855
+      Basement_Floor_Jl_6: 1972633683
+      Basement_Floor_Jl_7: 959899319
+      Basement_Floor_Jl_8: -1038910336
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
