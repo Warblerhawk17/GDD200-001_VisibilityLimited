@@ -12,6 +12,12 @@ public class Player_Script : MonoBehaviour
     private Rigidbody2D rb; // Reference to the Rigidbody2D component attached to the player
     private Vector2 movement; // Stores the direction of player movement
     public BatteryManager batteryManager;
+<<<<<<< Updated upstream
+=======
+    public LivesBehavior livesBehavior;
+    public int lives = 3;
+    public int friendsSaved = 0;
+>>>>>>> Stashed changes
     public string currentLightSource;
 
 
@@ -25,7 +31,6 @@ public class Player_Script : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         // Prevent the player from rotating
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
-
     }
 
     void Update()
@@ -92,6 +97,26 @@ public class Player_Script : MonoBehaviour
           }
         */
     }
+<<<<<<< Updated upstream
+=======
+    private void LoseLife()
+    {
+        livesBehavior.LoseLife();
+        lives--;
+        transform.position = GameObject.Find("PlayerSpawn").transform.position;
+        for (int i = 0; i < friendList.Count; i++) 
+        {
+            friendList[i].GetComponent<FriendFollow>().follow = null;
+        }
+        friendList.Clear();
+        if (lives == 0)
+        {
+            Object.Destroy(this.gameObject);
+        }
+    }
+
+
+>>>>>>> Stashed changes
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Friend") && !friendList.Contains(collision.gameObject) )
