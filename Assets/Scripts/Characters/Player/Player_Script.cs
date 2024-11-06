@@ -8,11 +8,13 @@ public class Player_Script : MonoBehaviour
     public float speed = 5f; // The speed of the player walking
     public float runSpeed = 8f; // The speed at which the player runs
 
+
     // Private variables 
     private Rigidbody2D rb; // Reference to the Rigidbody2D component attached to the player
     private Vector2 movement; // Stores the direction of player movement
     public BatteryManager batteryManager;
     public string currentLightSource;
+    private Animator anim; //Animation Object
 
 
     // Friend variable
