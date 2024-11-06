@@ -5,14 +5,12 @@ using UnityEngine;
 public class Player_Script : MonoBehaviour
 {
     // Public variables
-    public float speed = 5f;
-    public float runSpeed = 8f; // The speed at which the player moves
-    public bool canMoveDiagonally = true; // Controls whether the player can move diagonally
+    public float speed = 5f; // The speed of the player walking
+    public float runSpeed = 8f; // The speed at which the player runs
 
     // Private variables 
     private Rigidbody2D rb; // Reference to the Rigidbody2D component attached to the player
     private Vector2 movement; // Stores the direction of player movement
-    private bool isMovingHorizontally = true; // Flag to track if the player is moving horizontally
     public BatteryManager batteryManager;
     private int lives = 3;
     public int friendsSaved = 0;
@@ -39,24 +37,8 @@ public class Player_Script : MonoBehaviour
         float horizontalInput = Input.GetAxisRaw("Horizontal");
         float verticalInput = Input.GetAxisRaw("Vertical");
 
-        // Check if diagonal movement is allowed
-        if (canMoveDiagonally)
-        {
-            // Set movement direction based on input
-            movement = new Vector2(horizontalInput, verticalInput);
-        }
-        else
-        {
-            // Determine the priority of movement based on input
-            if (horizontalInput != 0)
-            {
-                isMovingHorizontally = true;
-            }
-            else if (verticalInput != 0)
-            {
-                isMovingHorizontally = false;
-            }
-        }
+        // Set movement direction based on input
+        movement = new Vector2(horizontalInput, verticalInput);
 
         if (Input.GetKey(KeyCode.LeftShift))
         {
