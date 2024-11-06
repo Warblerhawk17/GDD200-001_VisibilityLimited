@@ -1,0 +1,883 @@
+fileFormatVersion: 2
+guid: 099aef6935f9a944c99ba475676696ba
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: tvOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Wren_Idle_KN_Sprite_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 253.5
+        width: 58.875
+        height: 84.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aeb1f6903bc9e9e47af41faa35d966f5
+      internalID: 1074920353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wren_Idle_KN_Sprite_1
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 253.5
+        width: 58.875
+        height: 84.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c388edf741c9f748b014f3444630c3c
+      internalID: 2144792091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wren_Idle_KN_Sprite_2
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 253.5
+        width: 58.875
+        height: 84.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 485482105b237d24e950817815c1e5b3
+      internalID: 924075558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wren_Idle_KN_Sprite_3
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 253.5
+        width: 58.875
+        height: 84.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fb09810bbf7cda4c80723505b10accd
+      internalID: 219830650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wren_Idle_KN_Sprite_4
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 253.5
+        width: 58.875
+        height: 84.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8ff88b4751a4584697a24e7336f845c
+      internalID: -471659867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wren_Idle_KN_Sprite_5
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 253.5
+        width: 58.875
+        height: 84.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da1b9e5ba7c40284f9ba7f5f4c94c269
+      internalID: 1681512492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wren_Idle_KN_Sprite_6
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 253.5
+        width: 58.875
+        height: 84.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c050d08a50dac7498c0b6522da19316
+      internalID: 524432588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wren_Idle_KN_Sprite_7
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 253.5
+        width: 58.875
+        height: 84.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 649bf6941196de34ebbb507b6b52d83e
+      internalID: -731540609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wren_Idle_KN_Sprite_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 169.5
+        width: 58.875
+        height: 84.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77f8e08683fd62149826cef3719e5c28
+      internalID: -1929915247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wren_Idle_KN_Sprite_9
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 169.5
+        width: 58.875
+        height: 84.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ab48678c88a64d4398a12c33f90cff6
+      internalID: 1916495917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wren_Idle_KN_Sprite_10
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 169.5
+        width: 58.875
+        height: 84.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71acb78b0acfedc499cdd9860607aca7
+      internalID: -1917936898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wren_Idle_KN_Sprite_11
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 169.5
+        width: 58.875
+        height: 84.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41beca6bac49cbd4582b8bc6ec8b88ce
+      internalID: 809502489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wren_Idle_KN_Sprite_12
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 169.5
+        width: 58.875
+        height: 84.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d96cc416945b314da723183c26db088
+      internalID: -833077779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wren_Idle_KN_Sprite_13
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 169.5
+        width: 58.875
+        height: 84.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6c4bc97eabdc5d4e8a5462395ae327a
+      internalID: 210553278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wren_Idle_KN_Sprite_14
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 169.5
+        width: 58.875
+        height: 84.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f5aea16eaeebcd4985262ea6cffac80
+      internalID: 61216136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wren_Idle_KN_Sprite_15
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 169.5
+        width: 58.875
+        height: 84.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 548a1ad37068e9b49b5f46399848e212
+      internalID: 277202562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wren_Idle_KN_Sprite_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 85.5
+        width: 58.875
+        height: 84.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23858cb1aa551bd46bda47c297f52040
+      internalID: -2021785241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wren_Idle_KN_Sprite_17
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 85.5
+        width: 58.875
+        height: 84.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21180b3ab6acfaa44b376b6a20e31bc9
+      internalID: 610805223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wren_Idle_KN_Sprite_18
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 85.5
+        width: 58.875
+        height: 84.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d7d6d179c0d2fa4e81770228497c668
+      internalID: -1051456323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wren_Idle_KN_Sprite_19
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 85.5
+        width: 58.875
+        height: 84.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a630c09e1569da469b05b19c5e563d7
+      internalID: -2012896596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wren_Idle_KN_Sprite_20
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 85.5
+        width: 58.875
+        height: 84.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c6f4e510d04dcc47baacacaaee53e97
+      internalID: -1931483236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wren_Idle_KN_Sprite_21
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 85.5
+        width: 58.875
+        height: 84.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e850ff1cc7c79004c966d2b93fc2c547
+      internalID: -1199121867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wren_Idle_KN_Sprite_22
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 85.5
+        width: 58.875
+        height: 84.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be9138404b56e6646ac0815c0ff65e4f
+      internalID: 1251858581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wren_Idle_KN_Sprite_23
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 85.5
+        width: 58.875
+        height: 84.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b7b16a871831554882375ecb48aba70
+      internalID: 533866614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wren_Idle_KN_Sprite_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1.5
+        width: 58.875
+        height: 84.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41220408c7bc64340a28fa861d496834
+      internalID: -1934123127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wren_Idle_KN_Sprite_25
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 1.5
+        width: 58.875
+        height: 84.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb0dd398ea81ee247b974a77cd350bad
+      internalID: 1805706238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wren_Idle_KN_Sprite_26
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 1.5
+        width: 58.875
+        height: 84.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4914c1b90563312488f6dbd8c8262177
+      internalID: 1445203536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wren_Idle_KN_Sprite_27
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 1.5
+        width: 58.875
+        height: 84.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa2b0744c59882f48b60a5b70b478690
+      internalID: 1640868031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wren_Idle_KN_Sprite_28
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 1.5
+        width: 58.875
+        height: 84.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fc5595d5d7a7ea4a984665bc90c5336
+      internalID: -1047628738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wren_Idle_KN_Sprite_29
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 1.5
+        width: 58.875
+        height: 84.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97a73625cd3ba56429597f6632f88200
+      internalID: -706029976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wren_Idle_KN_Sprite_30
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 1.5
+        width: 58.875
+        height: 84.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84d810c58f64c8e48b44005b64d73854
+      internalID: -2139410482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wren_Idle_KN_Sprite_31
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 1.5
+        width: 58.875
+        height: 84.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c69cfe058bd6ba849b2d368f0240df07
+      internalID: -630367927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 28ba33c671be5e742b0128e590ae511f
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Wren_Idle_KN_Sprite_0: 1074920353
+      Wren_Idle_KN_Sprite_1: 2144792091
+      Wren_Idle_KN_Sprite_10: -1917936898
+      Wren_Idle_KN_Sprite_11: 809502489
+      Wren_Idle_KN_Sprite_12: -833077779
+      Wren_Idle_KN_Sprite_13: 210553278
+      Wren_Idle_KN_Sprite_14: 61216136
+      Wren_Idle_KN_Sprite_15: 277202562
+      Wren_Idle_KN_Sprite_16: -2021785241
+      Wren_Idle_KN_Sprite_17: 610805223
+      Wren_Idle_KN_Sprite_18: -1051456323
+      Wren_Idle_KN_Sprite_19: -2012896596
+      Wren_Idle_KN_Sprite_2: 924075558
+      Wren_Idle_KN_Sprite_20: -1931483236
+      Wren_Idle_KN_Sprite_21: -1199121867
+      Wren_Idle_KN_Sprite_22: 1251858581
+      Wren_Idle_KN_Sprite_23: 533866614
+      Wren_Idle_KN_Sprite_24: -1934123127
+      Wren_Idle_KN_Sprite_25: 1805706238
+      Wren_Idle_KN_Sprite_26: 1445203536
+      Wren_Idle_KN_Sprite_27: 1640868031
+      Wren_Idle_KN_Sprite_28: -1047628738
+      Wren_Idle_KN_Sprite_29: -706029976
+      Wren_Idle_KN_Sprite_3: 219830650
+      Wren_Idle_KN_Sprite_30: -2139410482
+      Wren_Idle_KN_Sprite_31: -630367927
+      Wren_Idle_KN_Sprite_4: -471659867
+      Wren_Idle_KN_Sprite_5: 1681512492
+      Wren_Idle_KN_Sprite_6: 524432588
+      Wren_Idle_KN_Sprite_7: -731540609
+      Wren_Idle_KN_Sprite_8: -1929915247
+      Wren_Idle_KN_Sprite_9: 1916495917
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
