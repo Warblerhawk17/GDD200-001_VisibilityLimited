@@ -10,7 +10,7 @@ public class FriendFollow : MonoBehaviour
     public LayerMask layerMask;
     private Node currentNode; //the current node it is at
     private List<Node> path = new List<Node>(); //the path of nodes it will travel
-    public float speed;
+    private float speed = 10;
 
     // Start is called before the first frame update
     void Start()
@@ -25,12 +25,12 @@ public class FriendFollow : MonoBehaviour
         {
             //Vector2 rayCastStart = transform.position + Vector3.Normalize(follow.transform.position - transform.position)*1.5f;
             RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector3.Normalize(follow.transform.position - transform.position), float.MaxValue, layerMask);
-            Debug.DrawRay(transform.position, Vector3.Normalize(follow.transform.position - transform.position), Color.red);
-            Debug.Log(hit.collider.gameObject == gameObject);
+            //Debug.DrawRay(transform.position, Vector3.Normalize(follow.transform.position - transform.position), Color.red);
+            //Debug.Log(hit.collider.gameObject == gameObject);
             //Debug.Log("Is self collide " + (hit.collider.gameObject == follow.gameObject) + " rayCastStart " + (rayCastStart) + " direction " + (Vector3.Normalize(follow.transform.position - transform.position)) + " Follow " + (follow.transform.position) + " my position" + (transform.position));
             if (hit.collider.gameObject != follow.gameObject)
             {
-                Debug.Log("Non Direct Move");
+                //Debug.Log("Non Direct Move");
                 if (path.Count == 0)
                 { //make new path
                     Node nearestNode = AStarManager.instance.FindNearestNode(transform.position); //the node nearest to the friend
@@ -38,7 +38,7 @@ public class FriendFollow : MonoBehaviour
                     path = AStarManager.instance.GeneratePath(nearestNode, targetNode); //makes a path from the crawler to the next node in the patrol path
                 }
                 GoTowards(path[0].transform.position); //goes towards the next node in path
-                Debug.DrawRay(transform.position, path[0].transform.position - transform.position, Color.red);
+                //Debug.DrawRay(transform.position, path[0].transform.position - transform.position, Color.red);
                 if (Vector2.Distance(transform.position, path[0].transform.position) < 0.1f) //removes node if it gets too close to it
                 {
                     currentNode = path[0];
@@ -47,7 +47,7 @@ public class FriendFollow : MonoBehaviour
             }
             else if (Vector2.Distance(transform.position, follow.transform.position) > followDistance)
             {
-                Debug.Log("Direct Move");
+                //Debug.Log("Direct Move");
                 GoTowards(follow.transform.position);
                 path.Clear();
             }
@@ -62,4 +62,29 @@ public class FriendFollow : MonoBehaviour
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg; // weird math to find the angle, yes the Atan2 goes y first then x
         transform.rotation = Quaternion.Euler(Vector3.forward * angle); // changes npc rotation
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player") && !collision.GetComponent<Player_Script>().friendList.Contains(this.gameObject))
+        {
+            Player_Script player = collision.GetComponent<Player_Script>();
+            player.friendList.Add(this.gameObject);
+            follow = player.gameObject;
+            followDistance = player.friendList.Count * 0.5f;
+        }
+
+        /*!collision.GetComponent<Player_Script>.friendList.Contains(this)
+          if (collision.gameObject.CompareTag("Friend") && !friendList.Contains(collision.gameObject))
+        {
+            Debug.Log("Collided with a friend");
+            friendList.Add(collision.gameObject);
+            friendList[friendList.Count - 1].GetComponent<FriendFollow>().follow = this.gameObject;
+            friendList[friendList.Count - 1].GetComponent<FriendFollow>().followDistance = friendList.Count * 0.5f;
+
+
+
+        }
+         */
+    }
+
 }

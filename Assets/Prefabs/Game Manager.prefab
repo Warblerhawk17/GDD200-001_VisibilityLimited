@@ -50,6 +50,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickupText: {fileID: 0}
   groundFlashlightPrefab: {fileID: 7908519645577968149, guid: 671b236e4b9272a48ad18e5fb8c79548, type: 3}
+  groundCandlePrefab: {fileID: 826861030557923246, guid: 33044e9161282ca4393d91eb56f3d69c, type: 3}
+  groundFirefliesPrefab: {fileID: 7908519645577968149, guid: 671b236e4b9272a48ad18e5fb8c79548, type: 3}
+  equippedFlashlightPrefab: {fileID: 7908519645577968149, guid: edbb72a2724c78146a6c763a45b26da2, type: 3}
+  equippedCandlePrefab: {fileID: 826861030557923246, guid: 935ed5b3126e8bc47a5287a3fbb1b0ce, type: 3}
+  equippedFirefliesPrefab: {fileID: 1811812448869938210, guid: 08151a7db74fc8c439521564c25c6110, type: 3}
+  lightSpawnRequested: 0
   spawnLocations:
   - {x: 0, y: 0}
   - {x: 8, y: -3}
@@ -60,10 +66,10 @@ MonoBehaviour:
   - {x: 16, y: 4}
   spawnedLights: []
   numberToSpawn: 7
-  equippedFlashlightPrefab: {fileID: 7908519645577968149, guid: 956a70e61f58b4f478d65a77a6a07560, type: 3}
   batteryManager: {fileID: 0}
-  lightSpawnRequested: 0
   player: {fileID: 0}
+  lightToSpawn: 
+  minNumberOfEach: 0
 --- !u!114 &1366631194341367263
 MonoBehaviour:
   m_ObjectHideFlags: 0

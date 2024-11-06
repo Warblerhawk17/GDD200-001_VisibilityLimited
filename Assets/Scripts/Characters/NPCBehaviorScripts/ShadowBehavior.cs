@@ -9,8 +9,8 @@ public class ShadowBehavior : MonoBehaviour
     public GameObject target; //the target, which it will go towards
     public float speed; //the speed of the crawler
     public LayerMask layerMask;
-    public float chaseRadius;
-    public float timeChased;
+    private float chaseRadius = 5;
+    private float timeChased;
 
     // Start is called before the first frame update
     void Start()

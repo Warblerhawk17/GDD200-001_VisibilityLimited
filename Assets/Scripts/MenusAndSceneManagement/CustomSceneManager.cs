@@ -66,15 +66,15 @@ public class CustomSceneManager : MonoBehaviour
         SceneManager.LoadScene(sceneIndex);
     }
 
-    void OnTriggerEnter2D(UnityEngine.Collider2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("Trigger activated");
 
         // Check if the player is the object entering the trigger
-        if (collision.CompareTag("Player"))
-        {
-            LoadScene(sceneIndex);
-        }
+        //if (collision.CompareTag("Player"))
+        //{
+        //    LoadScene(sceneIndex);
+        //}
     }
 }
 
