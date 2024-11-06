@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -28,6 +29,8 @@ public class CrawlerBehavior : MonoBehaviour
     void Start()
     {
         currentNode = AStarManager.instance.FindNearestNode(transform.position);
+        spriteRenderer = GetComponent<SpriteRenderer>(); //Sprite Renderer object
+        anim = GetComponent<Animator>(); //Animator object
     }
 
     // Update is called once per frame
@@ -105,21 +108,22 @@ public class CrawlerBehavior : MonoBehaviour
 
         direction.Normalize(); // normalizes direction (keeps direction, sets length to 1, makes the math work)
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg; // weird math to find the angle, yes the Atan2 goes y first then x
-        if (45 < angle || angle <= 135) //facing up (W)
+        Debug.Log(angle);
+        if (45 < angle && angle <= 135) //facing up (W)
         {
             anim.SetBool("facingUp", true);
-            anim.SetBool("facingLeft", false);
+            anim.SetBool("facingHorizontal", false);
         }
-        else if (135 < angle || angle <= 225) //facing left (A)
+        else if (-135 > angle || angle > 135) //facing left (A)
         {
             anim.SetBool("facingUp", false);
             anim.SetBool("facingHorizontal", true);
             spriteRenderer.flipX = false;
         }
-        else if (225 < angle || angle <= 315) //facing down (S)
+        else if (-45 > angle && angle >= -135) //facing down (S)
         {
             anim.SetBool("facingUp", false);
-            anim.SetBool("facingLeft", false);
+            anim.SetBool("facingHorizontal", false);
         }
         else //facing right (D)
         {
@@ -127,7 +131,7 @@ public class CrawlerBehavior : MonoBehaviour
             anim.SetBool("facingHorizontal", true);
             spriteRenderer.flipX = true;
         }
-        transform.rotation = Quaternion.Euler(Vector3.forward * angle); // changes npc rotation
+        //transform.rotation = Quaternion.Euler(Vector3.forward * angle); // changes npc rotation
         
     }
 

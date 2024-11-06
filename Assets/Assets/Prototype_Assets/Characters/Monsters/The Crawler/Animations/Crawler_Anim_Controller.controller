@@ -23,7 +23,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: facingLeft
+    m_ConditionEvent: facingHorizontal
     m_EventTreshold: 0
   - m_ConditionMode: 1
     m_ConditionEvent: facingUp
@@ -159,7 +159,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: facingLeft
+    m_ConditionEvent: facingHorizontal
     m_EventTreshold: 0
   - m_ConditionMode: 2
     m_ConditionEvent: facingUp
@@ -187,7 +187,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: facingLeft
+    m_ConditionEvent: facingHorizontal
     m_EventTreshold: 0
   - m_ConditionMode: 2
     m_ConditionEvent: facingUp
@@ -215,7 +215,7 @@ AnimatorController:
   m_Name: Crawler_Anim_Controller
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: facingLeft
+  - m_Name: facingHorizontal
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -313,7 +313,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: facingLeft
+    m_ConditionEvent: facingHorizontal
     m_EventTreshold: 0
   - m_ConditionMode: 1
     m_ConditionEvent: facingUp
@@ -369,7 +369,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: facingLeft
+    m_ConditionEvent: facingHorizontal
     m_EventTreshold: 0
   - m_ConditionMode: 2
     m_ConditionEvent: facingUp
@@ -397,7 +397,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: facingLeft
+    m_ConditionEvent: facingHorizontal
     m_EventTreshold: 0
   - m_ConditionMode: 2
     m_ConditionEvent: facingUp
@@ -411,7 +411,7 @@ AnimatorStateTransition:
   m_TransitionDuration: 0
   m_TransitionOffset: 0
   m_ExitTime: 4.0246895e-10
-  m_HasExitTime: 1
+  m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
