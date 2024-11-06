@@ -30,7 +30,16 @@ public class CrawlerBehavior : MonoBehaviour
     {
         //updates the crawlers search radius
         visionRadius = 3 + target.GetComponent<Player_Script>().friendList.Count;
-       
+        string lightName = target.GetComponent<Player_Script>().currentLightSource;
+        if (lightName == "Flashlight")
+        {
+            visionRadius += 4;
+        }
+        else if (lightName == "Candle")
+        {
+            visionRadius += 2;
+        }
+
 
 
 
