@@ -12,12 +12,9 @@ public class Player_Script : MonoBehaviour
     private Rigidbody2D rb; // Reference to the Rigidbody2D component attached to the player
     private Vector2 movement; // Stores the direction of player movement
     public BatteryManager batteryManager;
-<<<<<<< Updated upstream
-=======
     public LivesBehavior livesBehavior;
     public int lives = 3;
     public int friendsSaved = 0;
->>>>>>> Stashed changes
     public string currentLightSource;
 
 
@@ -97,8 +94,6 @@ public class Player_Script : MonoBehaviour
           }
         */
     }
-<<<<<<< Updated upstream
-=======
     private void LoseLife()
     {
         livesBehavior.LoseLife();
@@ -116,7 +111,6 @@ public class Player_Script : MonoBehaviour
     }
 
 
->>>>>>> Stashed changes
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Friend") && !friendList.Contains(collision.gameObject) )
@@ -125,8 +119,6 @@ public class Player_Script : MonoBehaviour
             friendList.Add(collision.gameObject);
             friendList[friendList.Count - 1].GetComponent<FriendFollow>().follow = this.gameObject;
             friendList[friendList.Count - 1].GetComponent<FriendFollow>().followDistance = friendList.Count * 0.5f;
-
-
 
         }
         if (collision.gameObject.CompareTag("Exit"))
