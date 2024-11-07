@@ -26,6 +26,11 @@ public class BatteryManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (batteryCharge <= 0 && spriteRenderer.enabled)
+        {
+            spriteRenderer.enabled = false;
+
+        }
         SetBatteryType();
         NaturalDepletion();
         ChangeBattery();

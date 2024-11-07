@@ -30,7 +30,7 @@ public class LightSourceBehavior : MonoBehaviour
         }
         if (gameObject.CompareTag("Fireflies"))
         {
-            lightName = "Candle";
+            lightName = "Fireflies";
         }
         player.currentLightSource = lightName;
 
@@ -48,6 +48,8 @@ public class LightSourceBehavior : MonoBehaviour
     {
         if (batteryManager.batteryCharge <= 0f)
         {
+            player.currentLightSource = "";
+
             Destroy(gameObject);
         }
     }
