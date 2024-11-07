@@ -4,17 +4,21 @@ using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using TMPro;
 
 public class CustomSceneManager : MonoBehaviour
 {
     // Static reference to the instance of our SceneManager
     public static CustomSceneManager instance;
-    public int currIndex;
     public int sceneIndex = 0;
     public Transform player;
     public GameObject pauseMenu;
+    public GameObject gameOverMenu;
+    public TextMeshProUGUI friendsText;
 
     private bool isGamePaused = false;
+    private bool isInBsmnt = false;
+    private Player_Script playerScript;
 
     private void Start()
     {
@@ -22,6 +26,13 @@ public class CustomSceneManager : MonoBehaviour
         {
             pauseMenu.SetActive(false);
         }
+
+        if (gameOverMenu.activeInHierarchy == true)
+        {
+            pauseMenu.SetActive(false);
+        }
+
+            playerScript = player.GetComponent<Player_Script>();
     }
     private void Awake()
     {
@@ -58,6 +69,13 @@ public class CustomSceneManager : MonoBehaviour
                 isGamePaused = false;
             }
         }
+
+        if (SceneManager.GetActiveScene().buildIndex != 0 && (playerScript.friendsSaved == 3 || playerScript.lives == 0))
+        {
+            Debug.Log("Game Over was called");
+            gameOverMenu.SetActive(true);
+            friendsText.text = "Friends Saved: " + playerScript.friendsSaved;
+        }
     }
 
     // General method to load scenes based on build index
@@ -71,10 +89,17 @@ public class CustomSceneManager : MonoBehaviour
         Debug.Log("Trigger activated");
 
         // Check if the player is the object entering the trigger
-        //if (collision.CompareTag("Player"))
-        //{
-        //    LoadScene(sceneIndex);
-        //}
+        if (collision.CompareTag("Player"))
+        {
+            if (player.position.y > -10)
+            {
+                player.transform.position = new Vector2(player.position.x, -24);
+            } 
+            else if (player.position.y < -10)
+            {
+                player.transform.position = new Vector2(player.position.x, 3.8f);
+            }
+        }
     }
 }
 
