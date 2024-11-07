@@ -36,8 +36,18 @@ public class CrawlerBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        visionRadius = 3 + target.GetComponent<Player_Script>().friendList.Count;
+        if (target.GetComponent<Player_Script>().currentLightSource == "Flashlight")
+        {
+            visionRadius += 4;
+        }
+        else if (target.GetComponent<Player_Script>().currentLightSource == "Candle")
+        {
+            visionRadius += 2;
+        }
         //New behavior for the crawler
         RaycastHit2D hit = Physics2D.Raycast(transform.position, target.transform.position - transform.position, float.MaxValue, layerMask);
+        
 
         // pause if it hit the player
         if (hitStopCount > 0f)
@@ -47,7 +57,7 @@ public class CrawlerBehavior : MonoBehaviour
         }
 
         // move towards the player if within radius and no walls blocking it
-        else if (hit.collider.gameObject.layer == target.gameObject.layer && Vector2.Distance(transform.position, target.transform.position) <= visionRadius)
+        else if (hit && hit.collider.gameObject.layer == target.gameObject.layer && Vector2.Distance(transform.position, target.transform.position) <= visionRadius)
         {
             //Debug.Log("Chase");
             GoTowards(target.transform.position); //moves towards target
@@ -108,7 +118,7 @@ public class CrawlerBehavior : MonoBehaviour
 
         direction.Normalize(); // normalizes direction (keeps direction, sets length to 1, makes the math work)
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg; // weird math to find the angle, yes the Atan2 goes y first then x
-        Debug.Log(angle);
+        //Debug.Log(angle);
         if (45 < angle && angle <= 135) //facing up (W)
         {
             anim.SetBool("facingUp", true);
