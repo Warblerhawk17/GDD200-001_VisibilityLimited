@@ -29,9 +29,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7908519645577968149}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.47644138, y: 0.008450827, z: -0.16760679}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 1.0093, y: 0.17356627, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -77,16 +77,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-<<<<<<< Updated upstream
-  m_Sprite: {fileID: 21300000, guid: 52369c8e54b151d45bddac16765b45e7, type: 3}
-=======
-  m_Sprite: {fileID: 21300000, guid: d4dc19db56f3756459f3213a19a9b82e, type: 3}
->>>>>>> Stashed changes
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Color: {r: 0.88959444, g: 1, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.28, y: 1.28}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -142,8 +138,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 4.03185, y: 0.28780007, z: 0}
-    m_Extent: {x: 4.1782503, y: 5.5641003, z: 0}
+    m_Center: {x: 3.4822001, y: 0.23134995, z: 0}
+    m_Extent: {x: 3.4814, y: 9.24715, z: 0}
   m_PointLightInnerAngle: 0
   m_PointLightOuterAngle: 90.00052
   m_PointLightInnerRadius: 1
@@ -154,10 +150,10 @@ MonoBehaviour:
   m_ShapeLightFalloffSize: 0.5
   m_ShapeLightFalloffOffset: {x: 0, y: 0}
   m_ShapePath:
-  - {x: 0.35328305, y: -0.20441903, z: 0}
-  - {x: 7.7100916, y: -4.7774644, z: 0}
-  - {x: 7.5407085, y: 5.3512836, z: 0}
-  - {x: 0.36318433, y: 0.13212232, z: 0}
+  - {x: 0.50249773, y: -0.5158235, z: 0}
+  - {x: 6.4634943, y: -8.517258, z: 0}
+  - {x: 6.464102, y: 8.977749, z: 0}
+  - {x: 0.5015796, y: 0.50297177, z: 0}
 --- !u!114 &8320535643694012673
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -173,7 +169,6 @@ MonoBehaviour:
   batteryManager: {fileID: 0}
   player: {fileID: 0}
   lightName: 
-  shadow: {fileID: 0}
 --- !u!60 &3112628981797972281
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -210,20 +205,16 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.28, y: 1.28}
-<<<<<<< Updated upstream
-    newSize: {x: 1.28, y: 1.28}
-=======
+    oldSize: {x: 1, y: 1}
     newSize: {x: 1, y: 1}
->>>>>>> Stashed changes
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.35072976, y: 0.110437155}
-      - {x: 0.3573743, y: -0.1965487}
-      - {x: 7.5765343, y: -4.673914}
-      - {x: 7.571847, y: 5.2761073}
+    - - {x: 0.4999445, y: 0.4996926}
+      - {x: 0.50010145, y: -0.50146514}
+      - {x: 6.21661, y: -8.187054}
+      - {x: 6.2119226, y: 8.619255}
   m_UseDelaunayMesh: 0
