@@ -93,7 +93,7 @@ public class CustomSceneManager : MonoBehaviour
         {
             if (player.position.y > -10)
             {
-                player.transform.position = new Vector2(player.position.x, -24);
+                player.transform.position = new Vector2(player.position.x, -21.5f);
             } 
             else if (player.position.y < -10)
             {
