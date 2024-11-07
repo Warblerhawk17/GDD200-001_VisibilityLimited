@@ -64,10 +64,18 @@ public class Player_Script : MonoBehaviour
         if (collision.gameObject.CompareTag("Crawler"))
         {
             batteryManager.batteryCharge = batteryManager.batteryCharge - 10;
+            if (currentLightSource == "" )
+            {
+                LoseLife();
+            }
         }
         else if (collision.gameObject.CompareTag("Shadow"))
         {
             batteryManager.batteryCharge = batteryManager.batteryCharge - 10;
+            if (currentLightSource == "")
+            {
+                LoseLife();
+            }
         }
         else if (collision.gameObject.CompareTag("Friend"))
         {
@@ -96,6 +104,7 @@ public class Player_Script : MonoBehaviour
     }
     private void LoseLife()
     {
+        Debug.Log("LoseLife called");
         livesBehavior.LoseLife();
         lives--;
         transform.position = GameObject.Find("PlayerSpawn").transform.position;

@@ -24,7 +24,7 @@ public class LivesBehavior : MonoBehaviour
     public void LoseLife()
     {
 
-
+        Debug.Log("LoseLives behavior called");
         if (spriteNum != 3)
         { 
            spriteNum++;
