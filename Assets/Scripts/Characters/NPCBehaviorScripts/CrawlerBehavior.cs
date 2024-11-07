@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,41 +10,33 @@ public class CrawlerBehavior : MonoBehaviour
     private List<Node> path = new List<Node>(); //the path of nodes it will travel
     public List<Node> patrolPath; //the nodes that will be patroled by the crawler
     private int patrolIndex; //the index in patrol path the crawler is headed towards
+    private Animator anim;
+    private SpriteRenderer spriteRenderer;
+
     public GameObject target; //the target, which it will go towards
     public float speed; //the speed of the crawler
-    private float visionRadius; //the radius the crawler can see
+    public float visionRadius; //the radius the crawler can see
     public LayerMask layerMask;
     private float stopCount; //used to make the monster pause for a second after loosing sight of the player
     public float defaultStopCount; //default value that sawPlayerCount is set to
-    private float hitStopCount; //how long it stops when it hits the player
+    public float hitStopCount; //how long it stops when it hits the player
     public float defaultHitStopCount; //default value that hitStopCount is set to
+    public bool isLookingAt; //checks if the crawler is looking at it
+    
 
 
     // Start is called before the first frame update
     void Start()
     {
         currentNode = AStarManager.instance.FindNearestNode(transform.position);
+        spriteRenderer = GetComponent<SpriteRenderer>(); //Sprite Renderer object
+        anim = GetComponent<Animator>(); //Animator object
     }
 
     // Update is called once per frame
     void Update()
     {
-        //updates the crawlers search radius
-        visionRadius = 3 + target.GetComponent<Player_Script>().friendList.Count;
-        string lightName = target.GetComponent<Player_Script>().currentLightSource;
-        if (lightName == "Flashlight")
-        {
-            visionRadius += 4;
-        }
-        else if (lightName == "Candle")
-        {
-            visionRadius += 2;
-        }
-
-
-
-
-        //raycast
+        //New behavior for the crawler
         RaycastHit2D hit = Physics2D.Raycast(transform.position, target.transform.position - transform.position, float.MaxValue, layerMask);
 
         // pause if it hit the player
@@ -112,12 +105,37 @@ public class CrawlerBehavior : MonoBehaviour
     {
         transform.position = Vector2.MoveTowards(this.transform.position, goTo, speed * Time.deltaTime); //moves the npc
         Vector2 direction = goTo - (Vector2)transform.position; // finds direction between npc and target
+
         direction.Normalize(); // normalizes direction (keeps direction, sets length to 1, makes the math work)
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg; // weird math to find the angle, yes the Atan2 goes y first then x
-        transform.rotation = Quaternion.Euler(Vector3.forward * angle); // changes npc rotation
+        Debug.Log(angle);
+        if (45 < angle && angle <= 135) //facing up (W)
+        {
+            anim.SetBool("facingUp", true);
+            anim.SetBool("facingHorizontal", false);
+        }
+        else if (-135 > angle || angle > 135) //facing left (A)
+        {
+            anim.SetBool("facingUp", false);
+            anim.SetBool("facingHorizontal", true);
+            spriteRenderer.flipX = false;
+        }
+        else if (-45 > angle && angle >= -135) //facing down (S)
+        {
+            anim.SetBool("facingUp", false);
+            anim.SetBool("facingHorizontal", false);
+        }
+        else //facing right (D)
+        {
+            anim.SetBool("facingUp", false);
+            anim.SetBool("facingHorizontal", true);
+            spriteRenderer.flipX = true;
+        }
+        //transform.rotation = Quaternion.Euler(Vector3.forward * angle); // changes npc rotation
+        
     }
 
-    private void OnDrawGizmos() //helper function to draw a line towards the node it is going towards
+    /*private void OnDrawGizmos() //helper function to draw a line towards the node it is going towards
     {
         Gizmos.color = Color.blue;
         if (path.Count != 0)
@@ -125,5 +143,5 @@ public class CrawlerBehavior : MonoBehaviour
             Gizmos.DrawLine(transform.position, path[0].transform.position);
         }
 
-    }
+    }*/
 }

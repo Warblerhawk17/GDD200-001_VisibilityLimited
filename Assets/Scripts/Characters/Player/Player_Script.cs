@@ -12,10 +12,10 @@ public class Player_Script : MonoBehaviour
     private Rigidbody2D rb; // Reference to the Rigidbody2D component attached to the player
     private Vector2 movement; // Stores the direction of player movement
     public BatteryManager batteryManager;
-    private int lives = 3;
+    public LivesBehavior livesBehavior;
+    public int lives = 3;
     public int friendsSaved = 0;
     public string currentLightSource;
-
 
 
     // Friend variable
@@ -28,7 +28,6 @@ public class Player_Script : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         // Prevent the player from rotating
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
-
     }
 
     void Update()
@@ -64,18 +63,10 @@ public class Player_Script : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Crawler"))
         {
-            if (batteryManager.batteryCharge <= 0)
-            {
-                LoseLife();
-            }
             batteryManager.batteryCharge = batteryManager.batteryCharge - 10;
         }
         else if (collision.gameObject.CompareTag("Shadow"))
         {
-            if (batteryManager.batteryCharge <= 0) 
-            {
-                LoseLife();
-            }
             batteryManager.batteryCharge = batteryManager.batteryCharge - 10;
         }
         else if (collision.gameObject.CompareTag("Friend"))
@@ -91,6 +82,10 @@ public class Player_Script : MonoBehaviour
                 friendList[friendList.Count - 1].GetComponent<FriendFollow>().follow = friendList[friendList.Count - 2].gameObject;
             }
         }
+
+
+
+
         // disabling temporarily as this monster will not be present in Beta  
         /*
            else if (collision.gameObject.CompareTag("Scream"))
@@ -101,6 +96,7 @@ public class Player_Script : MonoBehaviour
     }
     private void LoseLife()
     {
+        livesBehavior.LoseLife();
         lives--;
         transform.position = GameObject.Find("PlayerSpawn").transform.position;
         for (int i = 0; i < friendList.Count; i++) 
@@ -117,23 +113,19 @@ public class Player_Script : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        /*if (collision.gameObject.CompareTag("Friend") && !friendList.Contains(collision.gameObject))
+        if (collision.gameObject.CompareTag("Friend") && !friendList.Contains(collision.gameObject) )
         {
             Debug.Log("Collided with a friend");
             friendList.Add(collision.gameObject);
             friendList[friendList.Count - 1].GetComponent<FriendFollow>().follow = this.gameObject;
             friendList[friendList.Count - 1].GetComponent<FriendFollow>().followDistance = friendList.Count * 0.5f;
 
-
-
-        }*/
+        }
         if (collision.gameObject.CompareTag("Exit"))
         {
             for (int i = 0; i < friendList.Count; i++)
             { 
                 Object.Destroy(friendList[i]);
-                friendsSaved++;
-                MonsterSpawner.instance.SpawnMonsters(friendsSaved - 1);
             }
         friendList.Clear();
     }

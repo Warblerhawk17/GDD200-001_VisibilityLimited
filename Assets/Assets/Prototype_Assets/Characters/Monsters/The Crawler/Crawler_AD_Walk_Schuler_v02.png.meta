@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8dcf781eca4a9624cbf2afe82787d9a2
+guid: 767412995b5a76742b374ee328b2a595
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -106,63 +106,11 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: iPhone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Windows Store Apps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: tvOS
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Wren_D_KN_Sprite_0
+      name: Crawler_AD_Walk_Schuler_v02_0
       rect:
         serializedVersion: 2
         x: 0
@@ -176,14 +124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 726e66495a6e95644933846dacafbda0
-      internalID: 990648928
+      spriteID: a1a0d5e85ff82ed4e8bbd713db214dbf
+      internalID: 237551564
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wren_D_KN_Sprite_1
+      name: Crawler_AD_Walk_Schuler_v02_1
       rect:
         serializedVersion: 2
         x: 96
@@ -197,14 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a4c7ce3dcfe932e42b4f33596e5cfb34
-      internalID: -314143646
+      spriteID: ea90c17120453c14ca2a75125c2475f4
+      internalID: -433285235
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wren_D_KN_Sprite_2
+      name: Crawler_AD_Walk_Schuler_v02_2
       rect:
         serializedVersion: 2
         x: 192
@@ -218,14 +166,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e9a4d06be6c57644aa5d076b6d0d1660
-      internalID: 1178537900
+      spriteID: 651f88fd620f4d443a0904e70aa76a71
+      internalID: -1303961761
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wren_D_KN_Sprite_3
+      name: Crawler_AD_Walk_Schuler_v02_3
       rect:
         serializedVersion: 2
         x: 288
@@ -239,14 +187,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 96f1e7ea474d7ff4b940db8ed737da17
-      internalID: -372228413
+      spriteID: a1331defebda07346a513acd8c506725
+      internalID: 2053070938
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wren_D_KN_Sprite_4
+      name: Crawler_AD_Walk_Schuler_v02_4
       rect:
         serializedVersion: 2
         x: 384
@@ -260,14 +208,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 430b8cbeda54ac4489a4a8cea202978f
-      internalID: -244810461
+      spriteID: c5c5b35b350a35b46ba4c72096b3f4ab
+      internalID: -960829464
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wren_D_KN_Sprite_5
+      name: Crawler_AD_Walk_Schuler_v02_5
       rect:
         serializedVersion: 2
         x: 0
@@ -281,14 +229,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 23b94d0a360dc5f43b758473e6d6adcf
-      internalID: 1702278080
+      spriteID: a139eb34e4c09b14da872f4ab1340761
+      internalID: 605126230
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wren_D_KN_Sprite_6
+      name: Crawler_AD_Walk_Schuler_v02_6
       rect:
         serializedVersion: 2
         x: 96
@@ -302,14 +250,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eeb6ed91ef98ac546bf917604d7f82f5
-      internalID: 596901298
+      spriteID: 2091ea7b3d535e84a95174c21b4a10d2
+      internalID: 2143432018
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wren_D_KN_Sprite_7
+      name: Crawler_AD_Walk_Schuler_v02_7
       rect:
         serializedVersion: 2
         x: 192
@@ -323,8 +271,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf6b96c791a99f0488e0043caaa53f79
-      internalID: -677082065
+      spriteID: 1d6b9d940d1c72d48a6af1495fb9b6d4
+      internalID: -1258068680
       vertices: []
       indices: 
       edges: []
@@ -340,14 +288,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Wren_D_KN_Sprite_0: 990648928
-      Wren_D_KN_Sprite_1: -314143646
-      Wren_D_KN_Sprite_2: 1178537900
-      Wren_D_KN_Sprite_3: -372228413
-      Wren_D_KN_Sprite_4: -244810461
-      Wren_D_KN_Sprite_5: 1702278080
-      Wren_D_KN_Sprite_6: 596901298
-      Wren_D_KN_Sprite_7: -677082065
+      Crawler_AD_Walk_Schuler_v02_0: 237551564
+      Crawler_AD_Walk_Schuler_v02_1: -433285235
+      Crawler_AD_Walk_Schuler_v02_2: -1303961761
+      Crawler_AD_Walk_Schuler_v02_3: 2053070938
+      Crawler_AD_Walk_Schuler_v02_4: -960829464
+      Crawler_AD_Walk_Schuler_v02_5: 605126230
+      Crawler_AD_Walk_Schuler_v02_6: 2143432018
+      Crawler_AD_Walk_Schuler_v02_7: -1258068680
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
