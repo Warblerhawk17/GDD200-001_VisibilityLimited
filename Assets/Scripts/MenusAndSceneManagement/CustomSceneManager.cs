@@ -10,96 +10,74 @@ public class CustomSceneManager : MonoBehaviour
 {
     // Static reference to the instance of our SceneManager
     public static CustomSceneManager instance;
-    public int sceneIndex = 0;
-    public Transform player;
-    public GameObject pauseMenu;
-    public GameObject gameOverMenu;
-    public TextMeshProUGUI friendsText;
 
-    private bool isGamePaused = false;
-    private bool isInBsmnt = false;
-    private Player_Script playerScript;
+    private GameObject sceneMan;
+    private SceneMan sceneManScript;
 
-    private void Start()
-    {
-        if (pauseMenu.activeInHierarchy == true)
-        {
-            pauseMenu.SetActive(false);
-        }
-
-        if (gameOverMenu.activeInHierarchy == true)
-        {
-            pauseMenu.SetActive(false);
-        }
-
-            playerScript = player.GetComponent<Player_Script>();
-    }
     private void Awake()
     {
-        // Check if instance already exists
+        // Singleton pattern
         if (instance == null)
         {
-            // If not, set instance to this
             instance = this;
         }
         else if (instance != this)
         {
-            // If instance already exists and it's not this, then destroy this to enforce the singleton.
             Destroy(gameObject);
+            return;
         }
 
-        // Set this to not be destroyed when reloading scene
+        // Set this object to persist across scene loads
         DontDestroyOnLoad(gameObject);
+
+        // Subscribe to the sceneLoaded event
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
-    //Pause menu method
+    private void OnEnable()
+    {
+        // Re-subscribe to sceneLoaded in case it was unsubscribed
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnDisable()
+    {
+        // Unsubscribe to avoid potential memory leaks
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        // This is called every time a scene is loaded
+
+        // Find the SceneManager GameObject and assign the SceneMan script if it exists
+        sceneMan = GameObject.Find("SceneManager");
+
+        if (sceneMan != null)
+        {
+            sceneManScript = sceneMan.GetComponent<SceneMan>();
+            if (sceneManScript == null)
+            {
+                Debug.LogError("SceneMan script is not attached to the SceneManager GameObject.");
+            }
+        }
+        else
+        {
+            Debug.LogWarning("SceneManager GameObject not found in the new scene.");
+        }
+    }
+
     private void Update()
     {
-        if (SceneManager.GetActiveScene().buildIndex != 0 && Input.GetKeyDown(KeyCode.Escape))
+        // Make sure sceneManScript is assigned before trying to call CallPause
+        if (sceneManScript != null && SceneManager.GetActiveScene().buildIndex != 0 && Input.GetKeyDown(KeyCode.Escape))
         {
-            //Debug.Log("Escape responded correctly");
-            if (pauseMenu.activeInHierarchy == false)
-            {
-                pauseMenu.SetActive(true);
-                isGamePaused = true;
-            }
-            else
-            {
-                pauseMenu.SetActive(false);
-                isGamePaused = false;
-            }
-        }
-
-        if (SceneManager.GetActiveScene().buildIndex != 0 && (playerScript.friendsSaved == 3 || playerScript.lives == 0))
-        {
-            Debug.Log("Game Over was called");
-            gameOverMenu.SetActive(true);
-            friendsText.text = "Friends Saved: " + playerScript.friendsSaved;
+            sceneManScript.CallPause();
         }
     }
 
-    // General method to load scenes based on build index
     public void LoadScene(int sceneIndex)
     {
         SceneManager.LoadScene(sceneIndex);
     }
-
-    void OnTriggerEnter2D(Collider2D collision)
-    {
-        Debug.Log("Trigger activated");
-
-        // Check if the player is the object entering the trigger
-        if (collision.CompareTag("Player"))
-        {
-            if (player.position.y > -10)
-            {
-                player.transform.position = new Vector2(player.position.x, -21.5f);
-            } 
-            else if (player.position.y < -10)
-            {
-                player.transform.position = new Vector2(player.position.x, 3.8f);
-            }
-        }
-    }
 }
-
