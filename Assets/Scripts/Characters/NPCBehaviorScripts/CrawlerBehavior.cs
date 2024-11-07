@@ -129,7 +129,7 @@ public class CrawlerBehavior : MonoBehaviour
         {
             anim.SetBool("facingUp", false);
             anim.SetBool("facingHorizontal", true);
-            spriteRenderer.flipX = true;
+            spriteRenderer.flipX = true; //flips the sideview sprite to look the correct way
         }
         //transform.rotation = Quaternion.Euler(Vector3.forward * angle); // changes npc rotation
         
