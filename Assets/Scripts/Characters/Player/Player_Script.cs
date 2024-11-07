@@ -113,19 +113,21 @@ public class Player_Script : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Friend") && !friendList.Contains(collision.gameObject) )
+        /*if (collision.gameObject.CompareTag("Friend") && !friendList.Contains(collision.gameObject) )
         {
             Debug.Log("Collided with a friend");
             friendList.Add(collision.gameObject);
             friendList[friendList.Count - 1].GetComponent<FriendFollow>().follow = this.gameObject;
             friendList[friendList.Count - 1].GetComponent<FriendFollow>().followDistance = friendList.Count * 0.5f;
 
-        }
+        }*/
         if (collision.gameObject.CompareTag("Exit"))
         {
             for (int i = 0; i < friendList.Count; i++)
             { 
                 Object.Destroy(friendList[i]);
+                friendsSaved++;
+                MonsterSpawner.instance.SpawnMonsters(friendsSaved-1);
             }
         friendList.Clear();
     }
