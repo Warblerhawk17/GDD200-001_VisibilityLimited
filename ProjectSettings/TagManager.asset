@@ -3,7 +3,17 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Crawler
+  - Flashlight
+  - Shadow
+  - Friend
+  - Exit
+  - Candle
+  - Fireflies
+  - Ground Candle
+  - Ground Fireflies
+  - Ground Flashlight
   layers:
   - Default
   - TransparentFX
@@ -11,6 +21,11 @@ TagManager:
   - Wall
   - Water
   - UI
+  - WallsForAStar
+  - Player
+  - Monster
+  - Node
+  - Friend
   - 
   - 
   - 
@@ -20,12 +35,7 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - UITop
   - 
   - 
   - 
@@ -38,6 +48,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Back
+    uniqueID: 34348125
+    locked: 0
+  - name: Front
+    uniqueID: 1747097443
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
