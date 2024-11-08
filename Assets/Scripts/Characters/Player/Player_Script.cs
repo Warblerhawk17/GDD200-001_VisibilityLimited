@@ -5,15 +5,22 @@ using UnityEngine;
 public class Player_Script : MonoBehaviour
 {
     // Public variables
-    public float speed = 5f;
-    public float runSpeed = 8f; // The speed at which the player moves
-    public bool canMoveDiagonally = true; // Controls whether the player can move diagonally
+    public float speed = 5f; // The speed of the player walking
+    public float runSpeed = 8f; // The speed at which the player runs
 
     // Private variables 
     private Rigidbody2D rb; // Reference to the Rigidbody2D component attached to the player
     private Vector2 movement; // Stores the direction of player movement
-    private bool isMovingHorizontally = true; // Flag to track if the player is moving horizontally
     public BatteryManager batteryManager;
+    public LivesBehavior livesBehavior;
+    public int lives = 3;
+    public int friendsSaved = 0;
+    public string currentLightSource;
+
+
+    // Friend variable
+    public List<GameObject> friendList = new List<GameObject>();
+
 
     void Start()
     {
@@ -29,24 +36,8 @@ public class Player_Script : MonoBehaviour
         float horizontalInput = Input.GetAxisRaw("Horizontal");
         float verticalInput = Input.GetAxisRaw("Vertical");
 
-        // Check if diagonal movement is allowed
-        if (canMoveDiagonally)
-        {
-            // Set movement direction based on input
-            movement = new Vector2(horizontalInput, verticalInput);
-        }
-        else
-        {
-            // Determine the priority of movement based on input
-            if (horizontalInput != 0)
-            {
-                isMovingHorizontally = true;
-            }
-            else if (verticalInput != 0)
-            {
-                isMovingHorizontally = false;
-            }
-        }
+        // Set movement direction based on input
+        movement = new Vector2(horizontalInput, verticalInput);
 
         if (Input.GetKey(KeyCode.LeftShift))
         {
@@ -56,6 +47,9 @@ public class Player_Script : MonoBehaviour
         {
             transform.Translate(speed * Time.deltaTime * movement);
         }
+
+
+
     }
 
     void FixedUpdate()
@@ -70,17 +64,79 @@ public class Player_Script : MonoBehaviour
         if (collision.gameObject.CompareTag("Crawler"))
         {
             batteryManager.batteryCharge = batteryManager.batteryCharge - 10;
+            if (currentLightSource == "" )
+            {
+                LoseLife();
+            }
         }
-        // disabling temporarily as these monsters will not be present in Alpha
-     /*   
         else if (collision.gameObject.CompareTag("Shadow"))
         {
             batteryManager.batteryCharge = batteryManager.batteryCharge - 10;
+            if (currentLightSource == "")
+            {
+                LoseLife();
+            }
         }
-        else if (collision.gameObject.CompareTag("Scream"))
+        else if (collision.gameObject.CompareTag("Friend"))
         {
-            batteryManager.batteryCharge = batteryManager.batteryCharge - 10;
-       }
-     */
+            Debug.Log("Collided with a friend");
+            friendList.Add(collision.gameObject);
+            if (friendList.Count == 1)
+            {
+                friendList[0].GetComponent<FriendFollow>().follow = this.gameObject;
+            }
+            else
+            {
+                friendList[friendList.Count - 1].GetComponent<FriendFollow>().follow = friendList[friendList.Count - 2].gameObject;
+            }
+        }
+
+
+
+
+        // disabling temporarily as this monster will not be present in Beta  
+        /*
+           else if (collision.gameObject.CompareTag("Scream"))
+           {
+               batteryManager.batteryCharge = batteryManager.batteryCharge - 10;
+          }
+        */
+    }
+    private void LoseLife()
+    {
+        Debug.Log("LoseLife called");
+        livesBehavior.LoseLife();
+        lives--;
+        transform.position = GameObject.Find("PlayerSpawn").transform.position;
+        for (int i = 0; i < friendList.Count; i++) 
+        {
+            friendList[i].GetComponent<FriendFollow>().follow = null;
+        }
+        friendList.Clear();
+    }
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        /*if (collision.gameObject.CompareTag("Friend") && !friendList.Contains(collision.gameObject) )
+        {
+            Debug.Log("Collided with a friend");
+            friendList.Add(collision.gameObject);
+            friendList[friendList.Count - 1].GetComponent<FriendFollow>().follow = this.gameObject;
+            friendList[friendList.Count - 1].GetComponent<FriendFollow>().followDistance = friendList.Count * 0.5f;
+
+        }*/
+        if (collision.gameObject.CompareTag("Exit"))
+        {
+            for (int i = 0; i < friendList.Count; i++)
+            { 
+                Object.Destroy(friendList[i]);
+                friendsSaved++;
+                MonsterSpawner.instance.SpawnMonsters(friendsSaved-1);
+            }
+        friendList.Clear();
+    }
+
+
     }
 }

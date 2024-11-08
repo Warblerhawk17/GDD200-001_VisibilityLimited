@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +10,9 @@ public class CrawlerBehavior : MonoBehaviour
     private List<Node> path = new List<Node>(); //the path of nodes it will travel
     public List<Node> patrolPath; //the nodes that will be patroled by the crawler
     private int patrolIndex; //the index in patrol path the crawler is headed towards
+    private Animator anim;
+    private SpriteRenderer spriteRenderer;
+
     public GameObject target; //the target, which it will go towards
     public float speed; //the speed of the crawler
     public float visionRadius; //the radius the crawler can see
@@ -18,19 +22,32 @@ public class CrawlerBehavior : MonoBehaviour
     public float hitStopCount; //how long it stops when it hits the player
     public float defaultHitStopCount; //default value that hitStopCount is set to
     public bool isLookingAt; //checks if the crawler is looking at it
+    
 
 
     // Start is called before the first frame update
     void Start()
     {
         currentNode = AStarManager.instance.FindNearestNode(transform.position);
+        spriteRenderer = GetComponent<SpriteRenderer>(); //Sprite Renderer object
+        anim = GetComponent<Animator>(); //Animator object
     }
 
     // Update is called once per frame
     void Update()
     {
+        visionRadius = 3 + target.GetComponent<Player_Script>().friendList.Count;
+        if (target.GetComponent<Player_Script>().currentLightSource == "Flashlight")
+        {
+            visionRadius += 4;
+        }
+        else if (target.GetComponent<Player_Script>().currentLightSource == "Candle")
+        {
+            visionRadius += 2;
+        }
         //New behavior for the crawler
         RaycastHit2D hit = Physics2D.Raycast(transform.position, target.transform.position - transform.position, float.MaxValue, layerMask);
+        
 
         // pause if it hit the player
         if (hitStopCount > 0f)
@@ -40,7 +57,7 @@ public class CrawlerBehavior : MonoBehaviour
         }
 
         // move towards the player if within radius and no walls blocking it
-        else if (hit.collider.gameObject.layer == target.gameObject.layer && Vector2.Distance(transform.position, target.transform.position) <= visionRadius)
+        else if (hit && hit.collider.gameObject.layer == target.gameObject.layer && Vector2.Distance(transform.position, target.transform.position) <= visionRadius)
         {
             //Debug.Log("Chase");
             GoTowards(target.transform.position); //moves towards target
@@ -98,9 +115,34 @@ public class CrawlerBehavior : MonoBehaviour
     {
         transform.position = Vector2.MoveTowards(this.transform.position, goTo, speed * Time.deltaTime); //moves the npc
         Vector2 direction = goTo - (Vector2)transform.position; // finds direction between npc and target
+
         direction.Normalize(); // normalizes direction (keeps direction, sets length to 1, makes the math work)
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg; // weird math to find the angle, yes the Atan2 goes y first then x
-        transform.rotation = Quaternion.Euler(Vector3.forward * angle); // changes npc rotation
+        //Debug.Log(angle);
+        if (45 < angle && angle <= 135) //facing up (W)
+        {
+            anim.SetBool("facingUp", true);
+            anim.SetBool("facingHorizontal", false);
+        }
+        else if (-135 > angle || angle > 135) //facing left (A)
+        {
+            anim.SetBool("facingUp", false);
+            anim.SetBool("facingHorizontal", true);
+            spriteRenderer.flipX = false;
+        }
+        else if (-45 > angle && angle >= -135) //facing down (S)
+        {
+            anim.SetBool("facingUp", false);
+            anim.SetBool("facingHorizontal", false);
+        }
+        else //facing right (D)
+        {
+            anim.SetBool("facingUp", false);
+            anim.SetBool("facingHorizontal", true);
+            spriteRenderer.flipX = true; //flips the sideview sprite to look the correct way
+        }
+        //transform.rotation = Quaternion.Euler(Vector3.forward * angle); // changes npc rotation
+        
     }
 
     /*private void OnDrawGizmos() //helper function to draw a line towards the node it is going towards
