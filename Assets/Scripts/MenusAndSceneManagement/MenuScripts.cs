@@ -49,6 +49,9 @@ public class MenuScripts : MonoBehaviour
             case 4:
                 SceneManager.LoadScene(0);
                 break;
+            case 5:
+                SceneManager.LoadScene(1);
+                break;
             default:
                 Debug.Log(message: $"{button.name} pressed but has no action");
                 break;
