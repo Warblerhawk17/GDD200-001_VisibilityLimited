@@ -13,7 +13,11 @@ GameObject:
   - component: {fileID: 1156662853216976880}
   - component: {fileID: 156328397837796778}
   - component: {fileID: 1505221493680487553}
+<<<<<<< HEAD
   - component: {fileID: 5436415639861396817}
+=======
+  - component: {fileID: 546046726922232928}
+>>>>>>> main
   m_Layer: 0
   m_Name: Fireflies
   m_TagString: Fireflies
@@ -31,7 +35,11 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.7071067, w: 0.7071069}
   m_LocalPosition: {x: 0.5, y: 0, z: 0}
+<<<<<<< HEAD
   m_LocalScale: {x: 0.36530682, y: 0.19479305, z: 1}
+=======
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+>>>>>>> main
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -77,8 +85,13 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 8
+<<<<<<< HEAD
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.25850934, g: 0.9622642, b: 0, a: 1}
+=======
+  m_Sprite: {fileID: 21300000, guid: f10d4a92da75c324581349816e0a82d1, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+>>>>>>> main
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -127,7 +140,11 @@ MonoBehaviour:
   m_PointLightInnerAngle: 318.80173
   m_PointLightOuterAngle: 318.80173
   m_PointLightInnerRadius: 0
+<<<<<<< HEAD
   m_PointLightOuterRadius: 5
+=======
+  m_PointLightOuterRadius: 3
+>>>>>>> main
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
@@ -151,6 +168,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   batteryManager: {fileID: 0}
+<<<<<<< HEAD
+=======
+  player: {fileID: 0}
+  lightName: 
+  shadow: {fileID: 0}
+>>>>>>> main
 --- !u!114 &1505221493680487553
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -167,7 +190,11 @@ MonoBehaviour:
   orbitDistance: 1
   rotationSpeed: 5
   playerObject: {fileID: 0}
+<<<<<<< HEAD
 --- !u!60 &5436415639861396817
+=======
+--- !u!60 &546046726922232928
+>>>>>>> main
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -203,7 +230,11 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
+<<<<<<< HEAD
     oldSize: {x: 1, y: 1}
+=======
+    oldSize: {x: 1.28, y: 1.28}
+>>>>>>> main
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -211,6 +242,7 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
+<<<<<<< HEAD
     - - {x: 2.4669034, y: 25.22086}
       - {x: 1.9253649, y: 25.41351}
       - {x: 0.64946616, y: 25.639221}
@@ -345,4 +377,57 @@ PolygonCollider2D:
       - {x: 3.2114246, y: 24.950312}
       - {x: 3.1618416, y: 24.972624}
       - {x: 2.7563221, y: 25.117414}
+=======
+    - - {x: 1.6754814, y: 5.7917957}
+      - {x: 0.073052466, y: 6.0380254}
+      - {x: -2.7675028, y: 5.3642263}
+      - {x: -4.280572, y: 4.2333975}
+      - {x: -5.262253, y: 2.973832}
+      - {x: -5.9063344, y: 1.0898335}
+      - {x: -5.990732, y: -0.534591}
+      - {x: -5.5541997, y: -2.2518387}
+      - {x: -4.819923, y: -3.6090965}
+      - {x: -3.7051358, y: -4.770089}
+      - {x: -2.0982034, y: -5.6782722}
+      - {x: -0.0022220314, y: -0.015676498}
+      - {x: 2.1174426, y: -5.633407}
+      - {x: 3.4780939, y: -4.934516}
+      - {x: 4.97808, y: -3.4382286}
+      - {x: 5.9644423, y: -0.7566669}
+      - {x: 5.664272, y: 1.9856055}
+      - {x: 4.5177436, y: 3.979945}
+      - {x: 3.1374712, y: 5.133478}
+    - - {x: -0.12, y: -0.31}
+      - {x: -0.17999999, y: -0.26999998}
+      - {x: -0.12, y: -0.32999998}
+      - {x: -0.099999994, y: -0.32999998}
+      - {x: -0.06, y: -0.31}
+      - {x: -0.03, y: -0.28}
+      - {x: -0.03, y: -0.25}
+      - {x: 0.099999994, y: -0.25}
+      - {x: 0.12, y: -0.26999998}
+      - {x: 0.17, y: -0.26999998}
+      - {x: 0.12, y: -0.31}
+      - {x: 0.089999996, y: -0.32999998}
+      - {x: -0.099999994, y: -0.32999998}
+      - {x: -0.099999994, y: -0.32}
+    - - {x: -0.19999999, y: 0.01}
+      - {x: -0.19, y: -0.08}
+      - {x: -0.16, y: -0.11}
+      - {x: -0.08, y: -0.11}
+      - {x: -0.049999997, y: -0.08}
+      - {x: -0.049999997, y: -0.03}
+      - {x: 0.06, y: -0.03}
+      - {x: 0.17999999, y: -0.01}
+      - {x: 0.19999999, y: 0.01}
+      - {x: 0.19, y: -0.19}
+      - {x: 0.14, y: -0.17}
+      - {x: -0.17999999, y: -0.17}
+      - {x: -0.19999999, y: -0.19}
+      - {x: -0.19, y: -0.19}
+    - - {x: 0.06, y: -0.06}
+      - {x: 0.06, y: -0.16}
+      - {x: 0.17999999, y: -0.16}
+      - {x: 0.17999999, y: -0.06}
+>>>>>>> main
   m_UseDelaunayMesh: 0

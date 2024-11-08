@@ -12,7 +12,11 @@ using UnityEngine.Rendering.Universal;
 public class ShadowCaster2DCreator : MonoBehaviour
 {
     [SerializeField]
+<<<<<<< HEAD
     private bool selfShadows = true;
+=======
+    private bool selfShadows = false;
+>>>>>>> main
 
     private CompositeCollider2D tilemapCollider;
 

@@ -30,7 +30,11 @@ public class LightSourceBehavior : MonoBehaviour
         }
         if (gameObject.CompareTag("Fireflies"))
         {
+<<<<<<< HEAD
             lightName = "Candle";
+=======
+            lightName = "Fireflies";
+>>>>>>> main
         }
         player.currentLightSource = lightName;
 
@@ -48,6 +52,11 @@ public class LightSourceBehavior : MonoBehaviour
     {
         if (batteryManager.batteryCharge <= 0f)
         {
+<<<<<<< HEAD
+=======
+            player.currentLightSource = "";
+
+>>>>>>> main
             Destroy(gameObject);
         }
     }
@@ -58,7 +67,11 @@ public class LightSourceBehavior : MonoBehaviour
         {
             if (lightName.Equals("Flashlight"))
             {
+<<<<<<< HEAD
                 shadow.telaportAway();
+=======
+                shadow.GetComponent<ShadowBehavior>().telaportAway();
+>>>>>>> main
             }
             else
             {
@@ -69,7 +82,11 @@ public class LightSourceBehavior : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D col)
     {
+<<<<<<< HEAD
         if (col.gameObject.CompareTag("Shadow") && shadow.speed == 0)
+=======
+        if (col.gameObject.CompareTag("Shadow") && shadow.GetComponent<ShadowBehavior>().speed == 0)
+>>>>>>> main
         {
             shadow.speed = 3;
         }

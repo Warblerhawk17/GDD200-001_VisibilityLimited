@@ -13,7 +13,11 @@ GameObject:
   - component: {fileID: 1026855942851468666}
   - component: {fileID: 3579011377750263376}
   - component: {fileID: 2238409698780060325}
+<<<<<<< HEAD
   m_Layer: 0
+=======
+  m_Layer: 7
+>>>>>>> main
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -164,8 +168,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   runSpeed: 5
+<<<<<<< HEAD
   canMoveDiagonally: 1
   batteryManager: {fileID: 0}
+=======
+  batteryManager: {fileID: 0}
+  livesBehavior: {fileID: 0}
+  lives: 3
+  friendsSaved: 0
+  currentLightSource: 
+>>>>>>> main
   friendList: []
 --- !u!1 &6758829522810454915
 GameObject:
