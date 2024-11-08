@@ -113,10 +113,6 @@ public class Player_Script : MonoBehaviour
             friendList[i].GetComponent<FriendFollow>().follow = null;
         }
         friendList.Clear();
-        if (lives == 0)
-        {
-            Object.Destroy(this.gameObject);
-        }
     }
 
 

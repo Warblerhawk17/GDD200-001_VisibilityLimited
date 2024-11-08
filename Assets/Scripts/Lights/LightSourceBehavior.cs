@@ -60,7 +60,7 @@ public class LightSourceBehavior : MonoBehaviour
         {
             if (lightName.Equals("Flashlight"))
             {
-                shadow.telaportAway();
+                shadow.GetComponent<ShadowBehavior>().telaportAway();
             }
             else
             {
@@ -71,7 +71,7 @@ public class LightSourceBehavior : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D col)
     {
-        if (col.gameObject.CompareTag("Shadow") && shadow.speed == 0)
+        if (col.gameObject.CompareTag("Shadow") && shadow.GetComponent<ShadowBehavior>().speed == 0)
         {
             shadow.speed = 3;
         }
