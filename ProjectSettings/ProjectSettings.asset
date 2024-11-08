@@ -913,7 +913,13 @@ PlayerSettings:
   XboxOneOverrideIdentityName: 
   XboxOneOverrideIdentityPublisher: 
   vrEditorSettings: {}
-  cloudServicesEnabled: {}
+  cloudServicesEnabled:
+    Build: 0
+    Game Performance: 0
+    Legacy Analytics: 0
+    Purchasing: 0
+    UDP: 0
+    Unity Ads: 0
   luminIcon:
     m_Name: 
     m_ModelFolderPath: 
@@ -933,11 +939,11 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 2
   windowsGamepadBackendHint: 0
-  cloudProjectId: 49cd5031-14b8-4059-9351-7948b2f992d4
+  cloudProjectId: 97fe36ad-2c25-47a0-a107-f7b6712e8f06
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
   projectName: Visibility Limited 2D Core
-  organizationId: bloodren
+  organizationId: onyxseverin
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}
