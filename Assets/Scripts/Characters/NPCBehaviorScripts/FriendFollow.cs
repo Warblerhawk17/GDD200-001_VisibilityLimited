@@ -8,14 +8,17 @@ public class FriendFollow : MonoBehaviour
     public GameObject follow;
     public float followDistance;
     public LayerMask layerMask;
+
     private Node currentNode; //the current node it is at
     private List<Node> path = new List<Node>(); //the path of nodes it will travel
     private float speed = 10;
+    private Animator anim;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        anim.SetBool("isWalking", false);
+        anim = GetComponent<Animator>(); //Animator object
     }
 
     // Update is called once per frame
@@ -60,7 +63,27 @@ public class FriendFollow : MonoBehaviour
         Vector2 direction = goTo - (Vector2)transform.position; // finds direction between npc and target
         direction.Normalize(); // normalizes direction (keeps direction, sets length to 1, makes the math work)
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg; // weird math to find the angle, yes the Atan2 goes y first then x
-        transform.rotation = Quaternion.Euler(Vector3.forward * angle); // changes npc rotation
+        if (45 < angle && angle <= 135) //facing up (W)
+        {
+            anim.SetBool("facingUp", true);
+            anim.SetBool("facingLeft", false);
+        }
+        else if (-135 > angle || angle > 135) //facing left (A)
+        {
+            anim.SetBool("facingUp", false);
+            anim.SetBool("facingLeft", true);
+        }
+        else if (-45 > angle && angle >= -135) //facing down (S)
+        {
+            anim.SetBool("facingUp", false);
+            anim.SetBool("facingLeft", false);
+        }
+        else //facing right (D)
+        {
+            anim.SetBool("facingUp", false);
+            anim.SetBool("facingLeft", true);
+        }
+        //transform.rotation = Quaternion.Euler(Vector3.forward * angle); // changes npc rotation
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

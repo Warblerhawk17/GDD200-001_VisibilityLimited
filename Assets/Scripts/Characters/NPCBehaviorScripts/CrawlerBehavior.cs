@@ -12,7 +12,6 @@ public class CrawlerBehavior : MonoBehaviour
     private int patrolIndex; //the index in patrol path the crawler is headed towards
     private Animator anim;
     private SpriteRenderer spriteRenderer;
-    private float angle;
 
     public GameObject target; //the target, which it will go towards
     public float speed; //the speed of the crawler
@@ -128,7 +127,7 @@ public class CrawlerBehavior : MonoBehaviour
         transform.position = Vector2.MoveTowards(this.transform.position, goTo, speed * Time.deltaTime); //moves the npc
         Vector2 direction = goTo - (Vector2)transform.position; // finds direction between npc and target
         direction.Normalize(); // normalizes direction (keeps direction, sets length to 1, makes the math work)
-        angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg; // weird math to find the angle, yes the Atan2 goes y first then x
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg; // weird math to find the angle, yes the Atan2 goes y first then x
         
         //Debug.Log(angle);
         if (45 < angle && angle <= 135) //facing up (W)
