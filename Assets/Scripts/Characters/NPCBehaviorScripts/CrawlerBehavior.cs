@@ -31,6 +31,7 @@ public class CrawlerBehavior : MonoBehaviour
         currentNode = AStarManager.instance.FindNearestNode(transform.position);
         spriteRenderer = GetComponent<SpriteRenderer>(); //Sprite Renderer object
         anim = GetComponent<Animator>(); //Animator object
+        defaultHitStopCount = 3;
     }
 
     // Update is called once per frame
@@ -52,14 +53,19 @@ public class CrawlerBehavior : MonoBehaviour
         // pause if it hit the player
         if (hitStopCount > 0f)
         {
-            //Debug.Log("Just Hit");
+            Debug.Log("Counting");
             hitStopCount -= Time.deltaTime;
+            if (hitStopCount == 1)
+            {
+                anim.SetBool("isAttacking", false);
+            }
         }
 
         // move towards the player if within radius and no walls blocking it
         else if (hit && hit.collider.gameObject.layer == target.gameObject.layer && Vector2.Distance(transform.position, target.transform.position) <= visionRadius)
         {
-            //Debug.Log("Chase");
+            Debug.Log("Chase");
+            anim.SetBool("isAttacking", false);
             GoTowards(target.transform.position); //moves towards target
             stopCount = defaultStopCount;
         }
@@ -67,6 +73,7 @@ public class CrawlerBehavior : MonoBehaviour
         // pause if the player just left line of sight
         else if (stopCount > 0f)
         {
+            anim.SetBool("isAttacking", false);
             //Debug.Log("Stopped");
             stopCount -= Time.deltaTime;
         }
@@ -74,7 +81,8 @@ public class CrawlerBehavior : MonoBehaviour
         // travel along its patrol route
         else
         {
-            //Debug.Log("Patrol");
+            anim.SetBool("isAttacking", false);
+            Debug.Log("Patrol");
             //Debug.Log(path);
             if (path.Count == 0)
             {
@@ -106,6 +114,8 @@ public class CrawlerBehavior : MonoBehaviour
     {
         if (collision.gameObject.layer == target.layer)
         {
+            Debug.Log("Play attack anim");
+            anim.SetBool("isAttacking", true);
             hitStopCount = defaultHitStopCount;
         }
     }
@@ -113,11 +123,12 @@ public class CrawlerBehavior : MonoBehaviour
 
     private void GoTowards(Vector2 goTo) //helper method which both moves and rotates the thing moving
     {
+        anim.SetBool("isAttacking", false);
         transform.position = Vector2.MoveTowards(this.transform.position, goTo, speed * Time.deltaTime); //moves the npc
         Vector2 direction = goTo - (Vector2)transform.position; // finds direction between npc and target
-
         direction.Normalize(); // normalizes direction (keeps direction, sets length to 1, makes the math work)
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg; // weird math to find the angle, yes the Atan2 goes y first then x
+        
         //Debug.Log(angle);
         if (45 < angle && angle <= 135) //facing up (W)
         {
