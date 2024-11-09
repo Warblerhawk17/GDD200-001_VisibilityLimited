@@ -6,7 +6,6 @@ public class Player_Script : MonoBehaviour
 {
     // Public variables
     public float speed = 5f; // The speed of the player walking
-    public float runSpeed = 8f; // The speed at which the player runs
     public BatteryManager batteryManager;
     public LivesBehavior livesBehavior;
     public int lives = 3;
@@ -15,13 +14,11 @@ public class Player_Script : MonoBehaviour
 
     // Private variables 
     private Rigidbody2D rb; // Reference to the Rigidbody2D component attached to the player
-    private Vector2 movement; // Stores the direction of player movement
+    private Vector2 walkMovement; // Stores the direction of player movement
     private Animator anim;
-
 
     // Friend variable
     public List<GameObject> friendList = new List<GameObject>();
-
 
     void Start()
     {
@@ -37,9 +34,9 @@ public class Player_Script : MonoBehaviour
         // Get player input from keyboard or controller
         float horizontalInput = Input.GetAxisRaw("Horizontal");
         float verticalInput = Input.GetAxisRaw("Vertical");
-
         // Set movement direction based on input
-        movement = new Vector2(horizontalInput, verticalInput);
+        walkMovement = new Vector2(horizontalInput, verticalInput);
+
         if (Mathf.Abs(horizontalInput) > 0 || Mathf.Abs(verticalInput) > 0)
         {
             anim.SetBool("isWalking", true);
@@ -77,24 +74,21 @@ public class Player_Script : MonoBehaviour
             }
         }
         else anim.SetBool("isWalking", false);
-
-        if (Input.GetKey(KeyCode.LeftShift))
-        {
-            transform.Translate(runSpeed * Time.deltaTime * movement);
-        }
-        else
-        {
-            transform.Translate(speed * Time.deltaTime * movement);
-        }
-
-
-
     }
 
     void FixedUpdate()
     {
         // Apply movement to the player in FixedUpdate for physics consistency
-        rb.velocity = movement * speed;
+        rb.velocity = walkMovement * speed * 1.5f;
+
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            rb.MovePosition(rb.position + rb.velocity * Time.fixedDeltaTime * 2);
+        }
+        else
+        {
+            rb.MovePosition(rb.position + rb.velocity * Time.fixedDeltaTime);
+        }
     }
 
     //If the player collides into a monster
@@ -141,6 +135,7 @@ public class Player_Script : MonoBehaviour
           }
         */
     }
+
     private void LoseLife()
     {
         Debug.Log("LoseLife called");
@@ -174,8 +169,6 @@ public class Player_Script : MonoBehaviour
                 MonsterSpawner.instance.SpawnMonsters(friendsSaved-1);
             }
         friendList.Clear();
-    }
-
-
+        }
     }
 }
