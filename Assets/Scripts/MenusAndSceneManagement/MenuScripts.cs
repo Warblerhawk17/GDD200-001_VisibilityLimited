@@ -39,11 +39,11 @@ public class MenuScripts : MonoBehaviour
                 currentMenu.SetActive(true);
                 break;
             case 2:
-                Debug.Log("Resume button pressed");
+                //Debug.Log("Resume button pressed");
                 currentMenu.SetActive(false);
                 break;
             case 3:
-                Debug.Log("Exit button pressed");
+                //Debug.Log("Exit button pressed");
                 Application.Quit();
                 break;
             case 4:

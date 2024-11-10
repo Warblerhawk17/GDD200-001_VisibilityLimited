@@ -11,10 +11,12 @@ public class SceneMan : MonoBehaviour
     public GameObject pauseMenu;
     public GameObject gameOverMenu;
     public TextMeshProUGUI friendsText;
+    public bool isGamePaused = false;
+    public GameObject sceneManager;
 
-    private bool isGamePaused = false;
     private bool isInBsmnt = false;
     private Player_Script playerScript;
+    private MenuScripts menuScripts;
 
     // Start is called before the first frame update
     void Start()

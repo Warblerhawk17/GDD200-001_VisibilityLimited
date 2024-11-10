@@ -5,10 +5,12 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float speed = 5f; // The speed of the player walking
+    public GameObject sceneManager;
 
     private Rigidbody2D rb; // Reference to the Rigidbody2D component attached to the player
     private Vector2 walkMovement; // Stores the direction of player movement
     private Animator anim;
+    private SceneMan sceneMan;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +20,9 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         // Prevent the player from rotating
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+
+        sceneManager = GameObject.Find("SceneManager");
+        sceneMan = sceneManager.GetComponent<SceneMan>();
     }
 
     // Update is called once per frame
@@ -26,6 +31,7 @@ public class PlayerMovement : MonoBehaviour
         // Get player input from keyboard or controller
         float horizontalInput = Input.GetAxisRaw("Horizontal");
         float verticalInput = Input.GetAxisRaw("Vertical");
+
         // Set movement direction based on input
         walkMovement = new Vector2(horizontalInput, verticalInput);
 
@@ -68,18 +74,20 @@ public class PlayerMovement : MonoBehaviour
         else anim.SetBool("isWalking", false);
     }
 
-void FixedUpdate()
+    void FixedUpdate()
     {
         // Apply movement to the player in FixedUpdate for physics consistency
-        rb.velocity = walkMovement * speed * 1.5f;
-
-        if (Input.GetKey(KeyCode.LeftShift))
+        if (!sceneMan.isGamePaused)
         {
-            rb.MovePosition(rb.position + rb.velocity * Time.fixedDeltaTime * 2);
-        }
-        else
-        {
-            rb.MovePosition(rb.position + rb.velocity * Time.fixedDeltaTime);
+            rb.velocity = walkMovement * speed * 1.5f;
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                rb.MovePosition(rb.position + rb.velocity * Time.fixedDeltaTime * 2);
+            }
+            else
+            {
+                rb.MovePosition(rb.position + rb.velocity * Time.fixedDeltaTime);
+            }
         }
     }
 }

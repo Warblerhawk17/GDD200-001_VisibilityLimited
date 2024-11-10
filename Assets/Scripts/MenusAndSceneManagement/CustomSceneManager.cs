@@ -57,7 +57,7 @@ public class CustomSceneManager : MonoBehaviour
             sceneManScript = sceneMan.GetComponent<SceneMan>();
             if (sceneManScript == null)
             {
-                Debug.LogError("SceneMan script is not attached to the SceneManager GameObject.");
+                Debug.LogError("SceneMan script is not attached.");
             }
         }
         else
