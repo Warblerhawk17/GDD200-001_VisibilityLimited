@@ -11,6 +11,7 @@ public class Player_Script : MonoBehaviour
     public int friendsSaved = 0;
     public string currentLightSource;
 
+
     // Private variables 
 
     // Friend variable
