@@ -1,3 +1,4 @@
+using UnityEditor.Build.Content;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
@@ -65,6 +66,7 @@ public class CustomSceneManager : MonoBehaviour
             Debug.LogWarning("SceneManager GameObject not found in the new scene.");
         }
     }
+
     private void Update()
     {
         // Make sure sceneManScript is assigned before trying to call CallPause

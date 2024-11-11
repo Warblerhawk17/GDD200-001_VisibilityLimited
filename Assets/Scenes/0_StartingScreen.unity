@@ -660,7 +660,7 @@ MonoBehaviour:
   mainMenu: {fileID: 0}
   currentMenu: {fileID: 0}
   button: {fileID: 0}
-  index: 5
+  index: 10
 --- !u!1 &1263151674
 GameObject:
   m_ObjectHideFlags: 0
@@ -1649,7 +1649,7 @@ MonoBehaviour:
   mainMenu: {fileID: 0}
   currentMenu: {fileID: 0}
   button: {fileID: 0}
-  index: 5
+  index: 10
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

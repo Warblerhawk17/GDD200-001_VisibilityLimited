@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1026855942851468666}
   - component: {fileID: 3579011377750263376}
   - component: {fileID: 2238409698780060325}
+  - component: {fileID: 8575774425088931521}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -162,14 +163,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8c5eb32be603224d9f05d1f81f25d68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
-  runSpeed: 5
   batteryManager: {fileID: 0}
   livesBehavior: {fileID: 0}
   lives: 3
   friendsSaved: 0
   currentLightSource: 
   friendList: []
+--- !u!95 &8575774425088931521
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 457998364201435404}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 98303dc35aa47f046808f4d70c6009c6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &6758829522810454915
 GameObject:
   m_ObjectHideFlags: 0
