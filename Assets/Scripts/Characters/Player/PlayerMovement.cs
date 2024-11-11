@@ -34,36 +34,59 @@ public class PlayerMovement : MonoBehaviour
             anim.SetBool("isWalking", true);
             if (horizontalInput > 0) //Walking right (D)
             {
+                Debug.Log("facingRight");
+                anim.SetBool("facingHoriz", true);
                 anim.SetBool("facingLeft", false);
-                anim.SetBool("facingHoriz", true);
                 anim.SetBool("facingUp", false);
-                if (verticalInput < 0) //Walking down (S)
-                {
-                    anim.SetBool("facingUp", false);
-                    anim.SetBool("facingHoriz", false);
-                }
-                else //walking up (W)
-                {
-                    anim.SetBool("facingUp", true);
-                    anim.SetBool("facingHoriz", false);
-                }
             }
-            else //walking left (A)
+            else if (horizontalInput < 0) //walking left (A)
             {
-                anim.SetBool("facingLeft", true);
                 anim.SetBool("facingHoriz", true);
+                anim.SetBool("facingLeft", true);
                 anim.SetBool("facingUp", false);
-                if (verticalInput < 0) //Walking down (S)
-                {
-                    anim.SetBool("facingUp", false);
-                    anim.SetBool("facingHoriz", false);
-                }
-                else //walking up (W)
-                {
-                    anim.SetBool("facingUp", true);
-                    anim.SetBool("facingHoriz", false);
-                }
+                Debug.Log("facingLeft");
             }
+            else if (verticalInput < 0) //Walking down (S)
+            {
+                anim.SetBool("facingHoriz", false);
+                Debug.Log("facingDown");
+                anim.SetBool("facingLeft", false);
+                anim.SetBool("facingUp", false);
+            }
+            else if (verticalInput > 0) //walking up (W)
+            {
+                anim.SetBool("facingHoriz", false);
+                Debug.Log("facingUp");
+                anim.SetBool("facingLeft", false);
+                anim.SetBool("facingUp", true);
+            }
+
+            //switch (horizontalInput, verticalInput)
+            //{
+            //    case horizontalInput > 0:
+            //        anim.SetBool("facingLeft", false);
+            //        anim.SetBool("facingUp", false);
+            //        anim.SetBool("facingHoriz", true);
+            //        break;
+            //    case horizontalInput < 0:
+            //        anim.SetBool("facingLeft", true);
+            //        anim.SetBool("facingUp", false);
+            //        anim.SetBool("facingHoriz", true);
+            //        break;
+            //    case verticalInput < 0:
+            //        anim.SetBool("facingLeft", false);
+            //        anim.SetBool("facingUp", false);
+            //        anim.SetBool("facingHoriz", false);
+            //        break;
+            //    case verticalInput > 0:
+            //        anim.SetBool("facingLeft", false);
+            //        anim.SetBool("facingUp", true);
+            //        anim.SetBool("facingHoriz", false);
+            //        break;
+            //    default:
+            //        Debug.Log("Uhhh not moving?");
+            //        break;
+            //}
         }
         else anim.SetBool("isWalking", false);
     }
