@@ -5,8 +5,6 @@ using UnityEngine;
 public class Player_Script : MonoBehaviour
 {
     // Public variables
-    public float speed = 5f; // The speed of the player walking
-    public float runSpeed = 8f; // The speed at which the player runs
     public BatteryManager batteryManager;
     public LivesBehavior livesBehavior;
     public int lives = 3;
@@ -14,87 +12,12 @@ public class Player_Script : MonoBehaviour
     public string currentLightSource;
 
     // Private variables 
-    private Rigidbody2D rb; // Reference to the Rigidbody2D component attached to the player
-    private Vector2 movement; // Stores the direction of player movement
-    private Animator anim;
-
 
     // Friend variable
     public List<GameObject> friendList = new List<GameObject>();
 
-
     void Start()
     {
-        // Initialize the Rigidbody2D component
-        anim = GetComponent<Animator>(); //Animator object
-        rb = GetComponent<Rigidbody2D>();
-        // Prevent the player from rotating
-        rb.constraints = RigidbodyConstraints2D.FreezeRotation;
-    }
-
-    void Update()
-    {
-        // Get player input from keyboard or controller
-        float horizontalInput = Input.GetAxisRaw("Horizontal");
-        float verticalInput = Input.GetAxisRaw("Vertical");
-
-        // Set movement direction based on input
-        movement = new Vector2(horizontalInput, verticalInput);
-        if (Mathf.Abs(horizontalInput) > 0 || Mathf.Abs(verticalInput) > 0)
-        {
-            anim.SetBool("isWalking", true);
-            if (horizontalInput > 0) //Walking right (D)
-            {
-                anim.SetBool("facingLeft", false);
-                anim.SetBool("facingHoriz", true);
-                anim.SetBool("facingUp", false);
-                if (verticalInput < 0) //Walking down (S)
-                {
-                    anim.SetBool("facingUp", false);
-                    anim.SetBool("facingHoriz", false);
-                }
-                else //walking up (W)
-                {
-                    anim.SetBool("facingUp", true);
-                    anim.SetBool("facingHoriz", false);
-                }
-            }
-            else //walking left (A)
-            {
-                anim.SetBool("facingLeft", true);
-                anim.SetBool("facingHoriz", true);
-                anim.SetBool("facingUp", false);
-                if (verticalInput < 0) //Walking down (S)
-                {
-                    anim.SetBool("facingUp", false);
-                    anim.SetBool("facingHoriz", false);
-                }
-                else //walking up (W)
-                {
-                    anim.SetBool("facingUp", true);
-                    anim.SetBool("facingHoriz", false);
-                }
-            }
-        }
-        else anim.SetBool("isWalking", false);
-
-        if (Input.GetKey(KeyCode.LeftShift))
-        {
-            transform.Translate(runSpeed * Time.deltaTime * movement);
-        }
-        else
-        {
-            transform.Translate(speed * Time.deltaTime * movement);
-        }
-
-
-
-    }
-
-    void FixedUpdate()
-    {
-        // Apply movement to the player in FixedUpdate for physics consistency
-        rb.velocity = movement * speed;
     }
 
     //If the player collides into a monster
@@ -141,6 +64,7 @@ public class Player_Script : MonoBehaviour
           }
         */
     }
+
     private void LoseLife()
     {
         Debug.Log("LoseLife called");
@@ -174,8 +98,6 @@ public class Player_Script : MonoBehaviour
                 MonsterSpawner.instance.SpawnMonsters(friendsSaved-1);
             }
         friendList.Clear();
-    }
-
-
+        }
     }
 }
