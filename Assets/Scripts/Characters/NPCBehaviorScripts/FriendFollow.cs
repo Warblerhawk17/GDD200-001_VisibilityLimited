@@ -103,9 +103,6 @@ public class FriendFollow : MonoBehaviour
             friendList.Add(collision.gameObject);
             friendList[friendList.Count - 1].GetComponent<FriendFollow>().follow = this.gameObject;
             friendList[friendList.Count - 1].GetComponent<FriendFollow>().followDistance = friendList.Count * 0.5f;
-
-
-
         }
          */
     }

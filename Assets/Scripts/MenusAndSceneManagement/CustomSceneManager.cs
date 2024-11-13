@@ -50,21 +50,25 @@ public class CustomSceneManager : MonoBehaviour
         // This is called every time a scene is loaded
 
         // Find the SceneManager GameObject and assign the SceneMan script if it exists
-        sceneMan = GameObject.Find("SceneManager");
-
-        if (sceneMan != null)
+        if (SceneManager.GetActiveScene().buildIndex != 0)
         {
-            sceneManScript = sceneMan.GetComponent<SceneMan>();
-            if (sceneManScript == null)
+            sceneMan = GameObject.Find("SceneManager");
+
+            if (sceneMan != null)
             {
-                Debug.LogError("SceneMan script is not attached.");
+                sceneManScript = sceneMan.GetComponent<SceneMan>();
+                if (sceneManScript == null)
+                {
+                    Debug.LogError("SceneMan script is not attached.");
+                }
+            }
+            else
+            {
+                Debug.LogWarning("SceneManager GameObject not found in the new scene.");
             }
         }
-        else
-        {
-            Debug.LogWarning("SceneManager GameObject not found in the new scene.");
-        }
     }
+
     private void Update()
     {
         // Make sure sceneManScript is assigned before trying to call CallPause

@@ -14,7 +14,6 @@ public class SceneMan : MonoBehaviour
     public bool isGamePaused = false;
     public GameObject sceneManager;
 
-    private bool isInBsmnt = false;
     private Player_Script playerScript;
     private MenuScripts menuScripts;
 
