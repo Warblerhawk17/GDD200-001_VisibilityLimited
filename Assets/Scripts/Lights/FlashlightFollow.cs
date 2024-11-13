@@ -32,6 +32,7 @@ public class FlashlightFollow : MonoBehaviour
 
     void CalculatePosRot()
     {
+        Debug.Log("POSROT CALCULATED");
         // Get the mouse coordinates
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mousePosition.z = 0f; // Z-axis positon
@@ -54,6 +55,8 @@ public class FlashlightFollow : MonoBehaviour
 
     void ApplyPosRot()
     {
+        Debug.Log("POSROT APPLIED");
+
         // Update the flashlight position
         // Apply the rotation
         transform.SetPositionAndRotation(targetPosition, Quaternion.Lerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime));
