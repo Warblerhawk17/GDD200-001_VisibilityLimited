@@ -6,14 +6,15 @@ public class LivesBehavior : MonoBehaviour
 {
     BatteryManager batteryManager;
     public List<Sprite> livesSprites;
-    public SpriteRenderer livesRenderer;
     public Player_Script player;
    [SerializeField] int spriteNum = 0;
+   public UnityEngine.UI.Image livesImage;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        livesRenderer.sprite = livesSprites[0];
+        livesImage.sprite = livesSprites[0];
     }
 
     // Update is called once per frame
@@ -32,10 +33,10 @@ public class LivesBehavior : MonoBehaviour
         }
         else
         {
-            livesRenderer.sprite = livesSprites[3];
+            livesImage.sprite = livesSprites[3];
             Debug.Log("GAME OVER!");
         }
-        livesRenderer.sprite = livesSprites[spriteNum];
+        livesImage.sprite = livesSprites[spriteNum];
 
     }
 }
