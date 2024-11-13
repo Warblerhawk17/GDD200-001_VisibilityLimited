@@ -7,6 +7,7 @@ public class LightUIBehavior : MonoBehaviour
     public Player_Script player;
     [SerializeField] List<Sprite> lightSprites;
     [SerializeField] public UnityEngine.UI.Image uiImage;
+    string currentLight;
     // Start is called before the first frame update
     void Start()
     {
