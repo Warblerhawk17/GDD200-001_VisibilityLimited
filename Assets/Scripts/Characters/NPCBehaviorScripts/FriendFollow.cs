@@ -5,13 +5,13 @@ using static UnityEngine.GraphicsBuffer;
 
 public class FriendFollow : MonoBehaviour
 {
-    public GameObject follow;
+    public GameObject followTarget;
     public float followDistance;
     public LayerMask layerMask;
 
     private Node currentNode; //the current node it is at
     private List<Node> path = new List<Node>(); //the path of nodes it will travel
-    private float speed = 10;
+    private float speed = 5;
     private Animator anim;
 
     // Start is called before the first frame update
@@ -23,20 +23,21 @@ public class FriendFollow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (follow != null)
+        if (followTarget != null)
         {
+            anim.SetBool("isWalking", true);
             //Vector2 rayCastStart = transform.position + Vector3.Normalize(follow.transform.position - transform.position)*1.5f;
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector3.Normalize(follow.transform.position - transform.position), float.MaxValue, layerMask);
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector3.Normalize(followTarget.transform.position - transform.position), float.MaxValue, layerMask);
             //Debug.DrawRay(transform.position, Vector3.Normalize(follow.transform.position - transform.position), Color.red);
             //Debug.Log(hit.collider.gameObject == gameObject);
             //Debug.Log("Is self collide " + (hit.collider.gameObject == follow.gameObject) + " rayCastStart " + (rayCastStart) + " direction " + (Vector3.Normalize(follow.transform.position - transform.position)) + " Follow " + (follow.transform.position) + " my position" + (transform.position));
-            if (hit.collider.gameObject != follow.gameObject)
+            if (hit.collider.gameObject != followTarget.gameObject)
             {
                 //Debug.Log("Non Direct Move");
                 if (path.Count == 0)
                 { //make new path
                     Node nearestNode = AStarManager.instance.FindNearestNode(transform.position); //the node nearest to the friend
-                    Node targetNode = AStarManager.instance.FindNearestNode(follow.transform.position);
+                    Node targetNode = AStarManager.instance.FindNearestNode(followTarget.transform.position);
                     path = AStarManager.instance.GeneratePath(nearestNode, targetNode); //makes a path from the crawler to the next node in the patrol path
                 }
                 GoTowards(path[0].transform.position); //goes towards the next node in path
@@ -47,14 +48,20 @@ public class FriendFollow : MonoBehaviour
                     path.RemoveAt(0);
                 }
             }
-            else if (Vector2.Distance(transform.position, follow.transform.position) > followDistance)
+            else if (Vector2.Distance(transform.position, followTarget.transform.position) > followDistance)
             {
-                //Debug.Log("Direct Move");
-                GoTowards(follow.transform.position);
+                Debug.Log("Direct Move");
+                GoTowards(followTarget.transform.position);
                 path.Clear();
             }
+            else
+            {
+                //anim.SetBool("isWalking", false);
+                Debug.Log("is not walking");
+            }
+
         }
-        else anim.SetBool("isWalking", false);
+        //else anim.SetBool("isWalking", false);
     }
 
     private void GoTowards(Vector2 goTo) //helper method which both moves and rotates the thing moving
@@ -102,8 +109,8 @@ public class FriendFollow : MonoBehaviour
         {
             Player_Script player = collision.GetComponent<Player_Script>();
             player.friendList.Add(this.gameObject);
-            follow = player.gameObject;
-            followDistance = player.friendList.Count * 0.5f;
+            followTarget = player.gameObject;
+            //followDistance = player.friendList.Count * 0.5f;
         }
 
         /*!collision.GetComponent<Player_Script>.friendList.Contains(this)

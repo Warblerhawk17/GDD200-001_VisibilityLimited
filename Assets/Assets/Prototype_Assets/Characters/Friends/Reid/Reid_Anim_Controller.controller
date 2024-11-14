@@ -72,7 +72,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Katie_A_Walk
+  m_Name: Reid_A_Walk
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -89,7 +89,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 62a1033163f9e3b4892c6294934ef91e, type: 2}
+  m_Motion: {fileID: 7400000, guid: a0f56b67628918a4cac6e33b7286f2e7, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -167,7 +167,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Katie_W_Idle
+  m_Name: Reid_W_Idle
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -184,7 +184,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: e374145a0c33e1b4482c302369092cfa, type: 2}
+  m_Motion: {fileID: 7400000, guid: 00b4cde74b26c784082ae5f10cdbf16f, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -333,7 +333,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Katie_A_Idle
+  m_Name: Reid_A_Idle
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -350,7 +350,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 17957a59f6def8543aa3882436597a3d, type: 2}
+  m_Motion: {fileID: 7400000, guid: 04cd728580751404596e4a60aae34b7d, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -529,7 +529,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Katie_Anim_Controller
+  m_Name: Reid_Anim_Controller
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: isWalking
@@ -576,7 +576,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Katie_D_Walk
+  m_Name: Reid_D_Walk
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -593,7 +593,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 9ac442e402bb54d4b81d2e228fcdd954, type: 2}
+  m_Motion: {fileID: 7400000, guid: b0bbe0bdb5c9a9344848887357155242, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -983,7 +983,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Katie_W_Walk
+  m_Name: Reid_W_Walk
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -1000,7 +1000,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 68b397d4b4318a64e983e83d3f962b10, type: 2}
+  m_Motion: {fileID: 7400000, guid: 80e5041e8046bf144ad6caa190a5699e, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -1044,7 +1044,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Katie_D_Idle
+  m_Name: Reid_D_Idle
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -1061,7 +1061,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: e25ecfd33ee500f4b8a5abe4dcaa9e00, type: 2}
+  m_Motion: {fileID: 7400000, guid: 475eb276f1ca6c64b9a1a2aa4e7b40a9, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -1074,7 +1074,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Katie_S_Idle
+  m_Name: Reid_S_Idle
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -1091,7 +1091,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 6046aee623bc4ad458d0d88140a8f2d1, type: 2}
+  m_Motion: {fileID: 7400000, guid: c43abf6f3bcfbec40857cdfea8c67f37, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -1274,7 +1274,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Katie_S_Walk
+  m_Name: Reid_S_Walk
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -1291,7 +1291,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: a151f2becd5641a4db24448a6eb37171, type: 2}
+  m_Motion: {fileID: 7400000, guid: bd851ce2e5032724ab15b77bbe882745, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
