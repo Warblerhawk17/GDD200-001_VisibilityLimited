@@ -17,7 +17,6 @@ public class FriendFollow : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        anim.SetBool("isWalking", false);
         anim = GetComponent<Animator>(); //Animator object
     }
 
@@ -55,6 +54,7 @@ public class FriendFollow : MonoBehaviour
                 path.Clear();
             }
         }
+        else anim.SetBool("isWalking", false);
     }
 
     private void GoTowards(Vector2 goTo) //helper method which both moves and rotates the thing moving
@@ -63,25 +63,35 @@ public class FriendFollow : MonoBehaviour
         Vector2 direction = goTo - (Vector2)transform.position; // finds direction between npc and target
         direction.Normalize(); // normalizes direction (keeps direction, sets length to 1, makes the math work)
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg; // weird math to find the angle, yes the Atan2 goes y first then x
+        Debug.Log(angle);
+        anim.SetBool("isWalking", true);
         if (45 < angle && angle <= 135) //facing up (W)
         {
+            Debug.Log("facing Up");
+            anim.SetBool("facingHoriz", false);
             anim.SetBool("facingUp", true);
             anim.SetBool("facingLeft", false);
         }
         else if (-135 > angle || angle > 135) //facing left (A)
         {
+            Debug.Log("facing Left");
+            anim.SetBool("facingHoriz", true);
             anim.SetBool("facingUp", false);
             anim.SetBool("facingLeft", true);
         }
         else if (-45 > angle && angle >= -135) //facing down (S)
         {
+            Debug.Log("facing Down");
+            anim.SetBool("facingHoriz", false);
             anim.SetBool("facingUp", false);
             anim.SetBool("facingLeft", false);
         }
         else //facing right (D)
         {
+            Debug.Log("facing Right");
+            anim.SetBool("facingHoriz", true);
             anim.SetBool("facingUp", false);
-            anim.SetBool("facingLeft", true);
+            anim.SetBool("facingLeft", false);
         }
         //transform.rotation = Quaternion.Euler(Vector3.forward * angle); // changes npc rotation
     }

@@ -34,7 +34,7 @@ public class PlayerMovement : MonoBehaviour
             anim.SetBool("isWalking", true);
             if (horizontalInput > 0) //Walking right (D)
             {
-                Debug.Log("facingRight");
+                //Debug.Log("facingRight");
                 anim.SetBool("facingHoriz", true);
                 anim.SetBool("facingLeft", false);
                 anim.SetBool("facingUp", false);
@@ -44,19 +44,19 @@ public class PlayerMovement : MonoBehaviour
                 anim.SetBool("facingHoriz", true);
                 anim.SetBool("facingLeft", true);
                 anim.SetBool("facingUp", false);
-                Debug.Log("facingLeft");
+               // Debug.Log("facingLeft");
             }
             else if (verticalInput < 0) //Walking down (S)
             {
                 anim.SetBool("facingHoriz", false);
-                Debug.Log("facingDown");
+                //Debug.Log("facingDown");
                 anim.SetBool("facingLeft", false);
                 anim.SetBool("facingUp", false);
             }
             else if (verticalInput > 0) //walking up (W)
             {
                 anim.SetBool("facingHoriz", false);
-                Debug.Log("facingUp");
+                //Debug.Log("facingUp");
                 anim.SetBool("facingLeft", false);
                 anim.SetBool("facingUp", true);
             }
