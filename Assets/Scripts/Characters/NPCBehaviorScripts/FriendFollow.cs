@@ -8,6 +8,7 @@ public class FriendFollow : MonoBehaviour
     public GameObject followTarget;
     public float followDistance;
     public LayerMask layerMask;
+    public Animator anim;
 
     private Node currentNode; //the current node it is at
     private List<Node> path = new List<Node>(); //the path of nodes it will travel
@@ -105,9 +106,9 @@ public class FriendFollow : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player") && !collision.GetComponent<Player_Script>().friendList.Contains(this.gameObject))
+        if (collision.gameObject.CompareTag("Player") && !collision.GetComponent<player_script>().friendList.Contains(this.gameObject))
         {
-            Player_Script player = collision.GetComponent<Player_Script>();
+            player_script player = collision.GetComponent<player_script>();
             player.friendList.Add(this.gameObject);
             followTarget = player.gameObject;
             //followDistance = player.friendList.Count * 0.5f;
@@ -120,9 +121,6 @@ public class FriendFollow : MonoBehaviour
             friendList.Add(collision.gameObject);
             friendList[friendList.Count - 1].GetComponent<FriendFollow>().follow = this.gameObject;
             friendList[friendList.Count - 1].GetComponent<FriendFollow>().followDistance = friendList.Count * 0.5f;
-
-
-
         }
          */
     }
