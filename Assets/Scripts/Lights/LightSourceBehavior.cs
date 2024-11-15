@@ -5,6 +5,7 @@
 using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 public class LightSourceBehavior : MonoBehaviour
 {
     public BatteryManager batteryManager;
@@ -12,6 +13,7 @@ public class LightSourceBehavior : MonoBehaviour
     public player_script player;
     public string lightName;
     public ShadowBehavior shadow;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -62,10 +64,6 @@ public class LightSourceBehavior : MonoBehaviour
             {
                 shadow.GetComponent<ShadowBehavior>().telaportAway();
             }
-            else
-            {
-                shadow.speed = 0;
-            }
         }
     }
 
@@ -76,4 +74,5 @@ public class LightSourceBehavior : MonoBehaviour
             shadow.speed = 3;
         }
     }
+
 }
