@@ -12,7 +12,7 @@ public class GroundLightBehavior : MonoBehaviour
     float distance;
     float maxDistance = 1.0f;
     public GameObject player; // the player object
-    public Player_Script playerScript;
+    public player_script playerScript;
     public TextMeshProUGUI pickupText;
     LightSpawner gameManager;
     [SerializeField] bool isNearLight = false;
@@ -24,7 +24,7 @@ public class GroundLightBehavior : MonoBehaviour
         player = GameObject.Find("Player");
         gameManager = GameObject.Find("Game Manager").GetComponent<LightSpawner>();
         pickupText = GameObject.Find("Pickup Text").GetComponentInChildren<TextMeshProUGUI>();
-        playerScript = player.GetComponent<Player_Script>();
+        playerScript = player.GetComponent<player_script>();
     }
 
     // Update is called once per frame

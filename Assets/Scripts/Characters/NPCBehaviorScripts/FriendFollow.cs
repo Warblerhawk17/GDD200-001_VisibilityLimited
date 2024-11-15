@@ -8,11 +8,11 @@ public class FriendFollow : MonoBehaviour
     public GameObject follow;
     public float followDistance;
     public LayerMask layerMask;
+    public Animator anim;
 
     private Node currentNode; //the current node it is at
     private List<Node> path = new List<Node>(); //the path of nodes it will travel
     private float speed = 10;
-    private Animator anim;
 
     // Start is called before the first frame update
     void Start()
