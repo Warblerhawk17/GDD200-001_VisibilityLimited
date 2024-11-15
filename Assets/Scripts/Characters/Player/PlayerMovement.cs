@@ -30,7 +30,7 @@ public class PlayerMovement : MonoBehaviour
         sceneMan = sceneManager.GetComponent<SceneMan>();
         player_script = player.GetComponent<player_script>();
 
-        canMove = sceneMan.isGamePaused;
+        canMove = !sceneMan.isGamePaused;
     }
 
     // Update is called once per frame
@@ -43,7 +43,7 @@ public class PlayerMovement : MonoBehaviour
         // Set movement direction based on input
         walkMovement = new Vector2(horizontalInput, verticalInput);
 
-        if (Mathf.Abs(horizontalInput) > 0 || Mathf.Abs(verticalInput) > 0)
+        if ((Mathf.Abs(horizontalInput) > 0 || Mathf.Abs(verticalInput) > 0) && canMove)
         {
             anim.SetBool("isWalking", true);
             if (horizontalInput > 0) //Walking right (D)
@@ -114,7 +114,7 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         // Apply movement to the player in FixedUpdate for physics consistency
-        if (!canMove)
+        if (canMove)
         {
             rb.velocity = walkMovement * speed * 1.5f;
             if (Input.GetKey(KeyCode.LeftShift))
@@ -146,6 +146,11 @@ private IEnumerator MoveAndSpeak()
         float elapsedTime = 0f;
         Vector2 startPosition = transform.position;
 
+        if (anim != null)
+        {
+            anim.Play("Wren_W_Walk");
+        }
+
         while (elapsedTime < moveDuration)
         {
             // Linearly interpolate the position upwards
@@ -153,5 +158,7 @@ private IEnumerator MoveAndSpeak()
             elapsedTime += Time.deltaTime;
             yield return null;
         }
+        anim.Play("Jolene_W_Idle");
+        canMove = true;
     }
 }
