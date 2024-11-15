@@ -72,7 +72,7 @@ public class CustomSceneManager : MonoBehaviour
     private void Update()
     {
         // Make sure sceneManScript is assigned before trying to call CallPause
-        if (sceneManScript != null && SceneManager.GetActiveScene().buildIndex != 0 && Input.GetKeyDown(KeyCode.Escape))
+        if (sceneManScript != null && SceneManager.GetActiveScene().buildIndex != 0 && Input.GetKeyDown(KeyCode.Tab))
         {
             sceneManScript.CallPause();
         }

@@ -7,7 +7,7 @@ public class LivesBehavior : MonoBehaviour
     BatteryManager batteryManager;
     public List<Sprite> livesSprites;
     public SpriteRenderer livesRenderer;
-    public Player_Script player;
+    public player_script player;
    [SerializeField] int spriteNum = 0;
 
     // Start is called before the first frame update

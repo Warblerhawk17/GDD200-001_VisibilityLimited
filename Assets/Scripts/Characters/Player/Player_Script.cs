@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class Player_Script : MonoBehaviour
+public class player_script : MonoBehaviour
 {
     // Public variables
     public BatteryManager batteryManager;
@@ -13,6 +15,7 @@ public class Player_Script : MonoBehaviour
 
 
     // Private variables 
+
 
     // Friend variable
     public List<GameObject> friendList = new List<GameObject>();
@@ -92,13 +95,16 @@ public class Player_Script : MonoBehaviour
         }*/
         if (collision.gameObject.CompareTag("Exit"))
         {
-            for (int i = 0; i < friendList.Count; i++)
-            { 
-                Object.Destroy(friendList[i]);
-                friendsSaved++;
-                MonsterSpawner.instance.SpawnMonsters(friendsSaved-1);
-            }
-        friendList.Clear();
+            if (friendList != null)
+            {
+                for (int i = 0; i < friendList.Count; i++)
+                {
+                    Object.Destroy(friendList[i]);
+                    friendsSaved++;
+                    MonsterSpawner.instance.SpawnMonsters(friendsSaved - 1);
+                }
+                friendList.Clear();
+            } 
         }
     }
 }

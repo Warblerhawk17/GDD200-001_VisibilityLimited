@@ -88,9 +88,9 @@ public class FriendFollow : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player") && !collision.GetComponent<Player_Script>().friendList.Contains(this.gameObject))
+        if (collision.gameObject.CompareTag("Player") && !collision.GetComponent<player_script>().friendList.Contains(this.gameObject))
         {
-            Player_Script player = collision.GetComponent<Player_Script>();
+            player_script player = collision.GetComponent<player_script>();
             player.friendList.Add(this.gameObject);
             follow = player.gameObject;
             followDistance = player.friendList.Count * 0.5f;

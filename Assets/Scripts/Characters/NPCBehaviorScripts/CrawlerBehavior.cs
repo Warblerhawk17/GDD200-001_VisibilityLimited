@@ -37,12 +37,12 @@ public class CrawlerBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        visionRadius = 3 + target.GetComponent<Player_Script>().friendList.Count;
-        if (target.GetComponent<Player_Script>().currentLightSource == "Flashlight")
+        visionRadius = 3 + target.GetComponent<player_script>().friendList.Count;
+        if (target.GetComponent<player_script>().currentLightSource == "Flashlight")
         {
             visionRadius += 4;
         }
-        else if (target.GetComponent<Player_Script>().currentLightSource == "Candle")
+        else if (target.GetComponent<player_script>().currentLightSource == "Candle")
         {
             visionRadius += 2;
         }

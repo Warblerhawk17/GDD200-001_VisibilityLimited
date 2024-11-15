@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LightUIBehavior : MonoBehaviour
 {
-    public Player_Script player;
+    public player_script player;
     [SerializeField] List<Sprite> lightSprites;
     [SerializeField] SpriteRenderer spriteRenderer;
     [SerializeField] int lightnum;
