@@ -41,7 +41,7 @@ public class ShadowBehavior : MonoBehaviour
             timeChased += Time.deltaTime;
             if (timeChased > 5)
             {
-                telaportAway();
+                StartCoroutine( telaportAway());
                 timeChased = 0;
             }
         }
@@ -63,16 +63,22 @@ public class ShadowBehavior : MonoBehaviour
         }
     }   
 
-    public void telaportAway()
+    public IEnumerator telaportAway()
     {
+        Debug.Log("Teleported");
+        float storedSpeed = speed;
+        speed = 0;
+        yield return new WaitForSeconds(1);
         transform.position = AStarManager.instance.FindFurthestNode(transform.position).transform.position;
+        speed = storedSpeed;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.layer == target.layer)
         {
-            telaportAway();
+            Debug.Log("Hit player");
+            StartCoroutine(telaportAway());
         }
     }
 
