@@ -158,7 +158,7 @@ private IEnumerator MoveAndSpeak()
             elapsedTime += Time.deltaTime;
             yield return null;
         }
-        anim.Play("Jolene_W_Idle");
+        anim.Play("Wren_W_Idle");
         canMove = true;
     }
 }

@@ -13,7 +13,6 @@ public class FriendFollow : MonoBehaviour
     private Node currentNode; //the current node it is at
     private List<Node> path = new List<Node>(); //the path of nodes it will travel
     private float speed = 5;
-    private Animator anim;
 
     // Start is called before the first frame update
     void Start()
