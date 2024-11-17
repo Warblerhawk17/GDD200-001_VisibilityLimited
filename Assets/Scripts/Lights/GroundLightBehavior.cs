@@ -12,6 +12,7 @@ public class GroundLightBehavior : MonoBehaviour
     float distance;
     float maxDistance = 1.0f;
     public GameObject player; // the player object
+    public player_script playerScript;
     public TextMeshProUGUI pickupText;
     LightSpawner gameManager;
     [SerializeField] bool isNearLight = false;
@@ -23,6 +24,7 @@ public class GroundLightBehavior : MonoBehaviour
         player = GameObject.Find("Player");
         gameManager = GameObject.Find("Game Manager").GetComponent<LightSpawner>();
         pickupText = GameObject.Find("Pickup Text").GetComponentInChildren<TextMeshProUGUI>();
+        playerScript = player.GetComponent<player_script>();
     }
 
     // Update is called once per frame
@@ -60,9 +62,14 @@ public class GroundLightBehavior : MonoBehaviour
                 pickupText.enabled = true;
 
             }
-            if (Input.GetKeyDown(KeyCode.E) && ((GameObject.FindWithTag("Flashlight") == false && GameObject.FindWithTag("Candle") == false && GameObject.FindWithTag("Fireflies") == false)))
+            if (Input.GetKeyDown(KeyCode.E)) // Pick up light; if already have one, destroy the previous one (temporary until we can find a way to store charge on a dropped light)
                 
             {
+                if(playerScript.currentLightSource != "")
+                {
+                    Destroy(GameObject.FindWithTag(playerScript.currentLightSource));
+                    playerScript.currentLightSource = "";
+                }
                 Destroy(this.gameObject);
                 gameManager.lightSpawnRequested = true;
                 gameManager.lightToSpawn = lightType;

@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class Player_Script : MonoBehaviour
+public class player_script : MonoBehaviour
 {
     // Public variables
     public BatteryManager batteryManager;
@@ -13,6 +15,7 @@ public class Player_Script : MonoBehaviour
 
 
     // Private variables 
+
 
     // Friend variable
     public List<GameObject> friendList = new List<GameObject>();
@@ -46,11 +49,11 @@ public class Player_Script : MonoBehaviour
             friendList.Add(collision.gameObject);
             if (friendList.Count == 1)
             {
-                friendList[0].GetComponent<FriendFollow>().follow = this.gameObject;
+                friendList[0].GetComponent<FriendFollow>().followTarget = this.gameObject;
             }
             else
             {
-                friendList[friendList.Count - 1].GetComponent<FriendFollow>().follow = friendList[friendList.Count - 2].gameObject;
+                friendList[friendList.Count - 1].GetComponent<FriendFollow>().followTarget = friendList[friendList.Count - 2].gameObject;
             }
         }
 
@@ -74,7 +77,7 @@ public class Player_Script : MonoBehaviour
         transform.position = GameObject.Find("PlayerSpawn").transform.position;
         for (int i = 0; i < friendList.Count; i++) 
         {
-            friendList[i].GetComponent<FriendFollow>().follow = null;
+            friendList[i].GetComponent<FriendFollow>().followTarget = null;
         }
         friendList.Clear();
     }
@@ -92,13 +95,16 @@ public class Player_Script : MonoBehaviour
         }*/
         if (collision.gameObject.CompareTag("Exit"))
         {
-            for (int i = 0; i < friendList.Count; i++)
-            { 
-                Object.Destroy(friendList[i]);
-                friendsSaved++;
-                MonsterSpawner.instance.SpawnMonsters(friendsSaved-1);
-            }
-        friendList.Clear();
+            if (friendList != null)
+            {
+                for (int i = 0; i < friendList.Count; i++)
+                {
+                    Object.Destroy(friendList[i]);
+                    friendsSaved++;
+                    MonsterSpawner.instance.SpawnMonsters(friendsSaved - 1);
+                }
+                friendList.Clear();
+            } 
         }
     }
 }

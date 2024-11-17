@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class LightUIBehavior : MonoBehaviour
 {
-    public Player_Script player;
+    public player_script player;
     [SerializeField] List<Sprite> lightSprites;
     [SerializeField] public UnityEngine.UI.Image uiImage;
+    string currentLight;
+
+    private bool hasLight = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,15 +20,17 @@ public class LightUIBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(player.currentLightSource == "" && uiImage.enabled)
+        if (hasLight)
         {
-            uiImage.enabled = false;
-        }
-        else if (player.currentLightSource != "" && uiImage.enabled == false)
-        {
-            uiImage.enabled = true;
-            SwitchLights();
-
+            if (player.currentLightSource == "" && uiImage.enabled)
+            {
+                uiImage.enabled = false;
+            }
+            else if (player.currentLightSource != "" && !uiImage.enabled)
+            {
+                uiImage.enabled = true;
+                SwitchLights();
+            }
         }
     }
 

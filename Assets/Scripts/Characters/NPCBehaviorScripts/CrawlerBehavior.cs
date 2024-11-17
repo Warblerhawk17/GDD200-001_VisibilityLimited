@@ -37,12 +37,12 @@ public class CrawlerBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        visionRadius = 3 + target.GetComponent<Player_Script>().friendList.Count;
-        if (target.GetComponent<Player_Script>().currentLightSource == "Flashlight")
+        visionRadius = 3 + target.GetComponent<player_script>().friendList.Count;
+        if (target.GetComponent<player_script>().currentLightSource == "Flashlight")
         {
             visionRadius += 4;
         }
-        else if (target.GetComponent<Player_Script>().currentLightSource == "Candle")
+        else if (target.GetComponent<player_script>().currentLightSource == "Candle")
         {
             visionRadius += 2;
         }
@@ -82,7 +82,7 @@ public class CrawlerBehavior : MonoBehaviour
         else
         {
             anim.SetBool("isAttacking", false);
-            Debug.Log("Patrol");
+            //Debug.Log("Patrol");
             //Debug.Log(path);
             if (path.Count == 0)
             {
@@ -104,8 +104,6 @@ public class CrawlerBehavior : MonoBehaviour
                 }
             }
         }
-
-
     }
 
     //add some sort of collider with the player, stopCount = hitStopCount
@@ -119,7 +117,6 @@ public class CrawlerBehavior : MonoBehaviour
             hitStopCount = defaultHitStopCount;
         }
     }
-
 
     private void GoTowards(Vector2 goTo) //helper method which both moves and rotates the thing moving
     {
