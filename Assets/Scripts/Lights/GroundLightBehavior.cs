@@ -18,6 +18,8 @@ public class GroundLightBehavior : MonoBehaviour
     [SerializeField] bool isNearLight = false;
     string lightType;
     string lightTypeRequested;
+    public float storedCharge;
+    BatteryManager batteryManager;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +27,8 @@ public class GroundLightBehavior : MonoBehaviour
         gameManager = GameObject.Find("Game Manager").GetComponent<LightSpawner>();
         pickupText = GameObject.Find("Pickup Text").GetComponentInChildren<TextMeshProUGUI>();
         playerScript = player.GetComponent<player_script>();
+        batteryManager = GameObject.Find("Battery").GetComponent<BatteryManager>();
+
     }
 
     // Update is called once per frame
@@ -62,13 +66,18 @@ public class GroundLightBehavior : MonoBehaviour
                 pickupText.enabled = true;
 
             }
-            if (Input.GetKeyDown(KeyCode.E)) // Pick up light; if already have one, destroy the previous one (temporary until we can find a way to store charge on a dropped light)
+            if (Input.GetKeyDown(KeyCode.E)) // Pick up light
                 
             {
-                if(playerScript.currentLightSource != "")
+                if(playerScript.currentLightSource != "") // If player already has a light source
                 {
+                    gameManager.spawnGroundUsedLight();
                     Destroy(GameObject.FindWithTag(playerScript.currentLightSource));
                     playerScript.currentLightSource = "";
+                }
+                if(this.storedCharge != 0) // If the light has been previosuly used and has a stored charge
+                {
+                    gameManager.chargeToSpawnWith = storedCharge;
                 }
                 Destroy(this.gameObject);
                 gameManager.lightSpawnRequested = true;
