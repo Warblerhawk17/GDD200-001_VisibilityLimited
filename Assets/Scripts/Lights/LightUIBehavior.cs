@@ -4,28 +4,33 @@ using UnityEngine;
 
 public class LightUIBehavior : MonoBehaviour
 {
-    public Player_Script player;
+    public player_script player;
     [SerializeField] List<Sprite> lightSprites;
-    [SerializeField] SpriteRenderer spriteRenderer;
-    [SerializeField] int lightnum;
+    [SerializeField] public UnityEngine.UI.Image uiImage;
+    string currentLight;
+
+    private bool hasLight = false;
+
     // Start is called before the first frame update
     void Start()
     {
-        spriteRenderer.enabled = false;
+        uiImage.enabled = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(player.currentLightSource == "" && spriteRenderer.enabled)
+        if (hasLight)
         {
-            spriteRenderer.enabled = false;
-        }
-        else if (player.currentLightSource != "" && spriteRenderer.enabled == false)
-        {
-            spriteRenderer.enabled = true;
-            SwitchLights();
-
+            if (player.currentLightSource == "" && uiImage.enabled)
+            {
+                uiImage.enabled = false;
+            }
+            else if (player.currentLightSource != "" && !uiImage.enabled)
+            {
+                uiImage.enabled = true;
+                SwitchLights();
+            }
         }
     }
 
@@ -33,18 +38,15 @@ public class LightUIBehavior : MonoBehaviour
     {
         if(player.currentLightSource.Equals("Flashlight"))
         {
-            spriteRenderer.sprite = lightSprites[0];
-            lightnum = 1;
+            uiImage.sprite = lightSprites[0];
         }
         if (player.currentLightSource.Equals("Candle"))
         {
-            spriteRenderer.sprite = lightSprites[1];
-            lightnum = 2;
+            uiImage.sprite = lightSprites[1];
         }
         if (player.currentLightSource.Equals("Fireflies"))
         {
-            spriteRenderer.sprite = lightSprites[2];
-            lightnum = 3;
+            uiImage.sprite = lightSprites[2];
         }
     }
 }

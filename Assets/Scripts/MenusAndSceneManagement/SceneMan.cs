@@ -1,4 +1,3 @@
-using UnityEditor.Build.Content;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
@@ -12,10 +11,12 @@ public class SceneMan : MonoBehaviour
     public GameObject pauseMenu;
     public GameObject gameOverMenu;
     public TextMeshProUGUI friendsText;
+    public bool isGamePaused = false;
+    public GameObject sceneManager;
+    public PlayerMovement playerMovement;
 
-    private bool isGamePaused = false;
-    private bool isInBsmnt = false;
-    private Player_Script playerScript;
+    private player_script playerScript;
+    private MenuScripts menuScripts;
 
     // Start is called before the first frame update
     void Start()
@@ -30,7 +31,7 @@ public class SceneMan : MonoBehaviour
             pauseMenu.SetActive(false);
         }
 
-        playerScript = player.GetComponent<Player_Script>();
+        playerScript = player.GetComponent<player_script>();
     }
 
     // Update is called once per frame
@@ -67,11 +68,13 @@ public class SceneMan : MonoBehaviour
         {
             pauseMenu.SetActive(true);
             isGamePaused = true;
+            Time.timeScale = 0;
         }
         else
         {
             pauseMenu.SetActive(false);
             isGamePaused = false;
+            Time.timeScale = 1;
         }
     }
 }

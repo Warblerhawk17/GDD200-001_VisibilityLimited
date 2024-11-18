@@ -1,16 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class Player_Script : MonoBehaviour
+public class player_script : MonoBehaviour
 {
     // Public variables
-    public float speed = 5f; // The speed of the player walking
-    public float runSpeed = 8f; // The speed at which the player runs
-
-    // Private variables 
-    private Rigidbody2D rb; // Reference to the Rigidbody2D component attached to the player
-    private Vector2 movement; // Stores the direction of player movement
     public BatteryManager batteryManager;
     public LivesBehavior livesBehavior;
     public int lives = 3;
@@ -18,44 +14,14 @@ public class Player_Script : MonoBehaviour
     public string currentLightSource;
 
 
+    // Private variables 
+
+
     // Friend variable
     public List<GameObject> friendList = new List<GameObject>();
 
-
     void Start()
     {
-        // Initialize the Rigidbody2D component
-        rb = GetComponent<Rigidbody2D>();
-        // Prevent the player from rotating
-        rb.constraints = RigidbodyConstraints2D.FreezeRotation;
-    }
-
-    void Update()
-    {
-        // Get player input from keyboard or controller
-        float horizontalInput = Input.GetAxisRaw("Horizontal");
-        float verticalInput = Input.GetAxisRaw("Vertical");
-
-        // Set movement direction based on input
-        movement = new Vector2(horizontalInput, verticalInput);
-
-        if (Input.GetKey(KeyCode.LeftShift))
-        {
-            transform.Translate(runSpeed * Time.deltaTime * movement);
-        }
-        else
-        {
-            transform.Translate(speed * Time.deltaTime * movement);
-        }
-
-
-
-    }
-
-    void FixedUpdate()
-    {
-        // Apply movement to the player in FixedUpdate for physics consistency
-        rb.velocity = movement * speed;
     }
 
     //If the player collides into a monster
@@ -83,11 +49,11 @@ public class Player_Script : MonoBehaviour
             friendList.Add(collision.gameObject);
             if (friendList.Count == 1)
             {
-                friendList[0].GetComponent<FriendFollow>().follow = this.gameObject;
+                friendList[0].GetComponent<FriendFollow>().followTarget = this.gameObject;
             }
             else
             {
-                friendList[friendList.Count - 1].GetComponent<FriendFollow>().follow = friendList[friendList.Count - 2].gameObject;
+                friendList[friendList.Count - 1].GetComponent<FriendFollow>().followTarget = friendList[friendList.Count - 2].gameObject;
             }
         }
 
@@ -102,6 +68,7 @@ public class Player_Script : MonoBehaviour
           }
         */
     }
+
     private void LoseLife()
     {
         Debug.Log("LoseLife called");
@@ -110,13 +77,9 @@ public class Player_Script : MonoBehaviour
         transform.position = GameObject.Find("PlayerSpawn").transform.position;
         for (int i = 0; i < friendList.Count; i++) 
         {
-            friendList[i].GetComponent<FriendFollow>().follow = null;
+            friendList[i].GetComponent<FriendFollow>().followTarget = null;
         }
         friendList.Clear();
-        if (lives == 0)
-        {
-            Object.Destroy(this.gameObject);
-        }
     }
 
 
@@ -132,15 +95,16 @@ public class Player_Script : MonoBehaviour
         }*/
         if (collision.gameObject.CompareTag("Exit"))
         {
-            for (int i = 0; i < friendList.Count; i++)
-            { 
-                Object.Destroy(friendList[i]);
-                friendsSaved++;
-                MonsterSpawner.instance.SpawnMonsters(friendsSaved-1);
-            }
-        friendList.Clear();
-    }
-
-
+            if (friendList != null)
+            {
+                for (int i = 0; i < friendList.Count; i++)
+                {
+                    Object.Destroy(friendList[i]);
+                    friendsSaved++;
+                    MonsterSpawner.instance.SpawnMonsters(friendsSaved - 1);
+                }
+                friendList.Clear();
+            } 
+        }
     }
 }

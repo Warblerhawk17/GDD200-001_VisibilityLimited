@@ -5,17 +5,19 @@
 using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 public class LightSourceBehavior : MonoBehaviour
 {
     public BatteryManager batteryManager;
     //int lightLevel;
-    public Player_Script player;
+    public player_script player;
     public string lightName;
     public ShadowBehavior shadow;
+
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.Find("Player").GetComponent<Player_Script>();
+        player = GameObject.Find("Player").GetComponent<player_script>();
         shadow = GameObject.Find("Shadow").GetComponent<ShadowBehavior>();
 
         //Finds the battery object and its component
@@ -62,18 +64,15 @@ public class LightSourceBehavior : MonoBehaviour
             {
                 shadow.telaportAway();
             }
-            else
-            {
-                shadow.speed = 0;
-            }
         }
     }
 
     private void OnTriggerExit2D(Collider2D col)
     {
-        if (col.gameObject.CompareTag("Shadow") && shadow.speed == 0)
+        if (col.gameObject.CompareTag("Shadow") && shadow.GetComponent<ShadowBehavior>().speed == 0)
         {
             shadow.speed = 3;
         }
     }
+
 }

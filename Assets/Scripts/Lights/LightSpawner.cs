@@ -24,6 +24,8 @@ public class LightSpawner : MonoBehaviour
     Vector2 chosenLocation; // Location that is randomly chosen for a light to spawn (from spawnLocations)
     [SerializeField] int numberToSpawn; // The total number of flashlights that should be spawned, should be <= to the number of spawn locations
     public BatteryManager batteryManager; // The battery manager script on the battery object
+    player_script playerScript;
+    public float chargeToSpawnWith;
 
     public GameObject player; // the player object
     public string lightToSpawn;
@@ -33,6 +35,8 @@ public class LightSpawner : MonoBehaviour
     void Start()
     {
         SpawnStartingLights();
+        playerScript = player.GetComponent<player_script>();
+
     }
 
     // Update is called once per frame
@@ -49,22 +53,69 @@ public class LightSpawner : MonoBehaviour
     {
         if (lightToSpawn == "Flashlight")
         {
-        Instantiate(equippedFlashlightPrefab, player.transform, worldPositionStays: false);
-        batteryManager.batteryCharge = 50f;
+            GameObject newLight = (GameObject)Instantiate(equippedFlashlightPrefab, player.transform, worldPositionStays: false);
+            if(chargeToSpawnWith != 0)
+            {
+                batteryManager.batteryCharge = chargeToSpawnWith;
+
+            }
+            else
+            {
+            batteryManager.batteryCharge = 50f;
+            }
+            chargeToSpawnWith = 0;
         }
         if (lightToSpawn == "Candle")
         {
-            Instantiate(equippedCandlePrefab, player.transform, worldPositionStays: false);
-            batteryManager.batteryCharge = 150f;
+            GameObject newLight = (GameObject)Instantiate(equippedCandlePrefab, player.transform, worldPositionStays: false);
+            if (chargeToSpawnWith != 0)
+            {
+                batteryManager.batteryCharge = chargeToSpawnWith;
+
+            }
+            else
+            {
+                batteryManager.batteryCharge = 150f;
+            }
+            chargeToSpawnWith = 0;
+
         }
         if (lightToSpawn == "Fireflies")
         {
-            Instantiate(equippedFirefliesPrefab, player.transform, worldPositionStays: false);
-            batteryManager.batteryCharge = 100f;
+            GameObject newLight = (GameObject)Instantiate(equippedFirefliesPrefab, player.transform, worldPositionStays: false);
+            if (chargeToSpawnWith != 0)
+            {
+                batteryManager.batteryCharge = chargeToSpawnWith;
+
+            }
+            else
+            {
+                batteryManager.batteryCharge = 100f;
+            }
+            chargeToSpawnWith = 0;
+
         }
 
         lightSpawnRequested = false;
     }
+
+    public void spawnGroundUsedLight()
+    {
+        GameObject gameObjectToSpawn = groundFlashlightPrefab;
+        if (playerScript.currentLightSource == "Candle")
+        {
+            gameObjectToSpawn = groundCandlePrefab;
+        }
+        if (playerScript.currentLightSource == "Fireflies")
+        {
+            gameObjectToSpawn = groundFirefliesPrefab;
+        }
+        GameObject newLight = (GameObject)Instantiate(gameObjectToSpawn, player.transform.position, Quaternion.identity);
+
+        newLight.GetComponent<GroundLightBehavior>().storedCharge = batteryManager.batteryCharge;
+    
+}
+
 
     void SpawnStartingLights()
     {
