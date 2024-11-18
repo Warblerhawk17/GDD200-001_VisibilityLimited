@@ -29,13 +29,13 @@ public class PlayerMovement : MonoBehaviour
         sceneManager = GameObject.Find("SceneManager");
         sceneMan = sceneManager.GetComponent<SceneMan>();
         player_script = player.GetComponent<player_script>();
-
-        canMove = !sceneMan.isGamePaused;
     }
 
     // Update is called once per frame
     void Update()
     {
+        canMove = !sceneMan.isGamePaused;
+
         // Get player input from keyboard or controller
         float horizontalInput = Input.GetAxisRaw("Horizontal");
         float verticalInput = Input.GetAxisRaw("Vertical");
@@ -74,41 +74,11 @@ public class PlayerMovement : MonoBehaviour
                 anim.SetBool("facingLeft", false);
                 anim.SetBool("facingUp", true);
             }
-
-            //switch (horizontalInput, verticalInput)
-            //{
-            //    case horizontalInput > 0:
-            //        anim.SetBool("facingLeft", false);
-            //        anim.SetBool("facingUp", false);
-            //        anim.SetBool("facingHoriz", true);
-            //        break;
-            //    case horizontalInput < 0:
-            //        anim.SetBool("facingLeft", true);
-            //        anim.SetBool("facingUp", false);
-            //        anim.SetBool("facingHoriz", true);
-            //        break;
-            //    case verticalInput < 0:
-            //        anim.SetBool("facingLeft", false);
-            //        anim.SetBool("facingUp", false);
-            //        anim.SetBool("facingHoriz", false);
-            //        break;
-            //    case verticalInput > 0:
-            //        anim.SetBool("facingLeft", false);
-            //        anim.SetBool("facingUp", true);
-            //        anim.SetBool("facingHoriz", false);
-            //        break;
-            //    default:
-            //        Debug.Log("Uhhh not moving?");
-            //        break;
-            //}
         }
-        else anim.SetBool("isWalking", false);
-
-        if (Input.GetKeyDown(KeyCode.Space))
+        else
         {
-            StartCoroutine(MoveAndSpeak());
+            anim.SetBool("isWalking", false);
         }
-
     }
 
     void FixedUpdate()
