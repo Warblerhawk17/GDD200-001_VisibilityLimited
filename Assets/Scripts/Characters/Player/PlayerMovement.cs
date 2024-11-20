@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -15,6 +16,10 @@ public class PlayerMovement : MonoBehaviour
     private SceneMan sceneMan;
     private player_script player_script;
     private bool canMove;
+    private float timeStill = 0;
+    public float timeToArrow;
+    public GameObject arrow;
+    private float arrowAlpha = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -29,13 +34,16 @@ public class PlayerMovement : MonoBehaviour
         sceneManager = GameObject.Find("SceneManager");
         sceneMan = sceneManager.GetComponent<SceneMan>();
         player_script = player.GetComponent<player_script>();
+
+        canMove = !sceneMan.isGamePaused;
+
+        arrow = GameObject.Find("FriendArrow");
+        arrow.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
     }
 
     // Update is called once per frame
     void Update()
     {
-        canMove = !sceneMan.isGamePaused;
-
         // Get player input from keyboard or controller
         float horizontalInput = Input.GetAxisRaw("Horizontal");
         float verticalInput = Input.GetAxisRaw("Vertical");
@@ -45,6 +53,9 @@ public class PlayerMovement : MonoBehaviour
 
         if ((Mathf.Abs(horizontalInput) > 0 || Mathf.Abs(verticalInput) > 0) && canMove)
         {
+            timeStill = 0;
+            arrow.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
+            arrowAlpha = 0;
             anim.SetBool("isWalking", true);
             if (horizontalInput > 0) //Walking right (D)
             {
@@ -75,10 +86,57 @@ public class PlayerMovement : MonoBehaviour
                 anim.SetBool("facingUp", true);
             }
         }
-        else
+        else 
         {
             anim.SetBool("isWalking", false);
+            timeStill += Time.deltaTime;
+            if (timeStill > timeToArrow)
+            {
+                GameObject closestFriend = findClosestFriend();
+                
+                if (closestFriend != null)
+                {
+                    arrowAlpha += Time.deltaTime;
+                    if (arrowAlpha > 1) 
+                    { 
+                        arrowAlpha = 1;
+                    }
+                    arrow.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, arrowAlpha);
+                    Vector3 direction = closestFriend.transform.position - arrow.transform.position;
+                    direction.Normalize();
+                    float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+                    arrow.transform.rotation = Quaternion.Euler(new Vector3(0,0,1) * angle - new Vector3(0,0,90));
+                }
+            }
         }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            StartCoroutine(MoveAndSpeak());
+        }
+
+    }
+
+    GameObject findClosestFriend()
+    {
+        GameObject closestFriend = null;
+        GameObject[] friends = GameObject.FindGameObjectsWithTag("Friend");
+        for (int i = 0; i < friends.Length; i++)
+        {
+            if (
+                closestFriend != null &&
+                !this.GetComponent<player_script>().friendList.Contains(friends[i]) &&
+                Vector3.Distance(transform.position, friends[i].transform.position) < Vector3.Distance(transform.position, closestFriend.transform.position)
+                )
+            {
+                closestFriend = friends[i];
+            }
+            if (closestFriend == null && !this.GetComponent<player_script>().friendList.Contains(friends[i]))
+            {
+                closestFriend = friends[i];
+            }
+        }
+        return closestFriend;
     }
 
     void FixedUpdate()
