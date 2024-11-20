@@ -76,7 +76,7 @@ public class GroundLightBehavior : MonoBehaviour
                 }
 
             }
-            pickupText.SetText("Press E to pickup " + lightType + " (" + (storedCharge / maxCharge * 100) + "%)");
+            pickupText.SetText("Press E to pickup " + lightType + " (" + (System.Math.Truncate(storedCharge / maxCharge * 100)) + "%)");
             if (distance <= maxDistance && isNearLight == false) {
                 isNearLight = true;
                 pickupText.enabled = true;
