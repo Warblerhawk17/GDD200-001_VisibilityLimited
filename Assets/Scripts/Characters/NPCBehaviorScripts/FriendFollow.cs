@@ -29,7 +29,7 @@ public class FriendFollow : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector3.Normalize(followTarget.transform.position - transform.position), float.MaxValue, layerMask);
             if (hit.collider.gameObject != followTarget.gameObject)
             {
-                Debug.Log("Non Direct Move");
+                //Debug.Log("Non Direct Move");
                 if (path.Count == 0)
                 { //make new path
                     Node nearestNode = AStarManager.instance.FindNearestNode(transform.position); //the node nearest to the friend
@@ -46,14 +46,14 @@ public class FriendFollow : MonoBehaviour
             }
             else if (Vector2.Distance(transform.position, followTarget.transform.position) > followDistance)
             {
-                Debug.Log("Direct Move");
+                //Debug.Log("Direct Move");
                 GoTowards(followTarget.transform.position);
                 path.Clear();
             }
             else
             {
                 //anim.SetBool("isWalking", false);
-                Debug.Log("is not walking");
+                //Debug.Log("is not walking");
             }
 
         }
