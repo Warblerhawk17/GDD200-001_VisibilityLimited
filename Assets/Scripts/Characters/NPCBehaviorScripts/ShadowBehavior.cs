@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.Universal.Internal;
 
 public class ShadowBehavior : MonoBehaviour
 {
@@ -15,12 +16,20 @@ public class ShadowBehavior : MonoBehaviour
     private float chaseRadius = 5;
     private float timeChased;
 
+    private GameObject frontEyes;
+    private GameObject lEyes;
+    private GameObject rEyes;
+
     // Start is called before the first frame update
     void Start()
     {
         currentNode = AStarManager.instance.FindNearestNode(transform.position);
         spriteRenderer = GetComponent<SpriteRenderer>(); //Sprite Renderer object
         anim = GetComponent<Animator>(); //Animator object
+
+        frontEyes = GameObject.Find("Shadow").transform.GetChild(0).gameObject;
+        lEyes = GameObject.Find("Shadow").transform.GetChild(1).gameObject;
+        rEyes = GameObject.Find("Shadow").transform.GetChild(2).gameObject;
     }
 
     // Update is called once per frame
@@ -93,23 +102,35 @@ public class ShadowBehavior : MonoBehaviour
         {
             anim.SetBool("facingUp", true);
             anim.SetBool("facingHorizontal", false);
+            frontEyes.SetActive(false);
+            lEyes.SetActive(false);
+            rEyes.SetActive(false);
         }
         else if (-135 > angle || angle > 135) //facing left (A)
         {
             anim.SetBool("facingUp", false);
             anim.SetBool("facingHorizontal", true);
             spriteRenderer.flipX = false;
+            frontEyes.SetActive(false);
+            lEyes.SetActive(true);
+            rEyes.SetActive(false);
         }
         else if (-45 > angle && angle >= -135) //facing down (S)
         {
             anim.SetBool("facingUp", false);
             anim.SetBool("facingHorizontal", false);
+            frontEyes.SetActive(true);
+            lEyes.SetActive(false);
+            rEyes.SetActive(false);
         }
         else //facing right (D)
         {
             anim.SetBool("facingUp", false);
             anim.SetBool("facingHorizontal", true);
             spriteRenderer.flipX = true; //flips sideview sprite to look the correct way
+            frontEyes.SetActive(false);
+            lEyes.SetActive(false);
+            rEyes.SetActive(true);
         }
         //transform.rotation = Quaternion.Euler(Vector3.forward * angle); // changes npc rotation
     }

@@ -7,7 +7,7 @@ public class LightUIBehavior : MonoBehaviour
     public player_script player;
     [SerializeField] List<Sprite> lightSprites;
     [SerializeField] public UnityEngine.UI.Image uiImage;
-    string currentLight;
+    [SerializeField] string currentLight;
 
     private bool hasLight = false;
 
@@ -20,6 +20,15 @@ public class LightUIBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!hasLight) 
+        {
+            if(player.currentLightSource == "" && uiImage.enabled == false)
+            {
+                hasLight = true;
+            }
+
+
+        }
         if (hasLight)
         {
             if (player.currentLightSource == "" && uiImage.enabled)

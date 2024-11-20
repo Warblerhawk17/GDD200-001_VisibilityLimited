@@ -13,6 +13,7 @@ public class SceneMan : MonoBehaviour
     public TextMeshProUGUI friendsText;
     public bool isGamePaused = false;
     public GameObject sceneManager;
+    public PlayerMovement playerMovement;
 
     private player_script playerScript;
     private MenuScripts menuScripts;
@@ -67,11 +68,13 @@ public class SceneMan : MonoBehaviour
         {
             pauseMenu.SetActive(true);
             isGamePaused = true;
+            Time.timeScale = 0;
         }
         else
         {
             pauseMenu.SetActive(false);
             isGamePaused = false;
+            Time.timeScale = 1;
         }
     }
 }

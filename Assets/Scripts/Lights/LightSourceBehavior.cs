@@ -75,4 +75,11 @@ public class LightSourceBehavior : MonoBehaviour
         }
     }
 
+    void ChangeSprite()
+    {
+        if (lightName.Equals("Flashlight"))
+        {
+            
+        }
+    }
 }
