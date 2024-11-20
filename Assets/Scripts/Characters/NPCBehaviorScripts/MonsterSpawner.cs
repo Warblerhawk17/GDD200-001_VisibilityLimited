@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class MonsterSpawner : MonoBehaviour
 {
@@ -26,11 +28,23 @@ public class MonsterSpawner : MonoBehaviour
 
     public void SpawnMonsters(int i)
     {
-        //Instantiate(monsterList[i], AStarManager.instance.FindFurthestNode(GameObject.Find("Player").transform.position).transform);
+        
         if (i < monsterList.Count && monsterList[i] != null)
         {
             monsterList[i].gameObject.SetActive(true);
-            Debug.Log("Spawn monster");
+            monsterList[i].gameObject.transform.position = getSpawnNode();
+            //Debug.Log("Spawn monster");
         }
+    }
+    private Vector2 getSpawnNode()
+    {
+        List<Node> nodes = AStarManager.instance.NodesInScene().ToList();
+        Node node = nodes[Random.Range(0, nodes.Count())];
+        while (Vector2.Distance(node.transform.position, GameObject.Find("Player").transform.position) < 15)
+        {
+            nodes.Remove(node);
+            node = nodes[Random.Range(0, nodes.Count())];
+        }
+        return node.transform.position;
     }
 }

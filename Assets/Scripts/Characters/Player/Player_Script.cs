@@ -43,23 +43,7 @@ public class player_script : MonoBehaviour
                 LoseLife();
             }
         }
-        else if (collision.gameObject.CompareTag("Friend"))
-        {
-            Debug.Log("Collided with a friend");
-            friendList.Add(collision.gameObject);
-            if (friendList.Count == 1)
-            {
-                friendList[0].GetComponent<FriendFollow>().followTarget = this.gameObject;
-            }
-            else
-            {
-                friendList[friendList.Count - 1].GetComponent<FriendFollow>().followTarget = friendList[friendList.Count - 2].gameObject;
-            }
-        }
-
-
-
-
+        
         // disabling temporarily as this monster will not be present in Beta  
         /*
            else if (collision.gameObject.CompareTag("Scream"))
