@@ -11,7 +11,6 @@ public class SceneMan : MonoBehaviour
     public GameObject pauseMenu;
     public GameObject gameOverMenu;
     public TextMeshProUGUI friendsText;
-    public bool isGamePaused = false;
     public GameObject sceneManager;
     public PlayerMovement playerMovement;
 
@@ -67,14 +66,14 @@ public class SceneMan : MonoBehaviour
         if (pauseMenu.activeInHierarchy == false)
         {
             pauseMenu.SetActive(true);
-            isGamePaused = true;
             Time.timeScale = 0;
+            playerMovement.canMove = false;
         }
         else
         {
             pauseMenu.SetActive(false);
-            isGamePaused = false;
             Time.timeScale = 1;
+            playerMovement.canMove = true;
         }
     }
 }

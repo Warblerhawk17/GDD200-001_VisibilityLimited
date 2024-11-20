@@ -8,13 +8,14 @@ public class PlayerMovement : MonoBehaviour
     public GameObject sceneManager;
     public GameObject player;
     public float moveDuration = 0.5f;
+    public GameObject dialogFind;
+    public bool canMove;
+
 
     private Rigidbody2D rb; // Reference to the Rigidbody2D component attached to the player
     private Vector2 walkMovement; // Stores the direction of player movement
     private Animator anim;
-    private SceneMan sceneMan;
     private player_script player_script;
-    private bool canMove;
 
     // Start is called before the first frame update
     void Start()
@@ -27,15 +28,13 @@ public class PlayerMovement : MonoBehaviour
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
 
         sceneManager = GameObject.Find("SceneManager");
-        sceneMan = sceneManager.GetComponent<SceneMan>();
         player_script = player.GetComponent<player_script>();
+        canMove = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        canMove = !sceneMan.isGamePaused;
-
         // Get player input from keyboard or controller
         float horizontalInput = Input.GetAxisRaw("Horizontal");
         float verticalInput = Input.GetAxisRaw("Vertical");
@@ -86,10 +85,10 @@ public class PlayerMovement : MonoBehaviour
         // Apply movement to the player in FixedUpdate for physics consistency
         if (canMove)
         {
-            rb.velocity = walkMovement * speed * 1.5f;
+            rb.velocity = 1.5f * speed * walkMovement;
             if (Input.GetKey(KeyCode.LeftShift))
             {
-                rb.MovePosition(rb.position + rb.velocity * Time.fixedDeltaTime * 2);
+                rb.MovePosition(rb.position + 2 * Time.fixedDeltaTime * rb.velocity);
             }
             else
             {
@@ -116,19 +115,18 @@ private IEnumerator MoveAndSpeak()
         float elapsedTime = 0f;
         Vector2 startPosition = transform.position;
 
-        if (anim != null)
-        {
-            anim.Play("Wren_W_Walk");
-        }
-
+        dialogFind.SetActive(true);
+        anim.Play("Wren_W_Walk");
         while (elapsedTime < moveDuration)
         {
             // Linearly interpolate the position upwards
-            transform.position = startPosition + Vector2.up * speed * elapsedTime;
+            transform.position = startPosition + elapsedTime * speed * Vector2.up;
             elapsedTime += Time.deltaTime;
             yield return null;
         }
         anim.Play("Wren_W_Idle");
         canMove = true;
+        yield return new WaitForSeconds(1);
+        dialogFind.SetActive(false);
     }
 }
