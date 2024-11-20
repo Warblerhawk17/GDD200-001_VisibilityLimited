@@ -24,10 +24,10 @@ public class ScreamBehavior : MonoBehaviour
         //teleport after a bit of time
 
         RaycastHit2D hit = Physics2D.Raycast(transform.position, target.transform.position - transform.position, explodeRadius, layerMask);
-        if (hit.collider.gameObject.layer == target.gameObject.layer && target.GetComponent<Player_Script>().currentLightSource != "Candle")
+        if (hit.collider.gameObject.layer == target.gameObject.layer && target.GetComponent<player_script>().currentLightSource != "Candle")
         {
-            target.GetComponent<Player_Script>().batteryManager.batteryCharge -= 30;
-            if (target.GetComponent<Player_Script>().currentLightSource == "")
+            target.GetComponent<player_script>().batteryManager.batteryCharge -= 30;
+            if (target.GetComponent<player_script>().currentLightSource == "")
             {
                 //target.GetComponent<Player_Script>().LoseLife();
                 //make lose life public 
