@@ -19,6 +19,7 @@ public class GroundLightBehavior : MonoBehaviour
     string lightType;
     string lightTypeRequested;
     public float storedCharge;
+    float maxCharge;
     BatteryManager batteryManager;
     // Start is called before the first frame update
     void Start()
@@ -49,18 +50,33 @@ public class GroundLightBehavior : MonoBehaviour
             if(this.tag == "Ground Flashlight")
             {
                 lightType = "Flashlight";
+                maxCharge = 50f;
+                if (storedCharge == 0)
+                {
+                    storedCharge = maxCharge;
+                }
             }
             else if (this.tag ==  "Ground Candle")
             {
                 lightType = "Candle";
+                maxCharge = 150f;
+                if (storedCharge == 0)
+                {
+                    storedCharge = maxCharge;
+                }
 
             }
             else if (this.tag == "Ground Fireflies")
             {
                 lightType = "Fireflies";
+                maxCharge = 100f;
+                if (storedCharge == 0)
+                {
+                    storedCharge = maxCharge;
+                }
 
             }
-            pickupText.SetText("Press E to pickup " + lightType);
+            pickupText.SetText("Press E to pickup " + lightType + " (" + (System.Math.Truncate(storedCharge / maxCharge * 100)) + "%)");
             if (distance <= maxDistance && isNearLight == false) {
                 isNearLight = true;
                 pickupText.enabled = true;
@@ -75,7 +91,7 @@ public class GroundLightBehavior : MonoBehaviour
                     Destroy(GameObject.FindWithTag(playerScript.currentLightSource));
                     playerScript.currentLightSource = "";
                 }
-                if(this.storedCharge != 0) // If the light has been previosuly used and has a stored charge
+                if(this.storedCharge != 0 || this.storedCharge != maxCharge) // If the light has been previosuly used and has a stored charge
                 {
                     gameManager.chargeToSpawnWith = storedCharge;
                 }
