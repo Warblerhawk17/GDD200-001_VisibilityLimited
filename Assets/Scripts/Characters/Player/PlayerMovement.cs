@@ -185,7 +185,7 @@ private IEnumerator MoveAndSpeak()
         }
         anim.Play("Wren_W_Idle");
         canMove = true;
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(1.5f);
         dialogFind.SetActive(false);
     }
 }
