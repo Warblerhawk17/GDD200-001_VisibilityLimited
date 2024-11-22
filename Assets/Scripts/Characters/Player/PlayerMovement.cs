@@ -17,7 +17,6 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 walkMovement; // Stores the direction of player movement
     private Animator anim;
     private player_script player_script;
-    private bool canMove;
     private float timeStill = 0;
     public float timeToArrow;
     public GameObject arrow;
@@ -36,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
         sceneManager = GameObject.Find("SceneManager");
         player_script = player.GetComponent<player_script>();
 
-        canMove = true
+        canMove = true;
 
         arrow = GameObject.Find("FriendArrow");
         arrow.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
