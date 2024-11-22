@@ -29,8 +29,7 @@ public class ScreamBehavior : MonoBehaviour
             target.GetComponent<player_script>().batteryManager.batteryCharge -= 30;
             if (target.GetComponent<player_script>().currentLightSource == "")
             {
-                //target.GetComponent<Player_Script>().LoseLife();
-                //make lose life public 
+                target.GetComponent<player_script>().LoseLife();
             }
             teleport();
         }

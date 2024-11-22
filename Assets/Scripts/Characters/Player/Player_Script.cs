@@ -53,7 +53,7 @@ public class player_script : MonoBehaviour
         */
     }
 
-    private void LoseLife()
+    public void LoseLife()
     {
         Debug.Log("LoseLife called");
         livesBehavior.LoseLife();
