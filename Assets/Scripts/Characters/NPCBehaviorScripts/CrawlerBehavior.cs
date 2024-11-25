@@ -37,12 +37,12 @@ public class CrawlerBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        visionRadius = 3 + target.GetComponent<Player_Script>().friendList.Count;
-        if (target.GetComponent<Player_Script>().currentLightSource == "Flashlight")
+        visionRadius = 3 + target.GetComponent<player_script>().friendList.Count;
+        if (target.GetComponent<player_script>().currentLightSource == "Flashlight")
         {
             visionRadius += 4;
         }
-        else if (target.GetComponent<Player_Script>().currentLightSource == "Candle")
+        else if (target.GetComponent<player_script>().currentLightSource == "Candle")
         {
             visionRadius += 2;
         }
@@ -53,7 +53,7 @@ public class CrawlerBehavior : MonoBehaviour
         // pause if it hit the player
         if (hitStopCount > 0f)
         {
-            Debug.Log("Counting");
+            //Debug.Log("Counting");
             hitStopCount -= Time.deltaTime;
             if (hitStopCount == 1)
             {
@@ -64,7 +64,7 @@ public class CrawlerBehavior : MonoBehaviour
         // move towards the player if within radius and no walls blocking it
         else if (hit && hit.collider.gameObject.layer == target.gameObject.layer && Vector2.Distance(transform.position, target.transform.position) <= visionRadius)
         {
-            Debug.Log("Chase");
+            //Debug.Log("Chase");
             anim.SetBool("isAttacking", false);
             GoTowards(target.transform.position); //moves towards target
             stopCount = defaultStopCount;
@@ -82,7 +82,7 @@ public class CrawlerBehavior : MonoBehaviour
         else
         {
             anim.SetBool("isAttacking", false);
-            Debug.Log("Patrol");
+            //Debug.Log("Patrol");
             //Debug.Log(path);
             if (path.Count == 0)
             {
@@ -104,8 +104,6 @@ public class CrawlerBehavior : MonoBehaviour
                 }
             }
         }
-
-
     }
 
     //add some sort of collider with the player, stopCount = hitStopCount
@@ -119,7 +117,6 @@ public class CrawlerBehavior : MonoBehaviour
             hitStopCount = defaultHitStopCount;
         }
     }
-
 
     private void GoTowards(Vector2 goTo) //helper method which both moves and rotates the thing moving
     {

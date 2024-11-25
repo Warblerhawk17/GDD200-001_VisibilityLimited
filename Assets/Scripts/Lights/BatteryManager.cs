@@ -20,6 +20,8 @@ public class BatteryManager : MonoBehaviour
     public float interval = 1f;
     private float timer = 0f;
 
+    private bool isHoldingLight = false;
+
     void Start()
     {
         batteryImage.enabled = false;
@@ -28,10 +30,12 @@ public class BatteryManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (batteryCharge <= 0)
+        if (isHoldingLight)
         {
-            batteryImage.enabled = false;
-
+            if (batteryCharge <= 0)
+            {
+                batteryImage.enabled = false;
+            }
         }
         SetBatteryType();
         NaturalDepletion();
@@ -46,6 +50,7 @@ public class BatteryManager : MonoBehaviour
             {
                 case >= 40f:
                     batteryImage.enabled = true;
+                    isHoldingLight = true;
                     batteryImage.sprite = batterySprites[0];
                     break;
                 case >= 30f:
@@ -62,6 +67,7 @@ public class BatteryManager : MonoBehaviour
                     break;
                 case <= 0f:
                     batteryImage.enabled = false;
+                    isHoldingLight = false;
                     break;
                 default:
                     break;
@@ -73,6 +79,7 @@ public class BatteryManager : MonoBehaviour
             {
                 case >= 140f:
                     batteryImage.enabled = true;
+                    isHoldingLight = true;
                     batteryImage.sprite = batterySprites[0];
                     break;
                 case >= 130f:
@@ -90,7 +97,6 @@ public class BatteryManager : MonoBehaviour
                 case >= 90f:
                     batteryImage.sprite = batterySprites[5];
                     break;
-
                 case >= 80f:
                     batteryImage.sprite = batterySprites[6];
                     break;
@@ -120,6 +126,7 @@ public class BatteryManager : MonoBehaviour
                     break;
                 case <= 0f:
                     batteryImage.enabled = false;
+                    isHoldingLight = false;
                     break;
                 default:
                     break;
@@ -131,6 +138,7 @@ public class BatteryManager : MonoBehaviour
             {
                 case >= 90f:
                     batteryImage.enabled = true;
+                    isHoldingLight = true;
                     batteryImage.sprite = batterySprites[0];
                     break;
 
@@ -163,12 +171,12 @@ public class BatteryManager : MonoBehaviour
                     break;
                 case <= 0f:
                     batteryImage.enabled = false;
+                    isHoldingLight = false;
                     break;
                 default:
                     break;
             }
         }
-
     }
 
     void NaturalDepletion()
@@ -211,6 +219,4 @@ public class BatteryManager : MonoBehaviour
 
         }
     }
-
-
 }

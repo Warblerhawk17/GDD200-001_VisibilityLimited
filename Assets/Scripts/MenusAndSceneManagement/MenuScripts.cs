@@ -8,10 +8,13 @@ using UnityEngine.SceneManagement;
 public class MenuScripts : MonoBehaviour
 {
 
-    public GameObject mainMenu;
     public GameObject currentMenu;
 
-    public Button button;
+    public Sprite im1;
+    public Sprite im2;
+    public AudioListener audioListener;
+
+    private Button button;
     public int index;
 
     // Start is called before the first frame update
@@ -31,26 +34,34 @@ public class MenuScripts : MonoBehaviour
         switch (index)
         {
             case 0:
-                currentMenu.SetActive(false);
-                mainMenu.SetActive(true);
+                //from settings menu to main menu
+                SceneManager.LoadScene(0);
                 break;
             case 1:
-                mainMenu.SetActive(false);
-                currentMenu.SetActive(true);
+                //from main menu to settings menu
+                SceneManager.LoadScene(1);
                 break;
             case 2:
-                Debug.Log("Resume button pressed");
+                //Debug.Log("Resume button pressed");
                 currentMenu.SetActive(false);
                 break;
             case 3:
-                Debug.Log("Exit button pressed");
-                Application.Quit();
+                Image buttonImage = GetComponent<Image>();
+
+                if (buttonImage.sprite == im1)
+                {
+                    audioListener.enabled = false;
+                    buttonImage.sprite = im2;
+                }
+                else
+                {
+                    audioListener.enabled = true;
+                    buttonImage.sprite = im1;
+                }
                 break;
             case 4:
-                SceneManager.LoadScene(0);
-                break;
-            case 5:
-                SceneManager.LoadScene(1);
+                //Debug.Log("Exit Game button pressed");
+                Application.Quit();
                 break;
             default:
                 Debug.Log(message: $"{button.name} pressed but has no action");
