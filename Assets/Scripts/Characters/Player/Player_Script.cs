@@ -60,8 +60,9 @@ public class player_script : MonoBehaviour
 
     public void LoseLife()
     {
-        Debug.Log("LoseLife called");
+        //Debug.Log("LoseLife called");
         livesBehavior.LoseLife();
+        StartCoroutine(DamageFlash.instance.flash());
         lives--;
         transform.position = GameObject.Find("PlayerSpawn").transform.position;
         for (int i = 0; i < friendList.Count; i++)
