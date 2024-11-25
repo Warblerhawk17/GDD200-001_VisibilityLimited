@@ -53,7 +53,7 @@ public class CrawlerBehavior : MonoBehaviour
         // pause if it hit the player
         if (hitStopCount > 0f)
         {
-            Debug.Log("Counting");
+            //Debug.Log("Counting");
             hitStopCount -= Time.deltaTime;
             if (hitStopCount == 1)
             {
@@ -64,7 +64,7 @@ public class CrawlerBehavior : MonoBehaviour
         // move towards the player if within radius and no walls blocking it
         else if (hit && hit.collider.gameObject.layer == target.gameObject.layer && Vector2.Distance(transform.position, target.transform.position) <= visionRadius)
         {
-            Debug.Log("Chase");
+            //Debug.Log("Chase");
             anim.SetBool("isAttacking", false);
             GoTowards(target.transform.position); //moves towards target
             stopCount = defaultStopCount;
