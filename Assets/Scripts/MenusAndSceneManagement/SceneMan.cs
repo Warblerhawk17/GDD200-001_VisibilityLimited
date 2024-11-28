@@ -12,8 +12,8 @@ public class SceneMan : MonoBehaviour
     public GameObject gameOverMenu;
     public TextMeshProUGUI friendsText;
     public GameObject sceneManager;
-    public PlayerMovement playerMovement;
-
+    
+    private PlayerMovement playerMovement;
     private player_script playerScript;
     private MenuScripts menuScripts;
 
@@ -31,6 +31,7 @@ public class SceneMan : MonoBehaviour
         }
 
         playerScript = player.GetComponent<player_script>();
+        playerMovement = player.GetComponent<PlayerMovement>();
     }
 
     // Update is called once per frame
@@ -41,6 +42,7 @@ public class SceneMan : MonoBehaviour
             //Debug.Log("Game Over was called");
             gameOverMenu.SetActive(true);
             friendsText.text = "Friends Saved: " + playerScript.friendsSaved;
+            playerMovement.canMove = false;
         }
     }
     void OnTriggerEnter2D(Collider2D collision)

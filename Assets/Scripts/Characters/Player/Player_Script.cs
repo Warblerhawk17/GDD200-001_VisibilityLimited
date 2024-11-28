@@ -15,9 +15,13 @@ public class player_script : MonoBehaviour
     public int lives = 3;
     public int friendsSaved = 0;
     public string currentLightSource;
+    public int rotateSpeed = 10;
+    public Sprite wrenSprite;
 
 
     // Private variables 
+    private SpriteRenderer spriteRenderer;
+    private PlayerMovement playerMovement;
 
 
     // Friend variable
@@ -25,6 +29,8 @@ public class player_script : MonoBehaviour
 
     void Start()
     {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        playerMovement = GetComponent<PlayerMovement>();
     }
 
     //If the player collides into a monster
@@ -64,7 +70,8 @@ public class player_script : MonoBehaviour
         livesBehavior.LoseLife();
         StartCoroutine(DamageFlash.instance.flash());
         lives--;
-        transform.position = GameObject.Find("PlayerSpawn").transform.position;
+        playerMovement.canMove = false;
+        StartCoroutine(Respawn());
         for (int i = 0; i < friendList.Count; i++)
         {
             friendList[i].GetComponent<FriendFollow>().followTarget = null;
@@ -72,6 +79,33 @@ public class player_script : MonoBehaviour
         friendList.Clear();
     }
 
+    private IEnumerator Respawn()
+    {
+        int flashes = 3;
+        float flashInterval = 0.2f;
+
+        for (int i = 0; i < flashes; i++)
+        {
+            spriteRenderer.enabled = !spriteRenderer.enabled; // Toggle visibility
+            yield return new WaitForSeconds(flashInterval);
+        }
+        spriteRenderer.enabled = true; // Ensure it's visible at the end
+
+        // Respawn sprite by moving it to a new position
+        transform.position = GameObject.Find("PlayerSpawn").transform.position;
+
+        // Blink effect after respawn
+        for (int i = 0; i < flashes; i++)
+        {
+            spriteRenderer.enabled = !spriteRenderer.enabled; // Toggle visibility
+            yield return new WaitForSeconds(flashInterval);
+        }
+        spriteRenderer.enabled = true; // Ensure it's visible at the end
+
+        // Reset rotation to the default state
+        spriteRenderer.transform.localRotation = Quaternion.identity;
+        playerMovement.canMove = true;
+    }    
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -101,7 +135,6 @@ public class player_script : MonoBehaviour
     private IEnumerator CallFlicker()
     {
         Light2D light1 = null;
-        Debug.Log("Flicker called");
 
         if (GameObject.FindWithTag("Flashlight"))
         {
