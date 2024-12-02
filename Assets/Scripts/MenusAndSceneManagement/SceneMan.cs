@@ -37,7 +37,7 @@ public class SceneMan : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (playerScript.friendsSaved == 3 || playerScript.lives == 0)
+        if (playerScript.friendsSaved == 4 || playerScript.lives == 0)
         {
             //Debug.Log("Game Over was called");
             gameOverMenu.SetActive(true);
