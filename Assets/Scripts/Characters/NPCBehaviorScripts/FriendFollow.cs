@@ -9,6 +9,7 @@ public class FriendFollow : MonoBehaviour
     public float followDistance;
     public LayerMask layerMask;
     public Animator anim;
+    public bool pickedUp = false; //bool for if they have been picked up before 
 
     private Node currentNode; //the current node it is at
     private List<Node> path = new List<Node>(); //the path of nodes it will travel
@@ -104,9 +105,18 @@ public class FriendFollow : MonoBehaviour
         if (collision.gameObject.CompareTag("Player") && !collision.GetComponent<player_script>().friendList.Contains(this.gameObject))
         {
             player_script player = collision.GetComponent<player_script>();
-            player.friendList.Add(this.gameObject);
-            followTarget = player.gameObject;
-            followDistance = player.friendList.Count * 0.5f;
+            if (player.friendList.Count < 2)
+            {
+                player.friendList.Add(this.gameObject);
+                followTarget = player.gameObject;
+                followDistance = player.friendList.Count * 0.5f;
+                if (!pickedUp)
+                {
+                    pickedUp = true;
+                    player.friendsPickedUp++;
+                    MonsterSpawner.instance.SpawnMonsters(player.friendsPickedUp - 1);
+                }
+            }
         }
 
         
