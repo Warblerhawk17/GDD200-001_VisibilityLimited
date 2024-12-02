@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -9,17 +10,19 @@ public class PlayerMovement : MonoBehaviour
     public GameObject sceneManager;
     public GameObject player;
     public float moveDuration = 0.5f;
+    public GameObject dialogFind;
+    public bool canMove;
+    public float timeToArrow;
+    public GameObject arrow;
+
 
     private Rigidbody2D rb; // Reference to the Rigidbody2D component attached to the player
     private Vector2 walkMovement; // Stores the direction of player movement
     private Animator anim;
-    private SceneMan sceneMan;
     private player_script player_script;
-    private bool canMove;
     private float timeStill = 0;
-    public float timeToArrow;
-    public GameObject arrow;
     private float arrowAlpha = 0;
+    private AudioSource walkingAudio;
 
     // Start is called before the first frame update
     void Start()
@@ -32,13 +35,15 @@ public class PlayerMovement : MonoBehaviour
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
 
         sceneManager = GameObject.Find("SceneManager");
-        sceneMan = sceneManager.GetComponent<SceneMan>();
         player_script = player.GetComponent<player_script>();
 
-        canMove = !sceneMan.isGamePaused;
+        canMove = true;
 
         arrow = GameObject.Find("FriendArrow");
         arrow.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
+
+        walkingAudio = GetComponent<AudioSource>();
+        walkingAudio.mute = true;
     }
 
     // Update is called once per frame
@@ -57,6 +62,8 @@ public class PlayerMovement : MonoBehaviour
             arrow.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
             arrowAlpha = 0;
             anim.SetBool("isWalking", true);
+            walkingAudio.mute = false;
+
             if (horizontalInput > 0) //Walking right (D)
             {
                 //Debug.Log("facingRight");
@@ -90,6 +97,8 @@ public class PlayerMovement : MonoBehaviour
         {
             anim.SetBool("isWalking", false);
             timeStill += Time.deltaTime;
+            walkingAudio.mute = true;
+
             if (timeStill > timeToArrow)
             {
                 GameObject closestFriend = findClosestFriend();
@@ -109,12 +118,6 @@ public class PlayerMovement : MonoBehaviour
                 }
             }
         }
-
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            StartCoroutine(MoveAndSpeak());
-        }
-
     }
 
     GameObject findClosestFriend()
@@ -144,15 +147,26 @@ public class PlayerMovement : MonoBehaviour
         // Apply movement to the player in FixedUpdate for physics consistency
         if (canMove)
         {
-            rb.velocity = walkMovement * speed * 1.5f;
+            rb.velocity = 1.5f * speed * walkMovement;
             if (Input.GetKey(KeyCode.LeftShift))
             {
-                rb.MovePosition(rb.position + rb.velocity * Time.fixedDeltaTime * 2);
+                rb.MovePosition(rb.position + 1.6f * Time.fixedDeltaTime * rb.velocity);
             }
             else
             {
                 rb.MovePosition(rb.position + rb.velocity * Time.fixedDeltaTime);
             }
+
+        }
+
+        if (Input.GetKey(KeyCode.C))
+        {
+            canMove = false;
+            anim.Play("Wren_S_Walk");
+        }
+        else
+        {
+            canMove = true;
         }
     }
 
@@ -168,25 +182,23 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-
-private IEnumerator MoveAndSpeak()
+    private IEnumerator MoveAndSpeak()
     {
         float elapsedTime = 0f;
         Vector2 startPosition = transform.position;
 
-        if (anim != null)
-        {
-            anim.Play("Wren_W_Walk");
-        }
-
+        dialogFind.SetActive(true);
+        anim.Play("Wren_W_Walk");
         while (elapsedTime < moveDuration)
         {
             // Linearly interpolate the position upwards
-            transform.position = startPosition + Vector2.up * speed * elapsedTime;
+            transform.position = startPosition + elapsedTime * speed * Vector2.up;
             elapsedTime += Time.deltaTime;
             yield return null;
         }
         anim.Play("Wren_W_Idle");
         canMove = true;
+        yield return new WaitForSeconds(1.5f);
+        dialogFind.SetActive(false);
     }
 }

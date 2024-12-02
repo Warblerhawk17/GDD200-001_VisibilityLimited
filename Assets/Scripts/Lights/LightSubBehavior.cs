@@ -5,27 +5,22 @@ using UnityEngine.UI;
 
 public class LightSubBehavior : MonoBehaviour
 {
-
     ShadowBehavior shadow;
-    // Start is called before the first frame update
-    void Start()
-    {
-            shadow = GameObject.Find("Shadow").GetComponent<ShadowBehavior>();
 
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        
+        if (shadow == null)
+        {
+            shadow = GameObject.Find("Shadow").GetComponent<ShadowBehavior>();
+            Debug.Log("Trying for Shadow");
+        }
     }
 
     private void OnTriggerEnter2D(UnityEngine.Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Shadow"))
         {
-
-                shadow.speed = 0;
+            shadow.speed = 0;
         }
     }
 

@@ -1,7 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
+using UnityEditor.Rendering;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 using UnityEngine.SceneManagement;
 
 public class player_script : MonoBehaviour
@@ -12,9 +15,13 @@ public class player_script : MonoBehaviour
     public int lives = 3;
     public int friendsSaved = 0;
     public string currentLightSource;
+    public int rotateSpeed = 10;
+    public Sprite wrenSprite;
 
 
     // Private variables 
+    private SpriteRenderer spriteRenderer;
+    private PlayerMovement playerMovement;
 
 
     // Friend variable
@@ -22,6 +29,8 @@ public class player_script : MonoBehaviour
 
     void Start()
     {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        playerMovement = GetComponent<PlayerMovement>();
     }
 
     //If the player collides into a monster
@@ -30,7 +39,8 @@ public class player_script : MonoBehaviour
         if (collision.gameObject.CompareTag("Crawler"))
         {
             batteryManager.batteryCharge = batteryManager.batteryCharge - 10;
-            if (currentLightSource == "" )
+            StartCoroutine(CallFlicker());
+            if (currentLightSource == "")
             {
                 LoseLife();
             }
@@ -38,6 +48,7 @@ public class player_script : MonoBehaviour
         else if (collision.gameObject.CompareTag("Shadow"))
         {
             batteryManager.batteryCharge = batteryManager.batteryCharge - 10;
+            StartCoroutine(CallFlicker());
             if (currentLightSource == "")
             {
                 LoseLife();
@@ -59,14 +70,42 @@ public class player_script : MonoBehaviour
         livesBehavior.LoseLife();
         StartCoroutine(DamageFlash.instance.flash());
         lives--;
-        transform.position = GameObject.Find("PlayerSpawn").transform.position;
-        for (int i = 0; i < friendList.Count; i++) 
+        playerMovement.canMove = false;
+        StartCoroutine(Respawn());
+        for (int i = 0; i < friendList.Count; i++)
         {
             friendList[i].GetComponent<FriendFollow>().followTarget = null;
         }
         friendList.Clear();
     }
 
+    private IEnumerator Respawn()
+    {
+        int flashes = 3;
+        float flashInterval = 0.2f;
+
+        for (int i = 0; i < flashes; i++)
+        {
+            spriteRenderer.enabled = !spriteRenderer.enabled; // Toggle visibility
+            yield return new WaitForSeconds(flashInterval);
+        }
+        spriteRenderer.enabled = true; // Ensure it's visible at the end
+
+        // Respawn sprite by moving it to a new position
+        transform.position = GameObject.Find("PlayerSpawn").transform.position;
+
+        // Blink effect after respawn
+        for (int i = 0; i < flashes; i++)
+        {
+            spriteRenderer.enabled = !spriteRenderer.enabled; // Toggle visibility
+            yield return new WaitForSeconds(flashInterval);
+        }
+        spriteRenderer.enabled = true; // Ensure it's visible at the end
+
+        // Reset rotation to the default state
+        spriteRenderer.transform.localRotation = Quaternion.identity;
+        playerMovement.canMove = true;
+    }    
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -89,7 +128,34 @@ public class player_script : MonoBehaviour
                     MonsterSpawner.instance.SpawnMonsters(friendsSaved - 1);
                 }
                 friendList.Clear();
-            } 
+            }
+        }
+    }
+
+    private IEnumerator CallFlicker()
+    {
+        Light2D light1 = null;
+
+        if (GameObject.FindWithTag("Flashlight"))
+        {
+            light1 = GameObject.Find("Flashlight").GetComponent<Light2D>();
+        }
+        else if (GameObject.FindWithTag("Candle"))
+        {
+            light1 = GameObject.Find("CandleRotation").GetComponent<Light2D>();
+        }
+        else if (GameObject.FindWithTag("Fireflies"))
+        {
+            light1 = GameObject.Find("FirefliesRotate").GetComponent<Light2D>();
+        }
+
+        if (light1 != null)
+        {
+            for (int i = 0; i < 6; i++)
+            {
+                light1.enabled = !light1.enabled;
+                yield return new WaitForSeconds(Random.Range(0f, 0.3f));
+            }
         }
     }
 }
