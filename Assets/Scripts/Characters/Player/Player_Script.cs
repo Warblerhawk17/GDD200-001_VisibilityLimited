@@ -18,6 +18,7 @@ public class player_script : MonoBehaviour
     public string currentLightSource;
     public int rotateSpeed = 10;
     public Sprite wrenSprite;
+    public Transform player;
 
 
     // Private variables 
@@ -112,14 +113,18 @@ public class player_script : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Exit"))
         {
-            if (friendList != null)
+            if (player.position.y < 2.5f)
             {
-                for (int i = 0; i < friendList.Count; i++)
+                if (friendList != null)
                 {
-                    Object.Destroy(friendList[i]);
-                    friendsSaved++;
+                    for (int i = 0; i < friendList.Count; i++)
+                    {
+                        Object.Destroy(friendList[i]);
+                        friendsSaved++;
+                        MonsterSpawner.instance.SpawnMonsters(friendsSaved - 1);
+                    }
+                    friendList.Clear();
                 }
-                friendList.Clear();
             }
         }
     }

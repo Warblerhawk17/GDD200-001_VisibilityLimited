@@ -12,7 +12,6 @@ public class LightSubBehavior : MonoBehaviour
         if (shadow == null)
         {
             shadow = GameObject.Find("Shadow").GetComponent<ShadowBehavior>();
-            Debug.Log("Trying for Shadow");
         }
     }
 
