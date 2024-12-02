@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c5261046fce055d47890c6ac4ed51ca3
+guid: 5ffcabdac870f3e47ac39bb355bdc0ee
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -123,7 +123,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Shadow_AD_Walk_Schuler_v02_0
+      name: Crawler_S_Walk_Schuler_v03_0
       rect:
         serializedVersion: 2
         x: 0
@@ -137,14 +137,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0ace864694f3ea7468e85103fd035a8b
-      internalID: 1847378792
+      spriteID: 78679311003174d438a16da867d3759c
+      internalID: -564099686
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shadow_AD_Walk_Schuler_v02_1
+      name: Crawler_S_Walk_Schuler_v03_1
       rect:
         serializedVersion: 2
         x: 96
@@ -158,14 +158,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf4feb5a14ce12f4c85f767affccfe07
-      internalID: 1336950430
+      spriteID: 41c2dedd2599bdd409acfd36e012c560
+      internalID: -416255624
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shadow_AD_Walk_Schuler_v02_2
+      name: Crawler_S_Walk_Schuler_v03_2
       rect:
         serializedVersion: 2
         x: 192
@@ -179,14 +179,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 48287ccdeb653534197916da20dcd5a9
-      internalID: -245290891
+      spriteID: e8eaa4fc5236a704d8affef857ccd350
+      internalID: 1092456391
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shadow_AD_Walk_Schuler_v02_3
+      name: Crawler_S_Walk_Schuler_v03_3
       rect:
         serializedVersion: 2
         x: 288
@@ -200,14 +200,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b5c585f10152bba46b88613ce5a5d6e5
-      internalID: -1915563857
+      spriteID: 1eb122a7c5d47ce478acf7e5d97df6de
+      internalID: 1897087535
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shadow_AD_Walk_Schuler_v02_4
+      name: Crawler_S_Walk_Schuler_v03_4
       rect:
         serializedVersion: 2
         x: 384
@@ -221,14 +221,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f536e0ee8dc1dd14ebb61cd3a8a6bbd1
-      internalID: -352834697
+      spriteID: ad8ec18334780bd4d921a78ad011f05e
+      internalID: 1098417421
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shadow_AD_Walk_Schuler_v02_5
+      name: Crawler_S_Walk_Schuler_v03_5
       rect:
         serializedVersion: 2
         x: 0
@@ -242,14 +242,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ca8cecc32f4d7194283840719511532e
-      internalID: -620591683
+      spriteID: ce2f7e12668ebe346b9cbee3e6abccc3
+      internalID: -1782433414
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shadow_AD_Walk_Schuler_v02_6
+      name: Crawler_S_Walk_Schuler_v03_6
       rect:
         serializedVersion: 2
         x: 96
@@ -263,14 +263,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ce9dc93f9d5866a429d1bb7f3b7c552b
-      internalID: -392676764
+      spriteID: 73ed3d820b76dbc428a3a77ec4776fb0
+      internalID: 1176068949
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shadow_AD_Walk_Schuler_v02_7
+      name: Crawler_S_Walk_Schuler_v03_7
       rect:
         serializedVersion: 2
         x: 192
@@ -284,8 +284,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 87ca8ec7540df1a438f8c63f8a94a456
-      internalID: -1176038182
+      spriteID: 392abc745f898ff479daa32a354894a1
+      internalID: -2089505798
       vertices: []
       indices: 
       edges: []
@@ -301,14 +301,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Shadow_AD_Walk_Schuler_v02_0: 1847378792
-      Shadow_AD_Walk_Schuler_v02_1: 1336950430
-      Shadow_AD_Walk_Schuler_v02_2: -245290891
-      Shadow_AD_Walk_Schuler_v02_3: -1915563857
-      Shadow_AD_Walk_Schuler_v02_4: -352834697
-      Shadow_AD_Walk_Schuler_v02_5: -620591683
-      Shadow_AD_Walk_Schuler_v02_6: -392676764
-      Shadow_AD_Walk_Schuler_v02_7: -1176038182
+      Crawler_S_Walk_Schuler_v03_0: -564099686
+      Crawler_S_Walk_Schuler_v03_1: -416255624
+      Crawler_S_Walk_Schuler_v03_2: 1092456391
+      Crawler_S_Walk_Schuler_v03_3: 1897087535
+      Crawler_S_Walk_Schuler_v03_4: 1098417421
+      Crawler_S_Walk_Schuler_v03_5: -1782433414
+      Crawler_S_Walk_Schuler_v03_6: 1176068949
+      Crawler_S_Walk_Schuler_v03_7: -2089505798
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c5261046fce055d47890c6ac4ed51ca3
+guid: f441a6c0045550642ada276a2d11d12e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -123,7 +123,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Shadow_AD_Walk_Schuler_v02_0
+      name: Scream_FrontAttack_Schuler_v01_0
       rect:
         serializedVersion: 2
         x: 0
@@ -137,14 +137,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0ace864694f3ea7468e85103fd035a8b
-      internalID: 1847378792
+      spriteID: f656570530a668649ae62640d0957e59
+      internalID: -849494280
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shadow_AD_Walk_Schuler_v02_1
+      name: Scream_FrontAttack_Schuler_v01_1
       rect:
         serializedVersion: 2
         x: 96
@@ -158,14 +158,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf4feb5a14ce12f4c85f767affccfe07
-      internalID: 1336950430
+      spriteID: d0e6551fdfee3bd45982c39ec8807bbb
+      internalID: 906692881
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shadow_AD_Walk_Schuler_v02_2
+      name: Scream_FrontAttack_Schuler_v01_2
       rect:
         serializedVersion: 2
         x: 192
@@ -179,14 +179,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 48287ccdeb653534197916da20dcd5a9
-      internalID: -245290891
+      spriteID: b7044d37ad519224a9c8dbf57ce0aa63
+      internalID: 1568520376
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shadow_AD_Walk_Schuler_v02_3
+      name: Scream_FrontAttack_Schuler_v01_3
       rect:
         serializedVersion: 2
         x: 288
@@ -200,14 +200,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b5c585f10152bba46b88613ce5a5d6e5
-      internalID: -1915563857
+      spriteID: 276bc8563ceb18349859de933f1f3980
+      internalID: -102344257
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shadow_AD_Walk_Schuler_v02_4
+      name: Scream_FrontAttack_Schuler_v01_4
       rect:
         serializedVersion: 2
         x: 384
@@ -221,14 +221,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f536e0ee8dc1dd14ebb61cd3a8a6bbd1
-      internalID: -352834697
+      spriteID: 66cf622cd0313c041a0df888a0ed241b
+      internalID: 1448258980
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shadow_AD_Walk_Schuler_v02_5
+      name: Scream_FrontAttack_Schuler_v01_5
       rect:
         serializedVersion: 2
         x: 0
@@ -242,14 +242,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ca8cecc32f4d7194283840719511532e
-      internalID: -620591683
+      spriteID: 8da7265ff8e58b445960f165283520dc
+      internalID: 916034820
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shadow_AD_Walk_Schuler_v02_6
+      name: Scream_FrontAttack_Schuler_v01_6
       rect:
         serializedVersion: 2
         x: 96
@@ -263,29 +263,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ce9dc93f9d5866a429d1bb7f3b7c552b
-      internalID: -392676764
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Shadow_AD_Walk_Schuler_v02_7
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 64
-        width: 96
-        height: 96
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 87ca8ec7540df1a438f8c63f8a94a456
-      internalID: -1176038182
+      spriteID: dd1c94fc2852e314a9c008119b5262f8
+      internalID: 489152920
       vertices: []
       indices: 
       edges: []
@@ -301,14 +280,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Shadow_AD_Walk_Schuler_v02_0: 1847378792
-      Shadow_AD_Walk_Schuler_v02_1: 1336950430
-      Shadow_AD_Walk_Schuler_v02_2: -245290891
-      Shadow_AD_Walk_Schuler_v02_3: -1915563857
-      Shadow_AD_Walk_Schuler_v02_4: -352834697
-      Shadow_AD_Walk_Schuler_v02_5: -620591683
-      Shadow_AD_Walk_Schuler_v02_6: -392676764
-      Shadow_AD_Walk_Schuler_v02_7: -1176038182
+      Scream_FrontAttack_Schuler_v01_0: -849494280
+      Scream_FrontAttack_Schuler_v01_1: 906692881
+      Scream_FrontAttack_Schuler_v01_2: 1568520376
+      Scream_FrontAttack_Schuler_v01_3: -102344257
+      Scream_FrontAttack_Schuler_v01_4: 1448258980
+      Scream_FrontAttack_Schuler_v01_5: 916034820
+      Scream_FrontAttack_Schuler_v01_6: 489152920
+      Scream_FrontAttack_Schuler_v01_7: -109557233
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

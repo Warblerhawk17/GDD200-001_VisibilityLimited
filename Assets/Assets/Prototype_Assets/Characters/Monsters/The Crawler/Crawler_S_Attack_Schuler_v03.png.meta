@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c5261046fce055d47890c6ac4ed51ca3
+guid: ea943abeda1230f49a4777a99a9e8a5f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -123,7 +123,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Shadow_AD_Walk_Schuler_v02_0
+      name: Crawler_FrontAttack_Schuler_v03_0
       rect:
         serializedVersion: 2
         x: 0
@@ -137,14 +137,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0ace864694f3ea7468e85103fd035a8b
-      internalID: 1847378792
+      spriteID: 657e47810400a014bada740011d1f56d
+      internalID: 836841944
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shadow_AD_Walk_Schuler_v02_1
+      name: Crawler_FrontAttack_Schuler_v03_1
       rect:
         serializedVersion: 2
         x: 96
@@ -158,14 +158,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf4feb5a14ce12f4c85f767affccfe07
-      internalID: 1336950430
+      spriteID: a65a4a9b66893714a99dcd953c79d963
+      internalID: 73886741
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shadow_AD_Walk_Schuler_v02_2
+      name: Crawler_FrontAttack_Schuler_v03_2
       rect:
         serializedVersion: 2
         x: 192
@@ -179,14 +179,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 48287ccdeb653534197916da20dcd5a9
-      internalID: -245290891
+      spriteID: 9c41f7fc20253f34f8ba2354bfa2846b
+      internalID: -1799183729
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shadow_AD_Walk_Schuler_v02_3
+      name: Crawler_FrontAttack_Schuler_v03_3
       rect:
         serializedVersion: 2
         x: 288
@@ -200,14 +200,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b5c585f10152bba46b88613ce5a5d6e5
-      internalID: -1915563857
+      spriteID: 55aee9ace54c44145b47516910f2eded
+      internalID: 695120895
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shadow_AD_Walk_Schuler_v02_4
+      name: Crawler_FrontAttack_Schuler_v03_4
       rect:
         serializedVersion: 2
         x: 384
@@ -221,14 +221,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f536e0ee8dc1dd14ebb61cd3a8a6bbd1
-      internalID: -352834697
+      spriteID: 2e0385188e7c0494aad38721d56c4693
+      internalID: -1598960227
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shadow_AD_Walk_Schuler_v02_5
+      name: Crawler_FrontAttack_Schuler_v03_5
       rect:
         serializedVersion: 2
         x: 0
@@ -242,14 +242,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ca8cecc32f4d7194283840719511532e
-      internalID: -620591683
+      spriteID: 5b7c07dfbe136ce46bc732e4f7707d97
+      internalID: 1908620203
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shadow_AD_Walk_Schuler_v02_6
+      name: Crawler_FrontAttack_Schuler_v03_6
       rect:
         serializedVersion: 2
         x: 96
@@ -263,14 +263,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ce9dc93f9d5866a429d1bb7f3b7c552b
-      internalID: -392676764
+      spriteID: b37fad38f71549a4fabb3dd734eae4a1
+      internalID: -373780192
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shadow_AD_Walk_Schuler_v02_7
+      name: Crawler_FrontAttack_Schuler_v03_7
       rect:
         serializedVersion: 2
         x: 192
@@ -284,8 +284,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 87ca8ec7540df1a438f8c63f8a94a456
-      internalID: -1176038182
+      spriteID: 93a74f1c6b2b4084595d545ada6cb202
+      internalID: -735183977
       vertices: []
       indices: 
       edges: []
@@ -301,14 +301,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Shadow_AD_Walk_Schuler_v02_0: 1847378792
-      Shadow_AD_Walk_Schuler_v02_1: 1336950430
-      Shadow_AD_Walk_Schuler_v02_2: -245290891
-      Shadow_AD_Walk_Schuler_v02_3: -1915563857
-      Shadow_AD_Walk_Schuler_v02_4: -352834697
-      Shadow_AD_Walk_Schuler_v02_5: -620591683
-      Shadow_AD_Walk_Schuler_v02_6: -392676764
-      Shadow_AD_Walk_Schuler_v02_7: -1176038182
+      Crawler_FrontAttack_Schuler_v03_0: 836841944
+      Crawler_FrontAttack_Schuler_v03_1: 73886741
+      Crawler_FrontAttack_Schuler_v03_2: -1799183729
+      Crawler_FrontAttack_Schuler_v03_3: 695120895
+      Crawler_FrontAttack_Schuler_v03_4: -1598960227
+      Crawler_FrontAttack_Schuler_v03_5: 1908620203
+      Crawler_FrontAttack_Schuler_v03_6: -373780192
+      Crawler_FrontAttack_Schuler_v03_7: -735183977
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
