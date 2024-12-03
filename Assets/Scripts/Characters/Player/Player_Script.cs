@@ -14,9 +14,11 @@ public class player_script : MonoBehaviour
     public LivesBehavior livesBehavior;
     public int lives = 3;
     public int friendsSaved = 0;
+    public int friendsPickedUp = 0;
     public string currentLightSource;
     public int rotateSpeed = 10;
     public Sprite wrenSprite;
+    public Transform player;
 
 
     // Private variables 
@@ -109,25 +111,20 @@ public class player_script : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        /*if (collision.gameObject.CompareTag("Friend") && !friendList.Contains(collision.gameObject) )
-        {
-            Debug.Log("Collided with a friend");
-            friendList.Add(collision.gameObject);
-            friendList[friendList.Count - 1].GetComponent<FriendFollow>().follow = this.gameObject;
-            friendList[friendList.Count - 1].GetComponent<FriendFollow>().followDistance = friendList.Count * 0.5f;
-
-        }*/
         if (collision.gameObject.CompareTag("Exit"))
         {
-            if (friendList != null)
+            if (player.position.y < 2.5f)
             {
-                for (int i = 0; i < friendList.Count; i++)
+                if (friendList != null)
                 {
-                    Object.Destroy(friendList[i]);
-                    friendsSaved++;
-                    MonsterSpawner.instance.SpawnMonsters(friendsSaved - 1);
+                    for (int i = 0; i < friendList.Count; i++)
+                    {
+                        Object.Destroy(friendList[i]);
+                        friendsSaved++;
+                        MonsterSpawner.instance.SpawnMonsters(friendsSaved - 1);
+                    }
+                    friendList.Clear();
                 }
-                friendList.Clear();
             }
         }
     }

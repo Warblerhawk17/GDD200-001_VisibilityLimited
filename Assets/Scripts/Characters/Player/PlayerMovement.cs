@@ -23,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
     private float timeStill = 0;
     private float arrowAlpha = 0;
     private AudioSource walkingAudio;
+    private Transform playerTrans;
 
     // Start is called before the first frame update
     void Start()
@@ -44,6 +45,8 @@ public class PlayerMovement : MonoBehaviour
 
         walkingAudio = GetComponent<AudioSource>();
         walkingAudio.mute = true;
+
+        playerTrans = GetComponent<Transform>();
     }
 
     // Update is called once per frame
@@ -156,23 +159,17 @@ public class PlayerMovement : MonoBehaviour
             {
                 rb.MovePosition(rb.position + rb.velocity * Time.fixedDeltaTime);
             }
-
         }
 
         if (Input.GetKey(KeyCode.C))
         {
-            canMove = false;
             anim.Play("Wren_S_Walk");
-        }
-        else
-        {
-            canMove = true;
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Exit") && !this.gameObject.CompareTag("Flashlight"))
+        if (collision.gameObject.CompareTag("Exit") && (playerTrans.position.y < 2.5f))
         {
             if (player_script.friendList.Count == 0)
             {
@@ -182,7 +179,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private IEnumerator MoveAndSpeak()
+    public IEnumerator MoveAndSpeak()
     {
         float elapsedTime = 0f;
         Vector2 startPosition = transform.position;

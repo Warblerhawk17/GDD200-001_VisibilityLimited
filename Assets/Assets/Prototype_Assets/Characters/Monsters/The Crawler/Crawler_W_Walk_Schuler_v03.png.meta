@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b8b273b9f5598684bbe7c570235774bc
+guid: f4c65e8791e9d214b84442876cc5fe65
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -107,46 +107,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: iPhone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
     buildTarget: Windows Store Apps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: tvOS
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -162,7 +123,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Shadow_S_MS_Sprite_0
+      name: Crawler_BackAnim_Schuler_v03_0
       rect:
         serializedVersion: 2
         x: 0
@@ -176,14 +137,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 98a1d331c571b25448def6d62174dc19
-      internalID: -1787334577
+      spriteID: 82d4774933e357b428865723cc15ea43
+      internalID: 1657725333
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shadow_S_MS_Sprite_1
+      name: Crawler_BackAnim_Schuler_v03_1
       rect:
         serializedVersion: 2
         x: 96
@@ -197,14 +158,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3e443e18c216a504bb11d778b3449f4b
-      internalID: 69852479
+      spriteID: fd8c672359ddb2643811d646327b8c1f
+      internalID: 1693367818
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shadow_S_MS_Sprite_2
+      name: Crawler_BackAnim_Schuler_v03_2
       rect:
         serializedVersion: 2
         x: 192
@@ -218,14 +179,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5e1853c07241da54a9c9aace998dce45
-      internalID: -2081845923
+      spriteID: 00bc3a0e62cdd264284388be7ff88de2
+      internalID: 1093887883
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shadow_S_MS_Sprite_3
+      name: Crawler_BackAnim_Schuler_v03_3
       rect:
         serializedVersion: 2
         x: 288
@@ -239,14 +200,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 659aa7646910af6458fb18eb689a695f
-      internalID: 630360015
+      spriteID: ccbad243effda164e91c3920c5df933c
+      internalID: -769214200
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shadow_S_MS_Sprite_4
+      name: Crawler_BackAnim_Schuler_v03_4
       rect:
         serializedVersion: 2
         x: 384
@@ -260,14 +221,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d35a753dfaa6fcd45b5505ae2290aaa8
-      internalID: -1531099347
+      spriteID: 3a92a75fe57a3be4b92c2ce830dc5bf7
+      internalID: 614391877
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shadow_S_MS_Sprite_5
+      name: Crawler_BackAnim_Schuler_v03_5
       rect:
         serializedVersion: 2
         x: 0
@@ -281,14 +242,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f76ccc0b35969c3499b2718e68168279
-      internalID: -461821085
+      spriteID: 5e1fdd201f691254296ece826d2bc302
+      internalID: -65109044
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shadow_S_MS_Sprite_6
+      name: Crawler_BackAnim_Schuler_v03_6
       rect:
         serializedVersion: 2
         x: 96
@@ -302,14 +263,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 802709699231ec24eb7668d8ba6cc666
-      internalID: -426013956
+      spriteID: 0091a042962d4f249ad57626331e5fed
+      internalID: -32411265
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shadow_S_MS_Sprite_7
+      name: Crawler_BackAnim_Schuler_v03_7
       rect:
         serializedVersion: 2
         x: 192
@@ -323,8 +284,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 485eef73a1514284582f587a028926cf
-      internalID: 1051259799
+      spriteID: ac5e1ff4ea2689140b07e0f0bafbf9ad
+      internalID: 1995839863
       vertices: []
       indices: 
       edges: []
@@ -340,14 +301,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Shadow_S_MS_Sprite_0: -1787334577
-      Shadow_S_MS_Sprite_1: 69852479
-      Shadow_S_MS_Sprite_2: -2081845923
-      Shadow_S_MS_Sprite_3: 630360015
-      Shadow_S_MS_Sprite_4: -1531099347
-      Shadow_S_MS_Sprite_5: -461821085
-      Shadow_S_MS_Sprite_6: -426013956
-      Shadow_S_MS_Sprite_7: 1051259799
+      Crawler_BackAnim_Schuler_v03_0: 1657725333
+      Crawler_BackAnim_Schuler_v03_1: 1693367818
+      Crawler_BackAnim_Schuler_v03_2: 1093887883
+      Crawler_BackAnim_Schuler_v03_3: -769214200
+      Crawler_BackAnim_Schuler_v03_4: 614391877
+      Crawler_BackAnim_Schuler_v03_5: -65109044
+      Crawler_BackAnim_Schuler_v03_6: -32411265
+      Crawler_BackAnim_Schuler_v03_7: 1995839863
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

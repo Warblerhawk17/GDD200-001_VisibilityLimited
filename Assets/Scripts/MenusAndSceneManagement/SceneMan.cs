@@ -37,7 +37,7 @@ public class SceneMan : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (playerScript.friendsSaved == 3 || playerScript.lives == 0)
+        if (playerScript.friendsSaved == 4 || playerScript.lives == 0)
         {
             //Debug.Log("Game Over was called");
             gameOverMenu.SetActive(true);
@@ -52,13 +52,17 @@ public class SceneMan : MonoBehaviour
         // Check if the player is the object entering the trigger
         if (collision.CompareTag("Player"))
         {
-            if (player.position.y > -10)
+            if (collision.transform.position.y > -10) //down
             {
-                player.transform.position = new Vector2(player.position.x, -21.5f);
+                collision.transform.position = new Vector2(player.position.x, -21.5f);
             }
-            else if (player.position.y < -10)
+            else if (collision.transform.position.y < -10) //up
             {
-                player.transform.position = new Vector2(player.position.x, 3.8f);
+                collision.transform.position = new Vector2(player.position.x, 3.8f);
+            }
+            for (int i = 0; i < playerScript.friendList.Count; i++) 
+            {
+                playerScript.friendList[i].transform.position=player.position;
             }
         }
     }
