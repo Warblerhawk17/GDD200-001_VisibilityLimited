@@ -10,15 +10,19 @@ public class FriendFollow : MonoBehaviour
     public LayerMask layerMask;
     public Animator anim;
     public bool pickedUp = false; //bool for if they have been picked up before 
+    public List<GameObject> dialog;
 
     private Node currentNode; //the current node it is at
     private List<Node> path = new List<Node>(); //the path of nodes it will travel
     private float speed = 4;
+    private player_script player_script;
+    private bool wasCalled = false;
 
     // Start is called before the first frame update
     void Start()
     {
         anim = GetComponent<Animator>(); //Animator object
+        player_script = GameObject.Find("Player").GetComponent<player_script>();
     }
 
     // Update is called once per frame
@@ -27,6 +31,10 @@ public class FriendFollow : MonoBehaviour
         if (followTarget != null)
         {
             anim.SetBool("isWalking", true);
+            if (!wasCalled)
+            {
+                StartCoroutine(PlayDialog());
+            }
             RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector3.Normalize(followTarget.transform.position - transform.position), float.MaxValue, layerMask);
             if (hit.collider.gameObject != followTarget.gameObject)
             {
@@ -118,8 +126,36 @@ public class FriendFollow : MonoBehaviour
                 }
             }
         }
-
-        
     }
 
+    private IEnumerator PlayDialog()
+    {
+        wasCalled = true;
+        Debug.Log("Dialog was called");
+        if (player_script.friendsSaved == 0)
+        {
+            for (int i = 0; i < 3; i++)
+            {
+                dialog[i].SetActive(true);
+                yield return new WaitForSeconds(3);
+                dialog[i].SetActive(false);
+            }
+        }
+        else if (player_script.friendsSaved == 1)
+        {
+            for (int i = 3; i < 5; i++)
+            {
+                dialog[i].SetActive(true);
+                yield return new WaitForSeconds(3);
+                dialog[i].SetActive(false);
+            }
+        } else if (player_script.friendsSaved == 2)
+        {
+            dialog[5].SetActive(true);
+            yield return new WaitForSeconds(3);
+            dialog[5].SetActive(false);
+        }
+
+        yield return new WaitForSeconds(10);
+    }
 }
