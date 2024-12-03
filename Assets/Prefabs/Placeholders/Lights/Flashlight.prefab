@@ -105,6 +105,9 @@ MonoBehaviour:
   orbitDistance: 1
   rotationSpeed: 5
   playerObject: {fileID: 0}
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &2847913634833087052
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -171,7 +174,6 @@ MonoBehaviour:
   player: {fileID: 0}
   lightName: 
   shadow: {fileID: 0}
-  audioData: {fileID: 0}
 --- !u!60 &3112628981797972281
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -187,7 +189,7 @@ PolygonCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1050367
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2

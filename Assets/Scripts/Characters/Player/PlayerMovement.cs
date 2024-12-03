@@ -172,7 +172,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Exit"))
+        if (collision.gameObject.CompareTag("Exit") && !this.gameObject.CompareTag("Flashlight"))
         {
             if (player_script.friendList.Count == 0)
             {

@@ -14,6 +14,7 @@ TagManager:
   - Ground Candle
   - Ground Fireflies
   - Ground Flashlight
+  - Wall Collider
   layers:
   - Default
   - TransparentFX

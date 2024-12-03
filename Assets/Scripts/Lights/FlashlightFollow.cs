@@ -2,6 +2,7 @@
 // GDD 200-001
 // Fall 2024
 
+using System.Collections;
 using UnityEngine;
 
 public class FlashlightFollow : MonoBehaviour
@@ -13,13 +14,18 @@ public class FlashlightFollow : MonoBehaviour
     private Vector3 targetPosition;
     public GameObject playerObject;
     private float flashlightZPos = -0.1f;
+    bool isColliding = false;
+    [SerializeField] LayerMask obstacleLayer; // Layer to check for walls or obstacles
     // Keep flashlight Z-axis position at -.1 for light to be above the floor
     // (VERY IMPORTANT!! Z AXIS POS MUST BE <= -0.1 FOR IT TO WORK PROPERLY)
 
     void Start()
     {
+
         playerObject = GameObject.Find("Player");
         player = playerObject.transform;
+        obstacleLayer = LayerMask.GetMask("WallsForAStar");
+
     }
 
     void Update()
@@ -43,7 +49,14 @@ public class FlashlightFollow : MonoBehaviour
         // Calculate the new position for the flashlight
         targetPosition = player.position + directionToMouse * orbitDistance;
 
+        RaycastHit2D hit = Physics2D.Raycast(player.position, directionToMouse, orbitDistance, obstacleLayer);
         // Calculate the angle to the mouse cursor
+
+        if (hit.collider != null)
+        {
+            // If there's an obstacle, move the flashlight to the hit point
+            targetPosition = (Vector3)hit.point - directionToMouse * 0.1f; // Offset slightly from the obstacle
+        }
         float angle = (Mathf.Atan2(directionToMouse.y, directionToMouse.x) * Mathf.Rad2Deg);
         if(GameObject.FindWithTag("Candle") || GameObject.FindWithTag("Fireflies"))
         {
@@ -59,7 +72,9 @@ public class FlashlightFollow : MonoBehaviour
 
         // Update the flashlight position
         // Apply the rotation
+
         transform.SetPositionAndRotation(targetPosition, Quaternion.Lerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime));
         transform.position = new Vector3(transform.position.x, transform.position.y, flashlightZPos);
     }
+
 }
