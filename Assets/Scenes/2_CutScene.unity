@@ -565,6 +565,7 @@ MonoBehaviour:
   im1: {fileID: 0}
   im2: {fileID: 0}
   audioListener: {fileID: 0}
+  sceneMan: {fileID: 0}
   index: 1
 --- !u!1 &1644294333
 GameObject:
