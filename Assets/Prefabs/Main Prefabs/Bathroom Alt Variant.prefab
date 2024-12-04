@@ -2409,6 +2409,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bathroom Alt Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 3186105248745351541, guid: 79f23e690faa126478e07a154122dcce, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3243916903359736686, guid: 79f23e690faa126478e07a154122dcce, type: 3}
       propertyPath: m_CompositePaths.m_Paths.Array.size
       value: 0
@@ -2681,6 +2685,10 @@ PrefabInstance:
       propertyPath: m_ColliderPaths.Array.data[0].m_ColliderPaths.Array.data[0].Array.data[15].Y
       value: 20000000
       objectReference: {fileID: 0}
+    - target: {fileID: 3844203540544274399, guid: 79f23e690faa126478e07a154122dcce, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4862457840057851520, guid: 79f23e690faa126478e07a154122dcce, type: 3}
       propertyPath: m_Size.x
       value: 6
@@ -2688,6 +2696,10 @@ PrefabInstance:
     - target: {fileID: 4862457840057851520, guid: 79f23e690faa126478e07a154122dcce, type: 3}
       propertyPath: m_Size.y
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4862457840057851520, guid: 79f23e690faa126478e07a154122dcce, type: 3}
+      propertyPath: m_TileAnchor.y
+      value: -2.5
       objectReference: {fileID: 0}
     - target: {fileID: 4862457840057851520, guid: 79f23e690faa126478e07a154122dcce, type: 3}
       propertyPath: m_Tiles.Array.size
@@ -4060,7 +4072,7 @@ MonoBehaviour:
   - {x: 5.538103, y: 0.0073157013, z: 0}
   m_ShapePathHash: 1079751479
   m_Mesh: {fileID: 0}
-  m_InstanceId: 147174
+  m_InstanceId: 616008
   m_LocalBounds:
     m_Center: {x: 3.000071, y: 3.5547311, z: 0}
     m_Extent: {x: 2.5401938, y: 3.5474155, z: 0}
@@ -4099,7 +4111,7 @@ MonoBehaviour:
   - {x: 1.0550311, y: 7.007834, z: 0}
   m_ShapePathHash: 1116211421
   m_Mesh: {fileID: 0}
-  m_InstanceId: 147176
+  m_InstanceId: 616010
   m_LocalBounds:
     m_Center: {x: 2.9997609, y: 7.9968824, z: 0}
     m_Extent: {x: 2.5397336, y: 0.99604154, z: 0}
@@ -4139,7 +4151,7 @@ MonoBehaviour:
   - {x: 5.539529, y: 0.0072041517, z: 0}
   m_ShapePathHash: 829062957
   m_Mesh: {fileID: 0}
-  m_InstanceId: 147160
+  m_InstanceId: 615994
   m_LocalBounds:
     m_Center: {x: 2.9996347, y: 1.0003028, z: 0}
     m_Extent: {x: 2.5398943, y: 0.9932728, z: 0}

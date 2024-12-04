@@ -58,7 +58,7 @@ MonoBehaviour:
   - {x: 6.539429, y: 0.0074556246, z: 0}
   m_ShapePathHash: 1461294527
   m_Mesh: {fileID: 0}
-  m_InstanceId: 43500
+  m_InstanceId: 374560
   m_LocalBounds:
     m_Center: {x: 3.500136, y: 1.0006953, z: 0}
     m_Extent: {x: 3.039293, y: 0.99323976, z: 0}
@@ -120,7 +120,7 @@ MonoBehaviour:
   - {x: 11.539052, y: -2.9914174, z: 0}
   m_ShapePathHash: 1655985016
   m_Mesh: {fileID: 0}
-  m_InstanceId: 43494
+  m_InstanceId: 374554
   m_LocalBounds:
     m_Center: {x: 8.9996395, y: -1.9990158, z: 0}
     m_Extent: {x: 2.539413, y: 0.9924016, z: 0}
@@ -2583,6 +2583,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Study Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 3186105248745351541, guid: 79f23e690faa126478e07a154122dcce, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3844203540544274399, guid: 79f23e690faa126478e07a154122dcce, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4862457840057851520, guid: 79f23e690faa126478e07a154122dcce, type: 3}
       propertyPath: m_Size.x
       value: 12
@@ -2594,6 +2602,10 @@ PrefabInstance:
     - target: {fileID: 4862457840057851520, guid: 79f23e690faa126478e07a154122dcce, type: 3}
       propertyPath: m_Origin.y
       value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4862457840057851520, guid: 79f23e690faa126478e07a154122dcce, type: 3}
+      propertyPath: m_TileAnchor.y
+      value: -1.2
       objectReference: {fileID: 0}
     - target: {fileID: 4862457840057851520, guid: 79f23e690faa126478e07a154122dcce, type: 3}
       propertyPath: m_Tiles.Array.size
@@ -2918,11 +2930,11 @@ PrefabInstance:
     - target: {fileID: 4862457840057851520, guid: 79f23e690faa126478e07a154122dcce, type: 3}
       propertyPath: m_TileSpriteArray.Array.data[2].m_Data
       value: 
-      objectReference: {fileID: -1552791121, guid: d1fa37ecc53eeaa4fa46d63463c8520a, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 4862457840057851520, guid: 79f23e690faa126478e07a154122dcce, type: 3}
       propertyPath: m_TileSpriteArray.Array.data[3].m_Data
       value: 
-      objectReference: {fileID: -2064926982, guid: d1fa37ecc53eeaa4fa46d63463c8520a, type: 3}
+      objectReference: {fileID: -1552791121, guid: d1fa37ecc53eeaa4fa46d63463c8520a, type: 3}
     - target: {fileID: 4862457840057851520, guid: 79f23e690faa126478e07a154122dcce, type: 3}
       propertyPath: m_TileSpriteArray.Array.data[4].m_Data
       value: 
@@ -2942,7 +2954,7 @@ PrefabInstance:
     - target: {fileID: 4862457840057851520, guid: 79f23e690faa126478e07a154122dcce, type: 3}
       propertyPath: m_TileSpriteArray.Array.data[8].m_Data
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: -2064926982, guid: d1fa37ecc53eeaa4fa46d63463c8520a, type: 3}
     - target: {fileID: 4862457840057851520, guid: 79f23e690faa126478e07a154122dcce, type: 3}
       propertyPath: m_TileSpriteArray.Array.data[9].m_Data
       value: 
@@ -3169,7 +3181,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4862457840057851520, guid: 79f23e690faa126478e07a154122dcce, type: 3}
       propertyPath: m_TileSpriteArray.Array.data[2].m_RefCount
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4862457840057851520, guid: 79f23e690faa126478e07a154122dcce, type: 3}
       propertyPath: m_TileSpriteArray.Array.data[3].m_RefCount
@@ -3193,7 +3205,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4862457840057851520, guid: 79f23e690faa126478e07a154122dcce, type: 3}
       propertyPath: m_TileSpriteArray.Array.data[8].m_RefCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4862457840057851520, guid: 79f23e690faa126478e07a154122dcce, type: 3}
       propertyPath: m_TileSpriteArray.Array.data[9].m_RefCount
@@ -3357,7 +3369,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4862457840057851520, guid: 79f23e690faa126478e07a154122dcce, type: 3}
       propertyPath: m_Tiles.Array.data[7].second.m_TileSpriteIndex
-      value: 3
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4862457840057851520, guid: 79f23e690faa126478e07a154122dcce, type: 3}
       propertyPath: m_Tiles.Array.data[8].second.m_TileSpriteIndex
@@ -3405,7 +3417,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4862457840057851520, guid: 79f23e690faa126478e07a154122dcce, type: 3}
       propertyPath: m_Tiles.Array.data[19].second.m_TileSpriteIndex
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4862457840057851520, guid: 79f23e690faa126478e07a154122dcce, type: 3}
       propertyPath: m_Tiles.Array.data[20].second.m_TileSpriteIndex
@@ -3574,6 +3586,10 @@ PrefabInstance:
     - target: {fileID: 4862457840057851520, guid: 79f23e690faa126478e07a154122dcce, type: 3}
       propertyPath: m_Tiles.Array.data[30].second.m_TileObjectToInstantiateIndex
       value: 65535
+      objectReference: {fileID: 0}
+    - target: {fileID: 6278340330090383163, guid: 79f23e690faa126478e07a154122dcce, type: 3}
+      propertyPath: m_SortingOrder
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7984128486968051163, guid: 79f23e690faa126478e07a154122dcce, type: 3}
       propertyPath: m_Size.x
@@ -4543,7 +4559,7 @@ MonoBehaviour:
   - {x: 6.460681, y: 0.008604653, z: 0}
   m_ShapePathHash: 691180545
   m_Mesh: {fileID: 0}
-  m_InstanceId: 43488
+  m_InstanceId: 374548
   m_LocalBounds:
     m_Center: {x: 5.999961, y: 0.5550759, z: 0}
     m_Extent: {x: 5.5393767, y: 3.548113, z: 0}
@@ -4582,7 +4598,7 @@ MonoBehaviour:
   - {x: 1.054545, y: 4.0083017, z: 0}
   m_ShapePathHash: -2001293548
   m_Mesh: {fileID: 0}
-  m_InstanceId: 43496
+  m_InstanceId: 374556
   m_LocalBounds:
     m_Center: {x: 5.9992366, y: 5.000023, z: 0}
     m_Extent: {x: 5.540395, y: 0.99276805, z: 0}

@@ -2409,6 +2409,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bathroom Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 2912613071986284332, guid: 79f23e690faa126478e07a154122dcce, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 3186105248745351541, guid: 79f23e690faa126478e07a154122dcce, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.42
+      objectReference: {fileID: 0}
     - target: {fileID: 3243916903359736686, guid: 79f23e690faa126478e07a154122dcce, type: 3}
       propertyPath: m_CompositePaths.m_Paths.Array.size
       value: 1
@@ -2617,6 +2625,10 @@ PrefabInstance:
       propertyPath: m_ColliderPaths.Array.data[0].m_ColliderPaths.Array.data[0].Array.data[11].Y
       value: 20000000
       objectReference: {fileID: 0}
+    - target: {fileID: 3844203540544274399, guid: 79f23e690faa126478e07a154122dcce, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4862457840057851520, guid: 79f23e690faa126478e07a154122dcce, type: 3}
       propertyPath: m_Size.x
       value: 6
@@ -2624,6 +2636,10 @@ PrefabInstance:
     - target: {fileID: 4862457840057851520, guid: 79f23e690faa126478e07a154122dcce, type: 3}
       propertyPath: m_Size.y
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4862457840057851520, guid: 79f23e690faa126478e07a154122dcce, type: 3}
+      propertyPath: m_TileAnchor.y
+      value: -2.92
       objectReference: {fileID: 0}
     - target: {fileID: 4862457840057851520, guid: 79f23e690faa126478e07a154122dcce, type: 3}
       propertyPath: m_Tiles.Array.size
@@ -3345,6 +3361,10 @@ PrefabInstance:
       propertyPath: m_Tiles.Array.data[21].second.m_TileObjectToInstantiateIndex
       value: 65535
       objectReference: {fileID: 0}
+    - target: {fileID: 6278340330090383163, guid: 79f23e690faa126478e07a154122dcce, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7984128486968051163, guid: 79f23e690faa126478e07a154122dcce, type: 3}
       propertyPath: m_Size.x
       value: 6
@@ -3352,6 +3372,10 @@ PrefabInstance:
     - target: {fileID: 7984128486968051163, guid: 79f23e690faa126478e07a154122dcce, type: 3}
       propertyPath: m_Size.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7984128486968051163, guid: 79f23e690faa126478e07a154122dcce, type: 3}
+      propertyPath: m_TileAnchor.y
+      value: 0.78
       objectReference: {fileID: 0}
     - target: {fileID: 7984128486968051163, guid: 79f23e690faa126478e07a154122dcce, type: 3}
       propertyPath: m_Tiles.Array.size
@@ -4041,7 +4065,7 @@ MonoBehaviour:
   - {x: 1.0549637, y: 0.007647997, z: 0}
   m_ShapePathHash: -618770554
   m_Mesh: {fileID: 0}
-  m_InstanceId: 42310
+  m_InstanceId: 616038
   m_LocalBounds:
     m_Center: {x: 2.9995782, y: 1.0004009, z: 0}
     m_Extent: {x: 2.5393066, y: 0.99310005, z: 0}
@@ -4084,7 +4108,7 @@ MonoBehaviour:
   - {x: 1.0545197, y: 0.007602874, z: 0}
   m_ShapePathHash: -848144205
   m_Mesh: {fileID: 0}
-  m_InstanceId: 42316
+  m_InstanceId: 616044
   m_LocalBounds:
     m_Center: {x: 3.0002074, y: 3.5554664, z: 0}
     m_Extent: {x: 2.5403347, y: 3.5478635, z: 0}
@@ -4119,7 +4143,7 @@ MonoBehaviour:
   - {x: 5.539429, y: 7.0076814, z: 0}
   m_ShapePathHash: 338241876
   m_Mesh: {fileID: 0}
-  m_InstanceId: 42314
+  m_InstanceId: 616042
   m_LocalBounds:
     m_Center: {x: 2.9995909, y: 7.9998865, z: 0}
     m_Extent: {x: 2.5398383, y: 0.9939327, z: 0}

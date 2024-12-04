@@ -58,7 +58,7 @@ MonoBehaviour:
   - {x: 4.055138, y: 0.008139913, z: 0}
   m_ShapePathHash: -1915784710
   m_Mesh: {fileID: 0}
-  m_InstanceId: 43052
+  m_InstanceId: 479542
   m_LocalBounds:
     m_Center: {x: 4.000235, y: 0.05528968, z: 0}
     m_Extent: {x: 0.05524409, y: 0.047373626, z: 0}
@@ -159,7 +159,7 @@ MonoBehaviour:
   - {x: 3.0545492, y: 0.0072653294, z: 0}
   m_ShapePathHash: 321474318
   m_Mesh: {fileID: 0}
-  m_InstanceId: 43030
+  m_InstanceId: 479520
   m_LocalBounds:
     m_Center: {x: 1.2583061, y: 4.554862, z: 0}
     m_Extent: {x: 1.797271, y: 4.547597, z: 0}
@@ -225,7 +225,7 @@ MonoBehaviour:
   - {x: 8.538818, y: 0.006859131, z: 0}
   m_ShapePathHash: -1431636135
   m_Mesh: {fileID: 0}
-  m_InstanceId: 43022
+  m_InstanceId: 479512
   m_LocalBounds:
     m_Center: {x: 6.7421484, y: 4.5544734, z: 0}
     m_Extent: {x: 1.7973936, y: 4.547614, z: 0}
@@ -490,7 +490,7 @@ MonoBehaviour:
   - {x: 4.054521, y: 9.007951, z: 0}
   m_ShapePathHash: -1606680611
   m_Mesh: {fileID: 0}
-  m_InstanceId: 43048
+  m_InstanceId: 479538
   m_LocalBounds:
     m_Center: {x: 3.9998965, y: 9.054642, z: 0}
     m_Extent: {x: 0.054832578, y: 0.047378063, z: 0}
@@ -2926,6 +2926,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main Hall Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 3186105248745351541, guid: 79f23e690faa126478e07a154122dcce, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.83
+      objectReference: {fileID: 0}
     - target: {fileID: 4862457840057851520, guid: 79f23e690faa126478e07a154122dcce, type: 3}
       propertyPath: m_Size.x
       value: 10
@@ -2937,6 +2941,10 @@ PrefabInstance:
     - target: {fileID: 4862457840057851520, guid: 79f23e690faa126478e07a154122dcce, type: 3}
       propertyPath: m_Origin.x
       value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4862457840057851520, guid: 79f23e690faa126478e07a154122dcce, type: 3}
+      propertyPath: m_TileAnchor.y
+      value: -3.33
       objectReference: {fileID: 0}
     - target: {fileID: 4862457840057851520, guid: 79f23e690faa126478e07a154122dcce, type: 3}
       propertyPath: m_Tiles.Array.size
@@ -3405,7 +3413,7 @@ PrefabInstance:
     - target: {fileID: 4862457840057851520, guid: 79f23e690faa126478e07a154122dcce, type: 3}
       propertyPath: m_TileSpriteArray.Array.data[4].m_Data
       value: 
-      objectReference: {fileID: 1216528632, guid: d1fa37ecc53eeaa4fa46d63463c8520a, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 4862457840057851520, guid: 79f23e690faa126478e07a154122dcce, type: 3}
       propertyPath: m_TileSpriteArray.Array.data[5].m_Data
       value: 
@@ -3413,7 +3421,7 @@ PrefabInstance:
     - target: {fileID: 4862457840057851520, guid: 79f23e690faa126478e07a154122dcce, type: 3}
       propertyPath: m_TileSpriteArray.Array.data[6].m_Data
       value: 
-      objectReference: {fileID: -2064926982, guid: d1fa37ecc53eeaa4fa46d63463c8520a, type: 3}
+      objectReference: {fileID: 1216528632, guid: d1fa37ecc53eeaa4fa46d63463c8520a, type: 3}
     - target: {fileID: 4862457840057851520, guid: 79f23e690faa126478e07a154122dcce, type: 3}
       propertyPath: m_TileSpriteArray.Array.data[7].m_Data
       value: 
@@ -3421,7 +3429,7 @@ PrefabInstance:
     - target: {fileID: 4862457840057851520, guid: 79f23e690faa126478e07a154122dcce, type: 3}
       propertyPath: m_TileSpriteArray.Array.data[8].m_Data
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: -2064926982, guid: d1fa37ecc53eeaa4fa46d63463c8520a, type: 3}
     - target: {fileID: 4862457840057851520, guid: 79f23e690faa126478e07a154122dcce, type: 3}
       propertyPath: m_TileSpriteArray.Array.data[9].m_Data
       value: 
@@ -3724,7 +3732,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4862457840057851520, guid: 79f23e690faa126478e07a154122dcce, type: 3}
       propertyPath: m_TileSpriteArray.Array.data[4].m_RefCount
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4862457840057851520, guid: 79f23e690faa126478e07a154122dcce, type: 3}
       propertyPath: m_TileSpriteArray.Array.data[5].m_RefCount
@@ -3740,7 +3748,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4862457840057851520, guid: 79f23e690faa126478e07a154122dcce, type: 3}
       propertyPath: m_TileSpriteArray.Array.data[8].m_RefCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4862457840057851520, guid: 79f23e690faa126478e07a154122dcce, type: 3}
       propertyPath: m_TileSpriteArray.Array.data[9].m_RefCount
@@ -4000,7 +4008,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4862457840057851520, guid: 79f23e690faa126478e07a154122dcce, type: 3}
       propertyPath: m_Tiles.Array.data[14].second.m_TileSpriteIndex
-      value: 6
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4862457840057851520, guid: 79f23e690faa126478e07a154122dcce, type: 3}
       propertyPath: m_Tiles.Array.data[15].second.m_TileSpriteIndex
@@ -4036,7 +4044,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4862457840057851520, guid: 79f23e690faa126478e07a154122dcce, type: 3}
       propertyPath: m_Tiles.Array.data[23].second.m_TileSpriteIndex
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4862457840057851520, guid: 79f23e690faa126478e07a154122dcce, type: 3}
       propertyPath: m_Tiles.Array.data[24].second.m_TileSpriteIndex
@@ -5095,7 +5103,7 @@ MonoBehaviour:
   - {x: 3.0550525, y: 9.007649, z: 0}
   m_ShapePathHash: 1598829609
   m_Mesh: {fileID: 0}
-  m_InstanceId: 43044
+  m_InstanceId: 479534
   m_LocalBounds:
     m_Center: {x: 3.998767, y: 9.999844, z: 0}
     m_Extent: {x: 4.5410624, y: 0.99219465, z: 0}
@@ -5138,7 +5146,7 @@ MonoBehaviour:
   - {x: 3.0553162, y: 0.0080446005, z: 0}
   m_ShapePathHash: -2039623653
   m_Mesh: {fileID: 0}
-  m_InstanceId: 43056
+  m_InstanceId: 479546
   m_LocalBounds:
     m_Center: {x: 3.9997215, y: 1.000144, z: 0}
     m_Extent: {x: 4.5401473, y: 0.99249864, z: 0}
