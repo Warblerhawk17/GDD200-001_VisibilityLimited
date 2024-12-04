@@ -6,7 +6,7 @@ public class LivesBehavior : MonoBehaviour
 {
     BatteryManager batteryManager;
     public List<Sprite> livesSprites;
-    public Player_Script player;
+    public player_script player;
    [SerializeField] int spriteNum = 0;
    public UnityEngine.UI.Image livesImage;
 

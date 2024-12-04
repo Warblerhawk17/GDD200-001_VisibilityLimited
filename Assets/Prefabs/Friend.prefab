@@ -161,9 +161,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b70f4a221bdec54ab3784dc15ca593a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  follow: {fileID: 0}
+  followTarget: {fileID: 0}
   followDistance: 0
   layerMask:
     serializedVersion: 2
     m_Bits: 192
-  speed: 10
+  anim: {fileID: 0}

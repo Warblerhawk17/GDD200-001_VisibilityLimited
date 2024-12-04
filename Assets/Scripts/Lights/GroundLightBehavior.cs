@@ -12,19 +12,24 @@ public class GroundLightBehavior : MonoBehaviour
     float distance;
     float maxDistance = 1.0f;
     public GameObject player; // the player object
-    public Player_Script playerScript;
+    public player_script playerScript;
     public TextMeshProUGUI pickupText;
     LightSpawner gameManager;
     [SerializeField] bool isNearLight = false;
     string lightType;
     string lightTypeRequested;
+    public float storedCharge;
+    float maxCharge;
+    BatteryManager batteryManager;
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.Find("Player");
         gameManager = GameObject.Find("Game Manager").GetComponent<LightSpawner>();
         pickupText = GameObject.Find("Pickup Text").GetComponentInChildren<TextMeshProUGUI>();
-        playerScript = player.GetComponent<Player_Script>();
+        playerScript = player.GetComponent<player_script>();
+        batteryManager = GameObject.Find("Battery").GetComponent<BatteryManager>();
+
     }
 
     // Update is called once per frame
@@ -45,30 +50,50 @@ public class GroundLightBehavior : MonoBehaviour
             if(this.tag == "Ground Flashlight")
             {
                 lightType = "Flashlight";
+                maxCharge = 50f;
+                if (storedCharge == 0)
+                {
+                    storedCharge = maxCharge;
+                }
             }
             else if (this.tag ==  "Ground Candle")
             {
                 lightType = "Candle";
+                maxCharge = 150f;
+                if (storedCharge == 0)
+                {
+                    storedCharge = maxCharge;
+                }
 
             }
             else if (this.tag == "Ground Fireflies")
             {
                 lightType = "Fireflies";
+                maxCharge = 100f;
+                if (storedCharge == 0)
+                {
+                    storedCharge = maxCharge;
+                }
 
             }
-            pickupText.SetText("Press E to pickup " + lightType);
+            pickupText.SetText("Press E to pickup " + lightType + " (" + (System.Math.Truncate(storedCharge / maxCharge * 100)) + "%)");
             if (distance <= maxDistance && isNearLight == false) {
                 isNearLight = true;
                 pickupText.enabled = true;
 
             }
-            if (Input.GetKeyDown(KeyCode.E)) // Pick up light; if already have one, destroy the previous one (temporary until we can find a way to store charge on a dropped light)
+            if (Input.GetKeyDown(KeyCode.E)) // Pick up light
                 
             {
-                if(playerScript.currentLightSource != "")
+                if(playerScript.currentLightSource != "") // If player already has a light source
                 {
+                    gameManager.spawnGroundUsedLight();
                     Destroy(GameObject.FindWithTag(playerScript.currentLightSource));
                     playerScript.currentLightSource = "";
+                }
+                if(this.storedCharge != 0 || this.storedCharge != maxCharge) // If the light has been previosuly used and has a stored charge
+                {
+                    gameManager.chargeToSpawnWith = storedCharge;
                 }
                 Destroy(this.gameObject);
                 gameManager.lightSpawnRequested = true;
