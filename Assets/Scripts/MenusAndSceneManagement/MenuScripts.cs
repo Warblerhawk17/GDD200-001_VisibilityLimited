@@ -13,6 +13,7 @@ public class MenuScripts : MonoBehaviour
     public Sprite im1;
     public Sprite im2;
     public AudioListener audioListener;
+    public SceneMan sceneMan;
 
     private Button button;
     public int index;
@@ -43,7 +44,7 @@ public class MenuScripts : MonoBehaviour
                 break;
             case 2:
                 //Debug.Log("Resume button pressed");
-                currentMenu.SetActive(false);
+                sceneMan.CallPause();
                 break;
             case 3:
                 Image buttonImage = GetComponent<Image>();
