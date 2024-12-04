@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6903290306354263224}
   - component: {fileID: 2078228865007630295}
   - component: {fileID: 5843679562928629266}
-  - component: {fileID: -3747324398565529557}
+  - component: {fileID: 1518089157803688506}
   m_Layer: 0
   m_Name: Candle
   m_TagString: Candle
@@ -103,7 +103,7 @@ MonoBehaviour:
   player: {fileID: 0}
   lightName: 
   shadow: {fileID: 0}
---- !u!114 &-3747324398565529557
+--- !u!114 &1518089157803688506
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
