@@ -187,9 +187,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1857580506914656528, guid: c2965187cdb74d24bad0c2a580771c0b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3260281758869591973}
-    - targetCorrespondingSourceObject: {fileID: 1857580506914656528, guid: c2965187cdb74d24bad0c2a580771c0b, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 5991131492206011736}
   m_SourcePrefab: {fileID: 100100000, guid: c2965187cdb74d24bad0c2a580771c0b, type: 3}
 --- !u!1 &7576453566122883464 stripped
 GameObject:
@@ -231,37 +228,3 @@ CapsuleCollider2D:
   m_Offset: {x: 0.49999997, y: 0.6634416}
   m_Size: {x: 1.0000004, y: 0.7047481}
   m_Direction: 1
---- !u!114 &5991131492206011736
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7576453566122883464}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ShadowGroup: 0
-  m_ComponentVersion: 1
-  m_HasRenderer: 1
-  m_UseRendererSilhouette: 1
-  m_CastsShadows: 1
-  m_SelfShadows: 0
-  m_ApplyToSortingLayers: 5d1c0c026397226800000000
-  m_ShapePath:
-  - {x: 0.11540997, y: 0.4508202, z: 0}
-  - {x: 0.061802775, y: 0.57442576, z: 0}
-  - {x: 0.10098374, y: 0.7304903, z: 0}
-  - {x: 0.4909836, y: 0.77999973, z: 0}
-  - {x: 0.8918031, y: 0.716064, z: 0}
-  - {x: 0.93819726, y: 0.5888519, z: 0}
-  - {x: 0.88098335, y: 0.43639416, z: 0}
-  - {x: 0.49459016, y: 0.34360558, z: 0}
-  m_ShapePathHash: 1440366912
-  m_Mesh: {fileID: 0}
-  m_InstanceId: -167262
-  m_LocalBounds:
-    m_Center: {x: 0.5, y: 0.5618026, z: 0}
-    m_Extent: {x: 0.43819726, y: 0.21819708, z: 0}
