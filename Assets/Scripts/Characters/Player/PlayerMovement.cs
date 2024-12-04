@@ -163,7 +163,10 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.C))
         {
-            anim.Play("Wren_S_Walk");
+            canMove = false;
+            anim.Play("Wren_Crying");
+            new WaitForSeconds(2);
+            canMove = true;
         }
     }
 
