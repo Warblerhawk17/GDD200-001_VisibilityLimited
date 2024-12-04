@@ -63,6 +63,9 @@ public class MenuScripts : MonoBehaviour
                 //Debug.Log("Exit Game button pressed");
                 Application.Quit();
                 break;
+            case 5:
+                SceneManager.LoadScene(2);
+                break;
             default:
                 Debug.Log(message: $"{button.name} pressed but has no action");
                 break;
