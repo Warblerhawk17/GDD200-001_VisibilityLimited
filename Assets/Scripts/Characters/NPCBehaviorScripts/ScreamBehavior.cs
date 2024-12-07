@@ -9,10 +9,13 @@ public class ScreamBehavior : MonoBehaviour
     public LayerMask layerMask;
     public float explodeRadius;
     public float timeToTeleport;
+
+    private Animator anim;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -22,13 +25,16 @@ public class ScreamBehavior : MonoBehaviour
         //if so see if they have the candle, if they do do nothing
         //if they don't scream and deal lots of damage then teleport
         //teleport after a bit of time
+        anim.SetBool("isExploding", false);
 
         RaycastHit2D hit = Physics2D.Raycast(transform.position, target.transform.position - transform.position, explodeRadius, layerMask);
         if (hit && hit.collider.gameObject.layer == target.gameObject.layer && target.GetComponent<player_script>().currentLightSource != "Candle")
         {
+            anim.SetBool("isExploding", true);
             target.GetComponent<player_script>().batteryManager.batteryCharge -= 30;
             if (target.GetComponent<player_script>().currentLightSource == "")
             {
+                
                 target.GetComponent<player_script>().LoseLife();
             }
             teleport();

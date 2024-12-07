@@ -80,6 +80,7 @@ public class ShadowBehavior : MonoBehaviour
         yield return new WaitForSeconds(1);
         transform.position = AStarManager.instance.FindFurthestNode(transform.position).transform.position;
         speed = storedSpeed;
+        anim.SetBool("isAttacking", false);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -87,6 +88,7 @@ public class ShadowBehavior : MonoBehaviour
         if (collision.gameObject.layer == target.layer)
         {
             Debug.Log("Hit player");
+            anim.SetBool("isAttacking", true);
             StartCoroutine(telaportAway());
         }
     }
