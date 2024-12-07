@@ -10,7 +10,7 @@ public class VideoPlayerHelper : MonoBehaviour
     void Start()
     {
         VideoPlayer videoPlayer = image.GetComponent<VideoPlayer>();
-        videoPlayer.url = "Assets/CutScene/Final Intro Video.mp4";
+        videoPlayer.url = System.IO.Path.Combine(Application.streamingAssetsPath, "FinalIntroVideo.mp4");
     }
 
     // Update is called once per frame
