@@ -9,10 +9,14 @@ public class ScreamBehavior : MonoBehaviour
     public LayerMask layerMask;
     public float explodeRadius;
     public float timeToTeleport;
+    public bool exploding = false;
+
+    private Animator anim;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -22,26 +26,29 @@ public class ScreamBehavior : MonoBehaviour
         //if so see if they have the candle, if they do do nothing
         //if they don't scream and deal lots of damage then teleport
         //teleport after a bit of time
+        anim.SetBool("isExploding", false);
 
         RaycastHit2D hit = Physics2D.Raycast(transform.position, target.transform.position - transform.position, explodeRadius, layerMask);
-        if (hit && hit.collider.gameObject.layer == target.gameObject.layer && target.GetComponent<player_script>().currentLightSource != "Candle")
+        if (hit && hit.collider.gameObject.layer == target.gameObject.layer && target.GetComponent<player_script>().currentLightSource != "Candle" && !exploding)
         {
-            target.GetComponent<player_script>().batteryManager.batteryCharge -= 30;
+            exploding = true;
+            anim.SetBool("isExploding", true);
             if (target.GetComponent<player_script>().currentLightSource == "")
             {
                 target.GetComponent<player_script>().LoseLife();
             }
-            teleport();
+            target.GetComponent<player_script>().batteryManager.batteryCharge -= 30;
+            StartCoroutine(teleport());
         }
         timeToTeleport -= Time.deltaTime;
         if (timeToTeleport < 0) 
         {
-            teleport();
+            StartCoroutine(teleport());
             timeToTeleport = 30;
         }
     }
 
-    void teleport()
+    IEnumerator teleport()
     {
         List<Node> nodes = AStarManager.instance.NodesInScene().ToList();
         Node node = nodes[Random.Range(0,nodes.Count())];
@@ -50,6 +57,8 @@ public class ScreamBehavior : MonoBehaviour
             nodes.Remove(node);
             node = nodes[Random.Range(0, nodes.Count())];
         }
+        yield return new WaitForSeconds(0.55f);
         transform.position = node.transform.position;
+        exploding = false;
     }
 }

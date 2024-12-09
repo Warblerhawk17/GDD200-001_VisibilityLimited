@@ -75,7 +75,7 @@ public class SceneMan : MonoBehaviour
             Time.timeScale = 0;
             playerMovement.canMove = false;
         }
-        else
+        else if (pauseMenu.activeInHierarchy)
         {
             pauseMenu.SetActive(false);
             Time.timeScale = 1;

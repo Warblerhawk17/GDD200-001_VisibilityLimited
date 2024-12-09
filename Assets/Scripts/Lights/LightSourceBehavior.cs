@@ -43,6 +43,10 @@ public class LightSourceBehavior : MonoBehaviour
     {
         CheckLightCharge();
 
+        if (shadow == null)
+        {
+            shadow = GameObject.Find("Shadow").GetComponent<ShadowBehavior>();
+        }
     }
 
     //Checks the battery charge, and destroys the light if it has no charge

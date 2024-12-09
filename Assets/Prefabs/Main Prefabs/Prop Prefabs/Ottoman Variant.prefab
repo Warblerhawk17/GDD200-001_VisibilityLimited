@@ -267,9 +267,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1857580506914656528, guid: c2965187cdb74d24bad0c2a580771c0b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5660216907412509840}
-    - targetCorrespondingSourceObject: {fileID: 1857580506914656528, guid: c2965187cdb74d24bad0c2a580771c0b, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 3006947070659558235}
   m_SourcePrefab: {fileID: 100100000, guid: c2965187cdb74d24bad0c2a580771c0b, type: 3}
 --- !u!1 &3299079471527031884 stripped
 GameObject:
@@ -321,33 +318,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.4970578, y: 0.5459497}
   m_EdgeRadius: 0
---- !u!114 &3006947070659558235
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3299079471527031884}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ShadowGroup: 0
-  m_ComponentVersion: 1
-  m_HasRenderer: 1
-  m_UseRendererSilhouette: 1
-  m_CastsShadows: 1
-  m_SelfShadows: 0
-  m_ApplyToSortingLayers: 5d1c0c026397226800000000
-  m_ShapePath:
-  - {x: 0.30565256, y: 0.21897501, z: 0}
-  - {x: 0.30109066, y: 0.59034836, z: 0}
-  - {x: 1.6989095, y: 0.5949104, z: 0}
-  - {x: 1.6943469, y: 0.22809893, z: 0}
-  m_ShapePathHash: 1923713519
-  m_Mesh: {fileID: 0}
-  m_InstanceId: -169280
-  m_LocalBounds:
-    m_Center: {x: 1, y: 0.4069427, z: 0}
-    m_Extent: {x: 0.6989094, y: 0.18796769, z: 0}

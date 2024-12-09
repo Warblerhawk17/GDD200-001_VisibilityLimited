@@ -61,7 +61,7 @@ public class FriendFollow : MonoBehaviour
             }
             else
             {
-                //anim.SetBool("isWalking", false);
+                anim.SetBool("isWalking", false);
                 //Debug.Log("is not walking");
             }
 

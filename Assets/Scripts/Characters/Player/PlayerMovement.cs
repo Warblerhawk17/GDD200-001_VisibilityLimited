@@ -24,6 +24,8 @@ public class PlayerMovement : MonoBehaviour
     private float arrowAlpha = 0;
     private AudioSource walkingAudio;
     private Transform playerTrans;
+    private float walkSpeed = 0.7f;
+    private float runSpeed = 1.3f;
 
     // Start is called before the first frame update
     void Start()
@@ -154,16 +156,21 @@ public class PlayerMovement : MonoBehaviour
             if (Input.GetKey(KeyCode.LeftShift))
             {
                 rb.MovePosition(rb.position + 1.6f * Time.fixedDeltaTime * rb.velocity);
+                anim.speed = runSpeed;
             }
             else
             {
                 rb.MovePosition(rb.position + rb.velocity * Time.fixedDeltaTime);
+                anim.speed = walkSpeed;
             }
         }
 
         if (Input.GetKey(KeyCode.C))
         {
-            anim.Play("Wren_S_Walk");
+            canMove = false;
+            anim.Play("Wren_Crying");
+            new WaitForSeconds(2);
+            canMove = true;
         }
     }
 
