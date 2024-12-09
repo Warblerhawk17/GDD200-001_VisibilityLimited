@@ -66,7 +66,7 @@ MonoBehaviour:
   - {x: 5.055687, y: 0.0069752485, z: 0}
   m_ShapePathHash: -209566675
   m_Mesh: {fileID: 0}
-  m_InstanceId: 641840
+  m_InstanceId: 91136
   m_LocalBounds:
     m_Center: {x: 2.7579913, y: 5.0548725, z: 0}
     m_Extent: {x: 2.2978456, y: 5.048036, z: 0}
@@ -257,7 +257,7 @@ MonoBehaviour:
   - {x: 5.0546856, y: 0.008610234, z: 0}
   m_ShapePathHash: 1283802293
   m_Mesh: {fileID: 0}
-  m_InstanceId: 641782
+  m_InstanceId: 91078
   m_LocalBounds:
     m_Center: {x: 4.5004735, y: 1.0004312, z: 0}
     m_Extent: {x: 4.039841, y: 0.99349135, z: 0}
@@ -331,7 +331,7 @@ MonoBehaviour:
   - {x: 8.5392685, y: 0.00719323, z: 0}
   m_ShapePathHash: 31612899
   m_Mesh: {fileID: 0}
-  m_InstanceId: 641852
+  m_InstanceId: 91148
   m_LocalBounds:
     m_Center: {x: 7.242042, y: 5.555353, z: 0}
     m_Extent: {x: 2.2977529, y: 5.54816, z: 0}
@@ -393,7 +393,7 @@ MonoBehaviour:
   - {x: 9.5394125, y: 5.0074563, z: 0}
   m_ShapePathHash: 800869539
   m_Mesh: {fileID: 0}
-  m_InstanceId: 641800
+  m_InstanceId: 91096
   m_LocalBounds:
     m_Center: {x: 8.999937, y: 6.0002394, z: 0}
     m_Extent: {x: 0.5396185, y: 0.99287724, z: 0}
@@ -5661,10 +5661,52 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 2384373383807643355}
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5484297297433042393, guid: 79f23e690faa126478e07a154122dcce, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4196990460553935871}
     - targetCorrespondingSourceObject: {fileID: 2762598654767415770, guid: 79f23e690faa126478e07a154122dcce, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7664578578647544449}
   m_SourcePrefab: {fileID: 100100000, guid: 79f23e690faa126478e07a154122dcce, type: 3}
+--- !u!1 &17718744312960083 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5484297297433042393, guid: 79f23e690faa126478e07a154122dcce, type: 3}
+  m_PrefabInstance: {fileID: 5486176335497939338}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4196990460553935871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 17718744312960083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_ComponentVersion: 1
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 5d1c0c026397226800000000
+  m_ShapePath:
+  - {x: 0.45060635, y: 2.8980026, z: 0}
+  - {x: 0.4527971, y: 4.9003735, z: 0}
+  - {x: 8.5475645, y: 4.902755, z: 0}
+  - {x: 8.549457, y: 2.897089, z: 0}
+  - {x: 5.9336877, y: 2.8995264, z: 0}
+  - {x: 5.9374394, y: 4.446775, z: 0}
+  - {x: 5.0625854, y: 4.4465466, z: 0}
+  - {x: 5.062834, y: 2.9003184, z: 0}
+  m_ShapePathHash: 897177514
+  m_Mesh: {fileID: 0}
+  m_InstanceId: -108550
+  m_LocalBounds:
+    m_Center: {x: 4.5000315, y: 3.899922, z: 0}
+    m_Extent: {x: 4.049425, y: 1.0028329, z: 0}
 --- !u!4 &5426619518031256457 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 535341200810840579, guid: 79f23e690faa126478e07a154122dcce, type: 3}
@@ -5718,7 +5760,7 @@ MonoBehaviour:
   - {x: 2.5395114, y: 9.007635, z: 0}
   m_ShapePathHash: -1664969677
   m_Mesh: {fileID: 0}
-  m_InstanceId: 641836
+  m_InstanceId: 91132
   m_LocalBounds:
     m_Center: {x: 4.999875, y: 11.000576, z: 0}
     m_Extent: {x: 4.5398626, y: 1.9929404, z: 0}

@@ -11,6 +11,7 @@ public class ScreamBehavior : MonoBehaviour
     public float timeToTeleport;
 
     private Animator anim;
+    private AudioSource bomb;
 
     // Start is called before the first frame update
     void Start()
@@ -31,6 +32,7 @@ public class ScreamBehavior : MonoBehaviour
         if (hit && hit.collider.gameObject.layer == target.gameObject.layer && target.GetComponent<player_script>().currentLightSource != "Candle")
         {
             anim.SetBool("isExploding", true);
+            bomb.Play();
             target.GetComponent<player_script>().batteryManager.batteryCharge -= 30;
             if (target.GetComponent<player_script>().currentLightSource == "")
             {

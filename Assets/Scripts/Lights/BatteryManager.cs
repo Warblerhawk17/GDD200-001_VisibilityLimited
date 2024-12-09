@@ -65,7 +65,6 @@ public class BatteryManager : MonoBehaviour
                     break;
                 case >= 0f:
                     batteryImage.sprite = batterySprites[4];
-                    StartCoroutine(CallFlicker());
                     break;
                 case <= 0f:
                     batteryImage.enabled = false;
@@ -73,6 +72,10 @@ public class BatteryManager : MonoBehaviour
                     break;
                 default:
                     break;
+            }
+            if (batteryCharge == 5)
+            {
+                StartCoroutine(CallFlicker());
             }
         }
         else if (lightNum == 2)
@@ -125,7 +128,6 @@ public class BatteryManager : MonoBehaviour
                     break;
                 case > 0f:
                     batteryImage.sprite = batterySprites[14];
-                    StartCoroutine(CallFlicker());
                     break;
                 case <= 0f:
                     batteryImage.enabled = false;
@@ -133,6 +135,10 @@ public class BatteryManager : MonoBehaviour
                     break;
                 default:
                     break;
+            }
+            if (batteryCharge == 10)
+            {
+                StartCoroutine(CallFlicker());
             }
         }
         else if (lightNum == 3)
@@ -171,7 +177,6 @@ public class BatteryManager : MonoBehaviour
                     break;
                 case > 0f:
                     batteryImage.sprite = batterySprites[9];
-                    StartCoroutine(CallFlicker());
                     break;
                 case <= 0f:
                     batteryImage.enabled = false;
@@ -179,6 +184,10 @@ public class BatteryManager : MonoBehaviour
                     break;
                 default:
                     break;
+            }
+            if (batteryCharge == 10)
+            {
+                StartCoroutine(CallFlicker());
             }
         }
     }
@@ -230,15 +239,15 @@ public class BatteryManager : MonoBehaviour
 
         if (GameObject.FindWithTag("Flashlight").activeInHierarchy)
         {
-            light1 = GameObject.Find("Flashlight").GetComponent<Light2D>();
+            light1 = GameObject.FindWithTag("Flashlight").GetComponent<Light2D>();
         }
         else if (GameObject.FindWithTag("Candle").activeInHierarchy)
         {
-            light1 = GameObject.Find("CandleRotation").GetComponent<Light2D>();
+            light1 = GameObject.FindWithTag("Candle").GetComponent<Light2D>();
         }
         else if (GameObject.FindWithTag("Fireflies").activeInHierarchy)
         {
-            light1 = GameObject.Find("FirefliesRotate").GetComponent<Light2D>();
+            light1 = GameObject.FindWithTag("Fireflies").GetComponent<Light2D>();
         }
 
         if (light1 != null)

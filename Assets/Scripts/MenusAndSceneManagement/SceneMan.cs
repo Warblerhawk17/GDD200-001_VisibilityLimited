@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using TMPro;
+using UnityEditor.IMGUI.Controls;
 
 public class SceneMan : MonoBehaviour
 {
@@ -55,14 +56,18 @@ public class SceneMan : MonoBehaviour
         // Check if the player is the object entering the trigger
         if (collision.CompareTag("Player"))
         {
-            if (collision.transform.position.y > -10) //down
+            if (collision.transform.position.x < -30)
             {
-                collision.transform.position = new Vector2(player.position.x, -21.5f);
+                if (collision.transform.position.y > -10) //down
+                {
+                    collision.transform.position = new Vector2(player.position.x, -21.5f);
+                }
+                else if (collision.transform.position.y < -10) //up
+                {
+                    collision.transform.position = new Vector2(player.position.x, 3.8f);
+                }
             }
-            else if (collision.transform.position.y < -10) //up
-            {
-                collision.transform.position = new Vector2(player.position.x, 3.8f);
-            }
+
             for (int i = 0; i < playerScript.friendList.Count; i++) 
             {
                 playerScript.friendList[i].transform.position=player.position;
