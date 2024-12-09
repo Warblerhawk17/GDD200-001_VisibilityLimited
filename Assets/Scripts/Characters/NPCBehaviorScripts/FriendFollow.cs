@@ -131,7 +131,6 @@ public class FriendFollow : MonoBehaviour
     private IEnumerator PlayDialog()
     {
         wasCalled = true;
-        Debug.Log("Dialog was called");
         if (player_Script.friendsSaved == 0)
         {
             for (int i = 0; i < 3; i++)
