@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3dd6876fa33274249b958fb034bf547d
+guid: 8b5ebf2bcee0a2141a5e86f25fc3e1b3
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,12 +110,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Dialog_0
+      name: Crawler1
       rect:
         serializedVersion: 2
         x: 0
         y: 454
-        width: 128
+        width: 116
         height: 58
       alignment: 6
       pivot: {x: 0, y: 0}
@@ -124,19 +124,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4afa2d4d334ec594196486b8431efee3
-      internalID: -2048242154
+      spriteID: f3f809b2c814e0840a98b8db9ada7cdc
+      internalID: 114426334
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dialog_4
+      name: FindFriends
       rect:
         serializedVersion: 2
         x: 128
         y: 468
-        width: 128
+        width: 124
         height: 44
       alignment: 6
       pivot: {x: 0, y: 0}
@@ -145,14 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 008f50bf56e6e8f44af8e327c39e5533
-      internalID: 2135945725
+      spriteID: 27c08922faa5bda4f90a11b8090ab626
+      internalID: -1304161610
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dialog_5
+      name: Monster
       rect:
         serializedVersion: 2
         x: 256
@@ -166,19 +166,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 43568bfcb9db4bc4da73bab03eeaa6a7
-      internalID: -1956503963
+      spriteID: d1b2c990477c76f4fa5b1495f75d6c24
+      internalID: 299775281
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dialog_1
+      name: TooScary
       rect:
         serializedVersion: 2
         x: 0
         y: 396
-        width: 128
+        width: 126
         height: 58
       alignment: 6
       pivot: {x: 0, y: 0}
@@ -187,18 +187,60 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b740ace478abf094f81fe634b7fa99f4
-      internalID: 2066900624
+      spriteID: ebdadf1569855a947a28b81369583126
+      internalID: 1467776509
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dialog_6
+      name: FoundMe
       rect:
         serializedVersion: 2
         x: 128
-        y: 410
+        y: 424
+        width: 92
+        height: 44
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec1b3dc7166c54a4998b9b4d04a4e883
+      internalID: 450534602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OverHere
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 451
+        width: 86
+        height: 30
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23e6fc94902dac144b5cb5d08be61d1f
+      internalID: -854564273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GetOut1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 380
         width: 128
         height: 44
       alignment: 6
@@ -208,19 +250,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 51f61db273e76df4486afbb387e7a173
-      internalID: -1369634662
+      spriteID: 0e497a784d72a894da36e79dafe200ec
+      internalID: 1811095183
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dialog_2
+      name: WatchOut
       rect:
         serializedVersion: 2
-        x: 256
-        y: 424
-        width: 128
+        x: 257
+        y: 421
+        width: 86
         height: 30
       alignment: 6
       pivot: {x: 0, y: 0}
@@ -229,40 +271,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 356fe788663102a4d8244dda3ba68038
-      internalID: 915261667
+      spriteID: d0106097886024d4b8a7b1a501ed390c
+      internalID: 615821054
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dialog_3
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 366
-        width: 128
-        height: 30
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 31b27489d5a69524ca7078daacd59663
-      internalID: 1701198332
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dialog_7
+      name: Shadow1
       rect:
         serializedVersion: 2
         x: 0
         y: 338
-        width: 128
+        width: 116
         height: 58
       alignment: 6
       pivot: {x: 0, y: 0}
@@ -271,19 +292,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3a792bd60a87710429c9de647beff33b
-      internalID: 288697122
+      spriteID: 3ee4a9200fee5284b885dd82ea3f1ed0
+      internalID: -841647570
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dialog_8
+      name: Shadow2
       rect:
         serializedVersion: 2
         x: 128
-        y: 352
-        width: 128
+        y: 336
+        width: 116
         height: 44
       alignment: 6
       pivot: {x: 0, y: 0}
@@ -292,20 +313,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b92efffb1ca2f5645b8f80b6aef298b9
-      internalID: 1819726205
+      spriteID: bda2afd0bada31a4f8138f150899070c
+      internalID: -436896209
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dialog_9
+      name: GetOut2
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 345
+        width: 116
+        height: 44
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7cd5f7d4d021c4498b8b20779771ca0
+      internalID: 68840889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crawler2
       rect:
         serializedVersion: 2
         x: 0
         y: 294
-        width: 128
-        height: 45
+        width: 106
+        height: 44
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -313,20 +355,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0716bf1b17bf8cd49a7eb40461c7a606
-      internalID: 981837954
+      spriteID: 61cd93a26a5377543b1438b23658fbde
+      internalID: 723279884
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dialog_10
+      name: Safe
       rect:
         serializedVersion: 2
         x: 128
-        y: 294
-        width: 128
-        height: 45
+        y: 306
+        width: 106
+        height: 30
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -334,8 +376,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6ed9bea1721a0fb478ebb467e5295c56
-      internalID: -100077804
+      spriteID: a3e4b01393011204fbc219b3e9fb7020
+      internalID: -254417618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outside
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 315
+        width: 122
+        height: 30
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb4eb48cc8e748e419f25c34b82fcca5
+      internalID: -374237924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 236
+        width: 116
+        height: 58
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a61552d2dade2cd4281520244a527051
+      internalID: -195124823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ThankYou
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 276
+        width: 122
+        height: 30
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7740b115e3b02de449b52b91b03dca0d
+      internalID: -1415548310
       vertices: []
       indices: 
       edges: []
@@ -351,17 +456,22 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Dialog_0: -2048242154
-      Dialog_1: 2066900624
-      Dialog_10: -100077804
-      Dialog_2: 915261667
-      Dialog_3: 1701198332
-      Dialog_4: 2135945725
-      Dialog_5: -1956503963
-      Dialog_6: -1369634662
-      Dialog_7: 288697122
-      Dialog_8: 1819726205
-      Dialog_9: 981837954
+      Crawler1: 114426334
+      Crawler2: 723279884
+      Entrance: -195124823
+      FindFriends: -1304161610
+      FoundMe: 450534602
+      GetOut1: 1811095183
+      GetOut2: 68840889
+      Monster: 299775281
+      Outside: -374237924
+      OverHere: -854564273
+      Safe: -254417618
+      Shadow1: -841647570
+      Shadow2: -436896209
+      ThankYou: -1415548310
+      TooScary: 1467776509
+      WatchOut: 615821054
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

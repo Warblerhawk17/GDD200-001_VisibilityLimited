@@ -9,7 +9,8 @@ public class SceneMan : MonoBehaviour
 {
     public Transform player;
     public GameObject pauseMenu;
-    public GameObject gameOverMenu;
+    public GameObject gameLostMenu;
+    public GameObject gameWonMenu;
     public TextMeshProUGUI friendsText;
     public GameObject sceneManager;
     
@@ -25,11 +26,6 @@ public class SceneMan : MonoBehaviour
             pauseMenu.SetActive(false);
         }
 
-        if (gameOverMenu.activeInHierarchy == true)
-        {
-            pauseMenu.SetActive(false);
-        }
-
         playerScript = player.GetComponent<player_script>();
         playerMovement = player.GetComponent<PlayerMovement>();
     }
@@ -39,8 +35,15 @@ public class SceneMan : MonoBehaviour
     {
         if (playerScript.friendsSaved == 4 || playerScript.lives == 0)
         {
-            //Debug.Log("Game Over was called");
-            gameOverMenu.SetActive(true);
+            switch (playerScript.friendsSaved)
+            {
+                case 4:
+                    gameWonMenu.SetActive(true);
+                    break;
+                default:
+                    gameLostMenu.SetActive(true);
+                    break;
+            }
             friendsText.text = "Friends Saved: " + playerScript.friendsSaved;
             playerMovement.canMove = false;
         }
