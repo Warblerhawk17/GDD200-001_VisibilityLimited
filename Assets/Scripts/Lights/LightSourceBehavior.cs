@@ -66,6 +66,8 @@ public class LightSourceBehavior : MonoBehaviour
         {
             if (lightName.Equals("Flashlight"))
             {
+                Debug.Log("TRIGGER SHADOW");
+                shadow.speed = 0;
                 shadow.telaportAway();
             }
         }
