@@ -5,17 +5,19 @@
 using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 public class LightSourceBehavior : MonoBehaviour
 {
     public BatteryManager batteryManager;
     //int lightLevel;
-    public Player_Script player;
+    public player_script player;
     public string lightName;
     public ShadowBehavior shadow;
+
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.Find("Player").GetComponent<Player_Script>();
+        player = GameObject.Find("Player").GetComponent<player_script>();
         shadow = GameObject.Find("Shadow").GetComponent<ShadowBehavior>();
 
         //Finds the battery object and its component
@@ -30,7 +32,7 @@ public class LightSourceBehavior : MonoBehaviour
         }
         if (gameObject.CompareTag("Fireflies"))
         {
-            lightName = "Candle";
+            lightName = "Fireflies";
         }
         player.currentLightSource = lightName;
 
@@ -41,6 +43,10 @@ public class LightSourceBehavior : MonoBehaviour
     {
         CheckLightCharge();
 
+        if (shadow == null)
+        {
+            shadow = GameObject.Find("Shadow").GetComponent<ShadowBehavior>();
+        }
     }
 
     //Checks the battery charge, and destroys the light if it has no charge
@@ -48,6 +54,8 @@ public class LightSourceBehavior : MonoBehaviour
     {
         if (batteryManager.batteryCharge <= 0f)
         {
+            player.currentLightSource = "";
+
             Destroy(gameObject);
         }
     }
@@ -60,18 +68,15 @@ public class LightSourceBehavior : MonoBehaviour
             {
                 shadow.telaportAway();
             }
-            else
-            {
-                shadow.speed = 0;
-            }
         }
     }
 
     private void OnTriggerExit2D(Collider2D col)
     {
-        if (col.gameObject.CompareTag("Shadow") && shadow.speed == 0)
+        if (col.gameObject.CompareTag("Shadow") && shadow.GetComponent<ShadowBehavior>().speed == 0)
         {
             shadow.speed = 3;
         }
     }
+
 }

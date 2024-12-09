@@ -1,61 +1,38 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
+using Unity.VisualScripting;
+using UnityEditor.Rendering;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
+using UnityEngine.SceneManagement;
 
-public class Player_Script : MonoBehaviour
+public class player_script : MonoBehaviour
 {
     // Public variables
-    public float speed = 5f; // The speed of the player walking
-    public float runSpeed = 8f; // The speed at which the player runs
-
-    // Private variables 
-    private Rigidbody2D rb; // Reference to the Rigidbody2D component attached to the player
-    private Vector2 movement; // Stores the direction of player movement
     public BatteryManager batteryManager;
     public LivesBehavior livesBehavior;
     public int lives = 3;
     public int friendsSaved = 0;
+    public int friendsPickedUp = 0;
     public string currentLightSource;
+    public int rotateSpeed = 10;
+    public Sprite wrenSprite;
+    public Transform player;
+
+
+    // Private variables 
+    private SpriteRenderer spriteRenderer;
+    private PlayerMovement playerMovement;
 
 
     // Friend variable
     public List<GameObject> friendList = new List<GameObject>();
 
-
     void Start()
     {
-        // Initialize the Rigidbody2D component
-        rb = GetComponent<Rigidbody2D>();
-        // Prevent the player from rotating
-        rb.constraints = RigidbodyConstraints2D.FreezeRotation;
-    }
-
-    void Update()
-    {
-        // Get player input from keyboard or controller
-        float horizontalInput = Input.GetAxisRaw("Horizontal");
-        float verticalInput = Input.GetAxisRaw("Vertical");
-
-        // Set movement direction based on input
-        movement = new Vector2(horizontalInput, verticalInput);
-
-        if (Input.GetKey(KeyCode.LeftShift))
-        {
-            transform.Translate(runSpeed * Time.deltaTime * movement);
-        }
-        else
-        {
-            transform.Translate(speed * Time.deltaTime * movement);
-        }
-
-
-
-    }
-
-    void FixedUpdate()
-    {
-        // Apply movement to the player in FixedUpdate for physics consistency
-        rb.velocity = movement * speed;
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        playerMovement = GetComponent<PlayerMovement>();
     }
 
     //If the player collides into a monster
@@ -63,29 +40,27 @@ public class Player_Script : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Crawler"))
         {
-            batteryManager.batteryCharge = batteryManager.batteryCharge - 10;
+            if (currentLightSource == "")
+            {
+                LoseLife();
+            } else
+            {
+                batteryManager.batteryCharge = batteryManager.batteryCharge - 10;
+                StartCoroutine(CallFlicker());
+            }
         }
         else if (collision.gameObject.CompareTag("Shadow"))
         {
-            batteryManager.batteryCharge = batteryManager.batteryCharge - 10;
-        }
-        else if (collision.gameObject.CompareTag("Friend"))
-        {
-            Debug.Log("Collided with a friend");
-            friendList.Add(collision.gameObject);
-            if (friendList.Count == 1)
+            if (currentLightSource == "")
             {
-                friendList[0].GetComponent<FriendFollow>().follow = this.gameObject;
-            }
-            else
+                LoseLife();
+            } else
             {
-                friendList[friendList.Count - 1].GetComponent<FriendFollow>().follow = friendList[friendList.Count - 2].gameObject;
+                batteryManager.batteryCharge = batteryManager.batteryCharge - 10;
+                StartCoroutine(CallFlicker());
             }
         }
-
-
-
-
+        
         // disabling temporarily as this monster will not be present in Beta  
         /*
            else if (collision.gameObject.CompareTag("Scream"))
@@ -94,44 +69,94 @@ public class Player_Script : MonoBehaviour
           }
         */
     }
-    private void LoseLife()
+
+    public void LoseLife()
     {
+        //Debug.Log("LoseLife called");
         livesBehavior.LoseLife();
+        StartCoroutine(DamageFlash.instance.flash());
         lives--;
-        transform.position = GameObject.Find("PlayerSpawn").transform.position;
-        for (int i = 0; i < friendList.Count; i++) 
+        playerMovement.canMove = false;
+        StartCoroutine(Respawn());
+        for (int i = 0; i < friendList.Count; i++)
         {
-            friendList[i].GetComponent<FriendFollow>().follow = null;
+            friendList[i].GetComponent<FriendFollow>().followTarget = null;
         }
         friendList.Clear();
-        if (lives == 0)
-        {
-            Object.Destroy(this.gameObject);
-        }
     }
 
+    private IEnumerator Respawn()
+    {
+        int flashes = 3;
+        float flashInterval = 0.2f;
+
+        for (int i = 0; i < flashes; i++)
+        {
+            spriteRenderer.enabled = !spriteRenderer.enabled; // Toggle visibility
+            yield return new WaitForSeconds(flashInterval);
+        }
+        spriteRenderer.enabled = true; // Ensure it's visible at the end
+
+        // Respawn sprite by moving it to a new position
+        transform.position = GameObject.Find("PlayerSpawn").transform.position;
+
+        // Blink effect after respawn
+        for (int i = 0; i < flashes; i++)
+        {
+            spriteRenderer.enabled = !spriteRenderer.enabled; // Toggle visibility
+            yield return new WaitForSeconds(flashInterval);
+        }
+        spriteRenderer.enabled = true; // Ensure it's visible at the end
+
+        // Reset rotation to the default state
+        spriteRenderer.transform.localRotation = Quaternion.identity;
+        playerMovement.canMove = true;
+    }    
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        /*if (collision.gameObject.CompareTag("Friend") && !friendList.Contains(collision.gameObject) )
-        {
-            Debug.Log("Collided with a friend");
-            friendList.Add(collision.gameObject);
-            friendList[friendList.Count - 1].GetComponent<FriendFollow>().follow = this.gameObject;
-            friendList[friendList.Count - 1].GetComponent<FriendFollow>().followDistance = friendList.Count * 0.5f;
-
-        }*/
         if (collision.gameObject.CompareTag("Exit"))
         {
-            for (int i = 0; i < friendList.Count; i++)
-            { 
-                Object.Destroy(friendList[i]);
-                friendsSaved++;
-                MonsterSpawner.instance.SpawnMonsters(friendsSaved-1);
+            if (player.position.y < 2.5f)
+            {
+                if (friendList != null)
+                {
+                    for (int i = 0; i < friendList.Count; i++)
+                    {
+                        Object.Destroy(friendList[i]);
+                        friendsSaved++;
+                        MonsterSpawner.instance.SpawnMonsters(friendsSaved - 1);
+                    }
+                    friendList.Clear();
+                }
             }
-        friendList.Clear();
+        }
     }
 
+    private IEnumerator CallFlicker()
+    {
+        Light2D light1 = null;
 
+        if (GameObject.FindWithTag("Flashlight"))
+        {
+            light1 = GameObject.Find("Flashlight").GetComponent<Light2D>();
+        }
+        else if (GameObject.FindWithTag("Candle"))
+        {
+            light1 = GameObject.Find("CandleRotation").GetComponent<Light2D>();
+        }
+        else if (GameObject.FindWithTag("Fireflies"))
+        {
+            light1 = GameObject.Find("FirefliesRotate").GetComponent<Light2D>();
+        }
+
+        if (light1 != null)
+        {
+            for (int i = 0; i < 6; i++)
+            {
+                light1.enabled = !light1.enabled;
+                yield return new WaitForSeconds(Random.Range(0f, 0.3f));
+            }
+        }
     }
 }

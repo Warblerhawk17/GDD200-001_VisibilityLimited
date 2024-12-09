@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/Scripts/Characters/NPCBehaviorScripts/MonsterSpawner.cs.meta
-guid: af8ff3b56b590c84baa6d88dcebf02ac
-========
-guid: e4013729de7febb448f1f42e9d279f83
->>>>>>>> main:Assets/Scripts/MenusAndSceneManagement/CustomSceneManager.cs.meta
+guid: 2b653ed6c8d56364fb94e5a44578f3ff
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2

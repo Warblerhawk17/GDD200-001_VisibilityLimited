@@ -1,21 +1,37 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.Universal.Internal;
 
 public class ShadowBehavior : MonoBehaviour
 {
     private Node currentNode; //the current node it is at
     private List<Node> path = new List<Node>(); //the path of nodes it will travel
+    private Animator anim;
+    private SpriteRenderer spriteRenderer;
+    private AudioSource attackSound;
+
     public GameObject target; //the target, which it will go towards
     public float speed; //the speed of the crawler
     public LayerMask layerMask;
     private float chaseRadius = 5;
     private float timeChased;
 
+    private GameObject frontEyes;
+    private GameObject lEyes;
+    private GameObject rEyes;
+
     // Start is called before the first frame update
     void Start()
     {
         currentNode = AStarManager.instance.FindNearestNode(transform.position);
+        spriteRenderer = GetComponent<SpriteRenderer>(); //Sprite Renderer object
+        anim = GetComponent<Animator>(); //Animator object
+        attackSound = GetComponent<AudioSource>();
+
+        frontEyes = GameObject.Find("Shadow").transform.GetChild(0).gameObject;
+        lEyes = GameObject.Find("Shadow").transform.GetChild(1).gameObject;
+        rEyes = GameObject.Find("Shadow").transform.GetChild(2).gameObject;
     }
 
     // Update is called once per frame
@@ -36,7 +52,7 @@ public class ShadowBehavior : MonoBehaviour
             timeChased += Time.deltaTime;
             if (timeChased > 5)
             {
-                telaportAway();
+                StartCoroutine( telaportAway());
                 timeChased = 0;
             }
         }
@@ -58,16 +74,25 @@ public class ShadowBehavior : MonoBehaviour
         }
     }   
 
-    public void telaportAway()
+    public IEnumerator telaportAway()
     {
+        Debug.Log("Teleported");
+        float storedSpeed = speed;
+        speed = 0;
+        yield return new WaitForSeconds(1);
         transform.position = AStarManager.instance.FindFurthestNode(transform.position).transform.position;
+        speed = storedSpeed;
+        anim.SetBool("isAttacking", false);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.layer == target.layer)
         {
-            telaportAway();
+            Debug.Log("Hit player");
+            anim.SetBool("isAttacking", true);
+            attackSound.Play();
+            StartCoroutine(telaportAway());
         }
     }
 
@@ -77,6 +102,41 @@ public class ShadowBehavior : MonoBehaviour
         Vector2 direction = goTo - (Vector2)transform.position; // finds direction between npc and target
         direction.Normalize(); // normalizes direction (keeps direction, sets length to 1, makes the math work)
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg; // weird math to find the angle, yes the Atan2 goes y first then x
-        transform.rotation = Quaternion.Euler(Vector3.forward * angle); // changes npc rotation
+        
+        if (45 < angle && angle <= 135) //facing up (W)
+        {
+            anim.SetBool("facingUp", true);
+            anim.SetBool("facingHorizontal", false);
+            frontEyes.SetActive(false);
+            lEyes.SetActive(false);
+            rEyes.SetActive(false);
+        }
+        else if (-135 > angle || angle > 135) //facing left (A)
+        {
+            anim.SetBool("facingUp", false);
+            anim.SetBool("facingHorizontal", true);
+            spriteRenderer.flipX = false;
+            frontEyes.SetActive(false);
+            lEyes.SetActive(true);
+            rEyes.SetActive(false);
+        }
+        else if (-45 > angle && angle >= -135) //facing down (S)
+        {
+            anim.SetBool("facingUp", false);
+            anim.SetBool("facingHorizontal", false);
+            frontEyes.SetActive(true);
+            lEyes.SetActive(false);
+            rEyes.SetActive(false);
+        }
+        else //facing right (D)
+        {
+            anim.SetBool("facingUp", false);
+            anim.SetBool("facingHorizontal", true);
+            spriteRenderer.flipX = true; //flips sideview sprite to look the correct way
+            frontEyes.SetActive(false);
+            lEyes.SetActive(false);
+            rEyes.SetActive(true);
+        }
+        //transform.rotation = Quaternion.Euler(Vector3.forward * angle); // changes npc rotation
     }
 }
