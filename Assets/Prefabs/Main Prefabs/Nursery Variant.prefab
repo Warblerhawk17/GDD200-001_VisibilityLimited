@@ -1809,6 +1809,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Nursery Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 2912613071986284332, guid: 79f23e690faa126478e07a154122dcce, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 3186105248745351541, guid: 79f23e690faa126478e07a154122dcce, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3844203540544274399, guid: 79f23e690faa126478e07a154122dcce, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4862457840057851520, guid: 79f23e690faa126478e07a154122dcce, type: 3}
       propertyPath: m_Size.x
       value: 7
@@ -1816,6 +1828,10 @@ PrefabInstance:
     - target: {fileID: 4862457840057851520, guid: 79f23e690faa126478e07a154122dcce, type: 3}
       propertyPath: m_Size.y
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4862457840057851520, guid: 79f23e690faa126478e07a154122dcce, type: 3}
+      propertyPath: m_TileAnchor.y
+      value: -1.62
       objectReference: {fileID: 0}
     - target: {fileID: 4862457840057851520, guid: 79f23e690faa126478e07a154122dcce, type: 3}
       propertyPath: m_Tiles.Array.size
@@ -2529,6 +2545,10 @@ PrefabInstance:
       propertyPath: m_Tiles.Array.data[19].second.m_TileObjectToInstantiateIndex
       value: 65535
       objectReference: {fileID: 0}
+    - target: {fileID: 6278340330090383163, guid: 79f23e690faa126478e07a154122dcce, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7984128486968051163, guid: 79f23e690faa126478e07a154122dcce, type: 3}
       propertyPath: m_Size.x
       value: 7
@@ -2536,6 +2556,10 @@ PrefabInstance:
     - target: {fileID: 7984128486968051163, guid: 79f23e690faa126478e07a154122dcce, type: 3}
       propertyPath: m_Size.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7984128486968051163, guid: 79f23e690faa126478e07a154122dcce, type: 3}
+      propertyPath: m_TileAnchor.y
+      value: 1.02
       objectReference: {fileID: 0}
     - target: {fileID: 7984128486968051163, guid: 79f23e690faa126478e07a154122dcce, type: 3}
       propertyPath: m_Tiles.Array.size
@@ -3113,7 +3137,7 @@ MonoBehaviour:
   - {x: 1.0548694, y: 5.0079646, z: 0}
   m_ShapePathHash: -1878792548
   m_Mesh: {fileID: 0}
-  m_InstanceId: 46540
+  m_InstanceId: 676692
   m_LocalBounds:
     m_Center: {x: 3.4991693, y: 6.00023, z: 0}
     m_Extent: {x: 3.0404518, y: 0.9924588, z: 0}
@@ -3156,7 +3180,7 @@ MonoBehaviour:
   - {x: 6.538766, y: 0.0076912865, z: 0}
   m_ShapePathHash: -1879028822
   m_Mesh: {fileID: 0}
-  m_InstanceId: 46522
+  m_InstanceId: 676658
   m_LocalBounds:
     m_Center: {x: 3.4997873, y: 2.5552833, z: 0}
     m_Extent: {x: 3.0396194, y: 2.547592, z: 0}
@@ -3196,7 +3220,7 @@ MonoBehaviour:
   - {x: 6.539368, y: 0.0074250847, z: 0}
   m_ShapePathHash: 1255110720
   m_Mesh: {fileID: 0}
-  m_InstanceId: 46528
+  m_InstanceId: 676672
   m_LocalBounds:
     m_Center: {x: 3.4996684, y: 1.00079, z: 0}
     m_Extent: {x: 3.0396996, y: 0.9933649, z: 0}

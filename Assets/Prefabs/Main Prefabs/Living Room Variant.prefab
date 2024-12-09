@@ -66,7 +66,7 @@ MonoBehaviour:
   - {x: 5.055687, y: 0.0069752485, z: 0}
   m_ShapePathHash: -209566675
   m_Mesh: {fileID: 0}
-  m_InstanceId: 43998
+  m_InstanceId: 641840
   m_LocalBounds:
     m_Center: {x: 2.7579913, y: 5.0548725, z: 0}
     m_Extent: {x: 2.2978456, y: 5.048036, z: 0}
@@ -257,7 +257,7 @@ MonoBehaviour:
   - {x: 5.0546856, y: 0.008610234, z: 0}
   m_ShapePathHash: 1283802293
   m_Mesh: {fileID: 0}
-  m_InstanceId: 43970
+  m_InstanceId: 641782
   m_LocalBounds:
     m_Center: {x: 4.5004735, y: 1.0004312, z: 0}
     m_Extent: {x: 4.039841, y: 0.99349135, z: 0}
@@ -331,7 +331,7 @@ MonoBehaviour:
   - {x: 8.5392685, y: 0.00719323, z: 0}
   m_ShapePathHash: 31612899
   m_Mesh: {fileID: 0}
-  m_InstanceId: 44006
+  m_InstanceId: 641852
   m_LocalBounds:
     m_Center: {x: 7.242042, y: 5.555353, z: 0}
     m_Extent: {x: 2.2977529, y: 5.54816, z: 0}
@@ -393,7 +393,7 @@ MonoBehaviour:
   - {x: 9.5394125, y: 5.0074563, z: 0}
   m_ShapePathHash: 800869539
   m_Mesh: {fileID: 0}
-  m_InstanceId: 43976
+  m_InstanceId: 641800
   m_LocalBounds:
     m_Center: {x: 8.999937, y: 6.0002394, z: 0}
     m_Extent: {x: 0.5396185, y: 0.99287724, z: 0}
@@ -3560,6 +3560,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Living Room Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 2912613071986284332, guid: 79f23e690faa126478e07a154122dcce, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3186105248745351541, guid: 79f23e690faa126478e07a154122dcce, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3844203540544274399, guid: 79f23e690faa126478e07a154122dcce, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4862457840057851520, guid: 79f23e690faa126478e07a154122dcce, type: 3}
       propertyPath: m_Size.x
       value: 10
@@ -3567,6 +3579,10 @@ PrefabInstance:
     - target: {fileID: 4862457840057851520, guid: 79f23e690faa126478e07a154122dcce, type: 3}
       propertyPath: m_Size.y
       value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 4862457840057851520, guid: 79f23e690faa126478e07a154122dcce, type: 3}
+      propertyPath: m_TileAnchor.y
+      value: -3.6
       objectReference: {fileID: 0}
     - target: {fileID: 4862457840057851520, guid: 79f23e690faa126478e07a154122dcce, type: 3}
       propertyPath: m_Tiles.Array.size
@@ -4840,6 +4856,10 @@ PrefabInstance:
       propertyPath: m_Tiles.Array.data[39].second.m_TileObjectToInstantiateIndex
       value: 65535
       objectReference: {fileID: 0}
+    - target: {fileID: 6278340330090383163, guid: 79f23e690faa126478e07a154122dcce, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7984128486968051163, guid: 79f23e690faa126478e07a154122dcce, type: 3}
       propertyPath: m_Size.x
       value: 10
@@ -4847,6 +4867,10 @@ PrefabInstance:
     - target: {fileID: 7984128486968051163, guid: 79f23e690faa126478e07a154122dcce, type: 3}
       propertyPath: m_Size.y
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7984128486968051163, guid: 79f23e690faa126478e07a154122dcce, type: 3}
+      propertyPath: m_TileAnchor.y
+      value: 3.4
       objectReference: {fileID: 0}
     - target: {fileID: 7984128486968051163, guid: 79f23e690faa126478e07a154122dcce, type: 3}
       propertyPath: m_Tiles.Array.size
@@ -5694,7 +5718,7 @@ MonoBehaviour:
   - {x: 2.5395114, y: 9.007635, z: 0}
   m_ShapePathHash: -1664969677
   m_Mesh: {fileID: 0}
-  m_InstanceId: 43994
+  m_InstanceId: 641836
   m_LocalBounds:
     m_Center: {x: 4.999875, y: 11.000576, z: 0}
     m_Extent: {x: 4.5398626, y: 1.9929404, z: 0}

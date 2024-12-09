@@ -62,7 +62,7 @@ MonoBehaviour:
   - {x: 2.0532432, y: 0.0072057247, z: 0}
   m_ShapePathHash: 618370698
   m_Mesh: {fileID: 0}
-  m_InstanceId: 145656
+  m_InstanceId: 616736
   m_LocalBounds:
     m_Center: {x: 7.0001726, y: 1.0003242, z: 0}
     m_Extent: {x: 6.5393167, y: 0.9931186, z: 0}
@@ -132,7 +132,7 @@ MonoBehaviour:
   - {x: 2.0547588, y: 0.007824913, z: 0}
   m_ShapePathHash: 530268684
   m_Mesh: {fileID: 0}
-  m_InstanceId: 145672
+  m_InstanceId: 616754
   m_LocalBounds:
     m_Center: {x: 4.258161, y: 7.055339, z: 0}
     m_Extent: {x: 3.7985578, y: 7.048004, z: 0}
@@ -198,7 +198,7 @@ MonoBehaviour:
   - {x: 13.538516, y: 0.006693922, z: 0}
   m_ShapePathHash: 1355038908
   m_Mesh: {fileID: 0}
-  m_InstanceId: 145666
+  m_InstanceId: 616748
   m_LocalBounds:
     m_Center: {x: 8.241699, y: 7.055312, z: 0}
     m_Extent: {x: 5.29749, y: 7.0486183, z: 0}
@@ -260,7 +260,7 @@ MonoBehaviour:
   - {x: 7.538528, y: 7.008158, z: 0}
   m_ShapePathHash: 1977464422
   m_Mesh: {fileID: 0}
-  m_InstanceId: 145662
+  m_InstanceId: 616744
   m_LocalBounds:
     m_Center: {x: 4.000209, y: 8.000003, z: 0}
     m_Extent: {x: 3.5396762, y: 0.992697, z: 0}
@@ -6321,6 +6321,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Library Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 2912613071986284332, guid: 79f23e690faa126478e07a154122dcce, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 3186105248745351541, guid: 79f23e690faa126478e07a154122dcce, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.68
+      objectReference: {fileID: 0}
+    - target: {fileID: 3844203540544274399, guid: 79f23e690faa126478e07a154122dcce, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4862457840057851520, guid: 79f23e690faa126478e07a154122dcce, type: 3}
       propertyPath: m_Size.x
       value: 14
@@ -6328,6 +6340,10 @@ PrefabInstance:
     - target: {fileID: 4862457840057851520, guid: 79f23e690faa126478e07a154122dcce, type: 3}
       propertyPath: m_Size.y
       value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 4862457840057851520, guid: 79f23e690faa126478e07a154122dcce, type: 3}
+      propertyPath: m_TileAnchor.y
+      value: -6.16
       objectReference: {fileID: 0}
     - target: {fileID: 4862457840057851520, guid: 79f23e690faa126478e07a154122dcce, type: 3}
       propertyPath: m_Tiles.Array.size
@@ -7877,6 +7893,10 @@ PrefabInstance:
       propertyPath: m_Tiles.Array.data[51].second.m_TileObjectToInstantiateIndex
       value: 65535
       objectReference: {fileID: 0}
+    - target: {fileID: 6278340330090383163, guid: 79f23e690faa126478e07a154122dcce, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7984128486968051163, guid: 79f23e690faa126478e07a154122dcce, type: 3}
       propertyPath: m_Size.x
       value: 14
@@ -7884,6 +7904,10 @@ PrefabInstance:
     - target: {fileID: 7984128486968051163, guid: 79f23e690faa126478e07a154122dcce, type: 3}
       propertyPath: m_Size.y
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7984128486968051163, guid: 79f23e690faa126478e07a154122dcce, type: 3}
+      propertyPath: m_TileAnchor.y
+      value: 4.36
       objectReference: {fileID: 0}
     - target: {fileID: 7984128486968051163, guid: 79f23e690faa126478e07a154122dcce, type: 3}
       propertyPath: m_Tiles.Array.size
@@ -9489,7 +9513,7 @@ MonoBehaviour:
   - {x: 8.054839, y: 14.00687, z: 0}
   m_ShapePathHash: -894868698
   m_Mesh: {fileID: 0}
-  m_InstanceId: 145670
+  m_InstanceId: 616752
   m_LocalBounds:
     m_Center: {x: 10.499719, y: 14.999936, z: 0}
     m_Extent: {x: 3.0405471, y: 0.99309826, z: 0}
