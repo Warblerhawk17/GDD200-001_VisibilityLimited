@@ -40,20 +40,24 @@ public class player_script : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Crawler"))
         {
-            batteryManager.batteryCharge = batteryManager.batteryCharge - 10;
-            StartCoroutine(CallFlicker());
             if (currentLightSource == "")
             {
                 LoseLife();
+            } else
+            {
+                batteryManager.batteryCharge = batteryManager.batteryCharge - 10;
+                StartCoroutine(CallFlicker());
             }
         }
         else if (collision.gameObject.CompareTag("Shadow"))
         {
-            batteryManager.batteryCharge = batteryManager.batteryCharge - 10;
-            StartCoroutine(CallFlicker());
             if (currentLightSource == "")
             {
                 LoseLife();
+            } else
+            {
+                batteryManager.batteryCharge = batteryManager.batteryCharge - 10;
+                StartCoroutine(CallFlicker());
             }
         }
         
