@@ -139,7 +139,7 @@ public class player_script : MonoBehaviour
 
         if (GameObject.FindWithTag("Flashlight"))
         {
-            light1 = GameObject.Find("Flashlight").GetComponent<Light2D>();
+            light1 = GameObject.FindWithTag("Flashlight").GetComponent<Light2D>();
         }
         else if (GameObject.FindWithTag("Candle"))
         {
