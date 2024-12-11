@@ -202,7 +202,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!224 &760912875
 RectTransform:
@@ -563,7 +563,6 @@ GameObject:
   - component: {fileID: 1305578265}
   - component: {fileID: 1305578264}
   - component: {fileID: 1305578267}
-  - component: {fileID: 1305578268}
   m_Layer: 5
   m_Name: Skip Button
   m_TagString: Untagged
@@ -586,10 +585,10 @@ RectTransform:
   - {fileID: 1130215708}
   m_Father: {fileID: 760912875}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 332, y: 174}
-  m_SizeDelta: {x: 70, y: 20}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 321, y: 208.82}
+  m_SizeDelta: {x: -730, y: -524}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1305578264
 MonoBehaviour:
@@ -655,8 +654,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: ae393542b755c6e458a464ac4b38586c, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -691,20 +690,6 @@ MonoBehaviour:
   audioListener: {fileID: 0}
   sceneMan: {fileID: 0}
   index: 1
---- !u!114 &1305578268
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1305578262}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 435060e27d2a9d248b0491aaf550a579, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  button: {fileID: 1305578265}
-  newButton: {fileID: 21300000, guid: 49c66206cb10a844eb3e46b10fb2cb32, type: 3}
 --- !u!1 &1946402656
 GameObject:
   m_ObjectHideFlags: 0
