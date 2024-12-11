@@ -952,11 +952,11 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 2
   windowsGamepadBackendHint: 0
-  cloudProjectId: dda02b1a-eedc-4741-a759-5f6c904aa352
+  cloudProjectId: 49cd5031-14b8-4059-9351-7948b2f992d4
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
   projectName: Visibility Limited 2D Core
-  organizationId: zeono
+  organizationId: bloodren
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}

@@ -66,7 +66,7 @@ MonoBehaviour:
   - {x: 6.0553446, y: 0.00781472, z: 0}
   m_ShapePathHash: -680187234
   m_Mesh: {fileID: 0}
-  m_InstanceId: 42402
+  m_InstanceId: 282932
   m_LocalBounds:
     m_Center: {x: 5.5008836, y: 2.0543091, z: 0}
     m_Extent: {x: 5.0401516, y: 2.0479603, z: 0}
@@ -280,7 +280,7 @@ MonoBehaviour:
   - {x: 7.0562077, y: 0.008441411, z: 0}
   m_ShapePathHash: -438638990
   m_Mesh: {fileID: 0}
-  m_InstanceId: 42432
+  m_InstanceId: 282962
   m_LocalBounds:
     m_Center: {x: 7.0003595, y: 0.054840256, z: 0}
     m_Extent: {x: 0.05584836, y: 0.04660076, z: 0}
@@ -2880,6 +2880,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Closed Room 1 Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 2912613071986284332, guid: 79f23e690faa126478e07a154122dcce, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 3186105248745351541, guid: 79f23e690faa126478e07a154122dcce, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3844203540544274399, guid: 79f23e690faa126478e07a154122dcce, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4862457840057851520, guid: 79f23e690faa126478e07a154122dcce, type: 3}
       propertyPath: m_Size.x
       value: 11
@@ -2887,6 +2899,10 @@ PrefabInstance:
     - target: {fileID: 4862457840057851520, guid: 79f23e690faa126478e07a154122dcce, type: 3}
       propertyPath: m_Size.y
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4862457840057851520, guid: 79f23e690faa126478e07a154122dcce, type: 3}
+      propertyPath: m_TileAnchor.y
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 4862457840057851520, guid: 79f23e690faa126478e07a154122dcce, type: 3}
       propertyPath: m_Tiles.Array.size
@@ -3708,6 +3724,10 @@ PrefabInstance:
       propertyPath: m_Tiles.Array.data[25].second.m_TileObjectToInstantiateIndex
       value: 65535
       objectReference: {fileID: 0}
+    - target: {fileID: 6278340330090383163, guid: 79f23e690faa126478e07a154122dcce, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7984128486968051163, guid: 79f23e690faa126478e07a154122dcce, type: 3}
       propertyPath: m_Size.x
       value: 11
@@ -3715,6 +3735,10 @@ PrefabInstance:
     - target: {fileID: 7984128486968051163, guid: 79f23e690faa126478e07a154122dcce, type: 3}
       propertyPath: m_Size.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7984128486968051163, guid: 79f23e690faa126478e07a154122dcce, type: 3}
+      propertyPath: m_TileAnchor.y
+      value: 0.78
       objectReference: {fileID: 0}
     - target: {fileID: 7984128486968051163, guid: 79f23e690faa126478e07a154122dcce, type: 3}
       propertyPath: m_Tiles.Array.size
@@ -4509,7 +4533,7 @@ MonoBehaviour:
   - {x: 10.54017, y: 4.00759, z: 0}
   m_ShapePathHash: 1606662734
   m_Mesh: {fileID: 0}
-  m_InstanceId: 42416
+  m_InstanceId: 282946
   m_LocalBounds:
     m_Center: {x: 5.4998107, y: 5.00023, z: 0}
     m_Extent: {x: 5.0403585, y: 0.99264026, z: 0}
@@ -4552,7 +4576,7 @@ MonoBehaviour:
   - {x: 6.055084, y: 0.006994419, z: 0}
   m_ShapePathHash: -2118732179
   m_Mesh: {fileID: 0}
-  m_InstanceId: 42414
+  m_InstanceId: 282944
   m_LocalBounds:
     m_Center: {x: 5.498466, y: 1.0013405, z: 0}
     m_Extent: {x: 5.041241, y: 0.9949, z: 0}
