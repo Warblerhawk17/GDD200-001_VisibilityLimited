@@ -36,6 +36,7 @@ public class SceneMan : MonoBehaviour
     {
         if (playerScript.friendsSaved == 4 || playerScript.lives == 0)
         {
+            playerMovement.canMove = false;
             switch (playerScript.friendsSaved)
             {
                 case 4:
@@ -46,7 +47,6 @@ public class SceneMan : MonoBehaviour
                     break;
             }
             friendsText.text = "Friends Saved: " + playerScript.friendsSaved;
-            playerMovement.canMove = false;
         }
     }
     void OnTriggerEnter2D(Collider2D collision)

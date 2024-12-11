@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using static UnityEngine.GraphicsBuffer;
 
 public class FriendFollow : MonoBehaviour
@@ -10,21 +11,26 @@ public class FriendFollow : MonoBehaviour
     public LayerMask layerMask;
     public Animator anim;
     public bool pickedUp = false; //bool for if they have been picked up before 
-    public List<GameObject> dialog;
-    public List<Sprite> characterHead;
+    public List<Sprite> dialog;
+    public List<AudioClip> monsterBong;
+    public Sprite charSprite;
+    public GameObject bubbleSprite;
+    public GameObject charObject;
+
     private player_script player_Script;
-    private bool wasCalled = false;
     private Node currentNode; //the current node it is at
     private List<Node> path = new List<Node>(); //the path of nodes it will travel
     private float speed = 4;
     private player_script player_script;
     private GameObject curFriend;
+    private AudioSource monsterSound;
 
     // Start is called before the first frame update
     void Start()
     {
         anim = GetComponent<Animator>(); //Animator object
         player_Script = GameObject.Find("Player").GetComponent<player_script>();
+        monsterSound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -130,32 +136,49 @@ public class FriendFollow : MonoBehaviour
 
     private IEnumerator PlayDialog()
     {
-        wasCalled = true;
+        Image bubbleImage = bubbleSprite.GetComponent<Image>();
+        Image charImage = charObject.GetComponent<Image>();
+        charImage.sprite = charSprite;
+
+        monsterSound.clip = monsterBong[player_Script.friendsSaved];
+        monsterSound.Play();
+        bubbleSprite.SetActive(true);
+        charObject.SetActive(true);
+
         if (player_Script.friendsSaved == 0)
         {
             for (int i = 0; i < 3; i++)
             {
-                dialog[i].SetActive(true);
+                bubbleImage.sprite = dialog[i];
                 yield return new WaitForSeconds(3);
-                dialog[i].SetActive(false);
             }
         }
         else if (player_Script.friendsSaved == 1)
         {
             for (int i = 3; i < 5; i++)
             {
-                dialog[i].SetActive(true);
+                bubbleImage.sprite = dialog[i];
                 yield return new WaitForSeconds(3);
-                dialog[i].SetActive(false);
             }
         }
         else if (player_Script.friendsSaved == 2)
         {
-            dialog[5].SetActive(true);
-            yield return new WaitForSeconds(3);
-            dialog[5].SetActive(false);
+            for (int i = 5; i < 8; i++)
+            {
+                bubbleImage.sprite = dialog[i];
+                yield return new WaitForSeconds(3);
+            }
         }
-
+        else if (player_Script.friendsSaved == 3)
+        {
+            for (int i = 8; i < 9; i++)
+            {
+                bubbleImage.sprite = dialog[i];
+                yield return new WaitForSeconds(3);
+            }
+        }
+        bubbleSprite.SetActive(false);
+        charObject.SetActive(false);
         yield return new WaitForSeconds(10);
     }
 }
