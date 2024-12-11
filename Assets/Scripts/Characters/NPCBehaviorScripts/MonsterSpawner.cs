@@ -8,8 +8,6 @@ public class MonsterSpawner : MonoBehaviour
 {
     public List<GameObject> monsterList = new List<GameObject>();
     public static MonsterSpawner instance;
-    public int incrementAmmount = 1;
-    public int currentIndex = 0;
 
     private void Awake() //On Awake sets instance to this
     {
@@ -35,16 +33,8 @@ public class MonsterSpawner : MonoBehaviour
         {
             monsterList[i].gameObject.SetActive(true);
             monsterList[i].gameObject.transform.position = getSpawnNode();
-            Debug.Log("Spawn monster #" + i);
+            //Debug.Log("Spawn monster");
         }
-    }
-    public void SpawnMonsters()
-    {
-        for (int i = currentIndex; i < currentIndex + incrementAmmount; i++) 
-        { 
-            SpawnMonsters(i);
-        }
-        currentIndex = currentIndex + incrementAmmount;
     }
     private Vector2 getSpawnNode()
     {

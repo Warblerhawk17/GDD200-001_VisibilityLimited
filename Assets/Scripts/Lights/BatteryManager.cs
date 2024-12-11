@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using UnityEngine.Rendering.Universal;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
 
@@ -73,10 +72,6 @@ public class BatteryManager : MonoBehaviour
                 default:
                     break;
             }
-            if (batteryCharge == 5)
-            {
-                StartCoroutine(CallFlicker());
-            }
         }
         else if (lightNum == 2)
         {
@@ -136,10 +131,6 @@ public class BatteryManager : MonoBehaviour
                 default:
                     break;
             }
-            if (batteryCharge == 10)
-            {
-                StartCoroutine(CallFlicker());
-            }
         }
         else if (lightNum == 3)
         {
@@ -185,10 +176,6 @@ public class BatteryManager : MonoBehaviour
                 default:
                     break;
             }
-            if (batteryCharge == 10)
-            {
-                StartCoroutine(CallFlicker());
-            }
         }
     }
 
@@ -230,33 +217,6 @@ public class BatteryManager : MonoBehaviour
             batterySprites = firefliesBatterySprites.OfType<Sprite>().ToList();
             lightNum = 3;
 
-        }
-    }
-
-    private IEnumerator CallFlicker()
-    {
-        Light2D light1 = null;
-
-        if (GameObject.FindWithTag("Flashlight").activeInHierarchy)
-        {
-            light1 = GameObject.FindWithTag("Flashlight").GetComponent<Light2D>();
-        }
-        else if (GameObject.FindWithTag("Candle").activeInHierarchy)
-        {
-            light1 = GameObject.FindWithTag("Candle").GetComponent<Light2D>();
-        }
-        else if (GameObject.FindWithTag("Fireflies").activeInHierarchy)
-        {
-            light1 = GameObject.FindWithTag("Fireflies").GetComponent<Light2D>();
-        }
-
-        if (light1 != null)
-        {
-            for (int i = 0; i < 6; i++)
-            {
-                light1.enabled = !light1.enabled;
-                yield return new WaitForSeconds(Random.Range(0f, 0.3f));
-            }
         }
     }
 }

@@ -12,13 +12,11 @@ public class ScreamBehavior : MonoBehaviour
     public bool exploding = false;
 
     private Animator anim;
-    private AudioSource bomb;
 
     // Start is called before the first frame update
     void Start()
     {
         anim = GetComponent<Animator>();
-        bomb = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -35,9 +33,6 @@ public class ScreamBehavior : MonoBehaviour
         {
             exploding = true;
             anim.SetBool("isExploding", true);
-
-            bomb.Play();
-            target.GetComponent<player_script>().batteryManager.batteryCharge -= 30;
             if (target.GetComponent<player_script>().currentLightSource == "")
             {
                 target.GetComponent<player_script>().LoseLife();

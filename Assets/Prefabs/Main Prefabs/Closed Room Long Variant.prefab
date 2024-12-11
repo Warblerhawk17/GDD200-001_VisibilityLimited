@@ -58,7 +58,7 @@ MonoBehaviour:
   - {x: 3.538775, y: 0.0068445727, z: 0}
   m_ShapePathHash: 1093712510
   m_Mesh: {fileID: 0}
-  m_InstanceId: 404200
+  m_InstanceId: 67076
   m_LocalBounds:
     m_Center: {x: 2.0005517, y: 1.0003915, z: 0}
     m_Extent: {x: 1.5388201, y: 0.9935469, z: 0}
@@ -173,7 +173,7 @@ MonoBehaviour:
   - {x: 3.5391681, y: 0.0070788264, z: 0}
   m_ShapePathHash: -1765598203
   m_Mesh: {fileID: 0}
-  m_InstanceId: 404192
+  m_InstanceId: 67084
   m_LocalBounds:
     m_Center: {x: -0.00067186356, y: 6.054657, z: 0}
     m_Extent: {x: 4.540124, y: 6.0475783, z: 0}
@@ -235,7 +235,7 @@ MonoBehaviour:
   - {x: 0.5390371, y: 8.0071, z: 0}
   m_ShapePathHash: 1148241815
   m_Mesh: {fileID: 0}
-  m_InstanceId: 404184
+  m_InstanceId: 67062
   m_LocalBounds:
     m_Center: {x: -2.0004492, y: 9.000097, z: 0}
     m_Extent: {x: 2.5394864, y: 0.99299717, z: 0}
@@ -297,7 +297,7 @@ MonoBehaviour:
   - {x: 4.5383396, y: 9.008875, z: 0}
   m_ShapePathHash: -1677753536
   m_Mesh: {fileID: 0}
-  m_InstanceId: 404186
+  m_InstanceId: 67064
   m_LocalBounds:
     m_Center: {x: 4.000079, y: 9.999945, z: 0}
     m_Extent: {x: 0.53916335, y: 0.9924207, z: 0}
@@ -3973,10 +3973,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Closed Room Long Variant
       objectReference: {fileID: 0}
-    - target: {fileID: 3844203540544274399, guid: 79f23e690faa126478e07a154122dcce, type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 4862457840057851520, guid: 79f23e690faa126478e07a154122dcce, type: 3}
       propertyPath: m_Size.x
       value: 10
@@ -5069,10 +5065,6 @@ PrefabInstance:
       propertyPath: m_Tiles.Array.data[36].second.m_TileObjectToInstantiateIndex
       value: 65535
       objectReference: {fileID: 0}
-    - target: {fileID: 6278340330090383163, guid: 79f23e690faa126478e07a154122dcce, type: 3}
-      propertyPath: m_SortingOrder
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 7984128486968051163, guid: 79f23e690faa126478e07a154122dcce, type: 3}
       propertyPath: m_Size.x
       value: 11
@@ -5993,7 +5985,7 @@ MonoBehaviour:
   - {x: 4.5389743, y: 12.008726, z: 0}
   m_ShapePathHash: -1932215640
   m_Mesh: {fileID: 0}
-  m_InstanceId: 404204
+  m_InstanceId: 67080
   m_LocalBounds:
     m_Center: {x: -0.0010404587, y: 13.000286, z: 0}
     m_Extent: {x: 4.540244, y: 0.9938588, z: 0}

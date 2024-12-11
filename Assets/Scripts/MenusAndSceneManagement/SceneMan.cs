@@ -4,14 +4,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using TMPro;
-using UnityEditor.IMGUI.Controls;
 
 public class SceneMan : MonoBehaviour
 {
     public Transform player;
     public GameObject pauseMenu;
-    public GameObject gameLostMenu;
-    public GameObject gameWonMenu;
+    public GameObject gameOverMenu;
     public TextMeshProUGUI friendsText;
     public GameObject sceneManager;
     
@@ -27,6 +25,11 @@ public class SceneMan : MonoBehaviour
             pauseMenu.SetActive(false);
         }
 
+        if (gameOverMenu.activeInHierarchy == true)
+        {
+            pauseMenu.SetActive(false);
+        }
+
         playerScript = player.GetComponent<player_script>();
         playerMovement = player.GetComponent<PlayerMovement>();
     }
@@ -36,17 +39,10 @@ public class SceneMan : MonoBehaviour
     {
         if (playerScript.friendsSaved == 4 || playerScript.lives == 0)
         {
-            playerMovement.canMove = false;
-            switch (playerScript.friendsSaved)
-            {
-                case 4:
-                    gameWonMenu.SetActive(true);
-                    break;
-                default:
-                    gameLostMenu.SetActive(true);
-                    break;
-            }
+            //Debug.Log("Game Over was called");
+            gameOverMenu.SetActive(true);
             friendsText.text = "Friends Saved: " + playerScript.friendsSaved;
+            playerMovement.canMove = false;
         }
     }
     void OnTriggerEnter2D(Collider2D collision)
@@ -56,18 +52,14 @@ public class SceneMan : MonoBehaviour
         // Check if the player is the object entering the trigger
         if (collision.CompareTag("Player"))
         {
-            if (collision.transform.position.x < -30)
+            if (collision.transform.position.y > -10) //down
             {
-                if (collision.transform.position.y > -10) //down
-                {
-                    collision.transform.position = new Vector2(player.position.x, -21.5f);
-                }
-                else if (collision.transform.position.y < -10) //up
-                {
-                    collision.transform.position = new Vector2(player.position.x, 3.8f);
-                }
+                collision.transform.position = new Vector2(player.position.x, -21.5f);
             }
-
+            else if (collision.transform.position.y < -10) //up
+            {
+                collision.transform.position = new Vector2(player.position.x, 3.8f);
+            }
             for (int i = 0; i < playerScript.friendList.Count; i++) 
             {
                 playerScript.friendList[i].transform.position=player.position;

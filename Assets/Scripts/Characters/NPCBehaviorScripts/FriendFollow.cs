@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using static UnityEngine.GraphicsBuffer;
 
 public class FriendFollow : MonoBehaviour
@@ -11,26 +10,19 @@ public class FriendFollow : MonoBehaviour
     public LayerMask layerMask;
     public Animator anim;
     public bool pickedUp = false; //bool for if they have been picked up before 
-    public List<Sprite> dialog;
-    public List<AudioClip> monsterBong;
-    public Sprite charSprite;
-    public GameObject bubbleSprite;
-    public GameObject charObject;
+    public List<GameObject> dialog;
 
-    private player_script player_Script;
     private Node currentNode; //the current node it is at
     private List<Node> path = new List<Node>(); //the path of nodes it will travel
     private float speed = 4;
     private player_script player_script;
-    private GameObject curFriend;
-    private AudioSource monsterSound;
+    private bool wasCalled = false;
 
     // Start is called before the first frame update
     void Start()
     {
         anim = GetComponent<Animator>(); //Animator object
-        player_Script = GameObject.Find("Player").GetComponent<player_script>();
-        monsterSound = GetComponent<AudioSource>();
+        player_script = GameObject.Find("Player").GetComponent<player_script>();
     }
 
     // Update is called once per frame
@@ -39,6 +31,10 @@ public class FriendFollow : MonoBehaviour
         if (followTarget != null)
         {
             anim.SetBool("isWalking", true);
+            if (!wasCalled)
+            {
+                StartCoroutine(PlayDialog());
+            }
             RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector3.Normalize(followTarget.transform.position - transform.position), float.MaxValue, layerMask);
             if (hit.collider.gameObject != followTarget.gameObject)
             {
@@ -75,18 +71,6 @@ public class FriendFollow : MonoBehaviour
 
     private void GoTowards(Vector2 goTo) //helper method which both moves and rotates the thing moving
     {
-        if (Input.GetKey(KeyCode.LeftShift))
-        {
-            speed = 7f;
-        }
-        else
-        {
-            speed = 4.5f;
-        }
-        if (Vector2.Distance(transform.position, followTarget.transform.position) > 3)
-        {
-            speed += 4;
-        }
         transform.position = Vector2.MoveTowards(this.transform.position, goTo, speed * Time.deltaTime); //moves the npc
         Vector2 direction = goTo - (Vector2)transform.position; // finds direction between npc and target
         direction.Normalize(); // normalizes direction (keeps direction, sets length to 1, makes the math work)
@@ -132,15 +116,13 @@ public class FriendFollow : MonoBehaviour
             if (player.friendList.Count < 2)
             {
                 player.friendList.Add(this.gameObject);
-                StartCoroutine(PlayDialog());
                 followTarget = player.gameObject;
                 followDistance = player.friendList.Count * 0.5f;
-                curFriend = this.gameObject;
                 if (!pickedUp)
                 {
                     pickedUp = true;
                     player.friendsPickedUp++;
-                    MonsterSpawner.instance.SpawnMonsters();
+                    MonsterSpawner.instance.SpawnMonsters(player.friendsPickedUp - 1);
                 }
             }
         }
@@ -148,49 +130,32 @@ public class FriendFollow : MonoBehaviour
 
     private IEnumerator PlayDialog()
     {
-        Image bubbleImage = bubbleSprite.GetComponent<Image>();
-        Image charImage = charObject.GetComponent<Image>();
-        charImage.sprite = charSprite;
-
-        monsterSound.clip = monsterBong[player_Script.friendsSaved];
-        monsterSound.Play();
-        bubbleSprite.SetActive(true);
-        charObject.SetActive(true);
-
-        if (player_Script.friendsSaved == 0)
+        wasCalled = true;
+        Debug.Log("Dialog was called");
+        if (player_script.friendsSaved == 0)
         {
             for (int i = 0; i < 3; i++)
             {
-                bubbleImage.sprite = dialog[i];
+                dialog[i].SetActive(true);
                 yield return new WaitForSeconds(3);
+                dialog[i].SetActive(false);
             }
         }
-        else if (player_Script.friendsSaved == 1)
+        else if (player_script.friendsSaved == 1)
         {
             for (int i = 3; i < 5; i++)
             {
-                bubbleImage.sprite = dialog[i];
+                dialog[i].SetActive(true);
                 yield return new WaitForSeconds(3);
+                dialog[i].SetActive(false);
             }
-        }
-        else if (player_Script.friendsSaved == 2)
+        } else if (player_script.friendsSaved == 2)
         {
-            for (int i = 5; i < 8; i++)
-            {
-                bubbleImage.sprite = dialog[i];
-                yield return new WaitForSeconds(3);
-            }
+            dialog[5].SetActive(true);
+            yield return new WaitForSeconds(3);
+            dialog[5].SetActive(false);
         }
-        else if (player_Script.friendsSaved == 3)
-        {
-            for (int i = 8; i < 9; i++)
-            {
-                bubbleImage.sprite = dialog[i];
-                yield return new WaitForSeconds(3);
-            }
-        }
-        bubbleSprite.SetActive(false);
-        charObject.SetActive(false);
+
         yield return new WaitForSeconds(10);
     }
 }

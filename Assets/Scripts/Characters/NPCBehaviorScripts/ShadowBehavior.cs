@@ -9,7 +9,6 @@ public class ShadowBehavior : MonoBehaviour
     private List<Node> path = new List<Node>(); //the path of nodes it will travel
     private Animator anim;
     private SpriteRenderer spriteRenderer;
-    private AudioSource attackSound;
 
     public GameObject target; //the target, which it will go towards
     public float speed; //the speed of the crawler
@@ -27,7 +26,6 @@ public class ShadowBehavior : MonoBehaviour
         currentNode = AStarManager.instance.FindNearestNode(transform.position);
         spriteRenderer = GetComponent<SpriteRenderer>(); //Sprite Renderer object
         anim = GetComponent<Animator>(); //Animator object
-        attackSound = GetComponent<AudioSource>();
 
         frontEyes = GameObject.Find("Shadow").transform.GetChild(0).gameObject;
         lEyes = GameObject.Find("Shadow").transform.GetChild(1).gameObject;
@@ -91,7 +89,6 @@ public class ShadowBehavior : MonoBehaviour
         {
             Debug.Log("Hit player");
             anim.SetBool("isAttacking", true);
-            attackSound.Play();
             StartCoroutine(telaportAway());
         }
     }

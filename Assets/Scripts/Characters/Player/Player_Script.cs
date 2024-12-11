@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
-using TMPro;
 using Unity.VisualScripting;
 using UnityEditor.Rendering;
 using UnityEngine;
@@ -41,24 +40,20 @@ public class player_script : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Crawler"))
         {
+            batteryManager.batteryCharge = batteryManager.batteryCharge - 10;
+            StartCoroutine(CallFlicker());
             if (currentLightSource == "")
             {
                 LoseLife();
-            } else
-            {
-                batteryManager.batteryCharge = batteryManager.batteryCharge - 10;
-                StartCoroutine(CallFlicker());
             }
         }
         else if (collision.gameObject.CompareTag("Shadow"))
         {
+            batteryManager.batteryCharge = batteryManager.batteryCharge - 10;
+            StartCoroutine(CallFlicker());
             if (currentLightSource == "")
             {
                 LoseLife();
-            } else
-            {
-                batteryManager.batteryCharge = batteryManager.batteryCharge - 10;
-                StartCoroutine(CallFlicker());
             }
         }
         
@@ -126,8 +121,7 @@ public class player_script : MonoBehaviour
                     {
                         Object.Destroy(friendList[i]);
                         friendsSaved++;
-                        TMPro.TextMeshProUGUI counter = GameObject.Find("FriendCounter").GetComponent<TMPro.TextMeshProUGUI>();
-                        counter.text = friendsSaved + " / 4 Friends Saved";
+                        MonsterSpawner.instance.SpawnMonsters(friendsSaved - 1);
                     }
                     friendList.Clear();
                 }
@@ -141,7 +135,7 @@ public class player_script : MonoBehaviour
 
         if (GameObject.FindWithTag("Flashlight"))
         {
-            light1 = GameObject.FindWithTag("Flashlight").GetComponent<Light2D>();
+            light1 = GameObject.Find("Flashlight").GetComponent<Light2D>();
         }
         else if (GameObject.FindWithTag("Candle"))
         {
