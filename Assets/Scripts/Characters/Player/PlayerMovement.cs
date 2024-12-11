@@ -196,6 +196,10 @@ public class PlayerMovement : MonoBehaviour
         Image charIm = charObj.GetComponent<Image>();
         Image bubbleIm = bubbleSprite.GetComponent<Image>();
 
+        bubbleIm.sprite = findFriends;
+        charIm.sprite = charSprite;
+
+
         charObj.SetActive(true);
         bubbleSprite.SetActive(true);
         anim.Play("Wren_W_Walk");
