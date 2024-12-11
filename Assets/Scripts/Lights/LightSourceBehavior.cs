@@ -66,7 +66,8 @@ public class LightSourceBehavior : MonoBehaviour
         {
             if (lightName.Equals("Flashlight"))
             {
-                shadow.telaportAway();
+                
+                StartCoroutine(shadow.telaportAway());
             }
         }
     }

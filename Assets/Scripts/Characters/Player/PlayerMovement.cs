@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -14,6 +15,10 @@ public class PlayerMovement : MonoBehaviour
     public bool canMove;
     public float timeToArrow;
     public GameObject arrow;
+    public Sprite charSprite;
+    public Sprite findFriends;
+    public GameObject charObj;
+    public GameObject bubbleSprite;
 
 
     private Rigidbody2D rb; // Reference to the Rigidbody2D component attached to the player
@@ -168,9 +173,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.C))
         {
             canMove = false;
-            anim.Play("Wren_Crying");
-            new WaitForSeconds(2);
-            canMove = true;
+            StartCoroutine(Cry());
         }
     }
 
@@ -190,8 +193,11 @@ public class PlayerMovement : MonoBehaviour
     {
         float elapsedTime = 0f;
         Vector2 startPosition = transform.position;
+        Image charIm = charObj.GetComponent<Image>();
+        Image bubbleIm = bubbleSprite.GetComponent<Image>();
 
-        dialogFind.SetActive(true);
+        charObj.SetActive(true);
+        bubbleSprite.SetActive(true);
         anim.Play("Wren_W_Walk");
         while (elapsedTime < moveDuration)
         {
@@ -203,6 +209,14 @@ public class PlayerMovement : MonoBehaviour
         anim.Play("Wren_W_Idle");
         canMove = true;
         yield return new WaitForSeconds(1.5f);
-        dialogFind.SetActive(false);
+        charObj.SetActive(false);
+        bubbleSprite.SetActive(false);
+    }
+
+    private IEnumerator Cry()
+    {
+        anim.Play("Wren_Crying");
+        yield return new WaitForSeconds(1);
+        canMove = true;
     }
 }
