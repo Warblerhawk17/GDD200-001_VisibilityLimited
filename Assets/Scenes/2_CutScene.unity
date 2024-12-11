@@ -202,7 +202,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!224 &760912875
 RectTransform:
@@ -216,6 +216,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1305578263}
   - {fileID: 1129204437}
   - {fileID: 1305578263}
   m_Father: {fileID: 0}
@@ -585,10 +586,17 @@ RectTransform:
   - {fileID: 1130215708}
   m_Father: {fileID: 760912875}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 332, y: 174}
   m_SizeDelta: {x: 70, y: 20}
+=======
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 321, y: 208.82}
+  m_SizeDelta: {x: -730, y: -524}
+>>>>>>> parent of b86e166 (Merge branch 'main' into MiasNewBranch)
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1305578264
 MonoBehaviour:
