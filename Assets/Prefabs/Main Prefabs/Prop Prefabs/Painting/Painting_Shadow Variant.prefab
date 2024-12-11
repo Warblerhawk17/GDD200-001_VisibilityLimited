@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &1918988403585854960
+--- !u!1001 &4601040552214372687
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1857580506914656528, guid: c2965187cdb74d24bad0c2a580771c0b, type: 3}
       propertyPath: m_Name
-      value: Lamp Variant
+      value: Painting_Shadow Variant
       objectReference: {fileID: 0}
     - target: {fileID: 6030580070702791144, guid: c2965187cdb74d24bad0c2a580771c0b, type: 3}
       propertyPath: m_Size.x
@@ -47,19 +47,19 @@ PrefabInstance:
     - target: {fileID: 6030580070702791144, guid: c2965187cdb74d24bad0c2a580771c0b, type: 3}
       propertyPath: m_TileAssetArray.Array.data[0].m_Data
       value: 
-      objectReference: {fileID: 11400000, guid: 45e40cea8e7c993488459f5b293424fb, type: 2}
+      objectReference: {fileID: 11400000, guid: 863d0ae09c9382c4fb65d370b3290b6a, type: 2}
     - target: {fileID: 6030580070702791144, guid: c2965187cdb74d24bad0c2a580771c0b, type: 3}
       propertyPath: m_TileAssetArray.Array.data[1].m_Data
       value: 
-      objectReference: {fileID: 11400000, guid: 25230298ca97cef46a5875765d7b03af, type: 2}
+      objectReference: {fileID: 11400000, guid: 1532e63bf0cef2f4ebbb69c8c32efd8b, type: 2}
     - target: {fileID: 6030580070702791144, guid: c2965187cdb74d24bad0c2a580771c0b, type: 3}
       propertyPath: m_TileSpriteArray.Array.data[0].m_Data
       value: 
-      objectReference: {fileID: 1701321162, guid: 4b97733c178fbcd40bf7d0dc8c2c3e64, type: 3}
+      objectReference: {fileID: 598890288, guid: 6d31da3c232b2b241aa56cd3d5448906, type: 3}
     - target: {fileID: 6030580070702791144, guid: c2965187cdb74d24bad0c2a580771c0b, type: 3}
       propertyPath: m_TileSpriteArray.Array.data[1].m_Data
       value: 
-      objectReference: {fileID: -1138715849, guid: 4b97733c178fbcd40bf7d0dc8c2c3e64, type: 3}
+      objectReference: {fileID: -979527454, guid: 6d31da3c232b2b241aa56cd3d5448906, type: 3}
     - target: {fileID: 6030580070702791144, guid: c2965187cdb74d24bad0c2a580771c0b, type: 3}
       propertyPath: m_TileColorArray.Array.data[0].m_Data.a
       value: 1

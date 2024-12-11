@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &1918988403585854960
+--- !u!1001 &8101992160501488102
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1857580506914656528, guid: c2965187cdb74d24bad0c2a580771c0b, type: 3}
       propertyPath: m_Name
-      value: Lamp Variant
+      value: Counter_Table_front Variant
       objectReference: {fileID: 0}
     - target: {fileID: 6030580070702791144, guid: c2965187cdb74d24bad0c2a580771c0b, type: 3}
       propertyPath: m_Size.x
@@ -47,19 +47,19 @@ PrefabInstance:
     - target: {fileID: 6030580070702791144, guid: c2965187cdb74d24bad0c2a580771c0b, type: 3}
       propertyPath: m_TileAssetArray.Array.data[0].m_Data
       value: 
-      objectReference: {fileID: 11400000, guid: 45e40cea8e7c993488459f5b293424fb, type: 2}
+      objectReference: {fileID: 11400000, guid: d8936139b77f9b14d84d00829a4b072c, type: 2}
     - target: {fileID: 6030580070702791144, guid: c2965187cdb74d24bad0c2a580771c0b, type: 3}
       propertyPath: m_TileAssetArray.Array.data[1].m_Data
       value: 
-      objectReference: {fileID: 11400000, guid: 25230298ca97cef46a5875765d7b03af, type: 2}
+      objectReference: {fileID: 11400000, guid: 3a64e7aef14c5344392749e9793231c7, type: 2}
     - target: {fileID: 6030580070702791144, guid: c2965187cdb74d24bad0c2a580771c0b, type: 3}
       propertyPath: m_TileSpriteArray.Array.data[0].m_Data
       value: 
-      objectReference: {fileID: 1701321162, guid: 4b97733c178fbcd40bf7d0dc8c2c3e64, type: 3}
+      objectReference: {fileID: -25760285, guid: 4b97733c178fbcd40bf7d0dc8c2c3e64, type: 3}
     - target: {fileID: 6030580070702791144, guid: c2965187cdb74d24bad0c2a580771c0b, type: 3}
       propertyPath: m_TileSpriteArray.Array.data[1].m_Data
       value: 
-      objectReference: {fileID: -1138715849, guid: 4b97733c178fbcd40bf7d0dc8c2c3e64, type: 3}
+      objectReference: {fileID: 457157735, guid: 4b97733c178fbcd40bf7d0dc8c2c3e64, type: 3}
     - target: {fileID: 6030580070702791144, guid: c2965187cdb74d24bad0c2a580771c0b, type: 3}
       propertyPath: m_TileColorArray.Array.data[0].m_Data.a
       value: 1
@@ -183,5 +183,58 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1857580506914656528, guid: c2965187cdb74d24bad0c2a580771c0b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5963007915395496063}
   m_SourcePrefab: {fileID: 100100000, guid: c2965187cdb74d24bad0c2a580771c0b, type: 3}
+--- !u!1 &7617695079618463990 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1857580506914656528, guid: c2965187cdb74d24bad0c2a580771c0b, type: 3}
+  m_PrefabInstance: {fileID: 8101992160501488102}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &5963007915395496063
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7617695079618463990}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.5, y: 0.8656119}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.32761532}
+  m_EdgeRadius: 0
