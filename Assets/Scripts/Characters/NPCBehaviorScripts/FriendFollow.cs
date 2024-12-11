@@ -71,6 +71,18 @@ public class FriendFollow : MonoBehaviour
 
     private void GoTowards(Vector2 goTo) //helper method which both moves and rotates the thing moving
     {
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            speed = 7f;
+        }
+        else
+        {
+            speed = 4.5f;
+        }
+        if (Vector2.Distance(transform.position, followTarget.transform.position) > 3)
+        {
+            speed += 4;
+        }
         transform.position = Vector2.MoveTowards(this.transform.position, goTo, speed * Time.deltaTime); //moves the npc
         Vector2 direction = goTo - (Vector2)transform.position; // finds direction between npc and target
         direction.Normalize(); // normalizes direction (keeps direction, sets length to 1, makes the math work)
@@ -122,7 +134,7 @@ public class FriendFollow : MonoBehaviour
                 {
                     pickedUp = true;
                     player.friendsPickedUp++;
-                    MonsterSpawner.instance.SpawnMonsters(player.friendsPickedUp - 1);
+                    MonsterSpawner.instance.SpawnMonsters();
                 }
             }
         }
