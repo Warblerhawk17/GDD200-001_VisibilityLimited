@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEditor.Rendering;
 using UnityEngine;
@@ -125,7 +126,8 @@ public class player_script : MonoBehaviour
                     {
                         Object.Destroy(friendList[i]);
                         friendsSaved++;
-                        MonsterSpawner.instance.SpawnMonsters(friendsSaved - 1);
+                        TMPro.TextMeshProUGUI counter = GameObject.Find("FriendCounter").GetComponent<TMPro.TextMeshProUGUI>();
+                        counter.text = friendsSaved + " / 4 Friends Saved";
                     }
                     friendList.Clear();
                 }
